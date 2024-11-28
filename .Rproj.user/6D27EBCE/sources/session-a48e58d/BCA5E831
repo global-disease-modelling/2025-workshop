@@ -3,7 +3,7 @@
     "path": "~/Documents/local-workbench/2025-workshop/code-of-conduct.qmd",
     "project_path": "code-of-conduct.qmd",
     "type": "quarto_markdown",
-    "hash": "1654172020",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1732785157318.0,
@@ -16,16 +16,16 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "cursorPosition": "22,0",
+        "cursorPosition": "0,0",
         "scrollLine": "0",
-        "rmdVisualModeLocation": "866:529"
+        "rmdVisualModeLocation": "29:0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1732785325,
+    "lastKnownWriteTime": 1732785414,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1732785325539,
+    "last_content_update": 1732785414528,
     "read_only": false,
     "read_only_alternatives": []
 }
