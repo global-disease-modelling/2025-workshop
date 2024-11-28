@@ -4,6 +4,8 @@ project:
 website:
   title: "GDM Workshop 2025"
   navbar:
+    page-navigation: true
+    collapse-below: lg
     left:
       - href: index.qmd
         text: Home
@@ -16,6 +18,8 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    code-overflow: wrap
 
+freeze: true
+bibliography: references.bib
 editor: visual
-
