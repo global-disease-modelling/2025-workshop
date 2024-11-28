@@ -1,14 +1,14 @@
 {
-    "id": "12F85AD8",
-    "path": "~/Documents/local-workbench/2025-workshop/index.qmd",
-    "project_path": "index.qmd",
+    "id": "BCA5E831",
+    "path": "~/Documents/local-workbench/2025-workshop/code-of-conduct.qmd",
+    "project_path": "code-of-conduct.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "1654172020",
     "contents": "",
     "dirty": false,
-    "created": 1732784897865.0,
+    "created": 1732785157318.0,
     "source_on_save": false,
-    "relative_order": 1,
+    "relative_order": 4,
     "properties": {
         "rmdVisualMode": "true",
         "rmdVisualWrapConfigured": "true",
@@ -16,16 +16,16 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "282:0",
-        "cursorPosition": "0,0",
-        "scrollLine": "0"
+        "cursorPosition": "22,0",
+        "scrollLine": "0",
+        "rmdVisualModeLocation": "866:529"
     },
     "folds": "",
-    "lastKnownWriteTime": 1732785110,
+    "lastKnownWriteTime": 1732785325,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1732785110273,
+    "last_content_update": 1732785325539,
     "read_only": false,
     "read_only_alternatives": []
 }
