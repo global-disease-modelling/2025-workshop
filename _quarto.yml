@@ -3,36 +3,38 @@ project:
   output-dir: docs
 
 website:
-  title: "GDM Workshop 2025"
-  navbar:
-    page-navigation: true
-    collapse-below: lg
-    left:
-      - href: index.qmd
-        text: Home
-      - href: code-of-conduct.qmd
-        text: Code of Conduct
-      - about.qmd
-  # sidebar:
-  #   syle: "docked"
-  #   search: true
-  #   contents:
-  #     - section: "Workshop"
-  #       contents:
-  #         - 
-  #     - section: "Resources"
-  #       contents: 
-  #         - getting-started.qmd
-  #         - collaborative-git.qmd
-  #         - supercomputing.qmd
-  #         - pawsey.qmd
-  #         - best-practice-programming.qmd
+  title: "GDM 2025 Workshop"
+  sidebar:
+    syle: "docked"
+    type: "dark"
+    search: true
+    title: "GDM Workshop"
+    subtitle: "13-15 January 2025"
+    tools:
+      - icon: github
+        href: https://github.com/Infectious-Disease-Modelling-UWA/2025-workshop
+    contents:
+      - text: "Overview"
+        href: index.qmd
+      - text: "Code of Conduct"
+        href: code-of-conduct.qmd
+      - section: "Workshop"
+        contents:
+          - session-1.qmd
+          - session-2.qmd
+      - section: "Resources"
+        contents:
+          - getting-started.qmd
+          - collaborative-git.qmd
+          - supercomputing.qmd
+          - pawsey.qmd
+          - command-line.qmd
+          - best-practice-programming.qmd
 
 format:
   html:
     theme: cosmo
     css: styles.css
-    toc: true
     code-overflow: wrap
 
 freeze: true
