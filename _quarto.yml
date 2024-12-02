@@ -47,6 +47,9 @@ format:
     toc: true
     code-overflow: wrap
 
-freeze: false
+execute:
+  cache: true
+  freeze: auto
+  
 bibliography: references.bib
 editor: visual
