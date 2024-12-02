@@ -4,20 +4,15 @@ project:
 
 website:
   title: "GDM 2025 Workshop"
+  description: "13-15 January 2025"
   sidebar:
     syle: "docked"
     type: "dark"
     search: true
     title: "GDM Workshop"
-    subtitle: "13-15 January 2025"
-    tools:
-      - icon: github
-        href: https://github.com/Infectious-Disease-Modelling-UWA/2025-workshop
     contents:
-      - text: "Overview"
-        href: index.qmd
-      - text: "Code of Conduct"
-        href: code-of-conduct.qmd
+      - overview.qmd
+      - code-of-conduct.qmd
       - section: "Workshop"
         contents:
           - session-1.qmd
@@ -30,6 +25,10 @@ website:
           - pawsey.qmd
           - command-line.qmd
           - best-practice-programming.qmd
+  page-footer: 
+      right:
+      - icon: github
+        href: https://github.com/Infectious-Disease-Modelling-UWA/2025-workshop
 
 format:
   html:
@@ -37,6 +36,6 @@ format:
     css: styles.css
     code-overflow: wrap
 
-freeze: true
+freeze: false
 bibliography: references.bib
 editor: visual
