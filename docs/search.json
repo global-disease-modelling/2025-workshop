@@ -9,23 +9,36 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "GDM Intensive Workshop 2025",
+    "title": "GDM 2025 Workshop",
     "section": "",
-    "text": "This is the website for the Global Disease Modelling team’s intensive workshop, held 13-15 January 2025 at The Kids Research Institute Australia.\nThis workshop covers Git, Pawsey, and translating our pipelines from SciCore to Pawsey."
+    "text": "This is the website for the Global Disease Modelling team’s intensive workshop, held 13-15 January 2025 at The Kids Research Institute Australia.\nThis workshop covers Git, Pawsey, and translating our pipelines from SciCore to Pawsey.",
+    "crumbs": [
+      "Overview"
+    ]
   },
   {
     "objectID": "collaborative-git.html",
     "href": "collaborative-git.html",
     "title": "Collaborative Git",
     "section": "",
-    "text": "You’ve probably already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.\n\n\nThese questions encapsulate the concepts we will address in this section.\n\nWhat does it mean by staged and unstaged changes?\nWhat is a branch? Where does it live?\nHow do you add a second remote, and why would you want multiple remote repositories?\nHow do I incorporate someone else’s changes with the changes I’ve made, if we’ve both committed to the same branch at the same time?\nHow do you re-write history if you’re unhappy with the direction your project has taken?\nFollowing up on the previous question, can you choose to keep only some changes and not others?\n\n\n\n\n\nWe will discuss what happens when staging, committing, and pushing\nWe will discuss branches, remotes, and pull requests: what they are and how to use them\nWe will discuss what is considered best practice for commits, pushing, and branches on the command line\nWe will discuss what is considered best practice for team workflows, including how to use pull requests on GitHub\nWe will look at how to use revert, reset, merge, and cherry-pick, especially when collaborating with others"
+    "text": "You’ve probably already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.\n\n\nThese questions encapsulate the concepts we will address in this section.\n\nWhat does it mean to have staged and unstaged changes?\nWhat is a branch? Where does it live?\nHow do you add a second remote, and why would you want multiple remote repositories?\nHow do I incorporate someone else’s changes with the changes I’ve made, if we’ve both committed to the same branch at the same time?\nHow do you re-write history if you’re unhappy with the direction your project has taken?\nFollowing up on the previous question, can you choose to keep only some changes and not others?\n\n\n\n\n\nWe will discuss what happens when staging, committing, and pushing\nWe will discuss branches, remotes, and pull requests: what they are and how to use them\nWe will discuss what is considered best practice for commits, pushing, and branches on the command line\nWe will discuss what is considered best practice for team workflows, including how to use pull requests on GitHub\nWe will look at how to use revert, reset, merge, and cherry-pick, especially when collaborating with others",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Collaborative Git"
+    ]
   },
   {
     "objectID": "collaborative-git.html#introduction",
     "href": "collaborative-git.html#introduction",
     "title": "Collaborative Git",
     "section": "",
-    "text": "You’ve probably already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.\n\n\nThese questions encapsulate the concepts we will address in this section.\n\nWhat does it mean by staged and unstaged changes?\nWhat is a branch? Where does it live?\nHow do you add a second remote, and why would you want multiple remote repositories?\nHow do I incorporate someone else’s changes with the changes I’ve made, if we’ve both committed to the same branch at the same time?\nHow do you re-write history if you’re unhappy with the direction your project has taken?\nFollowing up on the previous question, can you choose to keep only some changes and not others?\n\n\n\n\n\nWe will discuss what happens when staging, committing, and pushing\nWe will discuss branches, remotes, and pull requests: what they are and how to use them\nWe will discuss what is considered best practice for commits, pushing, and branches on the command line\nWe will discuss what is considered best practice for team workflows, including how to use pull requests on GitHub\nWe will look at how to use revert, reset, merge, and cherry-pick, especially when collaborating with others"
+    "text": "You’ve probably already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.\n\n\nThese questions encapsulate the concepts we will address in this section.\n\nWhat does it mean to have staged and unstaged changes?\nWhat is a branch? Where does it live?\nHow do you add a second remote, and why would you want multiple remote repositories?\nHow do I incorporate someone else’s changes with the changes I’ve made, if we’ve both committed to the same branch at the same time?\nHow do you re-write history if you’re unhappy with the direction your project has taken?\nFollowing up on the previous question, can you choose to keep only some changes and not others?\n\n\n\n\n\nWe will discuss what happens when staging, committing, and pushing\nWe will discuss branches, remotes, and pull requests: what they are and how to use them\nWe will discuss what is considered best practice for commits, pushing, and branches on the command line\nWe will discuss what is considered best practice for team workflows, including how to use pull requests on GitHub\nWe will look at how to use revert, reset, merge, and cherry-pick, especially when collaborating with others",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Collaborative Git"
+    ]
   },
   {
     "objectID": "about.html",
@@ -33,5 +46,146 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "session-2.html",
+    "href": "session-2.html",
+    "title": "Session 2",
+    "section": "",
+    "text": "Implement an analysis pipeline on Pawsey\nSubmit jobs and run an analysis pipeline on Pawsey\nDiagnose errors on Pawsey\n? Attempt writing parallelisation code on Pawsey\nAttempt modularisation on Pawsey",
+    "crumbs": [
+      "Home",
+      "Workshop",
+      "Session 2"
+    ]
+  },
+  {
+    "objectID": "getting-started.html#setting-up-for-git",
+    "href": "getting-started.html#setting-up-for-git",
+    "title": "Getting started",
+    "section": "Setting up for Git",
+    "text": "Setting up for Git\n\nSSH set-up for Git",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Getting started"
+    ]
+  },
+  {
+    "objectID": "getting-started.html#setting-up-for-pawsey",
+    "href": "getting-started.html#setting-up-for-pawsey",
+    "title": "Getting started",
+    "section": "Setting up for Pawsey",
+    "text": "Setting up for Pawsey\n\nSSH set-up for Pawsey",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Getting started"
+    ]
+  },
+  {
+    "objectID": "pawsey.html",
+    "href": "pawsey.html",
+    "title": "Pawsey",
+    "section": "",
+    "text": "Logging in\nSecurity (SSH)\nMoving data (SCP, SFTP, Rsync, and GUIs)\nFinding and using available software\nSingularity (containers)\nSubmitting and monitoring jobs",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Pawsey"
+    ]
+  },
+  {
+    "objectID": "best-practice-programming.html#best-practice-git",
+    "href": "best-practice-programming.html#best-practice-git",
+    "title": "Best practices for programming",
+    "section": "Best practice Git",
+    "text": "Best practice Git\n\nCommit names\nBranch names",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Best practices for programming"
+    ]
+  },
+  {
+    "objectID": "best-practice-programming.html#best-practice-pawsey",
+    "href": "best-practice-programming.html#best-practice-pawsey",
+    "title": "Best practices for programming",
+    "section": "Best practice Pawsey",
+    "text": "Best practice Pawsey",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Best practices for programming"
+    ]
+  },
+  {
+    "objectID": "best-practice-programming.html#modularisation",
+    "href": "best-practice-programming.html#modularisation",
+    "title": "Best practices for programming",
+    "section": "Modularisation",
+    "text": "Modularisation",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Best practices for programming"
+    ]
+  },
+  {
+    "objectID": "best-practice-programming.html#resources",
+    "href": "best-practice-programming.html#resources",
+    "title": "Best practices for programming",
+    "section": "Resources",
+    "text": "Resources",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Best practices for programming"
+    ]
+  },
+  {
+    "objectID": "supercomputing.html",
+    "href": "supercomputing.html",
+    "title": "Supercomputing fundamentals",
+    "section": "",
+    "text": "Components of a supercomputer\nFilesystem of a supercomputer\nSupercomputer modules\nScheduler (Slurm)\nBatch scripting\nObject storage\n\n\n\n\nGeneral architecture of a supercomputer",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Supercomputing fundamentals"
+    ]
+  },
+  {
+    "objectID": "session-1.html",
+    "href": "session-1.html",
+    "title": "Session 1",
+    "section": "",
+    "text": "90 minutes",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
+    ]
+  },
+  {
+    "objectID": "session-1.html#objectives",
+    "href": "session-1.html#objectives",
+    "title": "Session 1",
+    "section": "Objectives",
+    "text": "Objectives\n\nSet up an SSH key for Git\nSet up an SSH key for Pawsey\nNavigate on Pawsey using the command line interface\nClone a git repository onto Pawsey\nTransfer files between your local PC and Pawsey\nCommit and push changes\nCreate a pull request for your changes",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
+    ]
+  },
+  {
+    "objectID": "session-1.html#notes",
+    "href": "session-1.html#notes",
+    "title": "Session 1",
+    "section": "Notes",
+    "text": "Notes\nIdeas for directions:\nClone the 2025-workshop-exercise repository. This is one of our pipelines. You have to transfer sensitive files from your local device onto Pawsey, to then run the pipeline.",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
+    ]
   }
 ]
