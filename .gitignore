@@ -1,3 +1,7 @@
 /.quarto/
-.Rproj.user*
+.Rproj.user
 .Rhistory
+.Rhistoryt
+/_site/
+/_*.local
+*_cache/
