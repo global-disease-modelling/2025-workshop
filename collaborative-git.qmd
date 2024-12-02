@@ -4,22 +4,23 @@ title: Part 1: Collaborative Git
 
 ## Introduction
 
-(Part of resources)
+You've probably already committed and pushed changes to GitHub, and you're comfortable with creating branches. In this section we'll level up your Git knowledge to fully utilise Git for collaboration.
 
-### Quiz
+### Questions
 
-This short quiz outlines the concepts we will address in this section.
+These questions encapsulate the concepts we will address in this section.
 
--   What happens when you stage, commit, and push changes?
+-   What does it mean by staged and unstaged changes?
 -   What is a branch? Where does it live?
 -   How do you add a second remote, and why would you want multiple remote repositories?
+-   How do I incorporate someone else's changes with the changes I've made, if we've both committed to the same branch at the same time?
+-   How do you re-write history if you're unhappy with the direction your project has taken?
+-   Following up on the previous question, can you choose to keep only some changes and not others?
 
 ### Outline
 
-This section discusses ...
-
--   A conceptual understanding of what happens when staging, committing, and pushing
--   A conceptual understanding of branches, remotes, and pull requests
--   Best practice for commits, pushing, and branches on the command line
--   Best practice for team workflows, including how to use pull requests on GitHub
--   How to use revert, reset, merge, and cherry-pick with other people's changes
+-   We will discuss what happens when staging, committing, and pushing
+-   We will discuss branches, remotes, and pull requests: what they are and how to use them
+-   We will discuss what is considered best practice for commits, pushing, and branches on the command line
+-   We will discuss what is considered best practice for team workflows, including how to use pull requests on GitHub
+-   We will look at how to use revert, reset, merge, and cherry-pick, especially when collaborating with others
