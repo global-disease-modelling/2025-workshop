@@ -1,0 +1,25 @@
+---
+title: Part 1: Collaborative Git
+---
+
+## Introduction
+
+(Part of resources)
+
+### Quiz
+
+This short quiz outlines the concepts we will address in this section.
+
+-   What happens when you stage, commit, and push changes?
+-   What is a branch? Where does it live?
+-   How do you add a second remote, and why would you want multiple remote repositories?
+
+### Outline
+
+This section discusses ...
+
+-   A conceptual understanding of what happens when staging, committing, and pushing
+-   A conceptual understanding of branches, remotes, and pull requests
+-   Best practice for commits, pushing, and branches on the command line
+-   Best practice for team workflows, including how to use pull requests on GitHub
+-   How to use revert, reset, merge, and cherry-pick with other people's changes
