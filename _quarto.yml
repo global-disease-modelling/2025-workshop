@@ -49,7 +49,7 @@ format:
 
 execute:
   cache: true
-  freeze: auto
+  freeze: false
   
 bibliography: references.bib
 editor: visual
