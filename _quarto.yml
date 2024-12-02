@@ -39,11 +39,13 @@ website:
   # Appearance and misc.
   bread-crumbs: false
   page-navigation: true
+  reader-mode: true
 
 format:
   html:
     theme: cosmo
     css: styles.css
+    toc: true
     code-overflow: wrap
 
 freeze: true
