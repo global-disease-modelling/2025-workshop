@@ -39,7 +39,6 @@ website:
   # Appearance and misc.
   bread-crumbs: false
   page-navigation: true
-  reader-mode: true
 
 format:
   html:
@@ -48,6 +47,6 @@ format:
     toc: true
     code-overflow: wrap
 
-freeze: true
+freeze: false
 bibliography: references.bib
 editor: visual
