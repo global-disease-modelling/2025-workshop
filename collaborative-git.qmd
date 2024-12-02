@@ -1,5 +1,5 @@
 ---
-title: Part 1: Collaborative Git
+title: Chapter 1: Collaborative Git
 ---
 
 ## Introduction
