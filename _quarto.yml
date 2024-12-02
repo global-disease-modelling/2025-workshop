@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "GDM Workshop 2025"
@@ -12,6 +13,20 @@ website:
       - href: code-of-conduct.qmd
         text: Code of Conduct
       - about.qmd
+  # sidebar:
+  #   syle: "docked"
+  #   search: true
+  #   contents:
+  #     - section: "Workshop"
+  #       contents:
+  #         - 
+  #     - section: "Resources"
+  #       contents: 
+  #         - getting-started.qmd
+  #         - collaborative-git.qmd
+  #         - supercomputing.qmd
+  #         - pawsey.qmd
+  #         - best-practice-programming.qmd
 
 format:
   html:
