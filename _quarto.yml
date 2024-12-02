@@ -5,6 +5,9 @@ project:
 website:
   title: "GDM 2025 Workshop"
   description: "13-15 January 2025"
+  
+  # Sidebar options
+  
   sidebar:
     syle: "docked"
     type: "dark"
@@ -25,10 +28,17 @@ website:
           - pawsey.qmd
           - command-line.qmd
           - best-practice-programming.qmd
+  
+  # Footer options
+  
   page-footer: 
       right:
       - icon: github
         href: https://github.com/Infectious-Disease-Modelling-UWA/2025-workshop
+  
+  # Appearance and misc.
+  bread-crumbs: false
+  page-navigation: true
 
 format:
   html:
@@ -36,6 +46,6 @@ format:
     css: styles.css
     code-overflow: wrap
 
-freeze: true
+freeze: false
 bibliography: references.bib
 editor: visual
