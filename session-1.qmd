@@ -1,0 +1,22 @@
+---
+title: Session 1
+subtitle: Starting up Git and Pawsey
+---
+
+90 minutes
+
+## Objectives
+
+- Set up an SSH key for Git
+- Set up an SSH key for Pawsey
+- Navigate on Pawsey using the command line interface
+- Clone a git repository onto Pawsey
+- Transfer files between your local PC and Pawsey
+- Commit and push changes
+- Create a pull request for your changes
+
+## Notes
+
+Ideas for directions:
+
+Clone the `2025-workshop-exercise` repository. This is one of our pipelines. You have to transfer sensitive files from your local device onto Pawsey, to then run the pipeline.

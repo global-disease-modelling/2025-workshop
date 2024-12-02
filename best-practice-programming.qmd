@@ -1,0 +1,18 @@
+---
+title: Best practices for programming
+subtitle: A non-exhaustive list we would like to strive towards!
+---
+
+## Keeping it simple
+
+## Best practice Git
+
+- Commit names
+- Branch names
+
+## Best practice Pawsey
+
+## Modularisation
+
+## Resources
+

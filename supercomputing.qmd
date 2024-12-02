@@ -1,0 +1,12 @@
+---
+title: Supercomputing fundamentals
+---
+
+-   Components of a supercomputer
+-   Filesystem of a supercomputer
+-   Supercomputer modules
+-   Scheduler (Slurm)
+-   Batch scripting
+-   Object storage
+
+![General architecture of a supercomputer](img/supercomputer-architecture.png)

@@ -1,0 +1,11 @@
+---
+title: Pawsey
+---
+
+- Logging in
+- Security (SSH)
+- Moving data (SCP, SFTP, Rsync, and GUIs)
+- Finding and using available software
+- Singularity (containers)
+- Submitting and monitoring jobs
+

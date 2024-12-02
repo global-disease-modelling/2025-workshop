@@ -10,7 +10,7 @@ You've probably already committed and pushed changes to GitHub, and you're comfo
 
 These questions encapsulate the concepts we will address in this section.
 
--   What does it mean by staged and unstaged changes?
+-   What does it mean to have staged and unstaged changes?
 -   What is a branch? Where does it live?
 -   How do you add a second remote, and why would you want multiple remote repositories?
 -   How do I incorporate someone else's changes with the changes I've made, if we've both committed to the same branch at the same time?
