@@ -36,6 +36,6 @@ format:
     css: styles.css
     code-overflow: wrap
 
-freeze: false
+freeze: true
 bibliography: references.bib
 editor: visual
