@@ -1,0 +1,28 @@
+/*-- scss:defaults --*/
+  
+  $link-color: #009193;
+  $toc-color: #009193;
+
+/*--scss:rules --*/
+  
+h1 {
+  font-size: 1.9rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Hover state */
+  a:hover {
+    color: #009193;
+  }
+
+p code, li code {
+  color: #2761E3;           /* or #000080 */
+    background-color: #f8f9fa; /* Optional: light background for inline code */
+}

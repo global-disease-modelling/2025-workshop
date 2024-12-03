@@ -43,8 +43,9 @@ website:
 
 format:
   html:
-    theme: lumen
-    css: styles.css
+    theme: 
+      - cosmo
+      - theme.scss
     toc: true
     code-overflow: wrap
 

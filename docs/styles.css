@@ -1,1 +1,46 @@
 /* css styles */
+
+h1 {
+    font-size: 1.9rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+a {
+    color: #009193;
+}
+
+/* Hover state */
+a:hover {
+    color: #009193;
+}
+
+p code, li code {
+    color: #2761E3;           /* or #000080 */
+    background-color: #f8f9fa; /* Optional: light background for inline code */
+}
+
+/* Active menu text color */
+.navbar-nav .nav-link.active {
+    color: #009193 !important;
+}
+
+/* TOC navigation link colors */
+.nav-link.active, 
+.nav-pills .nav-link.active, 
+.nav-pills .show > .nav-link {
+    color: #009193 !important;
+    background-color: transparent !important;
+}
+
+/* TOC sidebar link hover and active states */
+#quarto-sidebar .nav-link:hover,
+#quarto-sidebar .nav-link.active {
+    color: #009193 !important;
+}
