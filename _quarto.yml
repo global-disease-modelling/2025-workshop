@@ -15,7 +15,7 @@ website:
     title: "GDM 2025 Workshop"
     contents:
       - text: Overview
-        href: overview.qmd
+        href: index.qmd
       - code-of-conduct.qmd
       - section: "Workshop"
         contents:
