@@ -14,7 +14,8 @@ website:
     search: true
     title: "GDM Workshop"
     contents:
-      - overview.qmd
+      - text: Overview
+        href: overview.qmd
       - code-of-conduct.qmd
       - section: "Workshop"
         contents:
