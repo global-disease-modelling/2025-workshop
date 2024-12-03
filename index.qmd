@@ -14,5 +14,5 @@ This workshop covers Git, Pawsey, and translating our pipelines from SciCore to 
 ### Outline
 
 -   [Session 1](session-1.qmd) focuses on starting up with Git and HPCs.
--   [Session 2](session-2.qmd) explores how we can utilise HPCs, such as parallelisation, modularisation of our code, and submitting HPC jobs.
+-   [Session 2](session-2.qmd) explores how we can utilise HPCs, including: parallelisation, code modularisation, and submitting Slurm jobs.
 -   

@@ -4,7 +4,6 @@ project:
 
 website:
   title: "GDM 2025 Workshop"
-  description: "13-15 January 2025"
   
   # Sidebar options
   
@@ -13,6 +12,7 @@ website:
     type: "dark"
     search: true
     title: "GDM 2025 Workshop"
+    subtitle: "13-15 January 2025"
     contents:
       - text: Overview
         href: index.qmd
