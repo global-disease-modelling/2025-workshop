@@ -5,7 +5,7 @@ sidebar: true
 
 This is the website for the Global Disease Modelling team's intensive workshop, held 13-15 January 2025 at The Kids Research Institute Australia.
 
-Participating in the workshop sessions means you agree to abide by our [Code of Conduct](code-of-conduct.qmd).
+Participating in the workshop means you agree to abide by our [Code of Conduct](code-of-conduct.qmd).
 
 ### Overview
 

@@ -12,7 +12,7 @@ website:
     syle: "docked"
     type: "dark"
     search: true
-    title: "GDM Workshop"
+    title: "GDM 2025 Workshop"
     contents:
       - text: Overview
         href: overview.qmd
