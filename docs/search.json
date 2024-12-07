@@ -255,5 +255,82 @@
       "Resources",
       "The Unix shell"
     ]
+  },
+  {
+    "objectID": "unix-shell.html",
+    "href": "unix-shell.html",
+    "title": "The Unix shell",
+    "section": "",
+    "text": "The shell is a program that enables us to send commands to the computer and receive output. It is also referred to as the terminal or command line. Use of the shell is fundamental to a wide range of advanced computing tasks, including high-performance computing. This section will introduce you to this powerful tool.\nFirst, open a terminal. If you’re not sure how to open a terminal on your operating system (OS), see the instructions in the box “Shells for various OS” below.",
+    "crumbs": [
+      "Resources",
+      "The Unix shell"
+    ]
+  },
+  {
+    "objectID": "unix-shell.html#introducing-the-shell",
+    "href": "unix-shell.html#introducing-the-shell",
+    "title": "The Unix shell",
+    "section": "Introducing the Shell",
+    "text": "Introducing the Shell\n\n\n\n\n\n\nOverview\n\n\n\n\nWhat is a command shell?\nWhy would I use one?\n\n\n\n\nBackground\nHumans and computers commonly interact in many different ways, such as through a keyboard and mouse, touch screen interfaces, or using speech recognition systems. The most widely used way to interact with personal computers is called a graphical user interface (GUI). With a GUI, we give instructions by clicking a mouse and using menu-driven interactions.\nWhile the visual aid of a GUI makes it intuitive to learn, this way of delivering instructions to a computer scales very poorly. Imagine the following task: for a literature search, you have to copy the third line of one thousand text files in one thousand different directories and paste it into a single file. Using a GUI, you would not only be clicking at your desk for several hours, but you could potentially also commit an error in the process of completing this repetitive task. This is where we take advantage of the Unix shell. The Unix shell is both a command-line interface (CLI) and a scripting language, allowing such repetitive tasks to be done automatically and fast. With the proper commands, the shell can repeat tasks with or without some modification as many times as we want. Using the shell, the task in the literature example can be accomplished in seconds.\n\n\nThe Shell\nThe shell is a program where users can type commands. With the shell, it’s possible to invoke complicated programs like climate modeling software or simple commands that create an empty directory with only one line of code. The most popular Unix shell is Bash (the Bourne Again SHell — so-called because it’s derived from a shell written by Stephen Bourne). Bash is the default shell on most modern implementations of Unix and in most packages that provide Unix-like tools for Windows. Note that ‘Git Bash’ is a piece of software that enables Windows users to use a Bash like interface when interacting with Git.\nUsing the shell will take some effort and some time to learn. While a GUI presents you with choices to select, CLI choices are not automatically presented to you, so you must learn a few commands like new vocabulary in a language you’re studying. However, unlike a spoken language, a small number of “words” (i.e. commands) gets you a long way, and we’ll cover those essential few today.\nThe grammar of a shell allows you to combine existing tools into powerful pipelines and handle large volumes of data automatically. Sequences of commands can be written into a script, improving the reproducibility of workflows.\nIn addition, the command line is often the easiest way to interact with remote machines and supercomputers. Familiarity with the shell is near essential to run a variety of specialized tools and resources including high-performance computing systems. As clusters and cloud computing systems become more popular for scientific data crunching, being able to interact with the shell is becoming a necessary skill. We can build on the command-line skills covered here to tackle a wide range of scientific questions and computational challenges.",
+    "crumbs": [
+      "Resources",
+      "The Unix shell"
+    ]
+  },
+  {
+    "objectID": "unix-shell.html#useful-shortcuts",
+    "href": "unix-shell.html#useful-shortcuts",
+    "title": "The Unix shell",
+    "section": "Useful shortcuts",
+    "text": "Useful shortcuts\n\nPress Tab to auto-complete names (such as files, folders, or programs) in your current directory.\nPressing Ctrl + c cancels what you’ve written or terminates a process that’s currently running\nChanging directories using cd:\n\nTyping cd ~ takes you to your home directory\nTyping cd - takes you to the last directory you were in, which is especially useful if you’re switching back and forth between two directories\n\nPressing the up arrow (↑) gives you the previous command you entered\nPressing Ctrl + r searches through your command line history",
+    "crumbs": [
+      "Resources",
+      "The Unix shell"
+    ]
+  },
+  {
+    "objectID": "unix-shell.html#files-and-directories",
+    "href": "unix-shell.html#files-and-directories",
+    "title": "The Unix shell",
+    "section": "Files and directories",
+    "text": "Files and directories\n\n\n\n\n\n\nOverview\n\n\n\n\nHow can I move around on my computer?\nHow can I see what files and directories I have?\nHow can I specify the location of a file or directory on my computer?\n\n\n\n\nUseful commands\n\ncd &lt;path&gt; changes the current working directory.\nls &lt;path&gt; prints a listing of a specific file or directory; ls on its own lists the current working directory.\npwd prints the user’s current working directory.\ncp &lt;old-path&gt; &lt;new-path&gt; copies a file.\nmkdir &lt;path&gt; creates a new directory.\nmv &lt;old&gt; &lt;new&gt; moves (renames) a file or directory.\nrm &lt;path&gt; removes (deletes) a file.\n\n\n\nUnderstanding files and directories\nTo navigate files and directories:\n\nThe file system is responsible for managing information on the disk.\nInformation is stored in files, which are stored in directories (folders).\nDirectories can also store other directories, which forms a directory tree.\nA relative path specifies a location starting from the current location.\nAn absolute path specifies a location from the root of the file system.\nDirectory names in a path are separated with / on Unix, but \\ on Windows.\n/ on its own is the root directory of the whole file system.\n.. means ‘the directory above the current one’; . on its own means ‘the current directory’.\n\nWorking with files and directories:\n\nThe shell does not have a trash bin: once something is deleted, it’s really gone.\nMost files’ names are something.extension. The extension isn’t required, and doesn’t guarantee anything, but is normally used to indicate the type of data in the file.",
+    "crumbs": [
+      "Resources",
+      "The Unix shell"
+    ]
+  },
+  {
+    "objectID": "unix-shell.html#scripts",
+    "href": "unix-shell.html#scripts",
+    "title": "The Unix shell",
+    "section": "Scripts",
+    "text": "Scripts\n\n\n\n\n\n\nOverview\n\n\n\n\nHow can I save and reuse commands using bash?\n\n\n\nTo use Pawsey supercomputers, you will need to create batch job scripts (also called job scripts or batch scripts) to run your code. For historical reasons, a bunch of commands saved in a file is usually called ascript, but make no mistake: these are actually small programs. Not only will writing scripts make your work faster, but you also won’t have to retype the same commands over and over again. It will also make it more accurate (fewer chances for typos) and more reproducible. If you come back to your work later (or if someone else finds your work and wants to build on it), you will be able to reproduce the same results simply by running your script, rather than having to remember or retype a long list of commands.\n\nUseful commands\n\nbash &lt;filename&gt; runs the commands saved in a file.\n$@ refers to all of a shell script’s command-line arguments.\n$1, $2, etc., refer to the first command-line argument, the second command-line argument, etc.",
+    "crumbs": [
+      "Resources",
+      "The Unix shell"
+    ]
+  },
+  {
+    "objectID": "unix-shell.html#finding-things",
+    "href": "unix-shell.html#finding-things",
+    "title": "The Unix shell",
+    "section": "Finding things",
+    "text": "Finding things\n\n\n\n\n\n\nOverview\n\n\n\n\nHow can I find files?\nHow can I find things in files?\n\n\n\n\nfind finds files with specific properties that match patterns.\ngrep selects lines in files that match patterns.\n--help is an option supported by many bash commands, and programs that can be run from within Bash, to display more information on how to use these commands or programs.\nman &lt;command&gt; displays the manual page for a given command.\n$(&lt;command&gt;) inserts a command’s output in place.\n\nHere is an example of how you would combine the above commands.\n#| eval: false\n$ grep \"searching\" $(find . -name \"*.txt\")\nThe first (grep) finds files that match a pattern; the second (find) looks for lines inside those files that match another pattern. Here, for example, we can find txt files that contain the word “searching” by looking for the string ‘searching’ in all the .txt files in the current directory.\nHere is what the output would look like:\n./writing/LittleWomen.txt:sitting on the top step, affected to be searching for her book, but was\n./writing/haiku.txt:With searching comes loss",
+    "crumbs": [
+      "Resources",
+      "The Unix shell"
+    ]
+  },
+  {
+    "objectID": "unix-shell.html#permissions-chmod",
+    "href": "unix-shell.html#permissions-chmod",
+    "title": "The Unix shell",
+    "section": "Permissions (chmod)",
+    "text": "Permissions (chmod)\n\n\n\n\n\n\nOverview\n\n\n\n\nWhat are file or directory permissions?\nHow do I view permissions?\nHow do I change permissions?\n\n\n\nUnix controls who can read, modify, and run files using permissions. Let’s start with the user. I, Chitra, have a unique user name chitrams and user ID 26156. Users can belong to any number of groups, each of which has a unique group name and numeric group ID. Our group name is pawsey1104 with group ID 35725.\n\n\n\n\n\n\nTip\n\n\n\nRun id on the terminal to see your user details. You can also run this on the Pawsey terminal to see the group details.\n\n\n\n\n\n\n\n\nWhy use integers for IDs?\n\n\n\n\n\nThe answer goes back to the early 1970s. Character strings like alan.turing are of varying length, and comparing one to another takes many instructions. Integers, on the other hand, use a fairly small amount of storage (typically four characters), and can be compared with a single instruction. To make operations fast and simple, programmers often keep track of things internally using integers, then use a lookup table of some kind to translate those integers into user-friendly text for presentation.\nOf course, programmers being programmers, they will often skip the user-friendly string part and just use the integers, in the same way that someone working in a lab might talk about Experiment 28 instead of “the chronotypical alpha-response trials on anacondas”.\n\n\n\nNow let’s look at files and directories. Every file and directory on a Unix computer belongs to one owner and one group. Along with each file’s content, the operating system stores the numeric IDs of the user and group that own it.\nThe user-and-group model means that for each file every user on the system falls into one of three categories: the owner of the file, someone in the file’s group, and everyone else. For each of these three categories, the computer keeps track of whether people in that category can read the file, write to the file, or execute the file (i.e., run it if it is a program). For example, if a file had the following set of permissions:\n\n\n\n\nuser\ngroup\nall\n\n\n\n\nread\nyes\nyes\nno\n\n\nwrite\nyes\nno\nno\n\n\nexecute\nno\nno\nno\n\n\n\nit would mean that:\n\nthe file’s owner can read and write it, but not run it;\nother people in the file’s group can read it, but not modify it or run it; and\neverybody else can do nothing with it at all.\n\nLet’s look at this in action. If we cd into the GROUP directory on Pawsey (/software/projects/pawsey1104/GROUP) and run the command ls -l:\n$ ls -l\ntotal 20\ndrwxrws---  7 chitrams pawsey1104 4096 Oct  5 08:05 MAP_data\ndrwxrwx---  2 chitrams chitrams   4096 Dec  2 16:22 chatbox-om\ndrwxrwsr-x  3 acavelan pawsey1104 4096 Sep 25 16:11 OpenMalaria\ndrwxrwxr-x  6 acavelan pawsey1104 4096 Jul 13  2021 RASTERS\ndrwxrwxr-x 10 acavelan pawsey1104 4096 Aug 18  2023 SHAPEFILES\nThe -l flag tells ls to give us a long-form listing. It’s a lot of information, so let’s go through the columns in turn.\nOn the right side, we have the files’ names. Next to them, moving left, are the times and dates they were last modified. Backup systems and other tools use this information in a variety of ways, but you can use it to tell when you (or anyone else with permission) last changed a file.\nNext to the modification time is the file’s size in bytes and the names of the user and group that owns it (in this case, chitrams and pawsey1104 respectively). We’ll skip over the second column for now (the one showing 7 in the first line) because it’s the first column that we care about most. This shows the file’s permissions, i.e., who can read, write, or execute it.\nLet’s have a closer look at one of those permission strings: drwxrwx---. The first character tells us what type of thing this is: d means it’s a directory, while - means it’s a regular file.\nThe next three characters tell us what permissions the file’s owner has. Here, the owner can read, write, and execute the file: rwx. The middle triplet shows us the group’s permissions. If the permission is turned off, we see a dash, so r-x means “read and execute, but not write”. When we see rws it means that new files and subdirectories created within that directory will inherit the group of the directory. The final triplet shows us what everyone who isn’t the file’s owner, or in the file’s group, can do. In this case, it’s ---, so no one outside of the group can look at the file’s contents and run it.\nTo change permissions, we use the chmod command (whose name stands for “change mode”). Here’s a long-form listing showing the permissions on an R script Chitra is using:\n$ ls -l launch.R\n-rw-r--r-- 1 chitrams pawsey1104 15784 Nov 15 13:45 launch.R\nWhoops, Chitra can’t execute the R script on Pawsey! The command to change the owner’s permission to rwx is:\n$ chmod u=rwx launch.R\nLet’s run chmod again to give the group write permission but not execution; and everyone else no permission to read, write, or execute:\n$ chmod g=rw launch.R\n$ chmod o=--- launch.R\n#| code-block-bg: #f8f9fa\n-rwxrw---- 1 chitrams pawsey1104 15784 Nov 15 13:45 launch.R",
+    "crumbs": [
+      "Resources",
+      "The Unix shell"
+    ]
   }
 ]

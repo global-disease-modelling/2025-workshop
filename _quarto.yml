@@ -23,7 +23,7 @@ website:
       - section: "Resources"
         contents:
           - getting-started.qmd
-          - cli.qmd
+          - unix-shell.qmd
           - collaborative-git.qmd
           - supercomputing.qmd
           - pawsey.qmd

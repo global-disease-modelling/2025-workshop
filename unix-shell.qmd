@@ -1,5 +1,8 @@
 ---
 title: The Unix shell
+execute: 
+  eval: false
+  code-overflow: wrap
 ---
 
 The shell is a program that enables us to send commands to the computer and receive output. It is also referred to as the terminal or command line. Use of the shell is fundamental to a wide range of advanced computing tasks, including high-performance computing. This section will introduce you to this powerful tool.
@@ -132,6 +135,7 @@ To use Pawsey supercomputers, you will need to create **batch job scripts** (als
 Here is an example of how you would combine the above commands.
 
 ``` bash
+#| eval: false
 $ grep "searching" $(find . -name "*.txt")
 ```
 
@@ -142,4 +146,92 @@ Here is what the output would look like:
 ```         
 ./writing/LittleWomen.txt:sitting on the top step, affected to be searching for her book, but was
 ./writing/haiku.txt:With searching comes loss
+```
+
+## Permissions (`chmod`)
+
+::: {.callout-note title="Overview" icon="false"}
+-   What are file or directory permissions?
+-   How do I view permissions?
+-   How do I change permissions?
+:::
+
+Unix controls who can read, modify, and run files using **permissions**. Let's start with the user. I, Chitra, have a unique user name `chitrams` and user ID `26156`. Users can belong to any number of groups, each of which has a unique group name and numeric group ID. Our group name is `pawsey1104` with group ID `35725`.
+
+::: callout-tip
+Run `id` on the terminal to see your user details. You can also run this on the Pawsey terminal to see the group details.
+:::
+
+::: {.callout-note title="Why use integers for IDs?" collapse="true"}
+The answer goes back to the early 1970s. Character strings like `alan.turing` are of varying length, and comparing one to another takes many instructions. Integers, on the other hand, use a fairly small amount of storage (typically four characters), and can be compared with a single instruction. To make operations fast and simple, programmers often keep track of things internally using integers, then use a lookup table of some kind to translate those integers into user-friendly text for presentation.
+
+Of course, programmers being programmers, they will often skip the user-friendly string part and just use the integers, in the same way that someone working in a lab might talk about Experiment 28 instead of “the chronotypical alpha-response trials on anacondas”.
+:::
+
+Now let’s look at files and directories. Every file and directory on a Unix computer belongs to one owner and one group. Along with each file’s content, the operating system stores the numeric IDs of the user and group that own it.
+
+The user-and-group model means that for each file every user on the system falls into one of three categories: the owner of the file, someone in the file’s group, and everyone else. For each of these three categories, the computer keeps track of whether people in that category can read the file, write to the file, or execute the file (i.e., run it if it is a program). For example, if a file had the following set of permissions:
+
+|         | user | group | all |
+|---------|:----:|:-----:|:---:|
+| read    | yes  |  yes  | no  |
+| write   | yes  |  no   | no  |
+| execute |  no  |  no   | no  |
+
+it would mean that:
+
+-   the file’s owner can read and write it, but not run it;
+-   other people in the file’s group can read it, but not modify it or run it; and
+-   everybody else can do nothing with it at all.
+
+Let’s look at this in action. If we `cd` into the `GROUP` directory on Pawsey (`/software/projects/pawsey1104/GROUP`) and run the command `ls -l`:
+
+``` bash
+$ ls -l
+```
+
+```         
+total 20
+drwxrws---  7 chitrams pawsey1104 4096 Oct  5 08:05 MAP_data
+drwxrwx---  2 chitrams chitrams   4096 Dec  2 16:22 chatbox-om
+drwxrwsr-x  3 acavelan pawsey1104 4096 Sep 25 16:11 OpenMalaria
+drwxrwxr-x  6 acavelan pawsey1104 4096 Jul 13  2021 RASTERS
+drwxrwxr-x 10 acavelan pawsey1104 4096 Aug 18  2023 SHAPEFILES
+```
+
+The `-l` flag tells ls to give us a long-form listing. It’s a lot of information, so let’s go through the columns in turn.
+
+On the right side, we have the files’ names. Next to them, moving left, are the times and dates they were last modified. Backup systems and other tools use this information in a variety of ways, but you can use it to tell when you (or anyone else with permission) last changed a file.
+
+Next to the modification time is the file’s size in bytes and the names of the user and group that owns it (in this case, `chitrams` and `pawsey1104` respectively). We’ll skip over the second column for now (the one showing `7` in the first line) because it’s the first column that we care about most. This shows the file’s permissions, i.e., who can read, write, or execute it.
+
+Let’s have a closer look at one of those permission strings: `drwxrwx---`. The first character tells us what type of thing this is: `d` means it's a directory, while `-` means it’s a regular file.
+
+The next three characters tell us what permissions the file’s owner has. Here, the owner can read, write, and execute the file: `rwx`. The middle triplet shows us the group’s permissions. If the permission is turned off, we see a dash, so `r-x` means “read and execute, but not write”. When we see `rws` it means that new files and subdirectories created within that directory will inherit the group of the directory. The final triplet shows us what everyone who isn’t the file’s owner, or in the file’s group, can do. In this case, it’s `---`, so no one outside of the group can look at the file’s contents and run it.
+
+To change permissions, we use the `chmod` command (whose name stands for “change mode”). Here’s a long-form listing showing the permissions on an R script Chitra is using:
+
+``` bash
+$ ls -l launch.R
+```
+
+```         
+-rw-r--r-- 1 chitrams pawsey1104 15784 Nov 15 13:45 launch.R
+```
+
+Whoops, Chitra can't execute the R script on Pawsey! The command to change the owner's permission to `rwx` is:
+
+``` bash
+$ chmod u=rwx launch.R
+```
+
+Let's run `chmod` again to give the group write permission but not execution; and everyone else no permission to read, write, or execute:
+
+``` bash
+$ chmod g=rw launch.R
+$ chmod o=--- launch.R
+```
+
+```
+-rwxrw---- 1 chitrams pawsey1104 15784 Nov 15 13:45 launch.R
 ```
