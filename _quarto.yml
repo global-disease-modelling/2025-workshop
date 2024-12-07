@@ -29,6 +29,11 @@ website:
           - supercomputing.qmd
           - pawsey.qmd
           - best-practice-programming.qmd
+      # - section: "Discussion"
+      #   contents:
+      #   - discussion-1.qmd
+      #   - discussion-2.qmd
+      #   - discussion-3.qmd
       - acknowledgements.qmd
   
   # Footer options
