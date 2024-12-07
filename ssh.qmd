@@ -1,3 +1,52 @@
 ---
-title: Understanding SSH keys
+title: Remote logins and SSH
+execute: 
+  eval: false
 ---
+
+What happens when we want to run some commands on another machine, such as Pawsey's Setonix? To do this, we have to first log in to that machine. We call this a remote login.
+
+In order for us to be able to login, the remote computer must be running a remote login server and we will run a client program that can talk to that server. The client program passes our login credentials to the remote login server and, if we are allowed to login, that server then runs a shell for us on the remote computer.
+
+Once our local client is connected to the remote server, everything we type into the client is passed on, by the server, to the shell running on the remote computer. That remote shell runs those commands on our behalf, just as a local shell would, then sends back output, via the server, to our client, for our computer to display.
+
+## Background
+
+Back in the day, when everyone trusted each other and knew every chip in their computer by its first name, people didn’t encrypt anything except the most sensitive information when sending it over a network and the two programs used for running a shell (usually back then, the Bourne Shell, `sh`) on, or copying files to, a remote machine were named `rsh` and `rcp`, respectively. Think (`r`)emote `sh` and `cp`.
+
+However, anyone could watch the unencrypted network traffic, which meant that villains could steal usernames and passwords. The [SSH protocol](https://carpentries-incubator.github.io/shell-extras/reference/#ssh-protocolhttps://www.ssh.com/academy/ssh/protocol) was invented to prevent this (or at least slow it down). It uses several sophisticated, and heavily tested, encryption protocols to ensure that outsiders can’t see what’s in the messages going back and forth between different computers.
+
+The remote login server which accepts connections from client programs is known as the SSH daemon. The client program we use to login remotely is the **secure shell** or **SSH** (think (`s`)ecure `sh`).
+
+## Logging in using `ssh`
+
+To make a remote login, we issue the command `ssh <username>@<computer>` which tries to make a connection to the SSH daemon running on the remote computer we have specified. For Chitra to access the Setonix computer on Pawsey, she logs in using `ssh chitrams@setonix.pawsey.org.au`.
+
+::: {.callout-warning title="Test your understanding"}
+1.  What happens if Chitra has already been allocated a node named `nid09310` that she would like to directly log in to?
+2.  What happens if Chitra wants to access the data mover nodes on Pawsey, which has the hostname `data-mover.pawsey.org.au`?
+:::
+
+::: {.callout-note title="Answer" icon="false" collapse="true"}
+For the first instance, Chitra would log in with the following command:
+``` bash
+ssh chitrams@nid09310.pawsey.org.au
+```
+For the second, Chitra would log in with the following command:
+``` bash
+sftp chitrams@data-mover.pawseyl.org.au
+```
+where `sftp` is another companion program for `ssh`, the Secure File Transfer Protocol. We talk about this in a subsequent section.
+:::
+
+After we log in, we can use the remote shell to use the remote computer’s files and directories.
+
+Typing `exit` terminates the remote shell (and the local client program on that remote shell) and returns us to our previous shell.
+
+## Transferring files to and from Pawsey
+
+### `scp`
+
+### `sftp`
+
+### GUI clients such as Cyberduck

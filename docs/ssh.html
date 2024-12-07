@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Understanding SSH keys – GDM 2025 Workshop</title>
+<title>Remote logins and SSH – GDM 2025 Workshop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -82,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Understanding SSH keys</h1>
+          <h1 class="quarto-secondary-nav-title">Remote logins and SSH</h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -164,6 +198,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./unix-shell.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Unix shell</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./collaborative-git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Collaborative Git</span></a>
   </div>
@@ -178,12 +218,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./pawsey.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pawsey</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./command-line.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Command line</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -206,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ssh.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Understanding SSH keys</span></a>
+ <span class="menu-text">Remote logins and SSH</span></a>
   </div>
 </li>
       </ul>
@@ -222,15 +256,28 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#logging-in-using-ssh" id="toc-logging-in-using-ssh" class="nav-link" data-scroll-target="#logging-in-using-ssh">Logging in using <code>ssh</code></a></li>
+  <li><a href="#transferring-files-to-and-from-pawsey" id="toc-transferring-files-to-and-from-pawsey" class="nav-link" data-scroll-target="#transferring-files-to-and-from-pawsey">Transferring files to and from Pawsey</a>
+  <ul class="collapse">
+  <li><a href="#scp" id="toc-scp" class="nav-link" data-scroll-target="#scp"><code>scp</code></a></li>
+  <li><a href="#sftp" id="toc-sftp" class="nav-link" data-scroll-target="#sftp"><code>sftp</code></a></li>
+  <li><a href="#gui-clients-such-as-cyberduck" id="toc-gui-clients-such-as-cyberduck" class="nav-link" data-scroll-target="#gui-clients-such-as-cyberduck">GUI clients such as Cyberduck</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Understanding SSH keys</h1>
+<h1 class="title d-none d-lg-block">Remote logins and SSH</h1>
 </div>
 
 
@@ -247,8 +294,71 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>What happens when we want to run some commands on another machine, such as Pawsey’s Setonix? To do this, we have to first log in to that machine. We call this a remote login.</p>
+<p>In order for us to be able to login, the remote computer must be running a remote login server and we will run a client program that can talk to that server. The client program passes our login credentials to the remote login server and, if we are allowed to login, that server then runs a shell for us on the remote computer.</p>
+<p>Once our local client is connected to the remote server, everything we type into the client is passed on, by the server, to the shell running on the remote computer. That remote shell runs those commands on our behalf, just as a local shell would, then sends back output, via the server, to our client, for our computer to display.</p>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>Back in the day, when everyone trusted each other and knew every chip in their computer by its first name, people didn’t encrypt anything except the most sensitive information when sending it over a network and the two programs used for running a shell (usually back then, the Bourne Shell, <code>sh</code>) on, or copying files to, a remote machine were named <code>rsh</code> and <code>rcp</code>, respectively. Think (<code>r</code>)emote <code>sh</code> and <code>cp</code>.</p>
+<p>However, anyone could watch the unencrypted network traffic, which meant that villains could steal usernames and passwords. The <a href="https://carpentries-incubator.github.io/shell-extras/reference/#ssh-protocolhttps://www.ssh.com/academy/ssh/protocol">SSH protocol</a> was invented to prevent this (or at least slow it down). It uses several sophisticated, and heavily tested, encryption protocols to ensure that outsiders can’t see what’s in the messages going back and forth between different computers.</p>
+<p>The remote login server which accepts connections from client programs is known as the SSH daemon. The client program we use to login remotely is the <strong>secure shell</strong> or <strong>SSH</strong> (think (<code>s</code>)ecure <code>sh</code>).</p>
+</section>
+<section id="logging-in-using-ssh" class="level2">
+<h2 class="anchored" data-anchor-id="logging-in-using-ssh">Logging in using <code>ssh</code></h2>
+<p>To make a remote login, we issue the command <code>ssh &lt;username&gt;@&lt;computer&gt;</code> which tries to make a connection to the SSH daemon running on the remote computer we have specified. For Chitra to access the Setonix computer on Pawsey, she logs in using <code>ssh chitrams@setonix.pawsey.org.au</code>.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Test your understanding">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Test your understanding
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>What happens if Chitra has already been allocated a node named <code>nid09310</code> that she would like to directly log in to?</li>
+<li>What happens if Chitra wants to access the data mover nodes on Pawsey, which has the hostname <code>data-mover.pawsey.org.au</code>?</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>For the first instance, Chitra would log in with the following command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> chitrams@nid09310.pawsey.org.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For the second, Chitra would log in with the following command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sftp</span> chitrams@data-mover.pawseyl.org.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>where <code>sftp</code> is another companion program for <code>ssh</code>, the Secure File Transfer Protocol. We talk about this in a subsequent section.</p>
+</div>
+</div>
+</div>
+<p>After we log in, we can use the remote shell to use the remote computer’s files and directories.</p>
+<p>Typing <code>exit</code> or Control-D terminates the remote shell–and the local client program on that remote shell–and returns us to our previous shell.</p>
+</section>
+<section id="transferring-files-to-and-from-pawsey" class="level2">
+<h2 class="anchored" data-anchor-id="transferring-files-to-and-from-pawsey">Transferring files to and from Pawsey</h2>
+<section id="scp" class="level3">
+<h3 class="anchored" data-anchor-id="scp"><code>scp</code></h3>
+</section>
+<section id="sftp" class="level3">
+<h3 class="anchored" data-anchor-id="sftp"><code>sftp</code></h3>
+</section>
+<section id="gui-clients-such-as-cyberduck" class="level3">
+<h3 class="anchored" data-anchor-id="gui-clients-such-as-cyberduck">GUI clients such as Cyberduck</h3>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
