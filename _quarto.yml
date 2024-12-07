@@ -12,7 +12,6 @@ website:
     type: "dark"
     search: true
     title: "GDM 2025 Workshop"
-    subtitle: "13-15 January 2025"
     contents:
       - text: Overview
         href: index.qmd
@@ -21,6 +20,7 @@ website:
         contents:
           - session-1.qmd
           - session-2.qmd
+          - session-3.qmd
       - section: "Resources"
         contents:
           - getting-started.qmd
@@ -29,6 +29,10 @@ website:
           - pawsey.qmd
           - command-line.qmd
           - best-practice-programming.qmd
+      - section: "Appendices"
+        contents:
+          - ssh.qmd
+      - acknowledgements.qmd
   
   # Footer options
   

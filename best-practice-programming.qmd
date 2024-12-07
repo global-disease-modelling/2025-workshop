@@ -7,12 +7,11 @@ subtitle: A non-exhaustive list we would like to strive towards!
 
 ## Best practice Git
 
-- Commit names
-- Branch names
+-   Commit names
+-   Branch names
 
 ## Best practice Pawsey
 
 ## Modularisation
 
 ## Resources
-
