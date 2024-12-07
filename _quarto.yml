@@ -39,7 +39,7 @@ website:
   page-footer: 
       right:
       - icon: github
-        href: https://github.com/Infectious-Disease-Modelling-UWA/2025-workshop
+        href: https://github.com/global-disease-modelling/2025-workshop
   
   # Appearance and misc.
   bread-crumbs: false
