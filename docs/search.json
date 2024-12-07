@@ -1,48 +1,5 @@
 [
   {
-    "objectID": "code-of-conduct.html",
-    "href": "code-of-conduct.html",
-    "title": "Code of Conduct",
-    "section": "",
-    "text": "The organisers of this workshop are dedicated to providing a safe, inclusive, welcoming, and harassment-free experience for everyone. \n\nExpected Behaviour \nWe aim to create an inclusive learning environment where:\n\npeople feel comfortable exploring ideas;\nasking questions is encouraged and welcomed;\nno question is considered “stupid”;\nparticipants assume competence in one another;\ncuriosity and genuine learning are celebrated.\n\nParticipants are expected to engage in respectful interaction throughout the workshop. We request that participants:\n\nare considerate in their speech and actions;\nactively acknowledge and respect others’ personal boundaries;\npractice empathy and active listening;\noffer constructive, kind feedback;\nseek to understand before being understood.\n\n\n\nParticipation Guidelines\n\nBe fully present during workshop sessions.\nAvoid working on unrelated projects during workshop time.\nRespect the workshop organizers’ and facilitators’ time and effort.\nContribute to a collaborative and supportive learning environment.\n\n\n\nUnacceptable Behavior\nThe following behaviors are not tolerated:\n\ncombative or argumentative conduct;\nveiled criticisms disguised as questions (e.g., “Have you thought about…”);\ninterrupting or talking over others;\ndismissive or condescending remarks;\nany form of harassment, including: discriminatory language or jokes; unwelcome sexual advances; intimidation or bullying; and offensive comments related to gender, sexual orientation, race, religion, disability, or age.\n\nBy participating in this workshop, you agree to uphold these principles and contribute to a positive and supportive learning environment. \n\n\nReporting Guidelines \nThe Code of Conduct Committee includes Melissa Penny, Chitra M Saraswati, and #TODO XXX. \nIf you witness or experience inappropriate behaviour, or have any other concerns, please alert a member of the Code of Conduct Committee immediately. Even if an incident seems minor, reporting helps maintain a safe environment for everyone. \nViolation of the Code of Conduct will result in a verbal warning, asking a participant to leave a session, or removal from the entire workshop. \n\n\nAcknowledgment \nThis Code of Conduct was built from the rOpenSci Code of Conduct and WOMBAT 2024 Code of Conduct.",
-    "crumbs": [
-      "Code of Conduct"
-    ]
-  },
-  {
-    "objectID": "session-1.html",
-    "href": "session-1.html",
-    "title": "Session 1",
-    "section": "",
-    "text": "90 minutes",
-    "crumbs": [
-      "Workshop",
-      "Session 1"
-    ]
-  },
-  {
-    "objectID": "session-1.html#objectives",
-    "href": "session-1.html#objectives",
-    "title": "Session 1",
-    "section": "Objectives",
-    "text": "Objectives\n\nSet up an SSH key for Git\nSet up an SSH key for Pawsey\nNavigate on Pawsey using the command line interface\nClone a git repository onto Pawsey\nTransfer files between your local PC and Pawsey\nCommit and push changes\nCreate a pull request for your changes",
-    "crumbs": [
-      "Workshop",
-      "Session 1"
-    ]
-  },
-  {
-    "objectID": "session-1.html#notes",
-    "href": "session-1.html#notes",
-    "title": "Session 1",
-    "section": "Notes",
-    "text": "Notes\nIdeas for directions:\nClone the 2025-workshop-exercise repository. This is one of our pipelines. You have to transfer sensitive files from your local device onto Pawsey, to then run the pipeline.",
-    "crumbs": [
-      "Workshop",
-      "Session 1"
-    ]
-  },
-  {
     "objectID": "supercomputing.html",
     "href": "supercomputing.html",
     "title": "Supercomputing fundamentals",
@@ -120,6 +77,17 @@
     ]
   },
   {
+    "objectID": "pawsey.html",
+    "href": "pawsey.html",
+    "title": "Pawsey",
+    "section": "",
+    "text": "Logging in\nSecurity (SSH)\nMoving data (SCP, SFTP, Rsync, and GUIs)\nFinding and using available software\nSingularity (containers)\nSubmitting and monitoring jobs",
+    "crumbs": [
+      "Resources",
+      "Pawsey"
+    ]
+  },
+  {
     "objectID": "collaborative-git.html",
     "href": "collaborative-git.html",
     "title": "Collaborative Git",
@@ -142,14 +110,13 @@
     ]
   },
   {
-    "objectID": "pawsey.html",
-    "href": "pawsey.html",
-    "title": "Pawsey",
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Acknowledgements",
     "section": "",
-    "text": "Logging in\nSecurity (SSH)\nMoving data (SCP, SFTP, Rsync, and GUIs)\nFinding and using available software\nSingularity (containers)\nSubmitting and monitoring jobs",
+    "text": "Acknowledgement of country\nThe Kids Research Institute Australia acknowledges Aboriginal people as the Traditional Owners of the land and seas of Australia. We also acknowledge the Noongar Nation and especially the Whadjuk people as the custodians of the land on which the Institute is located.\nWe pay our respects to Elders past, present, and future and seek their wisdom in our work to improve the health of all children.\n\n\nCourse preparation\n\n\nCourse material",
     "crumbs": [
-      "Resources",
-      "Pawsey"
+      "Acknowledgements"
     ]
   },
   {
@@ -181,13 +148,46 @@
     ]
   },
   {
-    "objectID": "acknowledgements.html",
-    "href": "acknowledgements.html",
-    "title": "Acknowledgements",
+    "objectID": "session-1.html",
+    "href": "session-1.html",
+    "title": "Session 1",
     "section": "",
-    "text": "Acknowledgement of country\nThe Kids Research Institute Australia acknowledges Aboriginal people as the Traditional Owners of the land and seas of Australia. We also acknowledge the Noongar Nation and especially the Whadjuk people as the custodians of the land on which the Institute is located.\nWe pay our respects to Elders past, present, and future and seek their wisdom in our work to improve the health of all children.\n\n\nCourse preparation\n\n\nCourse material",
+    "text": "90 minutes",
     "crumbs": [
-      "Acknowledgements"
+      "Workshop",
+      "Session 1"
+    ]
+  },
+  {
+    "objectID": "session-1.html#objectives",
+    "href": "session-1.html#objectives",
+    "title": "Session 1",
+    "section": "Objectives",
+    "text": "Objectives\n\nSet up an SSH key for Git\nSet up an SSH key for Pawsey\nNavigate on Pawsey using the command line interface\nClone a git repository onto Pawsey\nTransfer files between your local PC and Pawsey\nCommit and push changes\nCreate a pull request for your changes",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
+    ]
+  },
+  {
+    "objectID": "session-1.html#notes",
+    "href": "session-1.html#notes",
+    "title": "Session 1",
+    "section": "Notes",
+    "text": "Notes\nIdeas for directions:\nClone the 2025-workshop-exercise repository. This is one of our pipelines. You have to transfer sensitive files from your local device onto Pawsey, to then run the pipeline.",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
+    ]
+  },
+  {
+    "objectID": "code-of-conduct.html",
+    "href": "code-of-conduct.html",
+    "title": "Code of Conduct",
+    "section": "",
+    "text": "The organisers of this workshop are dedicated to providing a safe, inclusive, welcoming, and harassment-free experience for everyone. \n\nExpected Behaviour \nWe aim to create an inclusive learning environment where:\n\npeople feel comfortable exploring ideas;\nasking questions is encouraged and welcomed;\nno question is considered “stupid”;\nparticipants assume competence in one another;\ncuriosity and genuine learning are celebrated.\n\nParticipants are expected to engage in respectful interaction throughout the workshop. We request that participants:\n\nare considerate in their speech and actions;\nactively acknowledge and respect others’ personal boundaries;\npractice empathy and active listening;\noffer constructive, kind feedback;\nseek to understand before being understood.\n\n\n\nParticipation Guidelines\n\nBe fully present during workshop sessions.\nAvoid working on unrelated projects during workshop time.\nRespect the workshop organizers’ and facilitators’ time and effort.\nContribute to a collaborative and supportive learning environment.\n\n\n\nUnacceptable Behavior\nThe following behaviors are not tolerated:\n\ncombative or argumentative conduct;\nveiled criticisms disguised as questions (e.g., “Have you thought about…”);\ninterrupting or talking over others;\ndismissive or condescending remarks;\nany form of harassment, including: discriminatory language or jokes; unwelcome sexual advances; intimidation or bullying; and offensive comments related to gender, sexual orientation, race, religion, disability, or age.\n\nBy participating in this workshop, you agree to uphold these principles and contribute to a positive and supportive learning environment. \n\n\nReporting Guidelines \nThe Code of Conduct Committee includes Melissa Penny, Chitra M Saraswati, and #TODO XXX. \nIf you witness or experience inappropriate behaviour, or have any other concerns, please alert a member of the Code of Conduct Committee immediately. Even if an incident seems minor, reporting helps maintain a safe environment for everyone. \nViolation of the Code of Conduct will result in a verbal warning, asking a participant to leave a session, or removal from the entire workshop. \n\n\nAcknowledgment \nThis Code of Conduct was built from the rOpenSci Code of Conduct and WOMBAT 2024 Code of Conduct.",
+    "crumbs": [
+      "Code of Conduct"
     ]
   }
 ]
