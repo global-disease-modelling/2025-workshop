@@ -240,7 +240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ssh.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Understanding SSH keys</span></a>
+ <span class="menu-text">Remote logins and SSH</span></a>
   </div>
 </li>
       </ul>
@@ -606,8 +606,7 @@ drwxrwxr-x 10 acavelan pawsey1104 4096 Aug 18  2023 SHAPEFILES</code></pre>
 <p>Let’s run <code>chmod</code> again to give the group write permission but not execution; and everyone else no permission to read, write, or execute:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> chmod g=rw launch.R</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> chmod o=--- launch.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>#| code-block-bg: #f8f9fa
--rwxrw---- 1 chitrams pawsey1104 15784 Nov 15 13:45 launch.R</code></pre>
+<pre><code>-rwxrw---- 1 chitrams pawsey1104 15784 Nov 15 13:45 launch.R</code></pre>
 
 
 </section>
