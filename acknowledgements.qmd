@@ -11,3 +11,5 @@ We pay our respects to Elders past, present, and future and seek their wisdom in
 ### Course preparation
 
 ### Course material
+
+-   The instruction material "Unix Shell" is derived from work that is Copyright © The Carpentries (<https://carpentries.org/>) made available under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).

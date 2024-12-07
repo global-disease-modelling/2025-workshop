@@ -27,7 +27,6 @@ website:
           - collaborative-git.qmd
           - supercomputing.qmd
           - pawsey.qmd
-          - command-line.qmd
           - best-practice-programming.qmd
       - section: "Appendices"
         contents:

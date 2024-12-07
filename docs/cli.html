@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The command line interface – GDM 2025 Workshop</title>
+<title>The Unix shell – GDM 2025 Workshop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -82,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">The command line interface</h1>
+          <h1 class="quarto-secondary-nav-title">The Unix shell</h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -165,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cli.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">The command line interface</span></a>
+ <span class="menu-text">The Unix shell</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -184,12 +218,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./pawsey.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pawsey</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./command-line.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Command line</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -228,15 +256,36 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introducing-the-shell" id="toc-introducing-the-shell" class="nav-link active" data-scroll-target="#introducing-the-shell">Introducing the Shell</a>
+  <ul class="collapse">
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#the-shell" id="toc-the-shell" class="nav-link" data-scroll-target="#the-shell">The Shell</a></li>
+  </ul></li>
+  <li><a href="#useful-shortcuts" id="toc-useful-shortcuts" class="nav-link" data-scroll-target="#useful-shortcuts">Useful shortcuts</a></li>
+  <li><a href="#files-and-directories" id="toc-files-and-directories" class="nav-link" data-scroll-target="#files-and-directories">Files and directories</a>
+  <ul class="collapse">
+  <li><a href="#useful-commands" id="toc-useful-commands" class="nav-link" data-scroll-target="#useful-commands">Useful commands</a></li>
+  <li><a href="#understanding-files-and-directories" id="toc-understanding-files-and-directories" class="nav-link" data-scroll-target="#understanding-files-and-directories">Understanding files and directories</a></li>
+  </ul></li>
+  <li><a href="#scripts" id="toc-scripts" class="nav-link" data-scroll-target="#scripts">Scripts</a>
+  <ul class="collapse">
+  <li><a href="#useful-commands-1" id="toc-useful-commands-1" class="nav-link" data-scroll-target="#useful-commands-1">Useful commands</a></li>
+  </ul></li>
+  <li><a href="#finding-things" id="toc-finding-things" class="nav-link" data-scroll-target="#finding-things">Finding things</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">The command line interface</h1>
+<h1 class="title d-none d-lg-block">The Unix shell</h1>
 </div>
 
 
@@ -253,8 +302,201 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>The shell is a program that enables us to send commands to the computer and receive output. It is also referred to as the terminal or command line. Use of the shell is fundamental to a wide range of advanced computing tasks, including high-performance computing. This section will introduce you to this powerful tool.</p>
+<p>First, open a terminal. If you’re not sure how to open a terminal on your operating system (OS), see the instructions in the box “Shells for various OS” below.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Shells for various OS">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Shells for various OS
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<section id="macos" class="level5">
+<h5 class="anchored" data-anchor-id="macos">MacOS</h5>
+<p>For a Mac computer running macOS Mojave or earlier releases, the default Unix Shell is Bash. For a Mac computer running macOS Catalina or later releases, the default Unix Shell is Zsh. Your default shell is available via the Terminal program within your Utilities folder.</p>
+<p>To open Terminal, try one or both of the following:</p>
+<ul>
+<li>In Finder, select the Go menu, then select Utilities. Locate Terminal in the Utilities folder and open it.</li>
+<li>Use the Mac ‘Spotlight’ computer search function. Search for ‘Terminal’ and press Return.</li>
+</ul>
+<p>To check if your machine is set up to use something other than Bash, type <code>echo $SHELL</code> in your terminal window.</p>
+<p>See <a href="https://www.macworld.com/article/671618/how-to-use-terminal-on-mac.html">this article on Macworld</a> for how to use Terminal on Mac.</p>
+</section>
+<section id="linux" class="level5">
+<h5 class="anchored" data-anchor-id="linux">Linux</h5>
+<p>The default Unix Shell for Linux operating systems is usually Bash.</p>
+</section>
+<section id="windows" class="level5">
+<h5 class="anchored" data-anchor-id="windows">Windows</h5>
+<p>Computers with Windows operating systems do not automatically have a Unix Shell program installed. In this lesson, we encourage you to use an emulator included in <a href="https://carpentries.github.io/workshop-template/install_instructions/#shell">Git for Windows</a>, which gives you access to both Bash shell commands and Git.</p>
+<p>Once installed, you can open a terminal by running the program Git Bash from the Windows start menu.</p>
+<p>As an alternative to Git for Windows you may wish to <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Install the Windows Subsystem for Linux</a> which gives access to a Bash shell command-line tool in Windows 10 and above.</p>
+</section>
+</div>
+</div>
+</div>
+<section id="introducing-the-shell" class="level2">
+<h2 class="anchored" data-anchor-id="introducing-the-shell">Introducing the Shell</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Overview">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Overview
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>What is a command shell?</li>
+<li>Why would I use one?</li>
+</ul>
+</div>
+</div>
+<section id="background" class="level3">
+<h3 class="anchored" data-anchor-id="background">Background</h3>
+<p>Humans and computers commonly interact in many different ways, such as through a keyboard and mouse, touch screen interfaces, or using speech recognition systems. The most widely used way to interact with personal computers is called a <strong>graphical user interface</strong> (GUI). With a GUI, we give instructions by clicking a mouse and using menu-driven interactions.</p>
+<p>While the visual aid of a GUI makes it intuitive to learn, this way of delivering instructions to a computer scales very poorly. Imagine the following task: for a literature search, you have to copy the third line of one thousand text files in one thousand different directories and paste it into a single file. Using a GUI, you would not only be clicking at your desk for several hours, but you could potentially also commit an error in the process of completing this repetitive task. This is where we take advantage of the Unix shell. The Unix shell is both a <strong>command-line interface</strong> (CLI) and a scripting language, allowing such repetitive tasks to be done automatically and fast. With the proper commands, the shell can repeat tasks with or without some modification as many times as we want. Using the shell, the task in the literature example can be accomplished in seconds.</p>
+</section>
+<section id="the-shell" class="level3">
+<h3 class="anchored" data-anchor-id="the-shell">The Shell</h3>
+<p>The shell is a program where users can type commands. With the shell, it’s possible to invoke complicated programs like climate modeling software or simple commands that create an empty directory with only one line of code. The most popular Unix shell is Bash (the Bourne Again SHell — so-called because it’s derived from a shell written by Stephen Bourne). Bash is the default shell on most modern implementations of Unix and in most packages that provide Unix-like tools for Windows. Note that ‘Git Bash’ is a piece of software that enables Windows users to use a Bash like interface when interacting with Git.</p>
+<p>Using the shell will take some effort and some time to learn. While a GUI presents you with choices to select, CLI choices are not automatically presented to you, so you must learn a few commands like new vocabulary in a language you’re studying. However, unlike a spoken language, a small number of “words” (i.e.&nbsp;commands) gets you a long way, and we’ll cover those essential few today.</p>
+<p>The grammar of a shell allows you to combine existing tools into powerful pipelines and handle large volumes of data automatically. Sequences of commands can be written into a <em>script</em>, improving the reproducibility of workflows.</p>
+<p>In addition, the command line is often the easiest way to interact with remote machines and supercomputers. Familiarity with the shell is near essential to run a variety of specialized tools and resources including high-performance computing systems. As clusters and cloud computing systems become more popular for scientific data crunching, being able to interact with the shell is becoming a necessary skill. We can build on the command-line skills covered here to tackle a wide range of scientific questions and computational challenges.</p>
+</section>
+</section>
+<section id="useful-shortcuts" class="level2">
+<h2 class="anchored" data-anchor-id="useful-shortcuts">Useful shortcuts</h2>
+<ul>
+<li>Press <code>Tab</code> to auto-complete names (such as files, folders, or programs) in your current directory.</li>
+<li>Pressing <code>Ctrl</code> + <code>c</code> cancels what you’ve written or terminates a process that’s currently running</li>
+<li>Changing directories using <code>cd</code>:
+<ul>
+<li>Typing <code>cd ~</code> takes you to your home directory</li>
+<li>Typing <code>cd -</code> takes you to the last directory you were in, which is especially useful if you’re switching back and forth between two directories</li>
+</ul></li>
+<li>Pressing the up arrow (<code>↑</code>) gives you the previous command you entered</li>
+<li>Pressing <code>Ctrl</code> + <code>r</code> searches through your command line history</li>
+</ul>
+</section>
+<section id="files-and-directories" class="level2">
+<h2 class="anchored" data-anchor-id="files-and-directories">Files and directories</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Overview">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Overview
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>How can I move around on my computer?</li>
+<li>How can I see what files and directories I have?</li>
+<li>How can I specify the location of a file or directory on my computer?</li>
+</ul>
+</div>
+</div>
+<section id="useful-commands" class="level3">
+<h3 class="anchored" data-anchor-id="useful-commands">Useful commands</h3>
+<ul>
+<li><code>cd &lt;path&gt;</code> changes the current working directory.</li>
+<li><code>ls &lt;path&gt;</code> prints a listing of a specific file or directory; <code>ls</code> on its own lists the current working directory.</li>
+<li><code>pwd</code> prints the user’s current working directory.</li>
+<li><code>cp &lt;old-path&gt; &lt;new-path&gt;</code> copies a file.</li>
+<li><code>mkdir &lt;path&gt;</code> creates a new directory.</li>
+<li><code>mv &lt;old&gt; &lt;new&gt;</code> moves (renames) a file or directory.</li>
+<li><code>rm &lt;path&gt;</code> removes (deletes) a file.</li>
+</ul>
+</section>
+<section id="understanding-files-and-directories" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-files-and-directories">Understanding files and directories</h3>
+<p>To navigate files and directories:</p>
+<ul>
+<li>The file system is responsible for managing information on the disk.</li>
+<li>Information is stored in files, which are stored in directories (folders).</li>
+<li>Directories can also store other directories, which forms a directory tree.</li>
+<li>A relative path specifies a location starting from the current location.</li>
+<li>An absolute path specifies a location from the root of the file system.</li>
+<li>Directory names in a path are separated with <code>/</code> on Unix, but <code>\</code> on Windows.</li>
+<li><code>/</code> on its own is the root directory of the whole file system.</li>
+<li><code>..</code> means ‘the directory above the current one’; <code>.</code> on its own means ‘the current directory’.</li>
+</ul>
+<p>Working with files and directories:</p>
+<ul>
+<li>The shell does not have a trash bin: once something is deleted, it’s really gone.</li>
+<li>Most files’ names are <code>something.extension</code>. The extension isn’t required, and doesn’t guarantee anything, but is normally used to indicate the type of data in the file.</li>
+</ul>
+</section>
+</section>
+<section id="scripts" class="level2">
+<h2 class="anchored" data-anchor-id="scripts">Scripts</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Overview">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Overview
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>How can I save and reuse commands using bash?</li>
+</ul>
+</div>
+</div>
+<p>To use Pawsey supercomputers, you will need to create <strong>batch job scripts</strong> (also called job scripts or batch scripts) to run your code. For historical reasons, a bunch of commands saved in a file is usually called ascript, but make no mistake: these are actually small programs. Not only will writing scripts make your work faster, but you also won’t have to retype the same commands over and over again. It will also make it more accurate (fewer chances for typos) and more reproducible. If you come back to your work later (or if someone else finds your work and wants to build on it), you will be able to reproduce the same results simply by running your script, rather than having to remember or retype a long list of commands.</p>
+<section id="useful-commands-1" class="level3">
+<h3 class="anchored" data-anchor-id="useful-commands-1">Useful commands</h3>
+<ul>
+<li><code>bash &lt;filename&gt;</code> runs the commands saved in a file.</li>
+<li><code>$@</code> refers to all of a shell script’s command-line arguments.</li>
+<li><code>$1</code>, <code>$2</code>, etc., refer to the first command-line argument, the second command-line argument, etc.</li>
+</ul>
+</section>
+</section>
+<section id="finding-things" class="level2">
+<h2 class="anchored" data-anchor-id="finding-things">Finding things</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Overview">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Overview
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>How can I find files?</li>
+<li>How can I find things in files?</li>
+</ul>
+</div>
+</div>
+<ul>
+<li><code>find</code> finds files with specific properties that match patterns.</li>
+<li><code>grep</code> selects lines in files that match patterns.</li>
+<li><code>--help</code> is an option supported by many bash commands, and programs that can be run from within Bash, to display more information on how to use these commands or programs.</li>
+<li><code>man &lt;command&gt;</code> displays the manual page for a given command.</li>
+<li><code>$(&lt;command&gt;)</code> inserts a command’s output in place.</li>
+</ul>
+<p>Here is an example of how you would combine the above commands.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">"searching"</span> <span class="va">$(</span><span class="fu">find</span> . <span class="at">-name</span> <span class="st">"*.txt"</span><span class="va">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The first (<code>grep</code>) finds files that match a pattern; the second (<code>find</code>) looks for lines inside those files that match another pattern. Here, for example, we can find txt files that contain the word “searching” by looking for the string ‘searching’ in all the <code>.txt</code> files in the current directory.</p>
+<p>Here is what the output would look like:</p>
+<pre><code>./writing/LittleWomen.txt:sitting on the top step, affected to be searching for her book, but was
+./writing/haiku.txt:With searching comes loss</code></pre>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

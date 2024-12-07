@@ -1,4 +1,145 @@
 ---
-title: The command line interface
+title: The Unix shell
 ---
 
+The shell is a program that enables us to send commands to the computer and receive output. It is also referred to as the terminal or command line. Use of the shell is fundamental to a wide range of advanced computing tasks, including high-performance computing. This section will introduce you to this powerful tool.
+
+First, open a terminal. If you're not sure how to open a terminal on your operating system (OS), see the instructions in the box "Shells for various OS" below.
+
+::: {.callout-note title="Shells for various OS" collapse="true"}
+##### MacOS
+
+For a Mac computer running macOS Mojave or earlier releases, the default Unix Shell is Bash. For a Mac computer running macOS Catalina or later releases, the default Unix Shell is Zsh. Your default shell is available via the Terminal program within your Utilities folder.
+
+To open Terminal, try one or both of the following:
+
+-   In Finder, select the Go menu, then select Utilities. Locate Terminal in the Utilities folder and open it.
+-   Use the Mac ‘Spotlight’ computer search function. Search for 'Terminal' and press Return.
+
+To check if your machine is set up to use something other than Bash, type `echo $SHELL` in your terminal window.
+
+See [this article on Macworld](https://www.macworld.com/article/671618/how-to-use-terminal-on-mac.html) for how to use Terminal on Mac.
+
+##### Linux
+
+The default Unix Shell for Linux operating systems is usually Bash.
+
+##### Windows
+
+Computers with Windows operating systems do not automatically have a Unix Shell program installed. In this lesson, we encourage you to use an emulator included in [Git for Windows](https://carpentries.github.io/workshop-template/install_instructions/#shell), which gives you access to both Bash shell commands and Git.
+
+Once installed, you can open a terminal by running the program Git Bash from the Windows start menu.
+
+As an alternative to Git for Windows you may wish to [Install the Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) which gives access to a Bash shell command-line tool in Windows 10 and above.
+:::
+
+## Introducing the Shell
+
+::: {.callout-note title="Overview" icon="false"}
+-   What is a command shell?
+-   Why would I use one?
+:::
+
+### Background
+
+Humans and computers commonly interact in many different ways, such as through a keyboard and mouse, touch screen interfaces, or using speech recognition systems. The most widely used way to interact with personal computers is called a **graphical user interface** (GUI). With a GUI, we give instructions by clicking a mouse and using menu-driven interactions.
+
+While the visual aid of a GUI makes it intuitive to learn, this way of delivering instructions to a computer scales very poorly. Imagine the following task: for a literature search, you have to copy the third line of one thousand text files in one thousand different directories and paste it into a single file. Using a GUI, you would not only be clicking at your desk for several hours, but you could potentially also commit an error in the process of completing this repetitive task. This is where we take advantage of the Unix shell. The Unix shell is both a **command-line interface** (CLI) and a scripting language, allowing such repetitive tasks to be done automatically and fast. With the proper commands, the shell can repeat tasks with or without some modification as many times as we want. Using the shell, the task in the literature example can be accomplished in seconds.
+
+### The Shell
+
+The shell is a program where users can type commands. With the shell, it’s possible to invoke complicated programs like climate modeling software or simple commands that create an empty directory with only one line of code. The most popular Unix shell is Bash (the Bourne Again SHell — so-called because it’s derived from a shell written by Stephen Bourne). Bash is the default shell on most modern implementations of Unix and in most packages that provide Unix-like tools for Windows. Note that ‘Git Bash’ is a piece of software that enables Windows users to use a Bash like interface when interacting with Git.
+
+Using the shell will take some effort and some time to learn. While a GUI presents you with choices to select, CLI choices are not automatically presented to you, so you must learn a few commands like new vocabulary in a language you’re studying. However, unlike a spoken language, a small number of “words” (i.e. commands) gets you a long way, and we’ll cover those essential few today.
+
+The grammar of a shell allows you to combine existing tools into powerful pipelines and handle large volumes of data automatically. Sequences of commands can be written into a *script*, improving the reproducibility of workflows.
+
+In addition, the command line is often the easiest way to interact with remote machines and supercomputers. Familiarity with the shell is near essential to run a variety of specialized tools and resources including high-performance computing systems. As clusters and cloud computing systems become more popular for scientific data crunching, being able to interact with the shell is becoming a necessary skill. We can build on the command-line skills covered here to tackle a wide range of scientific questions and computational challenges.
+
+## Useful shortcuts
+
+-   Press `Tab` to auto-complete names (such as files, folders, or programs) in your current directory.
+-   Pressing `Ctrl` + `c` cancels what you've written or terminates a process that's currently running
+-   Changing directories using `cd`:
+    -   Typing `cd ~` takes you to your home directory
+    -   Typing `cd -` takes you to the last directory you were in, which is especially useful if you're switching back and forth between two directories
+-   Pressing the up arrow (`↑`) gives you the previous command you entered
+-   Pressing `Ctrl` + `r` searches through your command line history
+
+## Files and directories
+
+::: {.callout-note title="Overview" icon="false"}
+-   How can I move around on my computer?
+-   How can I see what files and directories I have?
+-   How can I specify the location of a file or directory on my computer?
+:::
+
+### Useful commands
+
+-   `cd <path>` changes the current working directory.
+-   `ls <path>` prints a listing of a specific file or directory; `ls` on its own lists the current working directory.
+-   `pwd` prints the user’s current working directory.
+-   `cp <old-path> <new-path>` copies a file.
+-   `mkdir <path>` creates a new directory.
+-   `mv <old> <new>` moves (renames) a file or directory.
+-   `rm <path>` removes (deletes) a file.
+
+### Understanding files and directories
+
+To navigate files and directories:
+
+-   The file system is responsible for managing information on the disk.
+-   Information is stored in files, which are stored in directories (folders).
+-   Directories can also store other directories, which forms a directory tree.
+-   A relative path specifies a location starting from the current location.
+-   An absolute path specifies a location from the root of the file system.
+-   Directory names in a path are separated with `/` on Unix, but `\` on Windows.
+-   `/` on its own is the root directory of the whole file system.
+-   `..` means ‘the directory above the current one’; `.` on its own means ‘the current directory’.
+
+Working with files and directories:
+
+-   The shell does not have a trash bin: once something is deleted, it’s really gone.
+-   Most files’ names are `something.extension`. The extension isn’t required, and doesn’t guarantee anything, but is normally used to indicate the type of data in the file.
+
+## Scripts
+
+::: {.callout-note title="Overview" icon="false"}
+-   How can I save and reuse commands using bash?
+:::
+
+To use Pawsey supercomputers, you will need to create **batch job scripts** (also called job scripts or batch scripts) to run your code. For historical reasons, a bunch of commands saved in a file is usually called ascript, but make no mistake: these are actually small programs. Not only will writing scripts make your work faster, but you also won’t have to retype the same commands over and over again. It will also make it more accurate (fewer chances for typos) and more reproducible. If you come back to your work later (or if someone else finds your work and wants to build on it), you will be able to reproduce the same results simply by running your script, rather than having to remember or retype a long list of commands.
+
+### Useful commands
+
+-   `bash <filename>` runs the commands saved in a file.
+-   `$@` refers to all of a shell script’s command-line arguments.
+-   `$1`, `$2`, etc., refer to the first command-line argument, the second command-line argument, etc.
+
+## Finding things
+
+::: {.callout-note title="Overview" icon="false"}
+-   How can I find files?
+-   How can I find things in files?
+:::
+
+-   `find` finds files with specific properties that match patterns.
+-   `grep` selects lines in files that match patterns.
+-   `--help` is an option supported by many bash commands, and programs that can be run from within Bash, to display more information on how to use these commands or programs.
+-   `man <command>` displays the manual page for a given command.
+-   `$(<command>)` inserts a command’s output in place.
+
+Here is an example of how you would combine the above commands.
+
+``` bash
+$ grep "searching" $(find . -name "*.txt")
+```
+
+The first (`grep`) finds files that match a pattern; the second (`find`) looks for lines inside those files that match another pattern. Here, for example, we can find txt files that contain the word “searching” by looking for the string ‘searching’ in all the `.txt` files in the current directory.
+
+Here is what the output would look like:
+
+```         
+./writing/LittleWomen.txt:sitting on the top step, affected to be searching for her book, but was
+./writing/haiku.txt:With searching comes loss
+```
