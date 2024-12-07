@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./acknowledgements.html" rel="next">
-<link href="./best-practice-programming.html" rel="prev">
+<link href="./collaborative-git.html" rel="next">
+<link href="./unix-shell.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -204,6 +204,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./ssh.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Remote logins and SSH</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./collaborative-git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Collaborative Git</span></a>
   </div>
@@ -228,23 +234,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ssh.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Remote logins and SSH</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link">
@@ -263,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background"><span class="header-section-number">1</span> Background</a></li>
   <li><a href="#logging-in-using-ssh" id="toc-logging-in-using-ssh" class="nav-link" data-scroll-target="#logging-in-using-ssh"><span class="header-section-number">2</span> Logging in using <code>ssh</code></a></li>
-  <li><a href="#transferring-files-to-and-from-pawsey" id="toc-transferring-files-to-and-from-pawsey" class="nav-link" data-scroll-target="#transferring-files-to-and-from-pawsey"><span class="header-section-number">3</span> Transferring files to and from Pawsey</a>
+  <li><a href="#secure-file-transfers" id="toc-secure-file-transfers" class="nav-link" data-scroll-target="#secure-file-transfers"><span class="header-section-number">3</span> Secure file transfers</a>
   <ul class="collapse">
   <li><a href="#scp" id="toc-scp" class="nav-link" data-scroll-target="#scp"><span class="header-section-number">3.1</span> <code>scp</code></a></li>
   <li><a href="#sftp" id="toc-sftp" class="nav-link" data-scroll-target="#sftp"><span class="header-section-number">3.2</span> <code>sftp</code></a></li>
@@ -350,8 +339,8 @@ Answer
 <p>After we log in, we can use the remote shell to use the remote computer’s files and directories.</p>
 <p>Typing <code>exit</code> terminates the remote shell (and the local client program on that remote shell) and returns us to our previous shell.</p>
 </section>
-<section id="transferring-files-to-and-from-pawsey" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="transferring-files-to-and-from-pawsey"><span class="header-section-number">3</span> Transferring files to and from Pawsey</h2>
+<section id="secure-file-transfers" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="secure-file-transfers"><span class="header-section-number">3</span> Secure file transfers</h2>
 <p>The <code>ssh</code> login client has companion programs called <code>scp</code> (think (<code>s</code>)ecure <code>cp</code>) and <code>sftp</code> (short for Secure File Transfer Protocol) which allows us to copy files to or from a remote computer using the same kind of encrypted connection as SSH.</p>
 <p>Command line clients such as <code>scp</code> and <code>sftp</code> are a convenient way of moving data between computers. Alternatively, you could use GUI clients such as Filezilla, Cyberduck, or WinSCP.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Use SSH keys!">
@@ -417,7 +406,7 @@ Authentication
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>We do not recommend saving your password within the GUI client, use SSH keys instead. See <a href="#sec-sshkeys" class="quarto-xref">Section&nbsp;4</a> for information on SSH keys.</p>
+<p>Saving your password within the GUI client is not recommended. Instead, use SSH keys. See <a href="#sec-sshkeys" class="quarto-xref">Section&nbsp;4</a> for information on SSH keys.</p>
 </div>
 </div>
 </section>
@@ -425,7 +414,7 @@ Authentication
 <section id="sec-sshkeys" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="sec-sshkeys"><span class="header-section-number">4</span> SSH keys</h2>
 <p>Typing our password over and over again is annoying, especially if the commands we want to run remotely are in a loop. To remove the need to do this, we can create an SSH key to tell the remote machine that it should always trust us.</p>
-<p>SSH keys come in pairs, a public key that gets shared with services like GitHub, and a private key that is stored only on your computer. If the keys match, you’re granted access. The cryptography behind SSH keys ensures that no one can reverse engineer your private key from the public one.</p>
+<p>SSH keys come in pairs: a public key that gets shared with services like GitHub, and a private key that is stored only on your computer. If the keys match, you’re granted access. The cryptography behind SSH keys ensures that no one can reverse engineer your private key from the public one.</p>
 <p>The first step in using SSH authorization is to generate your own key pair. You might already have an SSH key pair on your machine. You can check to see if one exists by moving to your <code>.ssh</code> directory and listing the contents.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/.ssh</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -865,13 +854,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./best-practice-programming.html" class="pagination-link" aria-label="Best practices for programming">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Best practices for programming</span>
+      <a href="./unix-shell.html" class="pagination-link" aria-label="The Unix shell">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The Unix shell</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./acknowledgements.html" class="pagination-link" aria-label="Acknowledgements">
-        <span class="nav-page-text">Acknowledgements</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./collaborative-git.html" class="pagination-link" aria-label="Collaborative Git">
+        <span class="nav-page-text">Collaborative Git</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

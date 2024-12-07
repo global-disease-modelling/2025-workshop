@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./command-line.html" rel="next">
+<link href="./best-practice-programming.html" rel="next">
 <link href="./supercomputing.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -164,6 +198,18 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./unix-shell.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Unix shell</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ssh.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Remote logins and SSH</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./collaborative-git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Collaborative Git</span></a>
   </div>
@@ -182,31 +228,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./command-line.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Command line</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./best-practice-programming.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Best practices for programming</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ssh.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Understanding SSH keys</span></a>
   </div>
 </li>
       </ul>
@@ -222,8 +245,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#logging-in-using-ssh" id="toc-logging-in-using-ssh" class="nav-link active" data-scroll-target="#logging-in-using-ssh"><span class="header-section-number">1</span> Logging in using <code>ssh</code></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -255,8 +284,50 @@ ul.task-list li input[type="checkbox"] {
 <li>Singularity (containers)</li>
 <li>Submitting and monitoring jobs</li>
 </ul>
+<section id="logging-in-using-ssh" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="logging-in-using-ssh"><span class="header-section-number">1</span> Logging in using <code>ssh</code></h2>
+<p>To make a remote login, we issue the command <code>ssh &lt;username&gt;@&lt;computer&gt;</code> which tries to make a connection to the SSH daemon running on the remote computer we have specified. For Chitra to access the Setonix computer on Pawsey, she logs in using <code>ssh chitrams@setonix.pawsey.org.au</code>.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Test your understanding">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Test your understanding
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>What happens if Chitra has already been allocated a node named <code>nid09310</code> that she would like to directly log in to?</li>
+<li>What happens if Chitra wants to access the data mover nodes on Pawsey, which has the hostname <code>data-mover.pawsey.org.au</code>?</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>For the first instance, Chitra would log in with the following command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> chitrams@nid09310.pawsey.org.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For the second, Chitra would log in with the following command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sftp</span> chitrams@data-mover.pawseyl.org.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>where <code>sftp</code> is another companion program for <code>ssh</code>, the Secure File Transfer Protocol. We talk about this in a subsequent section.</p>
+</div>
+</div>
+</div>
+<p>After we log in, we can use the remote shell to use the remote computer’s files and directories.</p>
+<p>Typing <code>exit</code> terminates the remote shell (and the local client program on that remote shell) and returns us to our previous shell.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -686,8 +757,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./command-line.html" class="pagination-link" aria-label="Command line">
-        <span class="nav-page-text">Command line</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./best-practice-programming.html" class="pagination-link" aria-label="Best practices for programming">
+        <span class="nav-page-text">Best practices for programming</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

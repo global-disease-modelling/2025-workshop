@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./collaborative-git.html" rel="next">
+<link href="./ssh.html" rel="next">
 <link href="./getting-started.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -204,6 +204,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./ssh.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Remote logins and SSH</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./collaborative-git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Collaborative Git</span></a>
   </div>
@@ -228,23 +234,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ssh.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Remote logins and SSH</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link">
@@ -261,23 +250,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introducing-the-shell" id="toc-introducing-the-shell" class="nav-link active" data-scroll-target="#introducing-the-shell">Introducing the Shell</a>
+  <li><a href="#introducing-the-shell" id="toc-introducing-the-shell" class="nav-link active" data-scroll-target="#introducing-the-shell"><span class="header-section-number">1</span> Introducing the Shell</a>
   <ul class="collapse">
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  <li><a href="#the-shell" id="toc-the-shell" class="nav-link" data-scroll-target="#the-shell">The Shell</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background"><span class="header-section-number">1.1</span> Background</a></li>
+  <li><a href="#the-shell" id="toc-the-shell" class="nav-link" data-scroll-target="#the-shell"><span class="header-section-number">1.2</span> The Shell</a></li>
   </ul></li>
-  <li><a href="#useful-shortcuts" id="toc-useful-shortcuts" class="nav-link" data-scroll-target="#useful-shortcuts">Useful shortcuts</a></li>
-  <li><a href="#files-and-directories" id="toc-files-and-directories" class="nav-link" data-scroll-target="#files-and-directories">Files and directories</a>
+  <li><a href="#useful-shortcuts" id="toc-useful-shortcuts" class="nav-link" data-scroll-target="#useful-shortcuts"><span class="header-section-number">2</span> Useful shortcuts</a></li>
+  <li><a href="#files-and-directories" id="toc-files-and-directories" class="nav-link" data-scroll-target="#files-and-directories"><span class="header-section-number">3</span> Files and directories</a>
   <ul class="collapse">
-  <li><a href="#useful-commands" id="toc-useful-commands" class="nav-link" data-scroll-target="#useful-commands">Useful commands</a></li>
-  <li><a href="#understanding-files-and-directories" id="toc-understanding-files-and-directories" class="nav-link" data-scroll-target="#understanding-files-and-directories">Understanding files and directories</a></li>
+  <li><a href="#useful-commands" id="toc-useful-commands" class="nav-link" data-scroll-target="#useful-commands"><span class="header-section-number">3.1</span> Useful commands</a></li>
+  <li><a href="#understanding-files-and-directories" id="toc-understanding-files-and-directories" class="nav-link" data-scroll-target="#understanding-files-and-directories"><span class="header-section-number">3.2</span> Understanding files and directories</a></li>
   </ul></li>
-  <li><a href="#scripts" id="toc-scripts" class="nav-link" data-scroll-target="#scripts">Scripts</a>
+  <li><a href="#scripts" id="toc-scripts" class="nav-link" data-scroll-target="#scripts"><span class="header-section-number">4</span> Scripts</a>
   <ul class="collapse">
-  <li><a href="#useful-commands-1" id="toc-useful-commands-1" class="nav-link" data-scroll-target="#useful-commands-1">Useful commands</a></li>
+  <li><a href="#useful-commands-1" id="toc-useful-commands-1" class="nav-link" data-scroll-target="#useful-commands-1"><span class="header-section-number">4.1</span> Useful commands</a></li>
   </ul></li>
-  <li><a href="#finding-things" id="toc-finding-things" class="nav-link" data-scroll-target="#finding-things">Finding things</a></li>
-  <li><a href="#permissions-chmod" id="toc-permissions-chmod" class="nav-link" data-scroll-target="#permissions-chmod">Permissions (<code>chmod</code>)</a></li>
+  <li><a href="#finding-things" id="toc-finding-things" class="nav-link" data-scroll-target="#finding-things"><span class="header-section-number">5</span> Finding things</a></li>
+  <li><a href="#permissions-chmod" id="toc-permissions-chmod" class="nav-link" data-scroll-target="#permissions-chmod"><span class="header-section-number">6</span> Permissions (<code>chmod</code>)</a></li>
   </ul>
 </nav>
     </div>
@@ -317,8 +306,8 @@ Shells for various OS
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<section id="macos" class="level5">
-<h5 class="anchored" data-anchor-id="macos">MacOS</h5>
+<section id="macos" class="level5" data-number="0.0.0.1">
+<h5 data-number="0.0.0.1" class="anchored" data-anchor-id="macos"><span class="header-section-number">0.0.0.1</span> MacOS</h5>
 <p>For a Mac computer running macOS Mojave or earlier releases, the default Unix Shell is Bash. For a Mac computer running macOS Catalina or later releases, the default Unix Shell is Zsh. Your default shell is available via the Terminal program within your Utilities folder.</p>
 <p>To open Terminal, try one or both of the following:</p>
 <ul>
@@ -328,12 +317,12 @@ Shells for various OS
 <p>To check if your machine is set up to use something other than Bash, type <code>echo $SHELL</code> in your terminal window.</p>
 <p>See <a href="https://www.macworld.com/article/671618/how-to-use-terminal-on-mac.html">this article on Macworld</a> for how to use Terminal on Mac.</p>
 </section>
-<section id="linux" class="level5">
-<h5 class="anchored" data-anchor-id="linux">Linux</h5>
+<section id="linux" class="level5" data-number="0.0.0.2">
+<h5 data-number="0.0.0.2" class="anchored" data-anchor-id="linux"><span class="header-section-number">0.0.0.2</span> Linux</h5>
 <p>The default Unix Shell for Linux operating systems is usually Bash.</p>
 </section>
-<section id="windows" class="level5">
-<h5 class="anchored" data-anchor-id="windows">Windows</h5>
+<section id="windows" class="level5" data-number="0.0.0.3">
+<h5 data-number="0.0.0.3" class="anchored" data-anchor-id="windows"><span class="header-section-number">0.0.0.3</span> Windows</h5>
 <p>Computers with Windows operating systems do not automatically have a Unix Shell program installed. In this lesson, we encourage you to use an emulator included in <a href="https://carpentries.github.io/workshop-template/install_instructions/#shell">Git for Windows</a>, which gives you access to both Bash shell commands and Git.</p>
 <p>Once installed, you can open a terminal by running the program Git Bash from the Windows start menu.</p>
 <p>As an alternative to Git for Windows you may wish to <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Install the Windows Subsystem for Linux</a> which gives access to a Bash shell command-line tool in Windows 10 and above.</p>
@@ -341,8 +330,8 @@ Shells for various OS
 </div>
 </div>
 </div>
-<section id="introducing-the-shell" class="level2">
-<h2 class="anchored" data-anchor-id="introducing-the-shell">Introducing the Shell</h2>
+<section id="introducing-the-shell" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introducing-the-shell"><span class="header-section-number">1</span> Introducing the Shell</h2>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Overview">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -359,21 +348,21 @@ Overview
 </ul>
 </div>
 </div>
-<section id="background" class="level3">
-<h3 class="anchored" data-anchor-id="background">Background</h3>
+<section id="background" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="background"><span class="header-section-number">1.1</span> Background</h3>
 <p>Humans and computers commonly interact in many different ways, such as through a keyboard and mouse, touch screen interfaces, or using speech recognition systems. The most widely used way to interact with personal computers is called a <strong>graphical user interface</strong> (GUI). With a GUI, we give instructions by clicking a mouse and using menu-driven interactions.</p>
 <p>While the visual aid of a GUI makes it intuitive to learn, this way of delivering instructions to a computer scales very poorly. Imagine the following task: for a literature search, you have to copy the third line of one thousand text files in one thousand different directories and paste it into a single file. Using a GUI, you would not only be clicking at your desk for several hours, but you could potentially also commit an error in the process of completing this repetitive task. This is where we take advantage of the Unix shell. The Unix shell is both a <strong>command-line interface</strong> (CLI) and a scripting language, allowing such repetitive tasks to be done automatically and fast. With the proper commands, the shell can repeat tasks with or without some modification as many times as we want. Using the shell, the task in the literature example can be accomplished in seconds.</p>
 </section>
-<section id="the-shell" class="level3">
-<h3 class="anchored" data-anchor-id="the-shell">The Shell</h3>
+<section id="the-shell" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="the-shell"><span class="header-section-number">1.2</span> The Shell</h3>
 <p>The shell is a program where users can type commands. With the shell, it’s possible to invoke complicated programs like climate modeling software or simple commands that create an empty directory with only one line of code. The most popular Unix shell is Bash (the Bourne Again SHell — so-called because it’s derived from a shell written by Stephen Bourne). Bash is the default shell on most modern implementations of Unix and in most packages that provide Unix-like tools for Windows. Note that ‘Git Bash’ is a piece of software that enables Windows users to use a Bash like interface when interacting with Git.</p>
 <p>Using the shell will take some effort and some time to learn. While a GUI presents you with choices to select, CLI choices are not automatically presented to you, so you must learn a few commands like new vocabulary in a language you’re studying. However, unlike a spoken language, a small number of “words” (i.e.&nbsp;commands) gets you a long way, and we’ll cover those essential few today.</p>
 <p>The grammar of a shell allows you to combine existing tools into powerful pipelines and handle large volumes of data automatically. Sequences of commands can be written into a <em>script</em>, improving the reproducibility of workflows.</p>
 <p>In addition, the command line is often the easiest way to interact with remote machines and supercomputers. Familiarity with the shell is near essential to run a variety of specialized tools and resources including high-performance computing systems. As clusters and cloud computing systems become more popular for scientific data crunching, being able to interact with the shell is becoming a necessary skill. We can build on the command-line skills covered here to tackle a wide range of scientific questions and computational challenges.</p>
 </section>
 </section>
-<section id="useful-shortcuts" class="level2">
-<h2 class="anchored" data-anchor-id="useful-shortcuts">Useful shortcuts</h2>
+<section id="useful-shortcuts" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="useful-shortcuts"><span class="header-section-number">2</span> Useful shortcuts</h2>
 <ul>
 <li>Press <code>Tab</code> to auto-complete names (such as files, folders, or programs) in your current directory.</li>
 <li>Pressing <code>Ctrl</code> + <code>c</code> cancels what you’ve written or terminates a process that’s currently running</li>
@@ -386,8 +375,8 @@ Overview
 <li>Pressing <code>Ctrl</code> + <code>r</code> searches through your command line history</li>
 </ul>
 </section>
-<section id="files-and-directories" class="level2">
-<h2 class="anchored" data-anchor-id="files-and-directories">Files and directories</h2>
+<section id="files-and-directories" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="files-and-directories"><span class="header-section-number">3</span> Files and directories</h2>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Overview">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -405,8 +394,8 @@ Overview
 </ul>
 </div>
 </div>
-<section id="useful-commands" class="level3">
-<h3 class="anchored" data-anchor-id="useful-commands">Useful commands</h3>
+<section id="useful-commands" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="useful-commands"><span class="header-section-number">3.1</span> Useful commands</h3>
 <ul>
 <li><code>cd &lt;path&gt;</code> changes the current working directory.</li>
 <li><code>ls &lt;path&gt;</code> prints a listing of a specific file or directory; <code>ls</code> on its own lists the current working directory.</li>
@@ -417,8 +406,8 @@ Overview
 <li><code>rm &lt;path&gt;</code> removes (deletes) a file.</li>
 </ul>
 </section>
-<section id="understanding-files-and-directories" class="level3">
-<h3 class="anchored" data-anchor-id="understanding-files-and-directories">Understanding files and directories</h3>
+<section id="understanding-files-and-directories" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="understanding-files-and-directories"><span class="header-section-number">3.2</span> Understanding files and directories</h3>
 <p>To navigate files and directories:</p>
 <ul>
 <li>The file system is responsible for managing information on the disk.</li>
@@ -437,8 +426,8 @@ Overview
 </ul>
 </section>
 </section>
-<section id="scripts" class="level2">
-<h2 class="anchored" data-anchor-id="scripts">Scripts</h2>
+<section id="scripts" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="scripts"><span class="header-section-number">4</span> Scripts</h2>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Overview">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -455,8 +444,8 @@ Overview
 </div>
 </div>
 <p>To use Pawsey supercomputers, you will need to create <strong>batch job scripts</strong> (also called job scripts or batch scripts) to run your code. For historical reasons, a bunch of commands saved in a file is usually called ascript, but make no mistake: these are actually small programs. Not only will writing scripts make your work faster, but you also won’t have to retype the same commands over and over again. It will also make it more accurate (fewer chances for typos) and more reproducible. If you come back to your work later (or if someone else finds your work and wants to build on it), you will be able to reproduce the same results simply by running your script, rather than having to remember or retype a long list of commands.</p>
-<section id="useful-commands-1" class="level3">
-<h3 class="anchored" data-anchor-id="useful-commands-1">Useful commands</h3>
+<section id="useful-commands-1" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="useful-commands-1"><span class="header-section-number">4.1</span> Useful commands</h3>
 <ul>
 <li><code>bash &lt;filename&gt;</code> runs the commands saved in a file.</li>
 <li><code>$@</code> refers to all of a shell script’s command-line arguments.</li>
@@ -464,8 +453,8 @@ Overview
 </ul>
 </section>
 </section>
-<section id="finding-things" class="level2">
-<h2 class="anchored" data-anchor-id="finding-things">Finding things</h2>
+<section id="finding-things" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="finding-things"><span class="header-section-number">5</span> Finding things</h2>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Overview">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -497,8 +486,8 @@ Overview
 <pre><code>./writing/LittleWomen.txt:sitting on the top step, affected to be searching for her book, but was
 ./writing/haiku.txt:With searching comes loss</code></pre>
 </section>
-<section id="permissions-chmod" class="level2">
-<h2 class="anchored" data-anchor-id="permissions-chmod">Permissions (<code>chmod</code>)</h2>
+<section id="permissions-chmod" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="permissions-chmod"><span class="header-section-number">6</span> Permissions (<code>chmod</code>)</h2>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Overview">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1039,8 +1028,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./collaborative-git.html" class="pagination-link" aria-label="Collaborative Git">
-        <span class="nav-page-text">Collaborative Git</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ssh.html" class="pagination-link" aria-label="Remote logins and SSH">
+        <span class="nav-page-text">Remote logins and SSH</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
