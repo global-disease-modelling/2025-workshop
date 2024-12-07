@@ -9,7 +9,6 @@ website:
   
   sidebar:
     syle: "docked"
-    type: "dark"
     search: true
     title: "GDM 2025 Workshop"
     contents:
@@ -24,6 +23,7 @@ website:
       - section: "Resources"
         contents:
           - getting-started.qmd
+          - cli.qmd
           - collaborative-git.qmd
           - supercomputing.qmd
           - pawsey.qmd
