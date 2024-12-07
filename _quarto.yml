@@ -24,13 +24,11 @@ website:
         contents:
           - getting-started.qmd
           - unix-shell.qmd
+          - ssh.qmd
           - collaborative-git.qmd
           - supercomputing.qmd
           - pawsey.qmd
           - best-practice-programming.qmd
-      - section: "Appendices"
-        contents:
-          - ssh.qmd
       - acknowledgements.qmd
   
   # Footer options

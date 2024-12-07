@@ -48,7 +48,7 @@ After we log in, we can use the remote shell to use the remote computer’s file
 
 Typing `exit` terminates the remote shell (and the local client program on that remote shell) and returns us to our previous shell.
 
-## Transferring files to and from Pawsey
+## Secure file transfers
 
 The `ssh` login client has companion programs called `scp` (think (`s`)ecure `cp`) and `sftp` (short for Secure File Transfer Protocol) which allows us to copy files to or from a remote computer using the same kind of encrypted connection as SSH.
 
@@ -105,7 +105,7 @@ As for any software, be careful of not falling into "click tricks" that mislead 
 :::
 
 ::: {.callout-important title="Authentication"}
-We do not recommend saving your password within the GUI client, use SSH keys instead. See @sec-sshkeys for information on SSH keys.
+Saving your password within the GUI client is not recommended. Instead, use SSH keys. See @sec-sshkeys for information on SSH keys.
 :::
 
 ## SSH keys {#sec-sshkeys}

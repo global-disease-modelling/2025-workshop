@@ -3,6 +3,7 @@ title: The Unix shell
 execute: 
   eval: false
   code-overflow: wrap
+number-sections: true
 ---
 
 The shell is a program that enables us to send commands to the computer and receive output. It is also referred to as the terminal or command line. Use of the shell is fundamental to a wide range of advanced computing tasks, including high-performance computing. This section will introduce you to this powerful tool.
@@ -232,6 +233,6 @@ $ chmod g=rw launch.R
 $ chmod o=--- launch.R
 ```
 
-```
+```         
 -rwxrw---- 1 chitrams pawsey1104 15784 Nov 15 13:45 launch.R
 ```

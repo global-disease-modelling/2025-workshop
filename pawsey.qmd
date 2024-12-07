@@ -1,11 +1,40 @@
 ---
 title: Pawsey
+number-sections: true
 ---
 
-- Logging in
-- Security (SSH)
-- Moving data (SCP, SFTP, Rsync, and GUIs)
-- Finding and using available software
-- Singularity (containers)
-- Submitting and monitoring jobs
+-   Logging in
+-   Security (SSH)
+-   Moving data (SCP, SFTP, Rsync, and GUIs)
+-   Finding and using available software
+-   Singularity (containers)
+-   Submitting and monitoring jobs
 
+## Logging in using `ssh`
+
+To make a remote login, we issue the command `ssh <username>@<computer>` which tries to make a connection to the SSH daemon running on the remote computer we have specified. For Chitra to access the Setonix computer on Pawsey, she logs in using `ssh chitrams@setonix.pawsey.org.au`.
+
+::: {.callout-warning title="Test your understanding"}
+1.  What happens if Chitra has already been allocated a node named `nid09310` that she would like to directly log in to?
+2.  What happens if Chitra wants to access the data mover nodes on Pawsey, which has the hostname `data-mover.pawsey.org.au`?
+:::
+
+::: {.callout-note title="Answer" icon="false" collapse="true"}
+For the first instance, Chitra would log in with the following command:
+
+``` bash
+ssh chitrams@nid09310.pawsey.org.au
+```
+
+For the second, Chitra would log in with the following command:
+
+``` bash
+sftp chitrams@data-mover.pawseyl.org.au
+```
+
+where `sftp` is another companion program for `ssh`, the Secure File Transfer Protocol. We talk about this in a subsequent section.
+:::
+
+After we log in, we can use the remote shell to use the remote computer’s files and directories.
+
+Typing `exit` terminates the remote shell (and the local client program on that remote shell) and returns us to our previous shell.
