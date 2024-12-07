@@ -261,13 +261,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#logging-in-using-ssh" id="toc-logging-in-using-ssh" class="nav-link" data-scroll-target="#logging-in-using-ssh">Logging in using <code>ssh</code></a></li>
-  <li><a href="#transferring-files-to-and-from-pawsey" id="toc-transferring-files-to-and-from-pawsey" class="nav-link" data-scroll-target="#transferring-files-to-and-from-pawsey">Transferring files to and from Pawsey</a>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background"><span class="header-section-number">1</span> Background</a></li>
+  <li><a href="#logging-in-using-ssh" id="toc-logging-in-using-ssh" class="nav-link" data-scroll-target="#logging-in-using-ssh"><span class="header-section-number">2</span> Logging in using <code>ssh</code></a></li>
+  <li><a href="#transferring-files-to-and-from-pawsey" id="toc-transferring-files-to-and-from-pawsey" class="nav-link" data-scroll-target="#transferring-files-to-and-from-pawsey"><span class="header-section-number">3</span> Transferring files to and from Pawsey</a>
   <ul class="collapse">
-  <li><a href="#scp" id="toc-scp" class="nav-link" data-scroll-target="#scp"><code>scp</code></a></li>
-  <li><a href="#sftp" id="toc-sftp" class="nav-link" data-scroll-target="#sftp"><code>sftp</code></a></li>
-  <li><a href="#gui-clients-such-as-cyberduck" id="toc-gui-clients-such-as-cyberduck" class="nav-link" data-scroll-target="#gui-clients-such-as-cyberduck">GUI clients such as Cyberduck</a></li>
+  <li><a href="#scp" id="toc-scp" class="nav-link" data-scroll-target="#scp"><span class="header-section-number">3.1</span> <code>scp</code></a></li>
+  <li><a href="#sftp" id="toc-sftp" class="nav-link" data-scroll-target="#sftp"><span class="header-section-number">3.2</span> <code>sftp</code></a></li>
+  <li><a href="#gui-clients" id="toc-gui-clients" class="nav-link" data-scroll-target="#gui-clients"><span class="header-section-number">3.3</span> GUI clients</a></li>
+  </ul></li>
+  <li><a href="#sec-sshkeys" id="toc-sec-sshkeys" class="nav-link" data-scroll-target="#sec-sshkeys"><span class="header-section-number">4</span> SSH keys</a>
+  <ul class="collapse">
+  <li><a href="#generating-a-key-pair-for-github" id="toc-generating-a-key-pair-for-github" class="nav-link" data-scroll-target="#generating-a-key-pair-for-github"><span class="header-section-number">4.1</span> Generating a key pair for GitHub</a></li>
+  <li><a href="#generating-a-key-pair-for-pawsey" id="toc-generating-a-key-pair-for-pawsey" class="nav-link" data-scroll-target="#generating-a-key-pair-for-pawsey"><span class="header-section-number">4.2</span> Generating a key pair for Pawsey</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -297,14 +302,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>What happens when we want to run some commands on another machine, such as Pawsey’s Setonix? To do this, we have to first log in to that machine. We call this a remote login.</p>
 <p>In order for us to be able to login, the remote computer must be running a remote login server and we will run a client program that can talk to that server. The client program passes our login credentials to the remote login server and, if we are allowed to login, that server then runs a shell for us on the remote computer.</p>
 <p>Once our local client is connected to the remote server, everything we type into the client is passed on, by the server, to the shell running on the remote computer. That remote shell runs those commands on our behalf, just as a local shell would, then sends back output, via the server, to our client, for our computer to display.</p>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
+<section id="background" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="background"><span class="header-section-number">1</span> Background</h2>
 <p>Back in the day, when everyone trusted each other and knew every chip in their computer by its first name, people didn’t encrypt anything except the most sensitive information when sending it over a network and the two programs used for running a shell (usually back then, the Bourne Shell, <code>sh</code>) on, or copying files to, a remote machine were named <code>rsh</code> and <code>rcp</code>, respectively. Think (<code>r</code>)emote <code>sh</code> and <code>cp</code>.</p>
 <p>However, anyone could watch the unencrypted network traffic, which meant that villains could steal usernames and passwords. The <a href="https://carpentries-incubator.github.io/shell-extras/reference/#ssh-protocolhttps://www.ssh.com/academy/ssh/protocol">SSH protocol</a> was invented to prevent this (or at least slow it down). It uses several sophisticated, and heavily tested, encryption protocols to ensure that outsiders can’t see what’s in the messages going back and forth between different computers.</p>
 <p>The remote login server which accepts connections from client programs is known as the SSH daemon. The client program we use to login remotely is the <strong>secure shell</strong> or <strong>SSH</strong> (think (<code>s</code>)ecure <code>sh</code>).</p>
 </section>
-<section id="logging-in-using-ssh" class="level2">
-<h2 class="anchored" data-anchor-id="logging-in-using-ssh">Logging in using <code>ssh</code></h2>
+<section id="logging-in-using-ssh" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="logging-in-using-ssh"><span class="header-section-number">2</span> Logging in using <code>ssh</code></h2>
 <p>To make a remote login, we issue the command <code>ssh &lt;username&gt;@&lt;computer&gt;</code> which tries to make a connection to the SSH daemon running on the remote computer we have specified. For Chitra to access the Setonix computer on Pawsey, she logs in using <code>ssh chitrams@setonix.pawsey.org.au</code>.</p>
 <div class="callout callout-style-default callout-warning callout-titled" title="Test your understanding">
 <div class="callout-header d-flex align-content-center">
@@ -343,18 +348,95 @@ Answer
 </div>
 </div>
 <p>After we log in, we can use the remote shell to use the remote computer’s files and directories.</p>
-<p>Typing <code>exit</code> or Control-D terminates the remote shell–and the local client program on that remote shell–and returns us to our previous shell.</p>
+<p>Typing <code>exit</code> terminates the remote shell (and the local client program on that remote shell) and returns us to our previous shell.</p>
 </section>
-<section id="transferring-files-to-and-from-pawsey" class="level2">
-<h2 class="anchored" data-anchor-id="transferring-files-to-and-from-pawsey">Transferring files to and from Pawsey</h2>
-<section id="scp" class="level3">
-<h3 class="anchored" data-anchor-id="scp"><code>scp</code></h3>
+<section id="transferring-files-to-and-from-pawsey" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="transferring-files-to-and-from-pawsey"><span class="header-section-number">3</span> Transferring files to and from Pawsey</h2>
+<p>The <code>ssh</code> login client has companion programs called <code>scp</code> (think (<code>s</code>)ecure <code>cp</code>) and <code>sftp</code> (short for Secure File Transfer Protocol) which allows us to copy files to or from a remote computer using the same kind of encrypted connection as SSH.</p>
+<p>Command line clients such as <code>scp</code> and <code>sftp</code> are a convenient way of moving data between computers. Alternatively, you could use GUI clients such as Filezilla, Cyberduck, or WinSCP.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Use SSH keys!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Use SSH keys!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Whichever you use, it is strongly recommended to use SSH keys instead of the conventional and less secure username and password. See <a href="#sec-sshkeys" class="quarto-xref">Section&nbsp;4</a> for information on SSH keys.</p>
+</div>
+</div>
+<section id="scp" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="scp"><span class="header-section-number">3.1</span> <code>scp</code></h3>
+<p><code>scp</code> is useful to copy few small files and not a lot or very large files. It is not recommended for the transfer of large amounts of data, as it can’t resume transfers if the operation/connection is interrupted for any reason.</p>
+<p>The syntax for scp is:</p>
+<pre><code>scp &lt;options&gt; &lt;path/to/source&gt; &lt;user-name&gt;@data-mover.pawsey.org.au:&lt;path/to/destination&gt;
+
+scp &lt;options&gt; &lt;user-name&gt;@data-mover.pawsey.org.au:&lt;path/to/source&gt; &lt;path/to/destination&gt; </code></pre>
+<p>Note the use of the colon (<code>:</code>) separating the hostname and the definition of the path/files on it.</p>
+<p>Let’s look at an example. For Chitra to transfer the file “/VIMC/launch.R” from a local computer into her personal directory in “/scratch”, she would use:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp /VIMC/launch.R chitrams@data-mover.pawsey.org.au:/scratch/pawsey1104/chitrams</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>On Pawsey, your personal directory in scratch will always look like: <code>/scratch/&lt;project-name&gt;/&lt;user-name&gt;</code>.</p>
+<p>To transfer a whole directory tree recursively, then the option <code>-r</code> needs to be used. As an example:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-r</span> chitra-ms@data-mover.pawsey.org.au:/scratch/pawsey1104/chitrams/vimc-pawsey/output ./pawsey-files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="sftp" class="level3">
-<h3 class="anchored" data-anchor-id="sftp"><code>sftp</code></h3>
+<section id="sftp" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="sftp"><span class="header-section-number">3.2</span> <code>sftp</code></h3>
 </section>
-<section id="gui-clients-such-as-cyberduck" class="level3">
-<h3 class="anchored" data-anchor-id="gui-clients-such-as-cyberduck">GUI clients such as Cyberduck</h3>
+<section id="gui-clients" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="gui-clients"><span class="header-section-number">3.3</span> GUI clients</h3>
+<p>GUI clients are a very attractive option for file transfers because of their intuitive framework. They have the advantage that users do not need to remember the several different options for the command-line tools, but keep in mind these GUI clients are still based on the command line clients listed above. In practice, the combined use of both GUI and command line clients within your workflows results in better efficiency.</p>
+<p>Pawsey recommends the file transfer clients FileZilla (available for Windows, MacOS, and Linux), Cyberduck (available for MacOS and Windows), or WinSCP (available for Windows).</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Downloading software">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Downloading software
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Only download these tools from its official website:</p>
+<ul>
+<li>Filezilla: <a href="https://filezilla-project.org/index.php">filezilla-project.org/index.php</a></li>
+<li>Cyberduck: <a href="https://cyberduck.io/">cyberduck.io</a></li>
+<li>WinSCP: <a href="https://winscp.net/eng/index.php">winscp.net/eng/index.php</a></li>
+</ul>
+<p>As for any software, be careful of not falling into “click tricks” that mislead you to download or install undesired software.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Authentication">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Authentication
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We do not recommend saving your password within the GUI client, use SSH keys instead. See <a href="#sec-sshkeys" class="quarto-xref">Section&nbsp;4</a> for information on SSH keys.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-sshkeys" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="sec-sshkeys"><span class="header-section-number">4</span> SSH keys</h2>
+<p>Typing our password over and over again is annoying, especially if the commands we want to run remotely are in a loop. To remove the need to do this, we can create an SSH key to tell the remote machine that it should always trust us.</p>
+<p>SSH keys come in pairs, a public key that gets shared with services like GitHub, and a private key that is stored only on your computer. If the keys match, you’re granted access. The cryptography behind SSH keys ensures that no one can reverse engineer your private key from the public one.</p>
+<p>The first step in using SSH authorization is to generate your own key pair. You might already have an SSH key pair on your machine. You can check to see if one exists by moving to your <code>.ssh</code> directory and listing the contents.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/.ssh</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you see <code>id_rsa.pub</code>, you already have a key pair and don’t need to create a new one. If you don’t see <code>id_rsa.pub</code>, use the following command to generate a new key pair. Make sure to replace your@email.com with your own email address.</p>
+<section id="generating-a-key-pair-for-github" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="generating-a-key-pair-for-github"><span class="header-section-number">4.1</span> Generating a key pair for GitHub</h3>
+<p>https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</p>
+</section>
+<section id="generating-a-key-pair-for-pawsey" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="generating-a-key-pair-for-pawsey"><span class="header-section-number">4.2</span> Generating a key pair for Pawsey</h3>
+<p>https://pawsey.atlassian.net/wiki/spaces/US/pages/51925870/Use+of+SSH+Keys+for+Authentication</p>
 
 
 </section>
