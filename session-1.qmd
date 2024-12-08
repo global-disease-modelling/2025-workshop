@@ -3,6 +3,14 @@ title: Session 1
 subtitle: Starting up Pawsey and Git
 ---
 
+Schedule
+
+- 13:00-13:50 Workshop
+- 13:50-14:00 Break
+- 14:00-14:50 Workshop
+- 14:50-15:15 Afternoon tea
+- 15:15-16:00 Workshop
+
 ## Logging in
 
 ::: {.callout-note title="Objectives" icon=false}
