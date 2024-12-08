@@ -4,7 +4,9 @@ subtitle: Running an analysis on Pawsey
 ---
 
 - Implement an analysis pipeline on Pawsey
-- Submit jobs and run an analysis pipeline on Pawsey
+- Submit jobs on Pawsey
+- Integrating Git with HPCs
+- Git: create a pull request for your changes
 - Diagnose errors on Pawsey
 - ? Attempt writing parallelisation code on Pawsey
 - Attempt modularisation on Pawsey

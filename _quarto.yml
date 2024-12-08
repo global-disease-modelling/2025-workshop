@@ -24,6 +24,7 @@ website:
         contents:
           - getting-started.qmd
           - unix-shell.qmd
+          - vim.qmd
           - ssh.qmd
           - collaborative-git.qmd
           - supercomputing.qmd

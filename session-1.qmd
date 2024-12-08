@@ -1,11 +1,79 @@
 ---
 title: Session 1
-subtitle: Starting up Git and Pawsey
+subtitle: Starting up Pawsey and Git
 ---
 
-90 minutes
+## Logging in
 
-## Objectives
+::: {.callout-note title="Objectives" icon=false}
+- Set up SSH keys for Git and Pawsey
+- Understand "where" you are
+:::
+
+1. Check whether you already have SSH keys set up. How would you do this?
+2. Set up your SSH key for Git.
+3. Set up your SSH key for Pawsey.
+4. Log on to Pawsey using SSH. How do you know "where" you are? Is your terminal running on your local PC, or on Pawsey?
+
+::: {.callout-warning title="Discussion"}
+Why do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?
+:::
+
+## Looking around
+
+::: {.callout-note title="Objectives" icon=false}
+- Navigate Pawsey using the command line
+- Understand user permissions
+- Understand the Pawsey filesystem
+:::
+
+1. Navigate to your own software directory using `cd $MYSOFTWARE`. Now, navigate to the `GROUP` directory (also located within `pawsey1104`).
+2. We'd now like to copy confidential information from the folder `secret-files` within the `software` directory to our `scratch` directory. How would you do this?
+
+::: {.callout-tip title="Tip" collapse=true}
+Similar to `$MYSOFTWARE`, there is an alias `$MYSCRATCH` for your scratch directory.
+:::
+
+3. Navigate to the folder `secret-files` within your `scratch` directory, then run the program `secret-program.sh`.
+4. Remove the program `secret-program.sh` and the folder `old-data`.
+
+## File transfers
+
+::: {.callout-note title="Objectives" icon=false}
+- Use SCP and SFTP for file transfers
+- Use the command line for basic file operations
+- Use the text editor Vim
+:::
+
+1. Log in to an SFTP session. Transfer the folder `secret-files` within your `scratch` directory to your local PC.
+
+::: {.callout-important title="Warning"}
+It's tempting to use your PC's GUI, but please use the command line for the next steps in this exercise!
+:::
+
+2. Open a new terminal window for your local PC. Navigate to the `secret-files` directory on your local PC and open the file `unmodified-secret-scenario.xml` using Vim.
+3. There are some values in that file that needs to be substituted; they look like: `@parameter@`. Find these and change them.
+4. When you're done changing all the values, rename the file to `secret-scenario.xml` using the command `mv`.
+5. Using SCP, transfer the file `secret-scenario.xml` to the `secret-files` folder within your `scratch` directory on Pawsey.
+
+::: {.callout-warning title="Discussion"}
+When do you think you would use SCP, SFTP, and Rsync? Which method do you think is quicker? And when would you use GUIs?
+:::
+
+## Schedulers
+
+::: {.callout-note title="Objectives" icon=false}
+- Understand the Pawsey filesystem vs architecture (nodes and scheduler).
+- Understand where jobs are executed.
+:::
+
+#TODO(insert text here)
+
+::: {.callout-warning title="Discussion"}
+Where do you think this job was executed?
+:::
+
+## Chitra notes to self
 
 - Set up an SSH key for Git
 - Set up an SSH key for Pawsey
@@ -13,9 +81,7 @@ subtitle: Starting up Git and Pawsey
 - Clone a git repository onto Pawsey
 - Transfer files between your local PC and Pawsey
 - Commit and push changes
-- Create a pull request for your changes
-
-## Notes
+- Taster: run one job on Pawsey
 
 Ideas for directions:
 

@@ -26,7 +26,7 @@
     "href": "ssh.html#logging-in-using-ssh",
     "title": "Remote logins and SSH",
     "section": "2 Logging in using ssh",
-    "text": "2 Logging in using ssh\nTo make a remote login, we issue the command ssh &lt;username&gt;@&lt;computer&gt; which tries to make a connection to the SSH daemon running on the remote computer we have specified. For Chitra to access the Setonix computer on Pawsey, she logs in using ssh chitrams@setonix.pawsey.org.au.\n\n\n\n\n\n\nTest your understanding\n\n\n\n\nWhat happens if Chitra has already been allocated a node named nid09310 that she would like to directly log in to?\nWhat happens if Chitra wants to access the data mover nodes on Pawsey, which has the hostname data-mover.pawsey.org.au?\n\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nFor the first instance, Chitra would log in with the following command:\nssh chitrams@nid09310.pawsey.org.au\nFor the second, Chitra would log in with the following command:\nsftp chitrams@data-mover.pawseyl.org.au\nwhere sftp is another companion program for ssh, the Secure File Transfer Protocol. We talk about this in a subsequent section.\n\n\n\nAfter we log in, we can use the remote shell to use the remote computer’s files and directories.\nTyping exit terminates the remote shell (and the local client program on that remote shell) and returns us to our previous shell.",
+    "text": "2 Logging in using ssh\nTo make a remote login, we issue the command ssh &lt;username&gt;@&lt;computer&gt; which tries to make a connection to the SSH daemon running on the remote computer we have specified. For Chitra to access the Setonix computer on Pawsey, she logs in using ssh chitrams@setonix.pawsey.org.au.\n\n\n\n\n\n\nTest your understanding\n\n\n\n\nWhat happens if Chitra has already been allocated a node named nid09310 that she would like to directly log in to?\nWhat happens if Chitra wants to access the data mover nodes on Pawsey, which has the hostname data-mover.pawsey.org.au?\n\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nFor the first instance, Chitra would log in with the following command:\nssh chitrams@nid09310.pawsey.org.au\nFor the second, Chitra would log in with the following command:\nsftp chitrams@data-mover.pawseyl.org.au\nwhere sftp is another companion program for ssh, the Secure File Transfer Protocol. We talk about this in Section 4.\n\n\n\nAfter we log in, we can use the remote shell to use the remote computer’s files and directories.\nTyping exit terminates the remote shell (and the local client program on that remote shell) and returns us to our previous shell.",
     "crumbs": [
       "Resources",
       "Remote logins and SSH"
@@ -47,8 +47,8 @@
     "objectID": "ssh.html#sec-sshkeys",
     "href": "ssh.html#sec-sshkeys",
     "title": "Remote logins and SSH",
-    "section": "4 SSH keys",
-    "text": "4 SSH keys\nTyping our password over and over again is annoying, especially if the commands we want to run remotely are in a loop. To remove the need to do this, we can create an SSH key to tell the remote machine that it should always trust us.\nSSH keys come in pairs: a public key that gets shared with services like GitHub, and a private key that is stored only on your computer. If the keys match, you’re granted access. The cryptography behind SSH keys ensures that no one can reverse engineer your private key from the public one.\nThe first step in using SSH authorization is to generate your own key pair. You might already have an SSH key pair on your machine. You can check to see if one exists by moving to your .ssh directory and listing the contents.\n$ cd ~/.ssh\n$ ls\nIf you see id_rsa.pub, you already have a key pair and don’t need to create a new one. If you don’t see id_rsa.pub, use the following command to generate a new key pair. Make sure to replace your@email.com with your own email address.\n\n4.1 Generating a key pair for GitHub\nhttps://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\n\n\n4.2 Generating a key pair for Pawsey\nhttps://pawsey.atlassian.net/wiki/spaces/US/pages/51925870/Use+of+SSH+Keys+for+Authentication",
+    "section": "3 SSH keys",
+    "text": "3 SSH keys\nTyping our password over and over again is annoying, especially if the commands we want to run remotely are in a loop. To remove the need to do this, we can create an SSH key to tell the remote machine that it should always trust us.\nSSH keys come in pairs: a public key that gets shared with services like GitHub, and a private key that is stored only on your computer. If the keys match, you’re granted access. The cryptography behind SSH keys ensures that no one can reverse engineer your private key from the public one.\nThe first step in using SSH authorization is to generate your own key pair. You might already have an SSH key pair on your machine. You can check to see if one exists by moving to your .ssh directory and listing the contents.\n$ cd ~/.ssh\n$ ls\nIf you see id_rsa.pub, you already have a key pair and don’t need to create a new one. If you don’t see id_rsa.pub, use the following command to generate a new key pair. Make sure to replace your@email.com with your own email address.\n\n3.1 Generating a key pair for GitHub\nhttps://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\n\n\n3.2 Generating a key pair for Pawsey\nhttps://pawsey.atlassian.net/wiki/spaces/US/pages/51925870/Use+of+SSH+Keys+for+Authentication",
     "crumbs": [
       "Resources",
       "Remote logins and SSH"
@@ -228,7 +228,7 @@
     "href": "session-2.html",
     "title": "Session 2",
     "section": "",
-    "text": "Implement an analysis pipeline on Pawsey\nSubmit jobs and run an analysis pipeline on Pawsey\nDiagnose errors on Pawsey\n? Attempt writing parallelisation code on Pawsey\nAttempt modularisation on Pawsey",
+    "text": "Implement an analysis pipeline on Pawsey\nSubmit jobs on Pawsey\nIntegrating Git with HPCs\nGit: create a pull request for your changes\nDiagnose errors on Pawsey\n? Attempt writing parallelisation code on Pawsey\nAttempt modularisation on Pawsey",
     "crumbs": [
       "Workshop",
       "Session 2"
@@ -239,7 +239,7 @@
     "href": "session-1.html",
     "title": "Session 1",
     "section": "",
-    "text": "90 minutes",
+    "text": "Objectives\n\n\n\n\nSet up SSH keys for Git and Pawsey\nUnderstand “where” you are\n\n\n\n\nCheck whether you already have SSH keys set up. How would you do this?\nSet up your SSH key for Git.\nSet up your SSH key for Pawsey.\nLog on to Pawsey using SSH. How do you know “where” you are? Is your terminal running on your local PC, or on Pawsey?\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhy do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?",
     "crumbs": [
       "Workshop",
       "Session 1"
@@ -250,7 +250,7 @@
     "href": "session-1.html#objectives",
     "title": "Session 1",
     "section": "Objectives",
-    "text": "Objectives\n\nSet up an SSH key for Git\nSet up an SSH key for Pawsey\nNavigate on Pawsey using the command line interface\nClone a git repository onto Pawsey\nTransfer files between your local PC and Pawsey\nCommit and push changes\nCreate a pull request for your changes",
+    "text": "Objectives\n\nSet up an SSH key for Git\nSet up an SSH key for Pawsey\nNavigate on Pawsey using the command line interface\nClone a git repository onto Pawsey\nTransfer files between your local PC and Pawsey\nCommit and push changes\nTaster: run one job on Pawsey",
     "crumbs": [
       "Workshop",
       "Session 1"
@@ -260,8 +260,8 @@
     "objectID": "session-1.html#notes",
     "href": "session-1.html#notes",
     "title": "Session 1",
-    "section": "Notes",
-    "text": "Notes\nIdeas for directions:\nClone the 2025-workshop-exercise repository. This is one of our pipelines. You have to transfer sensitive files from your local device onto Pawsey, to then run the pipeline.",
+    "section": "",
+    "text": "Ideas for directions:\nClone the 2025-workshop-exercise repository. This is one of our pipelines. You have to transfer sensitive files from your local device onto Pawsey, to then run the pipeline.",
     "crumbs": [
       "Workshop",
       "Session 1"
@@ -283,7 +283,7 @@
     "href": "unix-shell.html#introducing-the-shell",
     "title": "The Unix shell",
     "section": "1 Introducing the Shell",
-    "text": "1 Introducing the Shell\n\n\n\n\n\n\nOverview\n\n\n\n\nWhat is a command shell?\nWhy would I use one?\n\n\n\n\n1.1 Background\nHumans and computers commonly interact in many different ways, such as through a keyboard and mouse, touch screen interfaces, or using speech recognition systems. The most widely used way to interact with personal computers is called a graphical user interface (GUI). With a GUI, we give instructions by clicking a mouse and using menu-driven interactions.\nWhile the visual aid of a GUI makes it intuitive to learn, this way of delivering instructions to a computer scales very poorly. Imagine the following task: for a literature search, you have to copy the third line of one thousand text files in one thousand different directories and paste it into a single file. Using a GUI, you would not only be clicking at your desk for several hours, but you could potentially also commit an error in the process of completing this repetitive task. This is where we take advantage of the Unix shell. The Unix shell is both a command-line interface (CLI) and a scripting language, allowing such repetitive tasks to be done automatically and fast. With the proper commands, the shell can repeat tasks with or without some modification as many times as we want. Using the shell, the task in the literature example can be accomplished in seconds.\n\n\n1.2 The Shell\nThe shell is a program where users can type commands. With the shell, it’s possible to invoke complicated programs like climate modeling software or simple commands that create an empty directory with only one line of code. The most popular Unix shell is Bash (the Bourne Again SHell — so-called because it’s derived from a shell written by Stephen Bourne). Bash is the default shell on most modern implementations of Unix and in most packages that provide Unix-like tools for Windows. Note that ‘Git Bash’ is a piece of software that enables Windows users to use a Bash like interface when interacting with Git.\nUsing the shell will take some effort and some time to learn. While a GUI presents you with choices to select, CLI choices are not automatically presented to you, so you must learn a few commands like new vocabulary in a language you’re studying. However, unlike a spoken language, a small number of “words” (i.e. commands) gets you a long way, and we’ll cover those essential few today.\nThe grammar of a shell allows you to combine existing tools into powerful pipelines and handle large volumes of data automatically. Sequences of commands can be written into a script, improving the reproducibility of workflows.\nIn addition, the command line is often the easiest way to interact with remote machines and supercomputers. Familiarity with the shell is near essential to run a variety of specialized tools and resources including high-performance computing systems. As clusters and cloud computing systems become more popular for scientific data crunching, being able to interact with the shell is becoming a necessary skill. We can build on the command-line skills covered here to tackle a wide range of scientific questions and computational challenges.",
+    "text": "1 Introducing the Shell\n\n\n\n\n\n\nOverview\n\n\n\n\nWhat is a command shell?\nWhy would I use one?\n\n\n\n\n1.1 Background\nHumans and computers commonly interact in many different ways, such as through a keyboard and mouse, touch screen interfaces, or using speech recognition systems. The most widely used way to interact with personal computers is called a graphical user interface (GUI). With a GUI, we give instructions by clicking a mouse and using menu-driven interactions.\nWhile the visual aid of a GUI makes it intuitive to learn, this way of delivering instructions to a computer scales very poorly. Imagine the following task: for a literature search, you have to copy the third line of one thousand text files in one thousand different directories and paste it into a single file. Using a GUI, you would not only be clicking at your desk for several hours, but you could potentially also commit an error in the process of completing this repetitive task. This is where we take advantage of the Unix shell. The Unix shell is both a command-line interface (CLI) and a scripting language, allowing such repetitive tasks to be done automatically and fast. With the proper commands, the shell can repeat tasks with or without some modification as many times as we want. Using the shell, the task in the literature example can be accomplished in seconds.\n\n\n1.2 The Shell\nThe shell is a program where users can type commands. With the shell, it’s possible to invoke complicated programs like malaria simulation software or simple commands that create an empty directory with only one line of code. The most popular Unix shell is Bash (the Bourne Again SHell — so-called because it’s derived from a shell written by Stephen Bourne). Bash is the default shell on most modern implementations of Unix and in most packages that provide Unix-like tools for Windows. Note that ‘Git Bash’ is a piece of software that enables Windows users to use a Bash like interface when interacting with Git.\nUsing the shell will take some effort and some time to learn. While a GUI presents you with choices to select, CLI choices are not automatically presented to you, so you must learn a few commands like new vocabulary in a language you’re studying. However, unlike a spoken language, a small number of “words” (i.e. commands) gets you a long way, and we’ll cover those essential few today.\nThe grammar of a shell allows you to combine existing tools into powerful pipelines and handle large volumes of data automatically. Sequences of commands can be written into a script, improving the reproducibility of workflows.\nIn addition, the command line is often the easiest way to interact with remote machines and supercomputers. Familiarity with the shell is near essential to run a variety of specialized tools and resources including high-performance computing systems. As clusters and cloud computing systems become more popular for scientific data crunching, being able to interact with the shell is becoming a necessary skill. We can build on the command-line skills covered here to tackle a wide range of scientific questions and computational challenges.",
     "crumbs": [
       "Resources",
       "The Unix shell"
@@ -342,6 +342,72 @@
     "crumbs": [
       "Resources",
       "The Unix shell"
+    ]
+  },
+  {
+    "objectID": "session-1.html#logging-in",
+    "href": "session-1.html#logging-in",
+    "title": "Session 1",
+    "section": "",
+    "text": "Objectives\n\n\n\n\nSet up SSH keys for Git and Pawsey\nUnderstand “where” you are\n\n\n\n\nCheck whether you already have SSH keys set up. How would you do this?\nSet up your SSH key for Git.\nSet up your SSH key for Pawsey.\nLog on to Pawsey using SSH. How do you know “where” you are? Is your terminal running on your local PC, or on Pawsey?\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhy do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
+    ]
+  },
+  {
+    "objectID": "session-1.html#looking-around",
+    "href": "session-1.html#looking-around",
+    "title": "Session 1",
+    "section": "Looking around",
+    "text": "Looking around\n\n\n\n\n\n\nObjectives\n\n\n\n\nNavigate Pawsey using the command line\nUnderstand user permissions\nUnderstand the Pawsey filesystem\n\n\n\n\nNavigate to your own software directory using cd $MYSOFTWARE. Now, navigate to the GROUP directory (also located within pawsey1104).\nWe’d now like to copy confidential information from the folder secret-files within the software directory to our scratch directory. How would you do this?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nSimilar to $MYSOFTWARE, there is an alias $MYSCRATCH for your scratch directory.\n\n\n\n\nNavigate to the folder secret-files within your scratch directory, then run the program secret-program.sh.\nRemove the program secret-program.sh and the folder old-data.",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
+    ]
+  },
+  {
+    "objectID": "ssh.html#sec-file-transfer",
+    "href": "ssh.html#sec-file-transfer",
+    "title": "Remote logins and SSH",
+    "section": "4 Secure file transfers",
+    "text": "4 Secure file transfers\nThe ssh login client has companion programs called scp (think (s)ecure cp) and sftp (short for Secure File Transfer Protocol) which allows us to copy files to or from a remote computer using the same kind of encrypted connection as SSH.\nCommand line clients such as scp and sftp are a convenient way of moving data between computers. Alternatively, you could use GUI clients such as Filezilla, Cyberduck, or WinSCP.\n\n\n\n\n\n\nUse SSH keys!\n\n\n\nWhichever you use, it is strongly recommended to use SSH keys instead of the conventional and less secure username and password. See Section 3 for information on SSH keys.\n\n\n\n4.1 scp\nscp is useful to copy few small files and not a lot or very large files. It is not recommended for the transfer of large amounts of data, as it can’t resume transfers if the operation/connection is interrupted for any reason.\nThe syntax for scp is:\nscp &lt;options&gt; &lt;path/to/source&gt; &lt;user-name&gt;@data-mover.pawsey.org.au:&lt;path/to/destination&gt;\n\nscp &lt;options&gt; &lt;user-name&gt;@data-mover.pawsey.org.au:&lt;path/to/source&gt; &lt;path/to/destination&gt; \nNote the use of the colon (:) separating the hostname and the definition of the path/files on it.\nLet’s look at an example. For Chitra to transfer the file “/VIMC/launch.R” from a local computer into her personal directory in “/scratch”, she would use:\n$ scp /VIMC/launch.R chitrams@data-mover.pawsey.org.au:/scratch/pawsey1104/chitrams\nOn Pawsey, your personal directory in scratch will always look like: /scratch/&lt;project-name&gt;/&lt;user-name&gt;.\nTo transfer a whole directory tree recursively, then the option -r needs to be used. As an example:\nscp -r chitra-ms@data-mover.pawsey.org.au:/scratch/pawsey1104/chitrams/vimc-pawsey/output ./pawsey-files\n\n\n4.2 sftp\n\n\n4.3 GUI clients\nGUI clients are a very attractive option for file transfers because of their intuitive framework. They have the advantage that users do not need to remember the several different options for the command-line tools, but keep in mind these GUI clients are still based on the command line clients listed above. In practice, the combined use of both GUI and command line clients within your workflows results in better efficiency.\nPawsey recommends the file transfer clients FileZilla (available for Windows, MacOS, and Linux), Cyberduck (available for MacOS and Windows), or WinSCP (available for Windows).\n\n\n\n\n\n\nDownloading software\n\n\n\nOnly download these tools from its official website:\n\nFilezilla: filezilla-project.org/index.php\nCyberduck: cyberduck.io\nWinSCP: winscp.net/eng/index.php\n\nAs for any software, be careful of not falling into “click tricks” that mislead you to download or install undesired software.\n\n\n\n\n\n\n\n\nAuthentication\n\n\n\nSaving your password within the GUI client is not recommended. Instead, use SSH keys. See Section 3 for information on SSH keys.",
+    "crumbs": [
+      "Resources",
+      "Remote logins and SSH"
+    ]
+  },
+  {
+    "objectID": "session-1.html#file-transfers",
+    "href": "session-1.html#file-transfers",
+    "title": "Session 1",
+    "section": "File transfers",
+    "text": "File transfers\n\n\n\n\n\n\nObjectives\n\n\n\n\nUse SCP and SFTP for file transfers\nUse the command line for basic file operations\nUse the text editor Vim\n\n\n\n\nLog in to an SFTP session. Transfer the folder secret-files within your scratch directory to your local PC.\n\n\n\n\n\n\n\nWarning\n\n\n\nIt’s tempting to use your PC’s GUI, but please use the command line for the next steps in this exercise!\n\n\n\nOpen a new terminal window for your local PC. Navigate to the secret-files directory on your local PC and open the file unmodified-secret-scenario.xml using Vim.\nThere are some values in that file that needs to be substituted; they look like: @parameter@. Find these and change them.\nWhen you’re done changing all the values, rename the file to secret-scenario.xml using the command mv.\nUsing SCP, transfer the file secret-scenario.xml to the secret-files folder within your scratch directory on Pawsey.\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhen do you think you would use SCP, SFTP, and Rsync? Which method do you think is quicker? And when would you use GUIs?",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
+    ]
+  },
+  {
+    "objectID": "session-1.html#schedulers",
+    "href": "session-1.html#schedulers",
+    "title": "Session 1",
+    "section": "Schedulers",
+    "text": "Schedulers\n\n\n\n\n\n\nObjectives\n\n\n\n\nUnderstand the Pawsey filesystem vs architecture (nodes and scheduler).\nUnderstand where jobs are executed.\n\n\n\n#TODO(insert text here)\n\n\n\n\n\n\nDiscussion\n\n\n\nWhere do you think this job was executed?",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
+    ]
+  },
+  {
+    "objectID": "session-1.html#chitra-notes-to-self",
+    "href": "session-1.html#chitra-notes-to-self",
+    "title": "Session 1",
+    "section": "Chitra notes to self",
+    "text": "Chitra notes to self\n\nSet up an SSH key for Git\nSet up an SSH key for Pawsey\nNavigate on Pawsey using the command line interface\nClone a git repository onto Pawsey\nTransfer files between your local PC and Pawsey\nCommit and push changes\nTaster: run one job on Pawsey\n\nIdeas for directions:\nClone the 2025-workshop-exercise repository. This is one of our pipelines. You have to transfer sensitive files from your local device onto Pawsey, to then run the pipeline.",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
     ]
   }
 ]
