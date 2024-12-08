@@ -60,6 +60,7 @@ It's tempting to use your PC's GUI, but please use the command line for the next
 When do you think you would use SCP, SFTP, and Rsync? Which method do you think is quicker? And when would you use GUIs?
 :::
 
+
 ## Schedulers
 
 ::: {.callout-note title="Objectives" icon=false}
@@ -67,11 +68,17 @@ When do you think you would use SCP, SFTP, and Rsync? Which method do you think 
 - Understand where jobs are executed.
 :::
 
-#TODO(insert text here)
+#TODO
 
 ::: {.callout-warning title="Discussion"}
 Where do you think this job was executed?
 :::
+
+## Git
+
+1. Clone the secret-exercises repository to your scratch directory.
+
+#TODO
 
 ## Chitra notes to self
 

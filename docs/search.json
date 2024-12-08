@@ -393,7 +393,7 @@
     "href": "session-1.html#schedulers",
     "title": "Session 1",
     "section": "Schedulers",
-    "text": "Schedulers\n\n\n\n\n\n\nObjectives\n\n\n\n\nUnderstand the Pawsey filesystem vs architecture (nodes and scheduler).\nUnderstand where jobs are executed.\n\n\n\n#TODO(insert text here)\n\n\n\n\n\n\nDiscussion\n\n\n\nWhere do you think this job was executed?",
+    "text": "Schedulers\n\n\n\n\n\n\nObjectives\n\n\n\n\nUnderstand the Pawsey filesystem vs architecture (nodes and scheduler).\nUnderstand where jobs are executed.\n\n\n\n#TODO\n\n\n\n\n\n\nDiscussion\n\n\n\nWhere do you think this job was executed?",
     "crumbs": [
       "Workshop",
       "Session 1"
@@ -405,6 +405,17 @@
     "title": "Session 1",
     "section": "Chitra notes to self",
     "text": "Chitra notes to self\n\nSet up an SSH key for Git\nSet up an SSH key for Pawsey\nNavigate on Pawsey using the command line interface\nClone a git repository onto Pawsey\nTransfer files between your local PC and Pawsey\nCommit and push changes\nTaster: run one job on Pawsey\n\nIdeas for directions:\nClone the 2025-workshop-exercise repository. This is one of our pipelines. You have to transfer sensitive files from your local device onto Pawsey, to then run the pipeline.",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
+    ]
+  },
+  {
+    "objectID": "session-1.html#git",
+    "href": "session-1.html#git",
+    "title": "Session 1",
+    "section": "Git",
+    "text": "Git\n\nClone the secret-exercises repository to your scratch directory.\n\n#TODO",
     "crumbs": [
       "Workshop",
       "Session 1"
