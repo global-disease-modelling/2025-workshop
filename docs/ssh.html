@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./collaborative-git.html" rel="next">
-<link href="./unix-shell.html" rel="prev">
+<link href="./supercomputing.html" rel="next">
+<link href="./vim.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -192,26 +192,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./getting-started.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Getting started</span></a>
+  <a href="./unix-shell.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unix shell</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./unix-shell.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Unix shell</span></a>
+  <a href="./vim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Text editors (Vim)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ssh.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Remote logins and SSH</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./collaborative-git.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Collaborative Git</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -224,6 +218,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./pawsey.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pawsey</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./collaborative-git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Collaborative Git</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -377,9 +377,9 @@ Use SSH keys!
 <h3 data-number="4.1" class="anchored" data-anchor-id="scp"><span class="header-section-number">4.1</span> <code>scp</code></h3>
 <p><code>scp</code> is useful to copy few small files and not a lot or very large files. It is not recommended for the transfer of large amounts of data, as it can’t resume transfers if the operation/connection is interrupted for any reason.</p>
 <p>The syntax for scp is:</p>
-<pre><code>scp &lt;options&gt; &lt;path/to/source&gt; &lt;user-name&gt;@data-mover.pawsey.org.au:&lt;path/to/destination&gt;
-
-scp &lt;options&gt; &lt;user-name&gt;@data-mover.pawsey.org.au:&lt;path/to/source&gt; &lt;path/to/destination&gt; </code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>scp &lt;options&gt; &lt;path/to/source&gt; &lt;user-name&gt;@data-mover.pawsey.org.au:&lt;path/to/destination&gt;</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>scp &lt;options&gt; &lt;user-name&gt;@data-mover.pawsey.org.au:&lt;path/to/source&gt; &lt;path/to/destination&gt; </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Note the use of the colon (<code>:</code>) separating the hostname and the definition of the path/files on it.</p>
 <p>Let’s look at an example. For Chitra to transfer the file “/VIMC/launch.R” from a local computer into her personal directory in “/scratch”, she would use:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp /VIMC/launch.R chitrams@data-mover.pawsey.org.au:/scratch/pawsey1104/chitrams</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -854,13 +854,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./unix-shell.html" class="pagination-link" aria-label="The Unix shell">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The Unix shell</span>
+      <a href="./vim.html" class="pagination-link" aria-label="Text editors (Vim)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Text editors (Vim)</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./collaborative-git.html" class="pagination-link" aria-label="Collaborative Git">
-        <span class="nav-page-text">Collaborative Git</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./supercomputing.html" class="pagination-link" aria-label="Supercomputing fundamentals">
+        <span class="nav-page-text">Supercomputing fundamentals</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

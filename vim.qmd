@@ -11,13 +11,13 @@ Vim is also everywhere. If you are working on a computer with a shell (e.g. term
 
 Let’s create a new file with Vim. First, open your shell, then type:
 
-```         
+```bash
 vim new-file.txt
 ```
 
 Yay, a new file! Now, close that file. Type:
 
-```         
+```txt       
 :q
 ```
 
@@ -27,7 +27,7 @@ Ta-da! Congratulations, you’ve exited vim.
 
 So, you’ve created and exited a file with Vim. Your next challenge is to put some text inside the file. Open your file again:
 
-```         
+```bash
 vim new-file.txt
 ```
 
@@ -35,19 +35,19 @@ Now, try and type some text. What’s happening? You are currently in **Normal**
 
 To enter Insert mode, type `i`. You can now type! Add some text:
 
-```         
+```txt
 Yay I can now add words to my file! This wasn't difficult at all!
 ```
 
 How do you save your work? `ctrl` + `s` will not help you. First, you need to go back to Normal mode by pressing `esc`, then type:
 
-```         
+```txt
 :w
 ```
 
 (If you spend too much time working in Vim, your word documents start to accumulate random `:w` in them). Now, you can safely quit vim again:
 
-```         
+```txt    
 :q
 ```
 
@@ -55,7 +55,7 @@ Practice this. Re-open your vim document, enter insert mode, and add some more r
 
 There is also a command for saving and exiting all in one instruction. Press `esc`, then type:
 
-```         
+```txt
 :x
 ```
 

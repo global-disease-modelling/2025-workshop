@@ -22,13 +22,12 @@ website:
           - session-3.qmd
       - section: "Resources"
         contents:
-          - getting-started.qmd
           - unix-shell.qmd
           - vim.qmd
           - ssh.qmd
-          - collaborative-git.qmd
           - supercomputing.qmd
           - pawsey.qmd
+          - collaborative-git.qmd
           - best-practice-programming.qmd
       # - section: "Discussion"
       #   contents:

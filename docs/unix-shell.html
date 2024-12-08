@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Unix shell – GDM 2025 Workshop</title>
+<title>Unix shell – GDM 2025 Workshop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ssh.html" rel="next">
-<link href="./getting-started.html" rel="prev">
+<link href="./vim.html" rel="next">
+<link href="./session-3.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">The Unix shell</h1>
+          <h1 class="quarto-secondary-nav-title">Unix shell</h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -192,26 +192,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./getting-started.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Getting started</span></a>
+  <a href="./unix-shell.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Unix shell</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./unix-shell.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">The Unix shell</span></a>
+  <a href="./vim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Text editors (Vim)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ssh.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Remote logins and SSH</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./collaborative-git.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Collaborative Git</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -224,6 +218,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="./pawsey.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pawsey</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./collaborative-git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Collaborative Git</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -275,7 +275,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">The Unix shell</h1>
+<h1 class="title d-none d-lg-block">Unix shell</h1>
 </div>
 
 
@@ -479,12 +479,11 @@ Overview
 <li><code>$(&lt;command&gt;)</code> inserts a command’s output in place.</li>
 </ul>
 <p>Here is an example of how you would combine the above commands.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">"searching"</span> <span class="va">$(</span><span class="fu">find</span> . <span class="at">-name</span> <span class="st">"*.txt"</span><span class="va">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> grep <span class="st">"searching"</span> <span class="va">$(</span><span class="fu">find</span> . <span class="at">-name</span> <span class="st">"*.txt"</span><span class="va">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The first (<code>grep</code>) finds files that match a pattern; the second (<code>find</code>) looks for lines inside those files that match another pattern. Here, for example, we can find txt files that contain the word “searching” by looking for the string ‘searching’ in all the <code>.txt</code> files in the current directory.</p>
 <p>Here is what the output would look like:</p>
-<pre><code>./writing/LittleWomen.txt:sitting on the top step, affected to be searching for her book, but was
-./writing/haiku.txt:With searching comes loss</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>./writing/LittleWomen.txt:sitting on the top step, affected to be searching for her book, but was</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>./writing/haiku.txt:With searching comes loss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="permissions-chmod" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="permissions-chmod"><span class="header-section-number">6</span> Permissions (<code>chmod</code>)</h2>
@@ -576,12 +575,12 @@ Why use integers for IDs?
 </ul>
 <p>Let’s look at this in action. If we <code>cd</code> into the <code>GROUP</code> directory on Pawsey (<code>/software/projects/pawsey1104/GROUP</code>) and run the command <code>ls -l</code>:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-l</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>total 20
-drwxrws---  7 chitrams pawsey1104 4096 Oct  5 08:05 MAP_data
-drwxrwx---  2 chitrams chitrams   4096 Dec  2 16:22 chatbox-om
-drwxrwsr-x  3 acavelan pawsey1104 4096 Sep 25 16:11 OpenMalaria
-drwxrwxr-x  6 acavelan pawsey1104 4096 Jul 13  2021 RASTERS
-drwxrwxr-x 10 acavelan pawsey1104 4096 Aug 18  2023 SHAPEFILES</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>total 20</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>drwxrws---  7 chitrams pawsey1104 4096 Oct  5 08:05 MAP_data</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>drwxrwx---  2 chitrams chitrams   4096 Dec  2 16:22 chatbox-om</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>drwxrwsr-x  3 acavelan pawsey1104 4096 Sep 25 16:11 OpenMalaria</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>drwxrwxr-x  6 acavelan pawsey1104 4096 Jul 13  2021 RASTERS</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>drwxrwxr-x 10 acavelan pawsey1104 4096 Aug 18  2023 SHAPEFILES</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The <code>-l</code> flag tells ls to give us a long-form listing. It’s a lot of information, so let’s go through the columns in turn.</p>
 <p>On the right side, we have the files’ names. Next to them, moving left, are the times and dates they were last modified. Backup systems and other tools use this information in a variety of ways, but you can use it to tell when you (or anyone else with permission) last changed a file.</p>
 <p>Next to the modification time is the file’s size in bytes and the names of the user and group that owns it (in this case, <code>chitrams</code> and <code>pawsey1104</code> respectively). We’ll skip over the second column for now (the one showing <code>7</code> in the first line) because it’s the first column that we care about most. This shows the file’s permissions, i.e., who can read, write, or execute it.</p>
@@ -589,13 +588,13 @@ drwxrwxr-x 10 acavelan pawsey1104 4096 Aug 18  2023 SHAPEFILES</code></pre>
 <p>The next three characters tell us what permissions the file’s owner has. Here, the owner can read, write, and execute the file: <code>rwx</code>. The middle triplet shows us the group’s permissions. If the permission is turned off, we see a dash, so <code>r-x</code> means “read and execute, but not write”. When we see <code>rws</code> it means that new files and subdirectories created within that directory will inherit the group of the directory. The final triplet shows us what everyone who isn’t the file’s owner, or in the file’s group, can do. In this case, it’s <code>---</code>, so no one outside of the group can look at the file’s contents and run it.</p>
 <p>To change permissions, we use the <code>chmod</code> command (whose name stands for “change mode”). Here’s a long-form listing showing the permissions on an R script Chitra is using:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-l</span> launch.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>-rw-r--r-- 1 chitrams pawsey1104 15784 Nov 15 13:45 launch.R</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>-rw-r--r-- 1 chitrams pawsey1104 15784 Nov 15 13:45 launch.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Whoops, Chitra can’t execute the R script on Pawsey! The command to change the owner’s permission to <code>rwx</code> is:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> chmod u=rwx launch.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Let’s run <code>chmod</code> again to give the group write permission but not execution; and everyone else no permission to read, write, or execute:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> chmod g=rw launch.R</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> chmod o=--- launch.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>-rwxrw---- 1 chitrams pawsey1104 15784 Nov 15 13:45 launch.R</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>-rwxrw---- 1 chitrams pawsey1104 15784 Nov 15 13:45 launch.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
@@ -1023,13 +1022,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./getting-started.html" class="pagination-link" aria-label="Getting started">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Getting started</span>
+      <a href="./session-3.html" class="pagination-link" aria-label="Session 3">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Session 3</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ssh.html" class="pagination-link" aria-label="Remote logins and SSH">
-        <span class="nav-page-text">Remote logins and SSH</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./vim.html" class="pagination-link" aria-label="Text editors (Vim)">
+        <span class="nav-page-text">Text editors (Vim)</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

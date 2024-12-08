@@ -87,7 +87,7 @@ Whichever you use, it is strongly recommended to use SSH keys instead of the con
 
 The syntax for scp is:
 
-```         
+```txt
 scp <options> <path/to/source> <user-name>@data-mover.pawsey.org.au:<path/to/destination>
 
 scp <options> <user-name>@data-mover.pawsey.org.au:<path/to/source> <path/to/destination> 
