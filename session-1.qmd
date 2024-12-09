@@ -3,15 +3,7 @@ title: Session 1
 subtitle: Starting up Pawsey and Git
 ---
 
-Schedule
-
-- 13:00-13:50 Workshop
-- 13:50-14:00 Break
-- 14:00-14:50 Workshop
-- 14:50-15:15 Afternoon tea
-- 15:15-16:00 Workshop
-
-## Logging in
+### Logging in
 
 ::: {.callout-note title="Objectives" icon=false}
 - Set up SSH keys for Git and Pawsey
@@ -27,7 +19,7 @@ Schedule
 Why do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?
 :::
 
-## Looking around
+### Looking around
 
 ::: {.callout-note title="Objectives" icon=false}
 - Navigate Pawsey using the command line
@@ -45,7 +37,7 @@ Similar to `$MYSOFTWARE`, there is an alias `$MYSCRATCH` for your scratch direct
 3. Navigate to the folder `secret-files` within your `scratch` directory, then run the program `secret-program.sh`.
 4. Remove the program `secret-program.sh` and the folder `old-data`.
 
-## File transfers
+### File transfers
 
 ::: {.callout-note title="Objectives" icon=false}
 - Use SCP and SFTP for file transfers
@@ -69,7 +61,7 @@ When do you think you would use SCP, SFTP, and Rsync? Which method do you think 
 :::
 
 
-## Schedulers
+### Schedulers
 
 ::: {.callout-note title="Objectives" icon=false}
 - Understand the Pawsey filesystem vs architecture (nodes and scheduler).
@@ -82,13 +74,13 @@ When do you think you would use SCP, SFTP, and Rsync? Which method do you think 
 Where do you think this job was executed?
 :::
 
-## Git
+### Git
 
 1. Clone the secret-exercises repository to your scratch directory.
 
 #TODO
 
-## Chitra notes to self
+### Chitra notes to self
 
 - Set up an SSH key for Git
 - Set up an SSH key for Pawsey
