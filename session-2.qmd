@@ -3,19 +3,14 @@ title: Session 2
 subtitle: Running an analysis on Pawsey
 ---
 
+Topics to be covered in this session:
+
 -   Submit jobs on Pawsey
-
 -   Using Git on Pawsey
-
 -   Git: create a pull request for your changes
-
 -   Debugging on Pawsey (Vim, file transfers)
-
 -   ? Attempt writing parallelisation code on Pawsey
-
     -   instead of using job arrays, which is the current preferred approach
     -   GNU parallel
-
 -   ? Attempt modularisation of individual project codes (ask participants to break up their code and find a better way of organising their code)
-
 -   ? Interactive RStudio sessions on Pawsey
