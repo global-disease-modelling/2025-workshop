@@ -50,7 +50,9 @@ Typing `exit` terminates the remote shell (and the local client program on that 
 
 ## SSH keys {#sec-sshkeys}
 
-Typing our password over and over again is annoying, especially if the commands we want to run remotely are in a loop. To remove the need to do this, we can create an SSH key to tell the remote machine that it should always trust us.
+#TODO SSH keys provide a more secure and streamlined way of authenticating to remote systems compared to traditional password-based login methods. Instead of relying on a potentially weak password that can be guessed or intercepted, SSH keys use a robust cryptographic authentication mechanism.
+
+#TODO Additionally, typing our long and complex password over and over again is annoying. This is another benefit of creating an SSH key: we can tell the remote machine that it should always trust us. By implementing SSH keys, you're not just avoiding the inconvenience of repeated password entry; you're fundamentally improving your system's security and authentication reliability.
 
 SSH keys come in pairs: a public key that gets shared with services like GitHub, and a private key that is stored only on your computer. If the keys match, you’re granted access. The cryptography behind SSH keys ensures that no one can reverse engineer your private key from the public one.
 
@@ -61,15 +63,15 @@ $ cd ~/.ssh
 $ ls
 ```
 
-If you see `id_rsa.pub`, you already have a key pair and don’t need to create a new one. If you don’t see `id_rsa.pub`, use the following command to generate a new key pair. Make sure to replace your\@email.com with your own email address.
+If you see `id_rsa.pub`, you already have a key pair and don’t need to create a new one. If you don't see any, follow the instructions below to generate a key pair.
 
 ### Generating a key pair for GitHub
 
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+#TODO https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 ### Generating a key pair for Pawsey
 
-https://pawsey.atlassian.net/wiki/spaces/US/pages/51925870/Use+of+SSH+Keys+for+Authentication
+#TODO https://pawsey.atlassian.net/wiki/spaces/US/pages/51925870/Use+of+SSH+Keys+for+Authentication
 
 ## Secure file transfers {#sec-file-transfer}
 
@@ -87,7 +89,7 @@ Whichever you use, it is strongly recommended to use SSH keys instead of the con
 
 The syntax for scp is:
 
-```txt
+``` txt
 scp <options> <path/to/source> <user-name>@data-mover.pawsey.org.au:<path/to/destination>
 
 scp <options> <user-name>@data-mover.pawsey.org.au:<path/to/source> <path/to/destination> 
