@@ -281,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="starting-vim" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="starting-vim"><span class="header-section-number">1</span> Starting Vim</h2>
 <p>Vim is a text editor. That is all it does. You cannot format a document, insert shapes, make a table with lines, use multiple fonts, highlight sentences, or print out with headings or margins. Vim, however, is very good at editing text. Once you’ve mastered Vim, it is very powerful. You can find and replace chunks of text using commands, copy and paste columns of data, and jump to a specified line number.</p>
-<p>Vim is also everywhere. If you are working on a computer with a shell (e.g.&nbsp;terminal or gitbash), then you have Vim; it’s already there. And you can open it directly from the shell. The problem is, however, that Vim is notoriously difficult to learn.</p>
+<p>Vim is also everywhere. If you are working on a computer with a shell (such as terminal or gitbash), then you have Vim; it’s already there. And you can open it directly from the shell. The problem is, however, that Vim is notoriously difficult to learn.</p>
 <p>Let’s create a new file with Vim. First, open your shell, then type:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">vim</span> new-file.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Yay, a new file! Now, close that file. Type:</p>
@@ -297,13 +297,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb4"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Yay I can now add words to my file! This wasn't difficult at all!</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>How do you save your work? <code>ctrl</code> + <code>s</code> will not help you. First, you need to go back to Normal mode by pressing <code>esc</code>, then type:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>:w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>(If you spend too much time working in Vim, your word documents start to accumulate random <code>:w</code> in them). Now, you can safely quit vim again:</p>
+<p>(If you spend too much time working in Vim, your text documents start to accumulate random <code>:w</code> in them.) Now, you can safely quit vim again:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>:q</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Practice this. Re-open your vim document, enter insert mode, and add some more random text.</p>
 <p>There is also a command for saving and exiting all in one instruction. Press <code>esc</code>, then type:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>:x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Phew! You had little control over <em>where</em> your new text went in the last exercise. How do you move around in vim? In Normal mode, you can move one character at a time using your arrow keys, or the keys <code>k</code> (up), <code>l</code> (right), <code>h</code> (left), and <code>j</code> (down).</p>
-<p>One you are in place, type <code>i</code> to enter insert mode on the left-hand-side of the current character. You can also type <code>a</code> to enter insert mode on the right-hand-side (i.e.&nbsp;’a’fter) the character. Try this out, and add some more text.</p>
+<p>Once you are in place, type <code>i</code> to enter Insert mode on the left-hand-side of the current character. You can also type <code>a</code> to enter Insert mode on the right-hand-side (think (<code>a</code>)fter the character). Try this out and add some more text.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Summary of Vim modes">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

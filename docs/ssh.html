@@ -341,19 +341,20 @@ Answer
 </section>
 <section id="sec-sshkeys" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="sec-sshkeys"><span class="header-section-number">3</span> SSH keys</h2>
-<p>Typing our password over and over again is annoying, especially if the commands we want to run remotely are in a loop. To remove the need to do this, we can create an SSH key to tell the remote machine that it should always trust us.</p>
+<p>#TODO SSH keys provide a more secure and streamlined way of authenticating to remote systems compared to traditional password-based login methods. Instead of relying on a potentially weak password that can be guessed or intercepted, SSH keys use a robust cryptographic authentication mechanism.</p>
+<p>#TODO Additionally, typing our long and complex password over and over again is annoying. This is another benefit of creating an SSH key: we can tell the remote machine that it should always trust us. By implementing SSH keys, you’re not just avoiding the inconvenience of repeated password entry; you’re fundamentally improving your system’s security and authentication reliability.</p>
 <p>SSH keys come in pairs: a public key that gets shared with services like GitHub, and a private key that is stored only on your computer. If the keys match, you’re granted access. The cryptography behind SSH keys ensures that no one can reverse engineer your private key from the public one.</p>
 <p>The first step in using SSH authorization is to generate your own key pair. You might already have an SSH key pair on your machine. You can check to see if one exists by moving to your <code>.ssh</code> directory and listing the contents.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/.ssh</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If you see <code>id_rsa.pub</code>, you already have a key pair and don’t need to create a new one. If you don’t see <code>id_rsa.pub</code>, use the following command to generate a new key pair. Make sure to replace your@email.com with your own email address.</p>
+<p>If you see <code>id_rsa.pub</code>, you already have a key pair and don’t need to create a new one. If you don’t see any, follow the instructions below to generate a key pair.</p>
 <section id="generating-a-key-pair-for-github" class="level3" data-number="3.1">
 <h3 data-number="3.1" class="anchored" data-anchor-id="generating-a-key-pair-for-github"><span class="header-section-number">3.1</span> Generating a key pair for GitHub</h3>
-<p>https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</p>
+<p>#TODO https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</p>
 </section>
 <section id="generating-a-key-pair-for-pawsey" class="level3" data-number="3.2">
 <h3 data-number="3.2" class="anchored" data-anchor-id="generating-a-key-pair-for-pawsey"><span class="header-section-number">3.2</span> Generating a key pair for Pawsey</h3>
-<p>https://pawsey.atlassian.net/wiki/spaces/US/pages/51925870/Use+of+SSH+Keys+for+Authentication</p>
+<p>#TODO https://pawsey.atlassian.net/wiki/spaces/US/pages/51925870/Use+of+SSH+Keys+for+Authentication</p>
 </section>
 </section>
 <section id="sec-file-transfer" class="level2" data-number="4">

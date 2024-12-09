@@ -23,9 +23,11 @@ You can access the Q&A at [slido.com](https://www.slido.com/) using the code **\
 
 -   [Session 1](session-1.qmd) focuses on starting up with Git and HPCs.
 -   [Session 2](session-2.qmd) explores how we can utilise HPCs, including job scheduling, code modularisation, and parallelisation.
--   [Session 3](session-3.qmd) continues exploring how we can utilise HPCs, including programming best practices. We will also review material from the last two days and have a guest from Pawsey join us.
+-   [Session 3](session-3.qmd) continues exploring how we can utilise HPCs, including parallelisation and code modularisation. We will also review material from the last two days.
 
 ### Session schedule
+
+This workshop is held 13 to 15 January 2025, Monday to Wednesday afternoons, with the following schedule:
 
 -   13:00-13:50 Workshop
 -   13:50-14:00 Break

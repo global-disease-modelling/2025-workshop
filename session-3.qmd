@@ -1,3 +1,10 @@
 ---
 title: Session 3
+subtitle: Further analysis on Pawsey
 ---
+
+-   Further attempt to write parallelisation
+    -   instead of using job arrays, which is the current preferred approach
+    -   GNU parallel
+-   ? Attempt modularisation of individual project codes (ask participants to break up their code and find a better way of organising their code)
+-   ? Interactive RStudio sessions on Pawsey
