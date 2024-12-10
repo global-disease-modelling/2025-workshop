@@ -6,6 +6,8 @@ subtitle: Running an analysis on Pawsey
 Topics to be covered in this session:
 
 -   Submit jobs on Pawsey
+    -   Conceptually explain Slurm
+    -   The difference between `sbatch`, `srun` and `salloc`
 -   Using Git on Pawsey
 -   Git: create a pull request for your changes
 -   Debugging on Pawsey (Vim, file transfers)
