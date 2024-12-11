@@ -68,6 +68,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
 
 
 </head>
@@ -239,7 +245,11 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Topics to be covered in this session:</p>
 <ul>
-<li>Submit jobs on Pawsey</li>
+<li>Submit jobs on Pawsey
+<ul>
+<li>Conceptually explain Slurm</li>
+<li>The difference between <code>sbatch</code>, <code>srun</code> and <code>salloc</code></li>
+</ul></li>
 <li>Using Git on Pawsey</li>
 <li>Git: create a pull request for your changes</li>
 <li>Debugging on Pawsey (Vim, file transfers)</li>

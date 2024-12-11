@@ -5,6 +5,9 @@ project:
 website:
   title: "GDM 2025 Workshop"
   
+  comments:
+    hypothesis: true
+  
   # Sidebar options
   
   sidebar:

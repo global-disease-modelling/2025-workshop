@@ -261,7 +261,7 @@
     "href": "session-2.html",
     "title": "Session 2",
     "section": "",
-    "text": "Topics to be covered in this session:\n\nSubmit jobs on Pawsey\nUsing Git on Pawsey\nGit: create a pull request for your changes\nDebugging on Pawsey (Vim, file transfers)\n? Attempt writing parallelisation code on Pawsey\n\ninstead of using job arrays, which is the current preferred approach\nGNU parallel\n\n? Attempt modularisation of individual project codes (ask participants to break up their code and find a better way of organising their code)\n? Interactive RStudio sessions on Pawsey",
+    "text": "Topics to be covered in this session:\n\nSubmit jobs on Pawsey\n\nConceptually explain Slurm\nThe difference between sbatch, srun and salloc\n\nUsing Git on Pawsey\nGit: create a pull request for your changes\nDebugging on Pawsey (Vim, file transfers)\n? Attempt writing parallelisation code on Pawsey\n\ninstead of using job arrays, which is the current preferred approach\nGNU parallel\n\n? Attempt modularisation of individual project codes (ask participants to break up their code and find a better way of organising their code)\n? Interactive RStudio sessions on Pawsey",
     "crumbs": [
       "Workshop",
       "Session 2"
