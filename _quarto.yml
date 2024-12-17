@@ -26,17 +26,12 @@ website:
       - section: "Resources"
         contents:
           - unix-shell.qmd
-          - vim.qmd
           - ssh.qmd
+          - collaborative-git.qmd
           - supercomputing.qmd
           - pawsey.qmd
-          - collaborative-git.qmd
           - best-practice-programming.qmd
-      # - section: "Discussion"
-      #   contents:
-      #   - discussion-1.qmd
-      #   - discussion-2.qmd
-      #   - discussion-3.qmd
+          - vim.qmd
       - acknowledgements.qmd
   
   # Footer options
