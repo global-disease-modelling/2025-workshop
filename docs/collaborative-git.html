@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./best-practice-programming.html" rel="next">
-<link href="./pawsey.html" rel="prev">
+<link href="./supercomputing.html" rel="next">
+<link href="./ssh.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -170,14 +170,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vim.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Text editors (Vim)</span></a>
+  <a href="./ssh.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Remote logins and SSH</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ssh.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Remote logins and SSH</span></a>
+  <a href="./collaborative-git.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Collaborative Git</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -194,14 +194,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./collaborative-git.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Collaborative Git</span></a>
+  <a href="./best-practice-programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Best practices for programming</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./best-practice-programming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Best practices for programming</span></a>
+  <a href="./vim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Text editors (Vim)</span></a>
   </div>
 </li>
       </ul>
@@ -222,12 +222,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
   <ul class="collapse">
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
-  <li><a href="#outline" id="toc-outline" class="nav-link" data-scroll-target="#outline">Outline</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="header-section-number">1.1</span> Questions</a></li>
+  <li><a href="#outline" id="toc-outline" class="nav-link" data-scroll-target="#outline"><span class="header-section-number">1.2</span> Outline</a></li>
   </ul></li>
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background"><span class="header-section-number">2</span> Background</a></li>
   </ul>
 </nav>
     </div>
@@ -253,11 +253,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>You’ve probably already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.</p>
-<section id="questions" class="level3">
-<h3 class="anchored" data-anchor-id="questions">Questions</h3>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>You’ve already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.</p>
+<section id="questions" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="questions"><span class="header-section-number">1.1</span> Questions</h3>
 <p>These questions encapsulate the concepts we will address in this section.</p>
 <ul>
 <li>What does it mean to have staged and unstaged changes?</li>
@@ -268,8 +268,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Following up on the previous question, can you choose to keep only some changes and not others?</li>
 </ul>
 </section>
-<section id="outline" class="level3">
-<h3 class="anchored" data-anchor-id="outline">Outline</h3>
+<section id="outline" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="outline"><span class="header-section-number">1.2</span> Outline</h3>
 <ul>
 <li>We will discuss what happens when staging, committing, and pushing</li>
 <li>We will discuss branches, remotes, and pull requests: what they are and how to use them</li>
@@ -279,8 +279,24 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
+<section id="background" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="background"><span class="header-section-number">2</span> Background</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Overview">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Overview
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>What is version control?</li>
+<li>Why should I use it?</li>
+</ul>
+</div>
+</div>
 <p>Why we like version control:</p>
 <ul>
 <li>Nothing that is committed to version control is ever lost, unless you work really, really hard at losing it. Since all old versions of files are saved, it’s always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results.</li>
@@ -289,6 +305,34 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Teams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).</p>
 <p>Version control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or needs to be shared can and should be stored in a version control system.</p>
+<p>We’ll start by exploring how version control can be used to keep track of what one person did and when. Even if you aren’t collaborating with other people, automated version control is much better than this situation:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/phd101212s.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>We’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document. Some word processors let us deal with this a little better, such as Microsoft Word’s <a href="https://support.office.com/en-us/article/Track-changes-in-Word-197ba630-0f5f-4a8e-9a77-3712475e806a">Track Changes</a>, Google Docs’ <a href="https://support.google.com/docs/answer/190843?hl=en">version history</a>, or LibreOffice’s <a href="https://help.libreoffice.org/Common/Recording_and_Displaying_Changes">Recording and Displaying Changes</a>.</p>
+<p>Version control systems start with a base version of the document and then record changes you make each step of the way. You can think of it as a recording of your progress: you can rewind to start at the base document and play back each change you made, eventually arriving at your more recent version.</p>
+<p>Once you think of changes as separate from the document itself, you can then think about “playing back” different sets of changes on the base document, ultimately resulting in different versions of that document. For example, two users can make independent sets of changes on the same document.</p>
+<p>Unless multiple users make changes to the same section of the document-a conflict–you can incorporate two sets of changes into the same base document.</p>
+<p>A version control system is a tool that keeps track of these changes for us, effectively creating different versions of our files. It allows us to decide which changes will be made to the next version (each record of these changes is called a commit), and keeps useful metadata about them. The complete history of commits for a particular project and their metadata make up a repository. Repositories can be kept in sync across different computers, facilitating collaboration among different people.</p>
+<p>Automated version control systems are nothing new. Tools like <a href="https://en.wikipedia.org/wiki/Revision_Control_System">RCS</a>, <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a>, or <a href="https://en.wikipedia.org/wiki/Apache_Subversion">Subversion</a> have been around since the early 1980s and are used by many large companies. However, many of these are now considered legacy systems (i.e., outdated) due to various limitations in their capabilities. More modern systems, such as Git and Mercurial, are <em>distributed</em>, meaning that they do not need a centralized server to host the repository. These modern systems also include powerful merging tools that make it possible for multiple authors to work on the same files concurrently.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Key points">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Key points
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Version control is like an unlimited “undo”</li>
+<li>Version control allows multiple people to work concurrently.</li>
+</ul>
+</div>
+</div>
 
 
 </section>
@@ -716,13 +760,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./pawsey.html" class="pagination-link" aria-label="Pawsey">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Pawsey</span>
+      <a href="./ssh.html" class="pagination-link" aria-label="Remote logins and SSH">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Remote logins and SSH</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./best-practice-programming.html" class="pagination-link" aria-label="Best practices for programming">
-        <span class="nav-page-text">Best practices for programming</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./supercomputing.html" class="pagination-link" aria-label="Supercomputing fundamentals">
+        <span class="nav-page-text">Supercomputing fundamentals</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
