@@ -3,34 +3,31 @@ title: "Global Disease Modelling 2025 Workshop"
 sidebar: true
 ---
 
-This is the website for the Global Disease Modelling team's intensive workshop, held 13-15 January 2025 at The Kids Research Institute Australia.
+This is the website for the Global Disease Modelling team's intensive workshop, held 13-15 January and 22 January 2025 at The Kids Research Institute Australia.
 
 Participating in the workshop means you agree to abide by our [Code of Conduct](code-of-conduct.qmd).
 
-### Overview
-
-By the end of this workshop, you should be comfortable with:
-
--   Using bash to navigate your computer
--   Submitting jobs to a supercomputer
--   Using Git on the command line
-
-#TODO (Insert giscus/hypothes.is here? Discussion forum? Slack / Teams?)
-
-You can access the Q&A at [slido.com](https://www.slido.com/) using the code **\# 3151 5665** or by [clicking this link](https://app.sli.do/event/t1wc4szfSZLy9CzTgTEove).
+You can access the Q&A at [slido.com](https://www.slido.com/) using the code **\# 3151 5665** or by [clicking this link](https://app.sli.do/event/t1wc4szfSZLy9CzTgTEove). You can also use the Teams meeting's chat to post any questions or comments.
 
 ### Outline
 
--   [Session 1](session-1.qmd) focuses on starting up with Git and HPCs.
--   [Session 2](session-2.qmd) explores how we can utilise HPCs, including job scheduling, code modularisation, and parallelisation.
--   [Session 3](session-3.qmd) continues exploring how we can utilise HPCs, including parallelisation and code modularisation. We will also review material from the last two days.
+-   In [session 1](session-1.qmd) we will have a refresher for Bash and Git.
+-   In [session 2](session-2.qmd) we will explore how we can utilise HPCs, including: a high-level overview of HPCs, logging on, software modules, containers, and job scheduling using Slurm.
+-   In [session 3](session-3.qmd) we will continue exploring how we can utilise HPCs, including: how to use Git specifically on Pawsey, understanding Slurm job arrays, and starting to work on transitioning our individual projects onto Pawsey.
+-   In the Hackathon session we will work on our individual projects to transition onto Pawsey with support from Pawsey specialists.
 
 ### Session schedule
 
-This workshop is held 13 to 15 January 2025, Monday to Wednesday afternoons, with the following schedule:
+The first part of the workshop is held 13 to 15 January 2025 from 13:00 to 16:00, with the following schedule:
 
 -   13:00-13:50 Workshop
 -   13:50-14:00 Break
 -   14:00-14:50 Workshop
 -   14:50-15:15 Afternoon tea
 -   15:15-16:00 Workshop
+
+The last day of the workshop is a Hackathon held on 22 January 2025 from 13:00 to 16:30, with the following schedule:
+
+-   13:00-14:45 Hackathon
+-   14:45-15:15 Afternoon tea
+-   15:15-16:30 Hackathon
