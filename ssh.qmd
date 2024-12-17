@@ -50,11 +50,11 @@ Typing `exit` terminates the remote shell (and the local client program on that 
 
 ## SSH keys {#sec-sshkeys}
 
-#TODO SSH keys provide a more secure and streamlined way of authenticating to remote systems compared to traditional password-based login methods. Instead of relying on a potentially weak password that can be guessed or intercepted, SSH keys use a robust cryptographic authentication mechanism.
-
-#TODO Additionally, typing our long and complex password over and over again is annoying. This is another benefit of creating an SSH key: we can tell the remote machine that it should always trust us. By implementing SSH keys, you're not just avoiding the inconvenience of repeated password entry; you're fundamentally improving your system's security and authentication reliability.
+SSH keys provide a more secure and streamlined way of authenticating to remote systems compared to traditional password-based login methods. Instead of relying on a potentially weak password that can be guessed or intercepted, SSH keys use a robust cryptographic authentication mechanism. By implementing SSH keys, you're not just avoiding the inconvenience of repeated password entry; you're fundamentally improving your system's security and authentication reliability.
 
 SSH keys come in pairs: a public key that gets shared with services like GitHub, and a private key that is stored only on your computer. If the keys match, you’re granted access. The cryptography behind SSH keys ensures that no one can reverse engineer your private key from the public one.
+
+When you generate an SSH key, you can add a passphrase to further secure the key. Whenever you use the key, you must enter the passphrase. If your key has a passphrase and you don't want to enter the passphrase every time you use the key, you can add your key to the SSH agent. The SSH agent manages your SSH keys and remembers your passphrase.
 
 The first step in using SSH authorization is to generate your own key pair. You might already have an SSH key pair on your machine. You can check to see if one exists by moving to your `.ssh` directory and listing the contents.
 
@@ -67,11 +67,178 @@ If you see `id_rsa.pub`, you already have a key pair and don’t need to create 
 
 ### Generating a key pair for GitHub
 
-#TODO https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+You can generate a new SSH key on your local machine. After you generate the key, you can add the public key to your account on GitHub.com to enable authentication for Git operations over SSH.
+
+#### Generate a new SSH key pair
+
+1.  Open a Terminal and paste the text below, replacing the email used in the example with your GitHub email address.
+
+    ``` txt
+    ssh-keygen -t ed25519 -C "your_email@example.com" -f ~/.ssh/github_ed25519_key
+    ```
+
+    This creates a new SSH key, using the provided email as a label, and `github_ed25519_key` as the key name.
+
+    ``` txt
+    > Generating public/private ALGORITHM key pair.
+    ```
+
+2.  At the prompt, type a secure passphrase.
+
+    ``` txt
+    > Enter passphrase (empty for no passphrase): [Type a passphrase]
+    > Enter same passphrase again: [Type passphrase again]
+    ```
+
+#### Add the keys to your machine's SSH agent
+
+1.  Start the ssh-agent in the background.
+
+    ```bash
+    $ eval "$(ssh-agent -s)" 
+    > Agent pid 59566
+    ```
+    
+    Depending on your environment, you may need to use a different command. For example, you may need to use root access by running `sudo -s -H` before starting the ssh-agent, or you may need to use `exec ssh-agent bash` or `exec ssh-agent zsh` to run the ssh-agent.
+2.  If you're using macOS Sierra 10.12.2 or later, you will need to modify your `~/.ssh/config` file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+    -   First, check to see if your `~/.ssh/config` file exists in the default location.
+    
+    ``` txt
+    $ open ~/.ssh/config
+    > The file /Users/YOU/.ssh/config does not exist.
+    ```
+    
+    -   If the file doesn't exist, create the file.
+    
+    ``` txt
+    touch ~/.ssh/config
+    ```
+    
+    -   Open your `~/.ssh/config` file, then modify the file to contain the following lines. If your SSH key file has a different name or path than the example code, modify the filename or path to match your current setup.
+    
+    ``` txt
+    Host setonix
+      AddKeysToAgent yes
+      UseKeychain yes
+      IdentityFile ~/.ssh/github_ed25519_key
+    ```
+    ::: {.callout-note title="Note"}
+    If you chose not to add a passphrase to your key, you should omit the `UseKeychain` line.
+    
+    If you see a `Bad configuration option: usekeychain` error, add an additional line to the configuration's `Host *.github.com` section.
+    
+    ``` txt
+    Host github.com
+      IgnoreUnknown UseKeychain
+    ```
+    :::
+3.  Add your SSH private key to the ssh-agent and store your passphrase in the keychain. If you created your key with a different name, or if you are adding an existing key that has a different name, replace `github_ed25519_key` in the command with the name of your private key file.
+
+    ``` txt
+    ssh-add --apple-use-keychain ~/.ssh/github_ed25519_key
+    ```
+    
+    ::: {.callout-note title="Note"}
+    The `--apple-use-keychain` option stores the passphrase in your keychain for you when you add an SSH key to the ssh-agent. If you chose not to add a passphrase to your key, run the command without the `--apple-use-keychain` option.
+    
+    The `--apple-use-keychain` option is in Apple's standard version of `ssh-add`. In macOS versions prior to Monterey (12.0), the `--apple-use-keychain` and `--apple-load-keychain` flags used the syntax `-K` and `-A`, respectively.
+    
+    If you continue to be prompted for your passphrase, you may need to add the command to your `~/.zshrc` file (or your `~/.bashrc` file for bash).
+    :::
+
+#### Add the public key to your account on GitHub
+
+1.  Copy the SSH public key to your clipboard. If your SSH public key file has a different name than the example code, modify the filename to match your current setup. When copying your key, don't add any newlines or whitespace.
+
+    ``` txt
+    $ pbcopy < ~/.ssh/github_ed25519_key.pub
+    # Copies the contents of the github_ed25519_key.pub file to your clipboard
+    ```
+    
+    ::: {.callout-tip title="If `pbcopy` doesn't work" collapse="true"}
+    If `pbcopy` isn't working, you can locate the hidden `.ssh` folder, open the file in your favorite text editor, and copy it to your clipboard.
+    :::
+    
+2.  In the upper-right corner of any page on GitHub, click your profile photo, then click **Settings**.
+3.  In the "Access" section of the sidebar, click **SSH and GPG keys**.
+4.  Click **New SSH key** or **Add SSH key**.
+5.  In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key "Personal laptop".
+6.  Select the type of key: in this instance, we want to set up a key for authentication.
+7.  In the "Key" field, paste your public key.
+8.  Click **Add SSH key**.
+9.  If prompted, confirm access to your account on GitHub.
+
+Link to GitHub documentation [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
 ### Generating a key pair for Pawsey
 
-#TODO https://pawsey.atlassian.net/wiki/spaces/US/pages/51925870/Use+of+SSH+Keys+for+Authentication
+#### Generate a new SSH key pair
+
+1.  Open a terminal and execute the following command: 
+
+    ```txt
+    ssh-keygen -t ed25519 -f ~/.ssh/pawsey_ed25519_key
+    ```
+2.  At the prompt, type a secure passphrase.
+
+    ``` txt
+    > Enter passphrase (empty for no passphrase): [Type a passphrase]
+    > Enter same passphrase again: [Type passphrase again]
+    ```
+
+#### Add the keys to your machine's SSH agent
+
+1.  Start the ssh-agent in the background.
+
+    ```txt
+    $ eval "$(ssh-agent -s)"
+    > Agent pid 59566
+    ```
+    
+    Depending on your environment, you may need to use a different command. For example, you may need to use root access by running `sudo -s -H` before starting the ssh-agent, or you may need to use `exec ssh-agent bash` or `exec ssh-agent zsh` to run the ssh-agent.
+2.  If you're using macOS Sierra 10.12.2 or later, you will need to modify your `~/.ssh/config` file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+    -   First, check to see if your `~/.ssh/config` file exists in the default location.
+    
+    ``` txt
+    $ open ~/.ssh/config
+    > The file /Users/YOU/.ssh/config does not exist.
+    ```
+    
+    -   If the file doesn't exist, create the file.
+    
+    ``` txt
+    touch ~/.ssh/config
+    ```
+    
+    -   Open your `~/.ssh/config` file, then modify the file to contain the following lines. If your SSH key file has a different name or path than the example code, modify the filename or path to match your current setup.
+    
+    ``` txt
+    Host setonix
+      AddKeysToAgent yes
+      UseKeychain yes
+      IdentityFile ~/.ssh/pawsey_ed25519_key
+    ```
+    
+    ::: {.callout-note title="Note"}
+    If you chose not to add a passphrase to your key, you should omit the `UseKeychain` line.
+    
+    If you see a `Bad configuration option: usekeychain` error, add an additional line to the configuration's `Host setonix` section.
+    
+    ``` txt
+    Host setonix
+      IgnoreUnknown UseKeychain
+    ```
+    :::
+
+#### Add the public key to Setonix
+
+On your local machine, execute the following command:
+
+``` txt
+ssh-copy-id -i ~/.ssh/pawsey_ed25519_key.pub <username>@<remotehost>
+```
+
+Where `<username>` is your Pawsey username and `<remotehost>` is the remote host to be accessed (usually setonix.pawsey.org.au). If the command establishes the correct connection to the host, then it will ask for your password to accept and finalise the copy.
 
 ## Secure file transfers {#sec-file-transfer}
 
@@ -132,3 +299,4 @@ As for any software, be careful of not falling into "click tricks" that mislead 
 ::: {.callout-important title="Authentication"}
 Saving your password within the GUI client is not recommended. Instead, use SSH keys. See @sec-sshkeys for information on SSH keys.
 :::
+::::::
