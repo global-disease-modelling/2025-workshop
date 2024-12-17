@@ -6,11 +6,11 @@ execute:
 number-sections: true
 ---
 
-### Using Git on Pawsey
+## Using Git on Pawsey
 
-### Slurm job arrays
+## Slurm job arrays
 
-### Intro to Nextflow
+## Intro to Nextflow
 
-### Moving your project to Pawsey
+## Moving your project to Pawsey
 

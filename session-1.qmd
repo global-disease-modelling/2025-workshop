@@ -6,11 +6,11 @@ execute:
 number-sections: true
 ---
 
-### Unix shell
+## Unix shell
 
 Find Pawsey's intro to Bash [here](https://pawsey-internships.github.io/more_with_bash/unix_and_shells/).
 
-### Logging in (SSH)
+## Logging in (SSH)
 
 ::: {.callout-note title="Objectives" icon=false}
 - Set up SSH keys for Git and Pawsey
@@ -26,7 +26,7 @@ Find Pawsey's intro to Bash [here](https://pawsey-internships.github.io/more_wit
 Why do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?
 :::
 
-#### Looking around
+### Looking around
 
 ::: {.callout-note title="Objectives" icon=false}
 - Navigate Pawsey using the command line
@@ -44,6 +44,6 @@ Similar to `$MYSOFTWARE`, there is an alias `$MYSCRATCH` for your scratch direct
 3. Navigate to the folder `secret-files` within your `scratch` directory, then run the program `secret-program.sh`.
 4. Remove the program `secret-program.sh` and the folder `old-data`.
 
-### Git
+## Git
 
 Find Pawsey's intro to version control [here](https://pawsey-internships.github.io/version-control/).

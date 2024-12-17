@@ -69,7 +69,7 @@
     "href": "session-1.html",
     "title": "Session 1",
     "section": "",
-    "text": "0.1 Unix shell\nFind Pawsey’s intro to Bash here.\n\n\n0.2 Logging in (SSH)\n\n\n\n\n\n\nObjectives\n\n\n\n\nSet up SSH keys for Git and Pawsey\nUnderstand “where” you are\n\n\n\n\nCheck whether you already have SSH keys set up. How would you do this?\nSet up your SSH key for Git.\nSet up your SSH key for Pawsey.\nLog on to Pawsey using SSH. How do you know “where” you are? Is your terminal running on your local PC, or on Pawsey?\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhy do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?\n\n\n\n0.2.1 Looking around\n\n\n\n\n\n\nObjectives\n\n\n\n\nNavigate Pawsey using the command line\nUnderstand user permissions\nUnderstand the Pawsey filesystem\n\n\n\n\nNavigate to your own software directory using cd $MYSOFTWARE. Now, navigate to the GROUP directory (also located within pawsey1104).\nWe’d now like to copy confidential information from the folder secret-files within the software directory to our scratch directory. How would you do this?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nSimilar to $MYSOFTWARE, there is an alias $MYSCRATCH for your scratch directory.\n\n\n\n\nNavigate to the folder secret-files within your scratch directory, then run the program secret-program.sh.\nRemove the program secret-program.sh and the folder old-data.\n\n\n\n\n0.3 Git\nFind Pawsey’s intro to version control here.",
+    "text": "Find Pawsey’s intro to Bash here.",
     "crumbs": [
       "Workshop",
       "Session 1"
@@ -364,6 +364,105 @@
     "crumbs": [
       "Resources",
       "Unix shell"
+    ]
+  },
+  {
+    "objectID": "session-1.html#unix-shell",
+    "href": "session-1.html#unix-shell",
+    "title": "Session 1",
+    "section": "",
+    "text": "Find Pawsey’s intro to Bash here.",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
+    ]
+  },
+  {
+    "objectID": "session-1.html#logging-in-ssh",
+    "href": "session-1.html#logging-in-ssh",
+    "title": "Session 1",
+    "section": "2 Logging in (SSH)",
+    "text": "2 Logging in (SSH)\n\n\n\n\n\n\nObjectives\n\n\n\n\nSet up SSH keys for Git and Pawsey\nUnderstand “where” you are\n\n\n\n\nCheck whether you already have SSH keys set up. How would you do this?\nSet up your SSH key for Git.\nSet up your SSH key for Pawsey.\nLog on to Pawsey using SSH. How do you know “where” you are? Is your terminal running on your local PC, or on Pawsey?\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhy do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?\n\n\n\n2.1 Looking around\n\n\n\n\n\n\nObjectives\n\n\n\n\nNavigate Pawsey using the command line\nUnderstand user permissions\nUnderstand the Pawsey filesystem\n\n\n\n\nNavigate to your own software directory using cd $MYSOFTWARE. Now, navigate to the GROUP directory (also located within pawsey1104).\nWe’d now like to copy confidential information from the folder secret-files within the software directory to our scratch directory. How would you do this?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nSimilar to $MYSOFTWARE, there is an alias $MYSCRATCH for your scratch directory.\n\n\n\n\nNavigate to the folder secret-files within your scratch directory, then run the program secret-program.sh.\nRemove the program secret-program.sh and the folder old-data.",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
+    ]
+  },
+  {
+    "objectID": "session-1.html#git",
+    "href": "session-1.html#git",
+    "title": "Session 1",
+    "section": "3 Git",
+    "text": "3 Git\nFind Pawsey’s intro to version control here.",
+    "crumbs": [
+      "Workshop",
+      "Session 1"
+    ]
+  },
+  {
+    "objectID": "session-2.html#file-transfers-more-ssh",
+    "href": "session-2.html#file-transfers-more-ssh",
+    "title": "Session 2",
+    "section": "2 File transfers (more SSH)",
+    "text": "2 File transfers (more SSH)\n\n\n\n\n\n\nObjectives\n\n\n\n\nUse SCP and SFTP for file transfers\nUse the command line for basic file operations\nUse the text editor Vim\n\n\n\n\nLog in to an SFTP session. Transfer the folder secret-files within your scratch directory to your local PC.\n\n\n\n\n\n\n\nWarning\n\n\n\nIt’s tempting to use your PC’s GUI, but please use the command line for the next steps in this exercise!\n\n\n\nOpen a new terminal window for your local PC. Navigate to the secret-files directory on your local PC and open the file unmodified-secret-scenario.xml using Vim.\nThere are some values in that file that needs to be substituted; they look like: @parameter@. Find these and change them.\nWhen you’re done changing all the values, rename the file to secret-scenario.xml using the command mv.\nUsing SCP, transfer the file secret-scenario.xml to the secret-files folder within your scratch directory on Pawsey.\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhen do you think you would use SCP, SFTP, and Rsync? Which method do you think is quicker? And when would you use GUIs?",
+    "crumbs": [
+      "Workshop",
+      "Session 2"
+    ]
+  },
+  {
+    "objectID": "session-2.html#software-on-hpc",
+    "href": "session-2.html#software-on-hpc",
+    "title": "Session 2",
+    "section": "3 Software on HPC",
+    "text": "3 Software on HPC",
+    "crumbs": [
+      "Workshop",
+      "Session 2"
+    ]
+  },
+  {
+    "objectID": "session-2.html#job-scheduling-slurm",
+    "href": "session-2.html#job-scheduling-slurm",
+    "title": "Session 2",
+    "section": "4 Job scheduling (Slurm)",
+    "text": "4 Job scheduling (Slurm)",
+    "crumbs": [
+      "Workshop",
+      "Session 2"
+    ]
+  },
+  {
+    "objectID": "session-3.html#slurm-job-arrays",
+    "href": "session-3.html#slurm-job-arrays",
+    "title": "Session 3",
+    "section": "2 Slurm job arrays",
+    "text": "2 Slurm job arrays",
+    "crumbs": [
+      "Workshop",
+      "Session 3"
+    ]
+  },
+  {
+    "objectID": "session-3.html#intro-to-nextflow",
+    "href": "session-3.html#intro-to-nextflow",
+    "title": "Session 3",
+    "section": "3 Intro to Nextflow",
+    "text": "3 Intro to Nextflow",
+    "crumbs": [
+      "Workshop",
+      "Session 3"
+    ]
+  },
+  {
+    "objectID": "session-3.html#moving-your-project-to-pawsey",
+    "href": "session-3.html#moving-your-project-to-pawsey",
+    "title": "Session 3",
+    "section": "4 Moving your project to Pawsey",
+    "text": "4 Moving your project to Pawsey",
+    "crumbs": [
+      "Workshop",
+      "Session 3"
     ]
   }
 ]

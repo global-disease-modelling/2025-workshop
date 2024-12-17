@@ -6,9 +6,9 @@ execute:
 number-sections: true
 ---
 
-### High-level overview of HPC
+## High-level overview of HPC
 
-### File transfers (more SSH)
+## File transfers (more SSH)
 
 ::: {.callout-note title="Objectives" icon=false}
 - Use SCP and SFTP for file transfers
@@ -31,6 +31,6 @@ It's tempting to use your PC's GUI, but please use the command line for the next
 When do you think you would use SCP, SFTP, and Rsync? Which method do you think is quicker? And when would you use GUIs?
 :::
 
-### Software on HPC
+## Software on HPC
 
-### Job scheduling (Slurm)
+## Job scheduling (Slurm)
