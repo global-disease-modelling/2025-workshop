@@ -483,7 +483,7 @@ If <code>pbcopy</code> doesn’t work
 <p>Depending on your environment, you may need to use a different command. For example, you may need to use root access by running <code>sudo -s -H</code> before starting the ssh-agent, or you may need to use <code>exec ssh-agent bash</code> or <code>exec ssh-agent zsh</code> to run the ssh-agent.</p></li>
 <li><p>If you’re using macOS Sierra 10.12.2 or later, you will need to modify your <code>~/.ssh/config</code> file to automatically load keys into the ssh-agent and store passphrases in your keychain.</p>
 <ul>
-<li>First, check to see if your <code>~/.ssh/config</code> file exists in the default location.</li>
+<li>First, check to see if your <code>~/.ssh/config</code> file exists in the default location using the following command:</li>
 </ul>
 <div class="sourceCode" id="cb17"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>$ open ~/.ssh/config</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>&gt; The file /Users/YOU/.ssh/config does not exist.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
