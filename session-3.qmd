@@ -1,12 +1,16 @@
 ---
 title: Session 3
-subtitle: Further analysis on Pawsey
+subtitle: Further exploring Pawsey
+execute: 
+  eval: false
+number-sections: true
 ---
 
-Topics to be covered in this session: 
+### Using Git on Pawsey
 
--   Further attempt to write code that encourages parallelisation
-    -   instead of using job arrays, which is the current preferred approach
-    -   GNU parallel
--   ? Attempt modularisation of individual project codes (ask participants to break up their code and find a better way of organising their code)
--   ? Interactive RStudio sessions on Pawsey
+### Slurm job arrays
+
+### Intro to Nextflow
+
+### Moving your project to Pawsey
+

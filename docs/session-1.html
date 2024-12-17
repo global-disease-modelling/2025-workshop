@@ -151,6 +151,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Session 3</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./session-hackathon.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hackathon session</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -222,12 +228,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#logging-in" id="toc-logging-in" class="nav-link active" data-scroll-target="#logging-in">Logging in</a></li>
-  <li><a href="#looking-around" id="toc-looking-around" class="nav-link" data-scroll-target="#looking-around">Looking around</a></li>
-  <li><a href="#file-transfers" id="toc-file-transfers" class="nav-link" data-scroll-target="#file-transfers">File transfers</a></li>
-  <li><a href="#schedulers" id="toc-schedulers" class="nav-link" data-scroll-target="#schedulers">Schedulers</a></li>
-  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git">Git</a></li>
-  <li><a href="#chitra-notes-to-self" id="toc-chitra-notes-to-self" class="nav-link" data-scroll-target="#chitra-notes-to-self">Chitra notes to self</a></li>
+  <li><a href="#unix-shell" id="toc-unix-shell" class="nav-link active" data-scroll-target="#unix-shell"><span class="header-section-number">0.1</span> Unix shell</a></li>
+  <li><a href="#logging-in-ssh" id="toc-logging-in-ssh" class="nav-link" data-scroll-target="#logging-in-ssh"><span class="header-section-number">0.2</span> Logging in (SSH)</a></li>
+  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git"><span class="header-section-number">0.3</span> Git</a></li>
   </ul>
 </nav>
     </div>
@@ -237,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">Session 1</h1>
-<p class="subtitle lead">Starting up Pawsey and Git</p>
+<p class="subtitle lead">Fundamentals of Unix and Git</p>
 </div>
 
 
@@ -254,8 +257,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="logging-in" class="level3">
-<h3 class="anchored" data-anchor-id="logging-in">Logging in</h3>
+<section id="unix-shell" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="unix-shell"><span class="header-section-number">0.1</span> Unix shell</h3>
+<p>Find Pawsey’s intro to Bash <a href="https://pawsey-internships.github.io/more_with_bash/unix_and_shells/">here</a>.</p>
+</section>
+<section id="logging-in-ssh" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="logging-in-ssh"><span class="header-section-number">0.2</span> Logging in (SSH)</h3>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Objectives">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -291,9 +298,8 @@ Discussion
 <p>Why do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?</p>
 </div>
 </div>
-</section>
-<section id="looking-around" class="level3">
-<h3 class="anchored" data-anchor-id="looking-around">Looking around</h3>
+<section id="looking-around" class="level4" data-number="0.2.1">
+<h4 data-number="0.2.1" class="anchored" data-anchor-id="looking-around"><span class="header-section-number">0.2.1</span> Looking around</h4>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Objectives">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -336,114 +342,10 @@ Tip
 <li>Remove the program <code>secret-program.sh</code> and the folder <code>old-data</code>.</li>
 </ol>
 </section>
-<section id="file-transfers" class="level3">
-<h3 class="anchored" data-anchor-id="file-transfers">File transfers</h3>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Objectives">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Objectives
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Use SCP and SFTP for file transfers</li>
-<li>Use the command line for basic file operations</li>
-<li>Use the text editor Vim</li>
-</ul>
-</div>
-</div>
-<ol type="1">
-<li>Log in to an SFTP session. Transfer the folder <code>secret-files</code> within your <code>scratch</code> directory to your local PC.</li>
-</ol>
-<div class="callout callout-style-default callout-important callout-titled" title="Warning">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>It’s tempting to use your PC’s GUI, but please use the command line for the next steps in this exercise!</p>
-</div>
-</div>
-<ol start="2" type="1">
-<li>Open a new terminal window for your local PC. Navigate to the <code>secret-files</code> directory on your local PC and open the file <code>unmodified-secret-scenario.xml</code> using Vim.</li>
-<li>There are some values in that file that needs to be substituted; they look like: <code>@parameter@</code>. Find these and change them.</li>
-<li>When you’re done changing all the values, rename the file to <code>secret-scenario.xml</code> using the command <code>mv</code>.</li>
-<li>Using SCP, transfer the file <code>secret-scenario.xml</code> to the <code>secret-files</code> folder within your <code>scratch</code> directory on Pawsey.</li>
-</ol>
-<div class="callout callout-style-default callout-warning callout-titled" title="Discussion">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Discussion
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>When do you think you would use SCP, SFTP, and Rsync? Which method do you think is quicker? And when would you use GUIs?</p>
-</div>
-</div>
 </section>
-<section id="schedulers" class="level3">
-<h3 class="anchored" data-anchor-id="schedulers">Schedulers</h3>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Objectives">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Objectives
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Understand the Pawsey filesystem vs architecture (nodes and scheduler).</li>
-<li>Understand where jobs are executed.</li>
-</ul>
-</div>
-</div>
-<p>#TODO</p>
-<div class="callout callout-style-default callout-warning callout-titled" title="Discussion">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Discussion
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Where do you think this job was executed?</p>
-</div>
-</div>
-</section>
-<section id="git" class="level3">
-<h3 class="anchored" data-anchor-id="git">Git</h3>
-<ol type="1">
-<li>Clone the secret-exercises repository to your scratch directory.</li>
-</ol>
-<p>#TODO</p>
-</section>
-<section id="chitra-notes-to-self" class="level3">
-<h3 class="anchored" data-anchor-id="chitra-notes-to-self">Chitra notes to self</h3>
-<ul>
-<li>Set up an SSH key for Git</li>
-<li>Set up an SSH key for Pawsey</li>
-<li>Navigate on Pawsey using the command line interface</li>
-<li>Clone a git repository onto Pawsey</li>
-<li>Transfer files between your local PC and Pawsey</li>
-<li>Commit and push changes</li>
-<li>Taster: run one job on Pawsey</li>
-</ul>
-<p>Ideas for directions:</p>
-<p>Clone the <code>2025-workshop-exercise</code> repository. This is one of our pipelines. You have to transfer sensitive files from your local device onto Pawsey, to then run the pipeline.</p>
+<section id="git" class="level3" data-number="0.3">
+<h3 data-number="0.3" class="anchored" data-anchor-id="git"><span class="header-section-number">0.3</span> Git</h3>
+<p>Find Pawsey’s intro to version control <a href="https://pawsey-internships.github.io/version-control/">here</a>.</p>
 
 
 </section>

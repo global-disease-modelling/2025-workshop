@@ -1,9 +1,16 @@
 ---
 title: Session 1
-subtitle: Starting up Pawsey and Git
+subtitle: Fundamentals of Unix and Git
+execute: 
+  eval: false
+number-sections: true
 ---
 
-### Logging in
+### Unix shell
+
+Find Pawsey's intro to Bash [here](https://pawsey-internships.github.io/more_with_bash/unix_and_shells/).
+
+### Logging in (SSH)
 
 ::: {.callout-note title="Objectives" icon=false}
 - Set up SSH keys for Git and Pawsey
@@ -19,7 +26,7 @@ subtitle: Starting up Pawsey and Git
 Why do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?
 :::
 
-### Looking around
+#### Looking around
 
 ::: {.callout-note title="Objectives" icon=false}
 - Navigate Pawsey using the command line
@@ -37,59 +44,6 @@ Similar to `$MYSOFTWARE`, there is an alias `$MYSCRATCH` for your scratch direct
 3. Navigate to the folder `secret-files` within your `scratch` directory, then run the program `secret-program.sh`.
 4. Remove the program `secret-program.sh` and the folder `old-data`.
 
-### File transfers
-
-::: {.callout-note title="Objectives" icon=false}
-- Use SCP and SFTP for file transfers
-- Use the command line for basic file operations
-- Use the text editor Vim
-:::
-
-1. Log in to an SFTP session. Transfer the folder `secret-files` within your `scratch` directory to your local PC.
-
-::: {.callout-important title="Warning"}
-It's tempting to use your PC's GUI, but please use the command line for the next steps in this exercise!
-:::
-
-2. Open a new terminal window for your local PC. Navigate to the `secret-files` directory on your local PC and open the file `unmodified-secret-scenario.xml` using Vim.
-3. There are some values in that file that needs to be substituted; they look like: `@parameter@`. Find these and change them.
-4. When you're done changing all the values, rename the file to `secret-scenario.xml` using the command `mv`.
-5. Using SCP, transfer the file `secret-scenario.xml` to the `secret-files` folder within your `scratch` directory on Pawsey.
-
-::: {.callout-warning title="Discussion"}
-When do you think you would use SCP, SFTP, and Rsync? Which method do you think is quicker? And when would you use GUIs?
-:::
-
-
-### Schedulers
-
-::: {.callout-note title="Objectives" icon=false}
-- Understand the Pawsey filesystem vs architecture (nodes and scheduler).
-- Understand where jobs are executed.
-:::
-
-#TODO
-
-::: {.callout-warning title="Discussion"}
-Where do you think this job was executed?
-:::
-
 ### Git
 
-1. Clone the secret-exercises repository to your scratch directory.
-
-#TODO
-
-### Chitra notes to self
-
-- Set up an SSH key for Git
-- Set up an SSH key for Pawsey
-- Navigate on Pawsey using the command line interface
-- Clone a git repository onto Pawsey
-- Transfer files between your local PC and Pawsey
-- Commit and push changes
-- Taster: run one job on Pawsey
-
-Ideas for directions:
-
-Clone the `2025-workshop-exercise` repository. This is one of our pipelines. You have to transfer sensitive files from your local device onto Pawsey, to then run the pipeline.
+Find Pawsey's intro to version control [here](https://pawsey-internships.github.io/version-control/).

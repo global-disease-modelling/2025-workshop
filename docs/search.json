@@ -65,100 +65,76 @@
     ]
   },
   {
-    "objectID": "session-3.html",
-    "href": "session-3.html",
-    "title": "Session 3",
+    "objectID": "session-1.html",
+    "href": "session-1.html",
+    "title": "Session 1",
     "section": "",
-    "text": "Topics to be covered in this session:\n\nFurther attempt to write code that encourages parallelisation\n\ninstead of using job arrays, which is the current preferred approach\nGNU parallel\n\n? Attempt modularisation of individual project codes (ask participants to break up their code and find a better way of organising their code)\n? Interactive RStudio sessions on Pawsey",
+    "text": "0.1 Unix shell\nFind Pawsey’s intro to Bash here.\n\n\n0.2 Logging in (SSH)\n\n\n\n\n\n\nObjectives\n\n\n\n\nSet up SSH keys for Git and Pawsey\nUnderstand “where” you are\n\n\n\n\nCheck whether you already have SSH keys set up. How would you do this?\nSet up your SSH key for Git.\nSet up your SSH key for Pawsey.\nLog on to Pawsey using SSH. How do you know “where” you are? Is your terminal running on your local PC, or on Pawsey?\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhy do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?\n\n\n\n0.2.1 Looking around\n\n\n\n\n\n\nObjectives\n\n\n\n\nNavigate Pawsey using the command line\nUnderstand user permissions\nUnderstand the Pawsey filesystem\n\n\n\n\nNavigate to your own software directory using cd $MYSOFTWARE. Now, navigate to the GROUP directory (also located within pawsey1104).\nWe’d now like to copy confidential information from the folder secret-files within the software directory to our scratch directory. How would you do this?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nSimilar to $MYSOFTWARE, there is an alias $MYSCRATCH for your scratch directory.\n\n\n\n\nNavigate to the folder secret-files within your scratch directory, then run the program secret-program.sh.\nRemove the program secret-program.sh and the folder old-data.\n\n\n\n\n0.3 Git\nFind Pawsey’s intro to version control here.",
     "crumbs": [
       "Workshop",
-      "Session 3"
+      "Session 1"
     ]
   },
   {
-    "objectID": "supercomputing.html",
-    "href": "supercomputing.html",
-    "title": "Supercomputing fundamentals",
+    "objectID": "session-2.html",
+    "href": "session-2.html",
+    "title": "Session 2",
     "section": "",
-    "text": "Components of a supercomputer\nFilesystem of a supercomputer\nSupercomputer modules\nScheduler (Slurm)\nBatch scripting\nObject storage\n\n\n\n\nGeneral architecture of a supercomputer",
+    "text": "0.1 High-level overview of HPC\n\n\n0.2 File transfers (more SSH)\n\n\n\n\n\n\nObjectives\n\n\n\n\nUse SCP and SFTP for file transfers\nUse the command line for basic file operations\nUse the text editor Vim\n\n\n\n\nLog in to an SFTP session. Transfer the folder secret-files within your scratch directory to your local PC.\n\n\n\n\n\n\n\nWarning\n\n\n\nIt’s tempting to use your PC’s GUI, but please use the command line for the next steps in this exercise!\n\n\n\nOpen a new terminal window for your local PC. Navigate to the secret-files directory on your local PC and open the file unmodified-secret-scenario.xml using Vim.\nThere are some values in that file that needs to be substituted; they look like: @parameter@. Find these and change them.\nWhen you’re done changing all the values, rename the file to secret-scenario.xml using the command mv.\nUsing SCP, transfer the file secret-scenario.xml to the secret-files folder within your scratch directory on Pawsey.\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhen do you think you would use SCP, SFTP, and Rsync? Which method do you think is quicker? And when would you use GUIs?\n\n\n\n\n0.3 Software on HPC\n\n\n0.4 Job scheduling (Slurm)",
+    "crumbs": [
+      "Workshop",
+      "Session 2"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "best-practice-programming.html#best-practice-git",
+    "href": "best-practice-programming.html#best-practice-git",
+    "title": "Best practices for programming",
+    "section": "Best practice Git",
+    "text": "Best practice Git\n\nCommit names\nBranch names",
     "crumbs": [
       "Resources",
-      "Supercomputing fundamentals"
+      "Best practices for programming"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Global Disease Modelling 2025 Workshop",
-    "section": "",
-    "text": "This workshop is held 13-15 January and 22 January 2025 for the Global Disease Modelling team at The Kids Research Institute Australia, in collaboration with Pawsey Supercomputing Centre.\nParticipating in the workshop means you agree to abide by our Code of Conduct.\nYou can access the Q&A at slido.com using the code # 3151 5665 or by clicking this link. You can also use the Teams meeting’s chat to post any questions or comments.\n\nOutline\n\nIn session 1 we will have a refresher for Bash and Git.\nIn session 2 we will explore how we can utilise HPCs, including: a high-level overview of HPCs, logging on, software modules, containers, and job scheduling using Slurm.\nIn session 3 we will continue exploring how we can utilise HPCs, including: how to use Git specifically on Pawsey, understanding Slurm job arrays, and starting to work on transitioning our individual projects onto Pawsey.\nIn the Hackathon session we will work on our individual projects to transition onto Pawsey with support from Pawsey specialists.\n\n\n\nSession schedule\nThe first part of the workshop is held 13 to 15 January 2025 from 13:00 to 16:00, with the following schedule:\n\n13:00-13:50 Workshop\n13:50-14:00 Break\n14:00-14:50 Workshop\n14:50-15:15 Afternoon tea\n15:15-16:00 Workshop\n\nThe last day of the workshop is a Hackathon held on 22 January 2025 from 13:00 to 16:30, with the following schedule:\n\n13:00-14:45 Hackathon\n14:45-15:15 Afternoon tea\n15:15-16:30 Hackathon",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "acknowledgements.html",
-    "href": "acknowledgements.html",
-    "title": "Acknowledgements",
-    "section": "",
-    "text": "Acknowledgement of country\nThe Kids Research Institute Australia acknowledges Aboriginal people as the Traditional Owners of the land and seas of Australia. We also acknowledge the Noongar Nation and especially the Whadjuk people as the custodians of the land on which the Institute is located.\nWe pay our respects to Elders past, present, and future and seek their wisdom in our work to improve the health of all children.\n\n\nCourse preparation\n\n\nCourse material\n\nThe Code of Conduct is derived from work that is copyright © rOpenSci (rOpenSci Code of Conduct) made available under the CC BY 4.0 license.\nThe instruction material “Unix Shell” is derived from work that is copyright © The Carpentries (https://carpentries.org/) made available under the CC BY 4.0 license.\nThe instruction material “Remote logins and SSH” is derived from works that are copyright © The Carpentries (https://carpentries.org/) and copyright © Pawsey (https://pawsey.atlassian.net/wiki/spaces/US/overview) made available under the CC BY 4.0 license; and copyright © GitHub, Inc. (https://docs.github.com/en) made available under the CC0 1.0 Universal Deed.",
-    "crumbs": [
-      "Acknowledgements"
-    ]
-  },
-  {
-    "objectID": "pawsey.html",
-    "href": "pawsey.html",
-    "title": "Pawsey",
-    "section": "",
-    "text": "Logging in\nSecurity (SSH)\nMoving data (SCP, SFTP, Rsync, and GUIs)\nFinding and using available software\nSingularity (containers)\nSubmitting and monitoring jobs",
+    "objectID": "best-practice-programming.html#best-practice-pawsey",
+    "href": "best-practice-programming.html#best-practice-pawsey",
+    "title": "Best practices for programming",
+    "section": "Best practice Pawsey",
+    "text": "Best practice Pawsey",
     "crumbs": [
       "Resources",
-      "Pawsey"
+      "Best practices for programming"
     ]
   },
   {
-    "objectID": "pawsey.html#logging-in-using-ssh",
-    "href": "pawsey.html#logging-in-using-ssh",
-    "title": "Pawsey",
-    "section": "1 Logging in using ssh",
-    "text": "1 Logging in using ssh\nTo make a remote login, we issue the command ssh &lt;username&gt;@&lt;computer&gt; which tries to make a connection to the SSH daemon running on the remote computer we have specified. For Chitra to access the Setonix computer on Pawsey, she logs in using ssh chitrams@setonix.pawsey.org.au.\n\n\n\n\n\n\nTest your understanding\n\n\n\n\nWhat happens if Chitra has already been allocated a node named nid09310 that she would like to directly log in to?\nWhat happens if Chitra wants to access the data mover nodes on Pawsey, which has the hostname data-mover.pawsey.org.au?\n\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nFor the first instance, Chitra would log in with the following command:\nssh chitrams@nid09310.pawsey.org.au\nFor the second, Chitra would log in with the following command:\nsftp chitrams@data-mover.pawseyl.org.au\nwhere sftp is another companion program for ssh, the Secure File Transfer Protocol. We talk about this in a subsequent section.\n\n\n\nAfter we log in, we can use the remote shell to use the remote computer’s files and directories.\nTyping exit terminates the remote shell (and the local client program on that remote shell) and returns us to our previous shell.",
+    "objectID": "best-practice-programming.html#modularisation",
+    "href": "best-practice-programming.html#modularisation",
+    "title": "Best practices for programming",
+    "section": "Modularisation",
+    "text": "Modularisation",
     "crumbs": [
       "Resources",
-      "Pawsey"
+      "Best practices for programming"
     ]
   },
   {
-    "objectID": "collaborative-git.html",
-    "href": "collaborative-git.html",
-    "title": "Collaborative Git",
-    "section": "",
-    "text": "You’ve already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.\n\n\nThese questions encapsulate the concepts we will address in this section.\n\nWhat does it mean to have staged and unstaged changes?\nWhat is a branch? Where does it live?\nHow do you add a second remote, and why would you want multiple remote repositories?\nHow do I incorporate someone else’s changes with the changes I’ve made, if we’ve both committed to the same branch at the same time?\nHow do you re-write history if you’re unhappy with the direction your project has taken?\nFollowing up on the previous question, can you choose to keep only some changes and not others?\n\n\n\n\n\nWe will discuss what happens when staging, committing, and pushing\nWe will discuss branches, remotes, and pull requests: what they are and how to use them\nWe will discuss what is considered best practice for commits, pushing, and branches on the command line\nWe will discuss what is considered best practice for team workflows, including how to use pull requests on GitHub\nWe will look at how to use revert, reset, merge, and cherry-pick, especially when collaborating with others",
+    "objectID": "best-practice-programming.html#resources",
+    "href": "best-practice-programming.html#resources",
+    "title": "Best practices for programming",
+    "section": "Resources",
+    "text": "Resources",
     "crumbs": [
       "Resources",
-      "Collaborative Git"
-    ]
-  },
-  {
-    "objectID": "collaborative-git.html#introduction",
-    "href": "collaborative-git.html#introduction",
-    "title": "Collaborative Git",
-    "section": "",
-    "text": "You’ve already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.\n\n\nThese questions encapsulate the concepts we will address in this section.\n\nWhat does it mean to have staged and unstaged changes?\nWhat is a branch? Where does it live?\nHow do you add a second remote, and why would you want multiple remote repositories?\nHow do I incorporate someone else’s changes with the changes I’ve made, if we’ve both committed to the same branch at the same time?\nHow do you re-write history if you’re unhappy with the direction your project has taken?\nFollowing up on the previous question, can you choose to keep only some changes and not others?\n\n\n\n\n\nWe will discuss what happens when staging, committing, and pushing\nWe will discuss branches, remotes, and pull requests: what they are and how to use them\nWe will discuss what is considered best practice for commits, pushing, and branches on the command line\nWe will discuss what is considered best practice for team workflows, including how to use pull requests on GitHub\nWe will look at how to use revert, reset, merge, and cherry-pick, especially when collaborating with others",
-    "crumbs": [
-      "Resources",
-      "Collaborative Git"
-    ]
-  },
-  {
-    "objectID": "collaborative-git.html#background",
-    "href": "collaborative-git.html#background",
-    "title": "Collaborative Git",
-    "section": "2 Background",
-    "text": "2 Background\n\n\n\n\n\n\nOverview\n\n\n\n\nWhat is version control?\nWhy should I use it?\n\n\n\nWhy we like version control:\n\nNothing that is committed to version control is ever lost, unless you work really, really hard at losing it. Since all old versions of files are saved, it’s always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results.\nAs we have this record of who made what changes when, we know who to ask if we have questions later on, and, if needed, revert to a previous version, much like the “undo” feature in an editor.\nWhen several people collaborate in the same project, it’s possible to accidentally overlook or overwrite someone’s changes. The version control system automatically notifies users whenever there’s a conflict between one person’s work and another’s.\n\nTeams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).\nVersion control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or needs to be shared can and should be stored in a version control system.\nWe’ll start by exploring how version control can be used to keep track of what one person did and when. Even if you aren’t collaborating with other people, automated version control is much better than this situation:\n\n\n\n\n\nWe’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document. Some word processors let us deal with this a little better, such as Microsoft Word’s Track Changes, Google Docs’ version history, or LibreOffice’s Recording and Displaying Changes.\nVersion control systems start with a base version of the document and then record changes you make each step of the way. You can think of it as a recording of your progress: you can rewind to start at the base document and play back each change you made, eventually arriving at your more recent version.\nOnce you think of changes as separate from the document itself, you can then think about “playing back” different sets of changes on the base document, ultimately resulting in different versions of that document. For example, two users can make independent sets of changes on the same document.\nUnless multiple users make changes to the same section of the document-a conflict–you can incorporate two sets of changes into the same base document.\nA version control system is a tool that keeps track of these changes for us, effectively creating different versions of our files. It allows us to decide which changes will be made to the next version (each record of these changes is called a commit), and keeps useful metadata about them. The complete history of commits for a particular project and their metadata make up a repository. Repositories can be kept in sync across different computers, facilitating collaboration among different people.\nAutomated version control systems are nothing new. Tools like RCS, CVS, or Subversion have been around since the early 1980s and are used by many large companies. However, many of these are now considered legacy systems (i.e., outdated) due to various limitations in their capabilities. More modern systems, such as Git and Mercurial, are distributed, meaning that they do not need a centralized server to host the repository. These modern systems also include powerful merging tools that make it possible for multiple authors to work on the same files concurrently.\n\n\n\n\n\n\nKey points\n\n\n\n\nVersion control is like an unlimited “undo”\nVersion control allows multiple people to work concurrently.",
-    "crumbs": [
-      "Resources",
-      "Collaborative Git"
+      "Best practices for programming"
     ]
   },
   {
@@ -206,76 +182,111 @@
     ]
   },
   {
-    "objectID": "best-practice-programming.html#best-practice-git",
-    "href": "best-practice-programming.html#best-practice-git",
-    "title": "Best practices for programming",
-    "section": "Best practice Git",
-    "text": "Best practice Git\n\nCommit names\nBranch names",
-    "crumbs": [
-      "Resources",
-      "Best practices for programming"
-    ]
-  },
-  {
-    "objectID": "best-practice-programming.html#best-practice-pawsey",
-    "href": "best-practice-programming.html#best-practice-pawsey",
-    "title": "Best practices for programming",
-    "section": "Best practice Pawsey",
-    "text": "Best practice Pawsey",
-    "crumbs": [
-      "Resources",
-      "Best practices for programming"
-    ]
-  },
-  {
-    "objectID": "best-practice-programming.html#modularisation",
-    "href": "best-practice-programming.html#modularisation",
-    "title": "Best practices for programming",
-    "section": "Modularisation",
-    "text": "Modularisation",
-    "crumbs": [
-      "Resources",
-      "Best practices for programming"
-    ]
-  },
-  {
-    "objectID": "best-practice-programming.html#resources",
-    "href": "best-practice-programming.html#resources",
-    "title": "Best practices for programming",
-    "section": "Resources",
-    "text": "Resources",
-    "crumbs": [
-      "Resources",
-      "Best practices for programming"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "collaborative-git.html",
+    "href": "collaborative-git.html",
+    "title": "Collaborative Git",
     "section": "",
-    "text": "About this site"
+    "text": "You’ve already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.\n\n\nThese questions encapsulate the concepts we will address in this section.\n\nWhat does it mean to have staged and unstaged changes?\nWhat is a branch? Where does it live?\nHow do you add a second remote, and why would you want multiple remote repositories?\nHow do I incorporate someone else’s changes with the changes I’ve made, if we’ve both committed to the same branch at the same time?\nHow do you re-write history if you’re unhappy with the direction your project has taken?\nFollowing up on the previous question, can you choose to keep only some changes and not others?\n\n\n\n\n\nWe will discuss what happens when staging, committing, and pushing\nWe will discuss branches, remotes, and pull requests: what they are and how to use them\nWe will discuss what is considered best practice for commits, pushing, and branches on the command line\nWe will discuss what is considered best practice for team workflows, including how to use pull requests on GitHub\nWe will look at how to use revert, reset, merge, and cherry-pick, especially when collaborating with others",
+    "crumbs": [
+      "Resources",
+      "Collaborative Git"
+    ]
   },
   {
-    "objectID": "session-2.html",
-    "href": "session-2.html",
-    "title": "Session 2",
+    "objectID": "collaborative-git.html#introduction",
+    "href": "collaborative-git.html#introduction",
+    "title": "Collaborative Git",
     "section": "",
-    "text": "Topics to be covered in this session:\n\nSubmit jobs on Pawsey\n\nConceptually explain Slurm\nThe difference between sbatch, srun and salloc\n\nUsing Git on Pawsey\nGit: create a pull request for your changes\nDebugging on Pawsey (Vim, file transfers)\n? Attempt writing parallelisation code on Pawsey\n\ninstead of using job arrays, which is the current preferred approach\nGNU parallel\n\n? Attempt modularisation of individual project codes (ask participants to break up their code and find a better way of organising their code)\n? Interactive RStudio sessions on Pawsey",
+    "text": "You’ve already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.\n\n\nThese questions encapsulate the concepts we will address in this section.\n\nWhat does it mean to have staged and unstaged changes?\nWhat is a branch? Where does it live?\nHow do you add a second remote, and why would you want multiple remote repositories?\nHow do I incorporate someone else’s changes with the changes I’ve made, if we’ve both committed to the same branch at the same time?\nHow do you re-write history if you’re unhappy with the direction your project has taken?\nFollowing up on the previous question, can you choose to keep only some changes and not others?\n\n\n\n\n\nWe will discuss what happens when staging, committing, and pushing\nWe will discuss branches, remotes, and pull requests: what they are and how to use them\nWe will discuss what is considered best practice for commits, pushing, and branches on the command line\nWe will discuss what is considered best practice for team workflows, including how to use pull requests on GitHub\nWe will look at how to use revert, reset, merge, and cherry-pick, especially when collaborating with others",
+    "crumbs": [
+      "Resources",
+      "Collaborative Git"
+    ]
+  },
+  {
+    "objectID": "collaborative-git.html#background",
+    "href": "collaborative-git.html#background",
+    "title": "Collaborative Git",
+    "section": "2 Background",
+    "text": "2 Background\n\n\n\n\n\n\nOverview\n\n\n\n\nWhat is version control?\nWhy should I use it?\n\n\n\nWhy we like version control:\n\nNothing that is committed to version control is ever lost, unless you work really, really hard at losing it. Since all old versions of files are saved, it’s always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results.\nAs we have this record of who made what changes when, we know who to ask if we have questions later on, and, if needed, revert to a previous version, much like the “undo” feature in an editor.\nWhen several people collaborate in the same project, it’s possible to accidentally overlook or overwrite someone’s changes. The version control system automatically notifies users whenever there’s a conflict between one person’s work and another’s.\n\nTeams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).\nVersion control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or needs to be shared can and should be stored in a version control system.\nWe’ll start by exploring how version control can be used to keep track of what one person did and when. Even if you aren’t collaborating with other people, automated version control is much better than this situation:\n\n\n\n\n\nWe’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document. Some word processors let us deal with this a little better, such as Microsoft Word’s Track Changes, Google Docs’ version history, or LibreOffice’s Recording and Displaying Changes.\nVersion control systems start with a base version of the document and then record changes you make each step of the way. You can think of it as a recording of your progress: you can rewind to start at the base document and play back each change you made, eventually arriving at your more recent version.\nOnce you think of changes as separate from the document itself, you can then think about “playing back” different sets of changes on the base document, ultimately resulting in different versions of that document. For example, two users can make independent sets of changes on the same document.\nUnless multiple users make changes to the same section of the document-a conflict–you can incorporate two sets of changes into the same base document.\nA version control system is a tool that keeps track of these changes for us, effectively creating different versions of our files. It allows us to decide which changes will be made to the next version (each record of these changes is called a commit), and keeps useful metadata about them. The complete history of commits for a particular project and their metadata make up a repository. Repositories can be kept in sync across different computers, facilitating collaboration among different people.\nAutomated version control systems are nothing new. Tools like RCS, CVS, or Subversion have been around since the early 1980s and are used by many large companies. However, many of these are now considered legacy systems (i.e., outdated) due to various limitations in their capabilities. More modern systems, such as Git and Mercurial, are distributed, meaning that they do not need a centralized server to host the repository. These modern systems also include powerful merging tools that make it possible for multiple authors to work on the same files concurrently.\n\n\n\n\n\n\nKey points\n\n\n\n\nVersion control is like an unlimited “undo”\nVersion control allows multiple people to work concurrently.",
+    "crumbs": [
+      "Resources",
+      "Collaborative Git"
+    ]
+  },
+  {
+    "objectID": "pawsey.html",
+    "href": "pawsey.html",
+    "title": "Pawsey",
+    "section": "",
+    "text": "Logging in\nSecurity (SSH)\nMoving data (SCP, SFTP, Rsync, and GUIs)\nFinding and using available software\nSingularity (containers)\nSubmitting and monitoring jobs",
+    "crumbs": [
+      "Resources",
+      "Pawsey"
+    ]
+  },
+  {
+    "objectID": "pawsey.html#logging-in-using-ssh",
+    "href": "pawsey.html#logging-in-using-ssh",
+    "title": "Pawsey",
+    "section": "1 Logging in using ssh",
+    "text": "1 Logging in using ssh\nTo make a remote login, we issue the command ssh &lt;username&gt;@&lt;computer&gt; which tries to make a connection to the SSH daemon running on the remote computer we have specified. For Chitra to access the Setonix computer on Pawsey, she logs in using ssh chitrams@setonix.pawsey.org.au.\n\n\n\n\n\n\nTest your understanding\n\n\n\n\nWhat happens if Chitra has already been allocated a node named nid09310 that she would like to directly log in to?\nWhat happens if Chitra wants to access the data mover nodes on Pawsey, which has the hostname data-mover.pawsey.org.au?\n\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nFor the first instance, Chitra would log in with the following command:\nssh chitrams@nid09310.pawsey.org.au\nFor the second, Chitra would log in with the following command:\nsftp chitrams@data-mover.pawseyl.org.au\nwhere sftp is another companion program for ssh, the Secure File Transfer Protocol. We talk about this in a subsequent section.\n\n\n\nAfter we log in, we can use the remote shell to use the remote computer’s files and directories.\nTyping exit terminates the remote shell (and the local client program on that remote shell) and returns us to our previous shell.",
+    "crumbs": [
+      "Resources",
+      "Pawsey"
+    ]
+  },
+  {
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Acknowledgements",
+    "section": "",
+    "text": "Acknowledgement of country\nThe Kids Research Institute Australia acknowledges Aboriginal people as the Traditional Owners of the land and seas of Australia. We also acknowledge the Noongar Nation and especially the Whadjuk people as the custodians of the land on which the Institute is located.\nWe pay our respects to Elders past, present, and future and seek their wisdom in our work to improve the health of all children.\n\n\nCourse preparation\n\n\nCourse material\n\nThe Code of Conduct is derived from work that is copyright © rOpenSci (rOpenSci Code of Conduct) made available under the CC BY 4.0 license.\nThe instruction material “Unix Shell” is derived from work that is copyright © The Carpentries (https://carpentries.org/) made available under the CC BY 4.0 license.\nThe instruction material “Remote logins and SSH” is derived from works that are copyright © The Carpentries (https://carpentries.org/) and copyright © Pawsey (https://pawsey.atlassian.net/wiki/spaces/US/overview) made available under the CC BY 4.0 license; and copyright © GitHub, Inc. (https://docs.github.com/en) made available under the CC0 1.0 Universal Deed.",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Global Disease Modelling 2025 Workshop",
+    "section": "",
+    "text": "This workshop is held 13-15 January and 22 January 2025 for the Global Disease Modelling team at The Kids Research Institute Australia, in collaboration with Pawsey Supercomputing Centre.\nParticipating in the workshop means you agree to abide by our Code of Conduct.\nYou can access the Q&A at slido.com using the code # 3151 5665 or by clicking this link. You can also use the Teams meeting’s chat to post any questions or comments.\n\nOutline\n\nIn session 1 we will have a refresher for Bash and Git.\nIn session 2 we will explore how we can utilise HPCs, including: a high-level overview of HPCs, logging on, software modules, containers, and job scheduling using Slurm.\nIn session 3 we will continue exploring how we can utilise HPCs, including: how to use Git specifically on Pawsey, understanding Slurm job arrays, and starting to work on transitioning our individual projects onto Pawsey.\nIn the Hackathon session we will work on our individual projects to transition onto Pawsey with support from Pawsey specialists.\n\n\n\nSession schedule\nThe first part of the workshop is held 13 to 15 January 2025 from 13:00 to 16:00, with the following schedule:\n\n13:00-13:50 Workshop\n13:50-14:00 Break\n14:00-14:50 Workshop\n14:50-15:15 Afternoon tea\n15:15-16:00 Workshop\n\nThe last day of the workshop is a Hackathon held on 22 January 2025 from 13:00 to 16:30, with the following schedule:\n\n13:00-14:45 Hackathon\n14:45-15:15 Afternoon tea\n15:15-16:30 Hackathon",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "supercomputing.html",
+    "href": "supercomputing.html",
+    "title": "Supercomputing fundamentals",
+    "section": "",
+    "text": "Components of a supercomputer\nFilesystem of a supercomputer\nSupercomputer modules\nScheduler (Slurm)\nBatch scripting\nObject storage\n\n\n\n\nGeneral architecture of a supercomputer",
+    "crumbs": [
+      "Resources",
+      "Supercomputing fundamentals"
+    ]
+  },
+  {
+    "objectID": "session-3.html",
+    "href": "session-3.html",
+    "title": "Session 3",
+    "section": "",
+    "text": "0.1 Using Git on Pawsey\n\n\n0.2 Slurm job arrays\n\n\n0.3 Intro to Nextflow\n\n\n0.4 Moving your project to Pawsey",
     "crumbs": [
       "Workshop",
-      "Session 2"
+      "Session 3"
     ]
   },
   {
-    "objectID": "session-1.html",
-    "href": "session-1.html",
-    "title": "Session 1",
+    "objectID": "session-hackathon.html",
+    "href": "session-hackathon.html",
+    "title": "Hackathon session",
     "section": "",
-    "text": "Logging in\n\n\n\n\n\n\nObjectives\n\n\n\n\nSet up SSH keys for Git and Pawsey\nUnderstand “where” you are\n\n\n\n\nCheck whether you already have SSH keys set up. How would you do this?\nSet up your SSH key for Git.\nSet up your SSH key for Pawsey.\nLog on to Pawsey using SSH. How do you know “where” you are? Is your terminal running on your local PC, or on Pawsey?\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhy do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?\n\n\n\n\nLooking around\n\n\n\n\n\n\nObjectives\n\n\n\n\nNavigate Pawsey using the command line\nUnderstand user permissions\nUnderstand the Pawsey filesystem\n\n\n\n\nNavigate to your own software directory using cd $MYSOFTWARE. Now, navigate to the GROUP directory (also located within pawsey1104).\nWe’d now like to copy confidential information from the folder secret-files within the software directory to our scratch directory. How would you do this?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nSimilar to $MYSOFTWARE, there is an alias $MYSCRATCH for your scratch directory.\n\n\n\n\nNavigate to the folder secret-files within your scratch directory, then run the program secret-program.sh.\nRemove the program secret-program.sh and the folder old-data.\n\n\n\nFile transfers\n\n\n\n\n\n\nObjectives\n\n\n\n\nUse SCP and SFTP for file transfers\nUse the command line for basic file operations\nUse the text editor Vim\n\n\n\n\nLog in to an SFTP session. Transfer the folder secret-files within your scratch directory to your local PC.\n\n\n\n\n\n\n\nWarning\n\n\n\nIt’s tempting to use your PC’s GUI, but please use the command line for the next steps in this exercise!\n\n\n\nOpen a new terminal window for your local PC. Navigate to the secret-files directory on your local PC and open the file unmodified-secret-scenario.xml using Vim.\nThere are some values in that file that needs to be substituted; they look like: @parameter@. Find these and change them.\nWhen you’re done changing all the values, rename the file to secret-scenario.xml using the command mv.\nUsing SCP, transfer the file secret-scenario.xml to the secret-files folder within your scratch directory on Pawsey.\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhen do you think you would use SCP, SFTP, and Rsync? Which method do you think is quicker? And when would you use GUIs?\n\n\n\n\nSchedulers\n\n\n\n\n\n\nObjectives\n\n\n\n\nUnderstand the Pawsey filesystem vs architecture (nodes and scheduler).\nUnderstand where jobs are executed.\n\n\n\n#TODO\n\n\n\n\n\n\nDiscussion\n\n\n\nWhere do you think this job was executed?\n\n\n\n\nGit\n\nClone the secret-exercises repository to your scratch directory.\n\n#TODO\n\n\nChitra notes to self\n\nSet up an SSH key for Git\nSet up an SSH key for Pawsey\nNavigate on Pawsey using the command line interface\nClone a git repository onto Pawsey\nTransfer files between your local PC and Pawsey\nCommit and push changes\nTaster: run one job on Pawsey\n\nIdeas for directions:\nClone the 2025-workshop-exercise repository. This is one of our pipelines. You have to transfer sensitive files from your local device onto Pawsey, to then run the pipeline.",
+    "text": "#TODO",
     "crumbs": [
       "Workshop",
-      "Session 1"
+      "Hackathon session"
     ]
   },
   {

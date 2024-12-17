@@ -1,18 +1,36 @@
 ---
 title: Session 2
-subtitle: Running an analysis on Pawsey
+subtitle: Familiarising ourselves with HPCs
+execute: 
+  eval: false
+number-sections: true
 ---
 
-Topics to be covered in this session:
+### High-level overview of HPC
 
--   Submit jobs on Pawsey
-    -   Conceptually explain Slurm
-    -   The difference between `sbatch`, `srun` and `salloc`
--   Using Git on Pawsey
--   Git: create a pull request for your changes
--   Debugging on Pawsey (Vim, file transfers)
--   ? Attempt writing parallelisation code on Pawsey
-    -   instead of using job arrays, which is the current preferred approach
-    -   GNU parallel
--   ? Attempt modularisation of individual project codes (ask participants to break up their code and find a better way of organising their code)
--   ? Interactive RStudio sessions on Pawsey
+### File transfers (more SSH)
+
+::: {.callout-note title="Objectives" icon=false}
+- Use SCP and SFTP for file transfers
+- Use the command line for basic file operations
+- Use the text editor Vim
+:::
+
+1. Log in to an SFTP session. Transfer the folder `secret-files` within your `scratch` directory to your local PC.
+
+::: {.callout-important title="Warning"}
+It's tempting to use your PC's GUI, but please use the command line for the next steps in this exercise!
+:::
+
+2. Open a new terminal window for your local PC. Navigate to the `secret-files` directory on your local PC and open the file `unmodified-secret-scenario.xml` using Vim.
+3. There are some values in that file that needs to be substituted; they look like: `@parameter@`. Find these and change them.
+4. When you're done changing all the values, rename the file to `secret-scenario.xml` using the command `mv`.
+5. Using SCP, transfer the file `secret-scenario.xml` to the `secret-files` folder within your `scratch` directory on Pawsey.
+
+::: {.callout-warning title="Discussion"}
+When do you think you would use SCP, SFTP, and Rsync? Which method do you think is quicker? And when would you use GUIs?
+:::
+
+### Software on HPC
+
+### Job scheduling (Slurm)

@@ -23,6 +23,7 @@ website:
           - session-1.qmd
           - session-2.qmd
           - session-3.qmd
+          - session-hackathon.qmd
       - section: "Resources"
         contents:
           - unix-shell.qmd

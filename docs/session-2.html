@@ -151,6 +151,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Session 3</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./session-hackathon.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hackathon session</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -217,8 +223,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#high-level-overview-of-hpc" id="toc-high-level-overview-of-hpc" class="nav-link active" data-scroll-target="#high-level-overview-of-hpc"><span class="header-section-number">0.1</span> High-level overview of HPC</a></li>
+  <li><a href="#file-transfers-more-ssh" id="toc-file-transfers-more-ssh" class="nav-link" data-scroll-target="#file-transfers-more-ssh"><span class="header-section-number">0.2</span> File transfers (more SSH)</a></li>
+  <li><a href="#software-on-hpc" id="toc-software-on-hpc" class="nav-link" data-scroll-target="#software-on-hpc"><span class="header-section-number">0.3</span> Software on HPC</a></li>
+  <li><a href="#job-scheduling-slurm" id="toc-job-scheduling-slurm" class="nav-link" data-scroll-target="#job-scheduling-slurm"><span class="header-section-number">0.4</span> Job scheduling (Slurm)</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -226,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">Session 2</h1>
-<p class="subtitle lead">Running an analysis on Pawsey</p>
+<p class="subtitle lead">Familiarising ourselves with HPCs</p>
 </div>
 
 
@@ -243,26 +258,72 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Topics to be covered in this session:</p>
+<section id="high-level-overview-of-hpc" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="high-level-overview-of-hpc"><span class="header-section-number">0.1</span> High-level overview of HPC</h3>
+</section>
+<section id="file-transfers-more-ssh" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="file-transfers-more-ssh"><span class="header-section-number">0.2</span> File transfers (more SSH)</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Objectives">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li>Submit jobs on Pawsey
-<ul>
-<li>Conceptually explain Slurm</li>
-<li>The difference between <code>sbatch</code>, <code>srun</code> and <code>salloc</code></li>
-</ul></li>
-<li>Using Git on Pawsey</li>
-<li>Git: create a pull request for your changes</li>
-<li>Debugging on Pawsey (Vim, file transfers)</li>
-<li>? Attempt writing parallelisation code on Pawsey
-<ul>
-<li>instead of using job arrays, which is the current preferred approach</li>
-<li>GNU parallel</li>
-</ul></li>
-<li>? Attempt modularisation of individual project codes (ask participants to break up their code and find a better way of organising their code)</li>
-<li>? Interactive RStudio sessions on Pawsey</li>
+<li>Use SCP and SFTP for file transfers</li>
+<li>Use the command line for basic file operations</li>
+<li>Use the text editor Vim</li>
 </ul>
+</div>
+</div>
+<ol type="1">
+<li>Log in to an SFTP session. Transfer the folder <code>secret-files</code> within your <code>scratch</code> directory to your local PC.</li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled" title="Warning">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It’s tempting to use your PC’s GUI, but please use the command line for the next steps in this exercise!</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Open a new terminal window for your local PC. Navigate to the <code>secret-files</code> directory on your local PC and open the file <code>unmodified-secret-scenario.xml</code> using Vim.</li>
+<li>There are some values in that file that needs to be substituted; they look like: <code>@parameter@</code>. Find these and change them.</li>
+<li>When you’re done changing all the values, rename the file to <code>secret-scenario.xml</code> using the command <code>mv</code>.</li>
+<li>Using SCP, transfer the file <code>secret-scenario.xml</code> to the <code>secret-files</code> folder within your <code>scratch</code> directory on Pawsey.</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled" title="Discussion">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When do you think you would use SCP, SFTP, and Rsync? Which method do you think is quicker? And when would you use GUIs?</p>
+</div>
+</div>
+</section>
+<section id="software-on-hpc" class="level3" data-number="0.3">
+<h3 data-number="0.3" class="anchored" data-anchor-id="software-on-hpc"><span class="header-section-number">0.3</span> Software on HPC</h3>
+</section>
+<section id="job-scheduling-slurm" class="level3" data-number="0.4">
+<h3 data-number="0.4" class="anchored" data-anchor-id="job-scheduling-slurm"><span class="header-section-number">0.4</span> Job scheduling (Slurm)</h3>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
