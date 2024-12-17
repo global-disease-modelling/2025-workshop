@@ -1,10 +1,13 @@
 ---
 title: Collaborative Git
+execute: 
+  eval: false
+number-sections: true
 ---
 
 ## Introduction
 
-You've probably already committed and pushed changes to GitHub, and you're comfortable with creating branches. In this section we'll level up your Git knowledge to fully utilise Git for collaboration.
+You've already committed and pushed changes to GitHub, and you're comfortable with creating branches. In this section we'll level up your Git knowledge to fully utilise Git for collaboration.
 
 ### Questions
 
@@ -27,6 +30,11 @@ These questions encapsulate the concepts we will address in this section.
 
 ## Background
 
+::: {.callout-note title="Overview" icon="false"}
+-   What is version control?
+-   Why should I use it?
+:::
+
 Why we like version control:
 
 -   Nothing that is committed to version control is ever lost, unless you work really, really hard at losing it. Since all old versions of files are saved, it’s always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results.
@@ -36,3 +44,40 @@ Why we like version control:
 Teams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).
 
 Version control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or needs to be shared can and should be stored in a version control system.
+
+We'll start by exploring how version control can be used to keep track of what one person did and when. Even if you aren't collaborating with other people, automated version control is much better than this situation:
+
+![](img/phd101212s.png){fig-align="center"}
+
+We've all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document. Some word processors let us deal with this a little better, such as Microsoft Word's [Track Changes](https://support.office.com/en-us/article/Track-changes-in-Word-197ba630-0f5f-4a8e-9a77-3712475e806a), Google Docs' [version history](https://support.google.com/docs/answer/190843?hl=en), or LibreOffice's [Recording and Displaying Changes](https://help.libreoffice.org/Common/Recording_and_Displaying_Changes).
+
+Version control systems start with a base version of the document and then record changes you make each step of the way. You can think of it as a recording of your progress: you can rewind to start at the base document and play back each change you made, eventually arriving at your more recent version.
+
+Once you think of changes as separate from the document itself, you can then think about "playing back" different sets of changes on the base document, ultimately resulting in different versions of that document. For example, two users can make independent sets of changes on the same document.
+
+Unless multiple users make changes to the same section of the document-a conflict–you can incorporate two sets of changes into the same base document.
+
+A version control system is a tool that keeps track of these changes for us,
+effectively creating different versions of our files. It allows us to decide
+which changes will be made to the next version (each record of these changes is
+called a commit), and keeps useful metadata
+about them. The complete history of commits for a particular project and their
+metadata make up a repository.
+Repositories can be kept in sync across different computers, facilitating
+collaboration among different people.
+
+Automated version control systems are nothing new.
+Tools like [RCS](https://en.wikipedia.org/wiki/Revision_Control_System), [CVS](https://en.wikipedia.org/wiki/Concurrent_Versions_System), or [Subversion](https://en.wikipedia.org/wiki/Apache_Subversion) have been around since the early 1980s and are used by
+many large companies.
+However, many of these are now considered legacy systems (i.e., outdated) due to various
+limitations in their capabilities.
+More modern systems, such as Git and Mercurial,
+are *distributed*, meaning that they do not need a centralized server to host the repository.
+These modern systems also include powerful merging tools that make it possible for
+multiple authors to work on
+the same files concurrently.
+
+::: {.callout-note title="Key points" icon="false"}
+-   Version control is like an unlimited "undo"
+-   Version control allows multiple people to work concurrently.
+:::
