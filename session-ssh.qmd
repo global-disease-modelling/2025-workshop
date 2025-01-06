@@ -13,9 +13,9 @@ number-sections: true
 -   Understand "where" you are
 :::
 
-1.  Check whether you already have SSH keys set up. How would you do this? Refer to [these instructions](ssh.qmd#sec-sshkeys).
-2.  Set up your SSH key for Git. Refer to [these instructions](ssh.qmd#sec-ssh-git).
-3.  Set up your SSH key for Pawsey. Refere to [these instructions](ssh.qmd#sec-ssh-pawsey).
+1.  Check whether you already have SSH keys set up. How would you do this? You may find [Section 3](ssh.qmd#sec-sshkeys) in the Remote logins and SSH page useful.
+2.  Set up your SSH key for Git. You may find [Section 3.1](ssh.qmd#sec-ssh-git) in the Remote logins and SSH page useful.
+3.  Set up your SSH key for Pawsey. You may find [Section 3.2](ssh.qmd#sec-ssh-pawsey) in the Remote logins and SSH page useful.
 4.  Log on to Pawsey using SSH. How do you know "where" you are? Is your terminal running on your local PC, or on Pawsey?
 
 ::: {.callout-warning title="Discussion"}
