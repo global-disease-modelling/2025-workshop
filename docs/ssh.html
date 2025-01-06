@@ -266,8 +266,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#logging-in-using-ssh" id="toc-logging-in-using-ssh" class="nav-link" data-scroll-target="#logging-in-using-ssh"><span class="header-section-number">2</span> Logging in using <code>ssh</code></a></li>
   <li><a href="#sec-sshkeys" id="toc-sec-sshkeys" class="nav-link" data-scroll-target="#sec-sshkeys"><span class="header-section-number">3</span> SSH keys</a>
   <ul class="collapse">
-  <li><a href="#generating-a-key-pair-for-github" id="toc-generating-a-key-pair-for-github" class="nav-link" data-scroll-target="#generating-a-key-pair-for-github"><span class="header-section-number">3.1</span> Generating a key pair for GitHub</a></li>
-  <li><a href="#generating-a-key-pair-for-pawsey" id="toc-generating-a-key-pair-for-pawsey" class="nav-link" data-scroll-target="#generating-a-key-pair-for-pawsey"><span class="header-section-number">3.2</span> Generating a key pair for Pawsey</a></li>
+  <li><a href="#sec-ssh-git" id="toc-sec-ssh-git" class="nav-link" data-scroll-target="#sec-ssh-git"><span class="header-section-number">3.1</span> Generating a key pair for GitHub</a></li>
+  <li><a href="#sec-ssh-pawsey" id="toc-sec-ssh-pawsey" class="nav-link" data-scroll-target="#sec-ssh-pawsey"><span class="header-section-number">3.2</span> Generating a key pair for Pawsey</a></li>
   </ul></li>
   <li><a href="#sec-file-transfer" id="toc-sec-file-transfer" class="nav-link" data-scroll-target="#sec-file-transfer"><span class="header-section-number">4</span> Secure file transfers</a>
   <ul class="collapse">
@@ -360,8 +360,8 @@ Answer
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd ~/.ssh</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you see <code>id_rsa.pub</code>, you already have a key pair and don’t need to create a new one. If you don’t see any, follow the instructions below to generate a key pair.</p>
-<section id="generating-a-key-pair-for-github" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="generating-a-key-pair-for-github"><span class="header-section-number">3.1</span> Generating a key pair for GitHub</h3>
+<section id="sec-ssh-git" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="sec-ssh-git"><span class="header-section-number">3.1</span> Generating a key pair for GitHub</h3>
 <p>You can generate a new SSH key on your local machine. After you generate the key, you can add the public key to your account on GitHub.com to enable authentication for Git operations over SSH.</p>
 <section id="generate-a-new-ssh-key-pair" class="level4" data-number="3.1.1">
 <h4 data-number="3.1.1" class="anchored" data-anchor-id="generate-a-new-ssh-key-pair"><span class="header-section-number">3.1.1</span> Generate a new SSH key pair</h4>
@@ -468,8 +468,8 @@ If <code>pbcopy</code> doesn’t work
 <p>Link to GitHub documentation <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">here</a>.</p>
 </section>
 </section>
-<section id="generating-a-key-pair-for-pawsey" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="generating-a-key-pair-for-pawsey"><span class="header-section-number">3.2</span> Generating a key pair for Pawsey</h3>
+<section id="sec-ssh-pawsey" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="sec-ssh-pawsey"><span class="header-section-number">3.2</span> Generating a key pair for Pawsey</h3>
 <section id="generate-a-new-ssh-key-pair-1" class="level4" data-number="3.2.1">
 <h4 data-number="3.2.1" class="anchored" data-anchor-id="generate-a-new-ssh-key-pair-1"><span class="header-section-number">3.2.1</span> Generate a new SSH key pair</h4>
 <ol type="1">
