@@ -65,7 +65,7 @@ $ ls
 
 If you see `id_rsa.pub`, you already have a key pair and don’t need to create a new one. If you don't see any, follow the instructions below to generate a key pair.
 
-### Generating a key pair for GitHub  {#sec-ssh-git}
+### Generating a key pair for GitHub {#sec-ssh-git}
 
 You can generate a new SSH key on your local machine. After you generate the key, you can add the public key to your account on GitHub.com to enable authentication for Git operations over SSH.
 
@@ -181,7 +181,7 @@ You can generate a new SSH key on your local machine. After you generate the key
 
 Link to GitHub documentation [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
-### Generating a key pair for Pawsey  {#sec-ssh-pawsey}
+### Generating a key pair for Pawsey {#sec-ssh-pawsey}
 
 #### Generate a new SSH key pair
 

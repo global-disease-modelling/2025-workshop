@@ -1,6 +1,6 @@
 ---
 title: Hackathon session
-subtitle: Moving our projects on to Pawsey
+subtitle: Moving our projects onto Pawsey
 execute: 
   eval: false
 number-sections: true

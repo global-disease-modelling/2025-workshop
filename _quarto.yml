@@ -20,9 +20,7 @@ website:
       - code-of-conduct.qmd
       - section: "Workshop"
         contents:
-          - session-1.qmd
-          - session-2.qmd
-          - session-3.qmd
+          - session-ssh.qmd
           - session-hackathon.qmd
       - section: "Resources"
         contents:
