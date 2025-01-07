@@ -11,9 +11,9 @@ You can access the sessions' Q&A at [slido.com](https://www.slido.com/) using th
 
 ### Outline
 
--   13/1 (Mon) at 13:00-16:00: Bash, SSH, and setting up SSH keys for Git and Setonix.
--   14/1 (Tue) at 13:00-16:00: Git and Git workflows for OpenMalaria.
--   15/1 (Wed) at 13:00-16:00: a high-level overview of HPCs including logging in, modules and containers, Slurm, and job submissions.
+-   13/1 (Mon) at 13:00-16:00: the Unix shell.
+-   14/1 (Tue) at 13:00-16:00: version control with Git.
+-   15/1 (Wed) at 13:00-16:00: a high-level overview of high-performance computing (HPC) including logging in, modules and containers, Slurm, and job submissions.
 -   22/1 (Wed) at 13:00-16:30: a Hackathon session. We will attempt to move our individual projects to Pawsey.
 
 ### Session schedule
