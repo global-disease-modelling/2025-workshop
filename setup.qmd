@@ -16,11 +16,11 @@ There is a list of common issues that occur during installation, as a reference 
 
 The default shell in Mac OS X Ventura and newer versions is Zsh, but Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in **/Applications/Utilities**). See the video tutorial below for an example on how to open the Terminal. You may want to keep Terminal in your dock for this workshop.
 
-To see if your default shell is Bash type `echo $SHELL` in Terminal and press the Return key. If the message printed does not end with '/bash' then your default is something else, you can change your current shell to Bash by typing `bash` and then pressing Return. To check your current shell type `echo $0` and press Return.
+To see if your default shell is Bash type `echo $SHELL` in Terminal and press the **Return** key. If the message printed does not end with '/bash' then your default is something else, you can change your current shell to Bash by typing `bash` and then pressing **Return**. To check your current shell type `echo $0` and press Return.
 
-To change your default shell to Bash type `chsh -s /bin/bash` and press the Return key, then reboot for the change to take effect.
+To change your default shell to Bash type `chsh -s /bin/bash` and press the **Return** key, then reboot for the change to take effect.
 
-To change your default back to Zsh, type `chsh -s /bin/zsh`, press the Return key and reboot.
+To change your default back to Zsh, type `chsh -s /bin/zsh`, press the **Return** key and reboot.
 
 To check available shells, type `cat /etc/shells`.
 
@@ -30,24 +30,24 @@ To check available shells, type `cat /etc/shells`.
 
 1.  Download the Git for Windows [installer](https://gitforwindows.org/).
 2.  Run the installer and follow the steps below:
-    1.  Click on "Next" four times (two times if you've previously installed Git). You don't need to change anything in the Information, location, components, and start menu screens.
-    2.  From the dropdown menu, "Choosing the default editor used by Git", select "Use the Nano editor by default" (NOTE: you will need to scroll up to find it) and click on "Next".
-    3.  On the page that says "Adjusting the name of the initial branch in new repositories", ensure that "Let Git decide" is selected. This will ensure the highest level of compatibility for our lessons.
-    4.  Ensure that "Git from the command line and also from 3rd-party software" is selected and click on "Next". (If you don't do this Git Bash will not work properly, requiring you to remove the Git Bash installation, re-run the installer and to select the "Git from the command line and also from 3rd-party software" option.)
-    5.  Select "Use bundled OpenSSH".
-    6.  Ensure that "Use the native Windows Secure Channel Library" is selected and click on "Next".
-    7.  Ensure that "Checkout Windows-style, commit Unix-style line endings" is selected and click on "Next".
-    8.  Ensure that "Use Windows' default console window" is selected and click "Next".
-    9.  Ensure that "Default (fast-forward or merge) is selected and click "Next"
-    10. Ensure that "Git Credential Manager" is selected and click on "Next".
-    11. Ensure that "Enable file system caching" is selected and click on "Next".
-    12. Click on "Install".
-    13. Click on "Finish" or "Next".
+    1.  Click on **Next** four times (two times if you've previously installed Git). You don't need to change anything in the Information, location, components, and start menu screens.
+    2.  From the dropdown menu **Choosing the default editor used by Git**, select **Use the Nano editor by default** (note: you will need to scroll up to find it), then click on **Next**.
+    3.  On the page that says **Adjusting the name of the initial branch in new repositories**, ensure that **Let Git decide** is selected. This will ensure the highest level of compatibility for our lessons.
+    4.  Ensure that **Git from the command line and also from 3rd-party software** is selected and click on **Next**. (If you don't do this, Git Bash will not work properly, requiring you to remove the Git Bash installation, re-run the installer and to select the **Git from the command line and also from 3rd-party software** option.)
+    5.  Select **Use bundled OpenSSH**.
+    6.  Ensure that **Use the native Windows Secure Channel Library** is selected and click on **Next**.
+    7.  Ensure that **Checkout Windows-style, commit Unix-style line endings** is selected and click on **Next**.
+    8.  Ensure that **Use Windows' default console window** is selected and click **Next**.
+    9.  Ensure that **Default (fast-forward or merge)** is selected and click **Next**.
+    10. Ensure that **Git Credential Manager** is selected and click on **Next**.
+    11. Ensure that **Enable file system caching** is selected and click on **Next**.
+    12. Click on **Install**.
+    13. Click on **Finish** or **Next**.
 3.  If your "HOME" environment variable is not set (or you don't know what this is):
     1.  Open command prompt (Open the **Start Menu**, then type `cmd` and press `Enter`)
     2.  Type the following line into the command prompt window, exactly as shown: `setx HOME "%USERPROFILE%"`
-    3.  Press Enter and you should see `SUCCESS: Specified value was saved.`
-    4.  Quit the command prompt by typing `exit` then pressing `Enter`.
+    3.  Press **Enter** and you should see `SUCCESS: Specified value was saved.`
+    4.  Quit the command prompt by typing `exit` then pressing **Enter**.
 
 This will provide you with both Git and Bash in the Git Bash program.
 
@@ -57,9 +57,9 @@ This will provide you with both Git and Bash in the Git Bash program.
 
 The default shell is usually Bash and there is usually no need to install anything.
 
-To see if your default shell is Bash type `echo $SHELL` in Terminal and press the Return key. If the message printed does not end with '/bash' then your default is something else, you can change your current shell to Bash by typing `bash` and then pressing Return. To check your current shell type `echo $0` and press Return.
+To see if your default shell is Bash type `echo $SHELL` in Terminal and press the **Return** key. If the message printed does not end with '/bash' then your default is something else, you can change your current shell to Bash by typing `bash` and then pressing **Return**. To check your current shell type `echo $0` and press **Return**.
 
-To change your default shell to Bash type `chsh -s /bin/bash` and press the Return key, then reboot for the change to take effect. To change your default back to Zsh, type `chsh -s /bin/zsh`, press the Return key and reboot. To check available shells, type `cat /etc/shells`.
+To change your default shell to Bash type `chsh -s /bin/bash` and press the **Return** key, then reboot for the change to take effect. To change your default back to Zsh, type `chsh -s /bin/zsh`, press the **Return** key and reboot. To check available shells, type `cat /etc/shells`.
 :::
 
 ## Git
@@ -71,9 +71,9 @@ You will need an account at [github.com](https://github.com/) for parts of the G
 ::: panel-tabset
 ### MacOS
 
-Please open the Terminal app, type `git --version` and press `Return`. If it's not installed already, follow the instructions to install the "command line developer tools". Do notclick "Get Xcode", because that will take too long and is not necessary for our Git lesson. After installing these tools, there won't be anything in your `/Applications` folder, as they and Git are command line programs.
+Please open the Terminal app, type `git --version` and press **Return**. If it's not installed already, follow the instructions to install the "command line developer tools". Do not click **Get Xcode**, because that will take too long and is not necessary for our Git lesson. After installing these tools, there won't be anything in your /Applications folder, as they and Git are command line programs.
 
-For older versions of OS X (10.5-10.8): use the most recent available installer labelled "snow-leopard" [available here](http://sourceforge.net/projects/git-osx-installer/files/). (Note: this project is no longer maintained.) Because this installer is not signed by the developer, you may have to right click (control + click) on the .pkg file, and then click Open in the pop-up dialog. You can watch the video tutorial below for this.
+For older versions of OS X (10.5-10.8): use the most recent available installer labelled "snow-leopard" [available here](http://sourceforge.net/projects/git-osx-installer/files/). (Note: this project is no longer maintained.) Because this installer is not signed by the developer, you may have to right click (**Control + click**) on the .pkg file, and then click **Open** in the pop-up dialog. You can watch the video tutorial below for this.
 
 {{< video https://youtu.be/9LQhwETCdwY >}}
 
@@ -88,7 +88,7 @@ If Git is not already available on your machine you can try to install it via yo
 
 ## Text editor
 
-When you're writing code, it's nice to have a text editor that is optimized for writing code, with features like automatic color-coding of key words. The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. If you accidentally find yourself stuck in it, hit the `Esc` key, followed by `:`+`q`+`!` (colon, lower-case 'q', exclamation mark), then hitting `Return` to return to the shell.
+When you're writing code, it's nice to have a text editor that is optimized for writing code, with features like automatic color-coding of key words. The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. If you accidentally find yourself stuck in it, hit the **Esc** key, followed by **: + q + !** (colon, lower-case 'q', exclamation mark), then hitting **Return** to return to the shell.
 
 ::: panel-tabset
 ### MacOS
@@ -105,3 +105,5 @@ nano is a basic editor and the default that instructors use in the workshop. It 
 
 nano is a basic editor and the default that instructors use in the workshop. It should be pre-installed.
 :::
+
+You can refer to our [guide for nano](nano.qmd) or [guide for vim](vim.qmd) under our Resources pages.
