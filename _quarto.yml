@@ -30,6 +30,7 @@ website:
             href: session-hackathon.qmd
       - section: "Additional resources"
         contents:
+          - setup.qmd
           - unix-shell.qmd
           - ssh.qmd
           - nano.qmd

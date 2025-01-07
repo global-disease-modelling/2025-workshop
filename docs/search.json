@@ -65,187 +65,69 @@
     ]
   },
   {
-    "objectID": "session-3.html#slurm-job-arrays",
-    "href": "session-3.html#slurm-job-arrays",
-    "title": "Session 3",
-    "section": "2 Slurm job arrays",
-    "text": "2 Slurm job arrays"
-  },
-  {
-    "objectID": "session-3.html#intro-to-nextflow",
-    "href": "session-3.html#intro-to-nextflow",
-    "title": "Session 3",
-    "section": "3 Intro to Nextflow",
-    "text": "3 Intro to Nextflow"
-  },
-  {
-    "objectID": "session-3.html#moving-your-project-to-pawsey",
-    "href": "session-3.html#moving-your-project-to-pawsey",
-    "title": "Session 3",
-    "section": "4 Moving your project to Pawsey",
-    "text": "4 Moving your project to Pawsey"
-  },
-  {
-    "objectID": "supercomputing.html",
-    "href": "supercomputing.html",
-    "title": "Supercomputing fundamentals",
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Setting up",
     "section": "",
-    "text": "Components of a supercomputer\nFilesystem of a supercomputer\nSupercomputer modules\nScheduler (Slurm)\nBatch scripting\nObject storage\n\n\n\n\nGeneral architecture of a supercomputer"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "best-practice-programming.html#best-practice-git",
-    "href": "best-practice-programming.html#best-practice-git",
-    "title": "Best practices for programming",
-    "section": "Best practice Git",
-    "text": "Best practice Git\n\nCommit names\nBranch names"
-  },
-  {
-    "objectID": "best-practice-programming.html#best-practice-pawsey",
-    "href": "best-practice-programming.html#best-practice-pawsey",
-    "title": "Best practices for programming",
-    "section": "Best practice Pawsey",
-    "text": "Best practice Pawsey"
-  },
-  {
-    "objectID": "best-practice-programming.html#modularisation",
-    "href": "best-practice-programming.html#modularisation",
-    "title": "Best practices for programming",
-    "section": "Modularisation",
-    "text": "Modularisation"
-  },
-  {
-    "objectID": "best-practice-programming.html#resources",
-    "href": "best-practice-programming.html#resources",
-    "title": "Best practices for programming",
-    "section": "Resources",
-    "text": "Resources"
-  },
-  {
-    "objectID": "vim.html",
-    "href": "vim.html",
-    "title": "Text editors: Vim",
-    "section": "",
-    "text": "Vim is a text editor. That is all it does. You cannot format a document, insert shapes, make a table with lines, use multiple fonts, highlight sentences, or print out with headings or margins. Vim, however, is very good at editing text. Once you’ve mastered Vim, it is very powerful. You can find and replace chunks of text using commands, copy and paste columns of data, and jump to a specified line number.\n\n\n\n\n\n\nWhat is a text editor?\n\n\n\nWe sometimes call programs like Microsoft Word or LibreOffice Writer “text editors”, but we need to be a bit more careful when it comes to programming.\nBy default, Microsoft Word uses .docx files to store not only text, but also formatting information about fonts, headings, and so on. This extra information isn’t stored as characters, and doesn’t mean anything to tools like head: they expect input files to contain nothing but the letters, digits and punctuation on a standard computer keyboard. When editing programs, therefore, you must either use a plain text editor, or be careful to save files as plain text.\n\n\nVim is also everywhere. If you are working on a computer with a shell (such as terminal or gitbash), then you have Vim; it’s already there. And you can open it directly from the shell. The problem is, however, that Vim is notoriously difficult to learn.\nLet’s create a new file with Vim. First, open your shell, then type:\nvim new-file.txt\nYay, a new file! Now, close that file. Type:\n:q\nTa-da! Congratulations, you’ve exited vim.",
+    "text": "To participate in the workshop, you will need access to software as described below. In addition, you will need an up-to-date web browser.\nThere is a list of common issues that occur during installation, as a reference for instructors, that may be useful in the following wiki page: Configuration Problems and Solutions.",
     "crumbs": [
       "Additional resources",
-      "Text editors: Vim"
+      "Setting up"
     ]
   },
   {
-    "objectID": "vim.html#starting-vim",
-    "href": "vim.html#starting-vim",
-    "title": "Text editors: Vim",
-    "section": "",
-    "text": "Vim is a text editor. That is all it does. You cannot format a document, insert shapes, make a table with lines, use multiple fonts, highlight sentences, or print out with headings or margins. Vim, however, is very good at editing text. Once you’ve mastered Vim, it is very powerful. You can find and replace chunks of text using commands, copy and paste columns of data, and jump to a specified line number.\n\n\n\n\n\n\nWhat is a text editor?\n\n\n\nWe sometimes call programs like Microsoft Word or LibreOffice Writer “text editors”, but we need to be a bit more careful when it comes to programming.\nBy default, Microsoft Word uses .docx files to store not only text, but also formatting information about fonts, headings, and so on. This extra information isn’t stored as characters, and doesn’t mean anything to tools like head: they expect input files to contain nothing but the letters, digits and punctuation on a standard computer keyboard. When editing programs, therefore, you must either use a plain text editor, or be careful to save files as plain text.\n\n\nVim is also everywhere. If you are working on a computer with a shell (such as terminal or gitbash), then you have Vim; it’s already there. And you can open it directly from the shell. The problem is, however, that Vim is notoriously difficult to learn.\nLet’s create a new file with Vim. First, open your shell, then type:\nvim new-file.txt\nYay, a new file! Now, close that file. Type:\n:q\nTa-da! Congratulations, you’ve exited vim.",
+    "objectID": "setup.html#the-bash-shell",
+    "href": "setup.html#the-bash-shell",
+    "title": "Setting up",
+    "section": "1 The Bash shell",
+    "text": "1 The Bash shell\n\nMacOSWindowsLinux\n\n\nThe default shell in Mac OS X Ventura and newer versions is Zsh, but Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in /Applications/Utilities). See the Git installation video tutorial for an example on how to open the Terminal. You may want to keep Terminal in your dock for this workshop.\nTo see if your default shell is Bash type echo $SHELL in Terminal and press the Return key. If the message printed does not end with ‘/bash’ then your default is something else, you can change your current shell to Bash by typing bash and then pressing Return. To check your current shell type echo $0 and press Return.\nTo change your default shell to Bash type chsh -s /bin/bash and press the Return key, then reboot for the change to take effect. To change your default back to Zsh, type chsh -s /bin/zsh, press the Return key and reboot. To check available shells, type cat /etc/shells.\n\n\n\n\nDownload the Git for Windows installer.\nRun the installer and follow the steps below:\n\nClick on “Next” four times (two times if you’ve previously installed Git). You don’t need to change anything in the Information, location, components, and start menu screens.\nFrom the dropdown menu, “Choosing the default editor used by Git”, select “Use the Nano editor by default” (NOTE: you will need to scroll up to find it) and click on “Next”.\nOn the page that says “Adjusting the name of the initial branch in new repositories”, ensure that “Let Git decide” is selected. This will ensure the highest level of compatibility for our lessons.\nEnsure that “Git from the command line and also from 3rd-party software” is selected and click on “Next”. (If you don’t do this Git Bash will not work properly, requiring you to remove the Git Bash installation, re-run the installer and to select the “Git from the command line and also from 3rd-party software” option.)\nSelect “Use bundled OpenSSH”.\nEnsure that “Use the native Windows Secure Channel Library” is selected and click on “Next”.\nEnsure that “Checkout Windows-style, commit Unix-style line endings” is selected and click on “Next”.\nEnsure that “Use Windows’ default console window” is selected and click on “Next”.\nEnsure that “Default (fast-forward or merge) is selected and click”Next”\nEnsure that “Git Credential Manager” is selected and click on “Next”.\nEnsure that “Enable file system caching” is selected and click on “Next”.\nClick on “Install”.\nClick on “Finish” or “Next”.\n\nIf your “HOME” environment variable is not set (or you don’t know what this is):\n\nOpen command prompt (Open the Start Menu, then type cmd and press Enter)\nType the following line into the command prompt window, exactly as shown: setx HOME \"%USERPROFILE%\"\nPress Enter and you should see SUCCESS: Specified value was saved.\nQuit the command prompt by typing exit then pressing Enter.\n\n\nThis will provide you with both Git and Bash in the Git Bash program.\n\n\n\nThe default shell is usually Bash and there is usually no need to install anything.\nTo see if your default shell is Bash type echo $SHELL in Terminal and press the Return key. If the message printed does not end with ‘/bash’ then your default is something else, you can change your current shell to Bash by typing bash and then pressing Return. To check your current shell type echo $0 and press Return.\nTo change your default shell to Bash type chsh -s /bin/bash and press the Return key, then reboot for the change to take effect. To change your default back to Zsh, type chsh -s /bin/zsh, press the Return key and reboot. To check available shells, type cat /etc/shells.",
     "crumbs": [
       "Additional resources",
-      "Text editors: Vim"
+      "Setting up"
     ]
   },
   {
-    "objectID": "vim.html#text-editing",
-    "href": "vim.html#text-editing",
-    "title": "Text editors: Vim",
-    "section": "2 Text editing",
-    "text": "2 Text editing\nSo, you’ve created and exited a file with Vim. Your next challenge is to put some text inside the file. Open your file again:\nvim new-file.txt\nNow, try and type some text. What’s happening? You are currently in Normal (or ‘control’) mode. To add text, you need to be in Insert or ‘edit’ mode.\nTo enter Insert mode, type i. You can now type! Add some text:\nYay I can now add words to my file! This wasn't difficult at all!\nHow do you save your work? ctrl + s will not help you. First, you need to go back to Normal mode by pressing esc, then type:\n:w\n(If you spend too much time working in Vim, your text documents start to accumulate random :w in them.) Now, you can safely quit vim again:\n:q\nPractice this. Re-open your vim document, enter insert mode, and add some more random text.\nThere is also a command for saving and exiting all in one instruction. Press esc, then type:\n:x\nPhew! You had little control over where your new text went in the last exercise. How do you move around in vim? In Normal mode, you can move one character at a time using your arrow keys, or the keys k (up), l (right), h (left), and j (down).\nOnce you are in place, type i to enter Insert mode on the left-hand-side of the current character. You can also type a to enter Insert mode on the right-hand-side (think (a)fter the character). Try this out and add some more text.\n\n\n\n\n\n\nSummary of Vim modes\n\n\n\nVim has several modes. For our purposes, the Normal mode and Insert mode are the most important.\n\nNormal mode is the default mode for navigating and manipulating text.\n\nTo enter, press Esc from any other mode.\nUse this mode for moving around the file, deleting text, copying, pasting, and other commands.\n\nInsert mode is used for inserting and editing text.\n\nTo enter this mode, press i, I, a, A, o, or O from Normal mode.\nUse this mode to type text directly into the document.",
+    "objectID": "setup.html#git",
+    "href": "setup.html#git",
+    "title": "Setting up",
+    "section": "2 Git",
+    "text": "2 Git\nGit is a version control system that lets you track who made changes to what when and has options for easily updating a shared or public version of your code on github.com. You will need a supported web browser.\nYou will need an account at github.com for parts of the Git lesson. When setting up your GitHub account, please consider what personal information you’d like to reveal. For example, you may want to review these instructions for keeping your email address private provided at GitHub.\n\nMacOSWindowsLinux\n\n\nPlease open the Terminal app, type git --version and press Return. If it’s not installed already, follow the instructions to install the “command line developer tools”. Do notclick “Get Xcode”, because that will take too long and is not necessary for our Git lesson. After installing these tools, there won’t be anything in your /Applications folder, as they and Git are command line programs.\nFor older versions of OS X (10.5-10.8): use the most recent available installer labelled “snow-leopard” available here. (Note: this project is no longer maintained.) Because this installer is not signed by the developer, you may have to right click (control + click) on the .pkg file, and then click Open in the pop-up dialog. You can watch the video tutorial below for this.\n\n\n\nGit should be installed on your computer as part of your Bash install.\n\n\nIf Git is not already available on your machine you can try to install it via your distro’s package manager. For Debian/Ubuntu run sudo apt-get install git and for Fedora run sudo dnf install git.",
     "crumbs": [
       "Additional resources",
-      "Text editors: Vim"
+      "Setting up"
     ]
   },
   {
-    "objectID": "vim.html#useful-shortcuts",
-    "href": "vim.html#useful-shortcuts",
-    "title": "Text editors: Vim",
-    "section": "3 Useful shortcuts",
-    "text": "3 Useful shortcuts\n\n/pattern searches forward from the current cursor position for the text matching pattern. Press /, type the search term (pattern), and press Enter.\n\nTo search for the word “example”: first, ensure you are in Normal mode by pressing esc. Then type /example and press Enter.\nTo navigate search results, n moves to the next occurrence of the search pattern.\nN moves to the previous occurrence of the search pattern.\n\n?pattern searches backward from the current cursor position for the text matching pattern. Press ?, type the search term (pattern), and press Enter.\n\nTo search backward for the word “example”, you would type ?example in Normal mode and press Enter.",
+    "objectID": "setup.html#text-editor",
+    "href": "setup.html#text-editor",
+    "title": "Setting up",
+    "section": "3 Text editor",
+    "text": "3 Text editor\nWhen you’re writing code, it’s nice to have a text editor that is optimized for writing code, with features like automatic color-coding of key words. The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. If you accidentally find yourself stuck in it, hit the Esc key, followed by :+q+! (colon, lower-case ‘q’, exclamation mark), then hitting Return to return to the shell.\n\nMacOSWindowsLinux\n\n\nnano is a basic editor and the default that instructors use in the workshop. See the Git installation video tutorial, also provided below, for an example on how to open nano. It should be pre-installed.\n\n\n\nnano is a basic editor and the default that instructors use in the workshop. It is installed along with Git.\n\n\nnano is a basic editor and the default that instructors use in the workshop. It should be pre-installed.",
     "crumbs": [
       "Additional resources",
-      "Text editors: Vim"
+      "Setting up"
     ]
   },
   {
-    "objectID": "collaborative-git.html",
-    "href": "collaborative-git.html",
-    "title": "Collaborative Git",
-    "section": "",
-    "text": "You’ve already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.\n\n\nThese questions encapsulate the concepts we will address in this section.\n\nWhat does it mean to have staged and unstaged changes?\nWhat is a branch? Where does it live?\nHow do you add a second remote, and why would you want multiple remote repositories?\nHow do I incorporate someone else’s changes with the changes I’ve made, if we’ve both committed to the same branch at the same time?\nHow do you re-write history if you’re unhappy with the direction your project has taken?\nFollowing up on the previous question, can you choose to keep only some changes and not others?\n\n\n\n\n\nWe will discuss what happens when staging, committing, and pushing\nWe will discuss branches, remotes, and pull requests: what they are and how to use them\nWe will discuss what is considered best practice for commits, pushing, and branches on the command line\nWe will discuss what is considered best practice for team workflows, including how to use pull requests on GitHub\nWe will look at how to use revert, reset, merge, and cherry-pick, especially when collaborating with others"
+    "objectID": "session-2.html#file-transfers-more-ssh",
+    "href": "session-2.html#file-transfers-more-ssh",
+    "title": "Session 2",
+    "section": "2 File transfers (more SSH)",
+    "text": "2 File transfers (more SSH)\n\n\n\n\n\n\nObjectives\n\n\n\n\nUse SCP and SFTP for file transfers\nUse the command line for basic file operations\nUse the text editor Vim\n\n\n\n\nLog in to an SFTP session. Transfer the folder secret-files within your scratch directory to your local PC.\n\n\n\n\n\n\n\nWarning\n\n\n\nIt’s tempting to use your PC’s GUI, but please use the command line for the next steps in this exercise!\n\n\n\nOpen a new terminal window for your local PC. Navigate to the secret-files directory on your local PC and open the file unmodified-secret-scenario.xml using Vim.\nThere are some values in that file that needs to be substituted; they look like: @parameter@. Find these and change them.\nWhen you’re done changing all the values, rename the file to secret-scenario.xml using the command mv.\nUsing SCP, transfer the file secret-scenario.xml to the secret-files folder within your scratch directory on Pawsey.\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhen do you think you would use SCP, SFTP, and Rsync? Which method do you think is quicker? And when would you use GUIs?"
   },
   {
-    "objectID": "collaborative-git.html#introduction",
-    "href": "collaborative-git.html#introduction",
-    "title": "Collaborative Git",
-    "section": "",
-    "text": "You’ve already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.\n\n\nThese questions encapsulate the concepts we will address in this section.\n\nWhat does it mean to have staged and unstaged changes?\nWhat is a branch? Where does it live?\nHow do you add a second remote, and why would you want multiple remote repositories?\nHow do I incorporate someone else’s changes with the changes I’ve made, if we’ve both committed to the same branch at the same time?\nHow do you re-write history if you’re unhappy with the direction your project has taken?\nFollowing up on the previous question, can you choose to keep only some changes and not others?\n\n\n\n\n\nWe will discuss what happens when staging, committing, and pushing\nWe will discuss branches, remotes, and pull requests: what they are and how to use them\nWe will discuss what is considered best practice for commits, pushing, and branches on the command line\nWe will discuss what is considered best practice for team workflows, including how to use pull requests on GitHub\nWe will look at how to use revert, reset, merge, and cherry-pick, especially when collaborating with others"
+    "objectID": "session-2.html#software-on-hpc",
+    "href": "session-2.html#software-on-hpc",
+    "title": "Session 2",
+    "section": "3 Software on HPC",
+    "text": "3 Software on HPC"
   },
   {
-    "objectID": "collaborative-git.html#background",
-    "href": "collaborative-git.html#background",
-    "title": "Collaborative Git",
-    "section": "2 Background",
-    "text": "2 Background\n\n\n\n\n\n\nOverview\n\n\n\n\nWhat is version control?\nWhy should I use it?\n\n\n\nWhy we like version control:\n\nNothing that is committed to version control is ever lost, unless you work really, really hard at losing it. Since all old versions of files are saved, it’s always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results.\nAs we have this record of who made what changes when, we know who to ask if we have questions later on, and, if needed, revert to a previous version, much like the “undo” feature in an editor.\nWhen several people collaborate in the same project, it’s possible to accidentally overlook or overwrite someone’s changes. The version control system automatically notifies users whenever there’s a conflict between one person’s work and another’s.\n\nTeams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).\nVersion control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or needs to be shared can and should be stored in a version control system.\nWe’ll start by exploring how version control can be used to keep track of what one person did and when. Even if you aren’t collaborating with other people, automated version control is much better than this situation:\n\n\n\n\n\nWe’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document. Some word processors let us deal with this a little better, such as Microsoft Word’s Track Changes, Google Docs’ version history, or LibreOffice’s Recording and Displaying Changes.\nVersion control systems start with a base version of the document and then record changes you make each step of the way. You can think of it as a recording of your progress: you can rewind to start at the base document and play back each change you made, eventually arriving at your more recent version.\nOnce you think of changes as separate from the document itself, you can then think about “playing back” different sets of changes on the base document, ultimately resulting in different versions of that document. For example, two users can make independent sets of changes on the same document.\nUnless multiple users make changes to the same section of the document-a conflict–you can incorporate two sets of changes into the same base document.\nA version control system is a tool that keeps track of these changes for us, effectively creating different versions of our files. It allows us to decide which changes will be made to the next version (each record of these changes is called a commit), and keeps useful metadata about them. The complete history of commits for a particular project and their metadata make up a repository. Repositories can be kept in sync across different computers, facilitating collaboration among different people.\nAutomated version control systems are nothing new. Tools like RCS, CVS, or Subversion have been around since the early 1980s and are used by many large companies. However, many of these are now considered legacy systems (i.e., outdated) due to various limitations in their capabilities. More modern systems, such as Git and Mercurial, are distributed, meaning that they do not need a centralized server to host the repository. These modern systems also include powerful merging tools that make it possible for multiple authors to work on the same files concurrently.\n\n\n\n\n\n\nKey points\n\n\n\n\nVersion control is like an unlimited “undo”\nVersion control allows multiple people to work concurrently."
-  },
-  {
-    "objectID": "session-ssh.html",
-    "href": "session-ssh.html",
-    "title": "SSH keys and logging in",
-    "section": "",
-    "text": "Objectives\n\n\n\n\nSet up SSH keys for Git and Pawsey\nUnderstand “where” you are\n\n\n\n\nCheck whether you already have SSH keys set up. How would you do this? You may find Section 3 in the Remote logins and SSH page useful.\nSet up your SSH key for Git. You may find Section 3.1 in the Remote logins and SSH page useful.\nSet up your SSH key for Pawsey. You may find Section 3.2 in the Remote logins and SSH page useful.\nLog on to Pawsey using SSH. How do you know “where” you are? Is your terminal running on your local PC, or on Pawsey?\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhy do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?"
-  },
-  {
-    "objectID": "session-ssh.html#logging-in-ssh",
-    "href": "session-ssh.html#logging-in-ssh",
-    "title": "SSH keys and logging in",
-    "section": "",
-    "text": "Objectives\n\n\n\n\nSet up SSH keys for Git and Pawsey\nUnderstand “where” you are\n\n\n\n\nCheck whether you already have SSH keys set up. How would you do this? You may find Section 3 in the Remote logins and SSH page useful.\nSet up your SSH key for Git. You may find Section 3.1 in the Remote logins and SSH page useful.\nSet up your SSH key for Pawsey. You may find Section 3.2 in the Remote logins and SSH page useful.\nLog on to Pawsey using SSH. How do you know “where” you are? Is your terminal running on your local PC, or on Pawsey?\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhy do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?"
-  },
-  {
-    "objectID": "session-ssh.html#looking-around",
-    "href": "session-ssh.html#looking-around",
-    "title": "SSH keys and logging in",
-    "section": "2 Looking around",
-    "text": "2 Looking around\n\n\n\n\n\n\nObjectives\n\n\n\n\nNavigate Pawsey using the command line\nUnderstand user permissions\nUnderstand the Pawsey filesystem\n\n\n\n\nNavigate to your own software directory using cd $MYSOFTWARE. Now, navigate to the GROUP directory (also located within pawsey1104).\nCopy a folder within the software directory to your scratch directory. How would you do this?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nSimilar to $MYSOFTWARE, there is an alias $MYSCRATCH for your scratch directory.\n\n\n\n\nNavigate to the copied folder within your scratch directory."
-  },
-  {
-    "objectID": "pawsey.html",
-    "href": "pawsey.html",
-    "title": "Pawsey",
-    "section": "",
-    "text": "Logging in\nSecurity (SSH)\nMoving data (SCP, SFTP, Rsync, and GUIs)\nFinding and using available software\nSingularity (containers)\nSubmitting and monitoring jobs"
-  },
-  {
-    "objectID": "pawsey.html#logging-in-using-ssh",
-    "href": "pawsey.html#logging-in-using-ssh",
-    "title": "Pawsey",
-    "section": "1 Logging in using ssh",
-    "text": "1 Logging in using ssh\nTo make a remote login, we issue the command ssh &lt;username&gt;@&lt;computer&gt; which tries to make a connection to the SSH daemon running on the remote computer we have specified. For Chitra to access the Setonix computer on Pawsey, she logs in using ssh chitrams@setonix.pawsey.org.au.\n\n\n\n\n\n\nTest your understanding\n\n\n\n\nWhat happens if Chitra has already been allocated a node named nid09310 that she would like to directly log in to?\nWhat happens if Chitra wants to access the data mover nodes on Pawsey, which has the hostname data-mover.pawsey.org.au?\n\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nFor the first instance, Chitra would log in with the following command:\nssh chitrams@nid09310.pawsey.org.au\nFor the second, Chitra would log in with the following command:\nsftp chitrams@data-mover.pawseyl.org.au\nwhere sftp is another companion program for ssh, the Secure File Transfer Protocol. We talk about this in a subsequent section.\n\n\n\nAfter we log in, we can use the remote shell to use the remote computer’s files and directories.\nTyping exit terminates the remote shell (and the local client program on that remote shell) and returns us to our previous shell."
-  },
-  {
-    "objectID": "acknowledgements.html",
-    "href": "acknowledgements.html",
-    "title": "Acknowledgements",
-    "section": "",
-    "text": "Acknowledgement of country\nThe Kids Research Institute Australia acknowledges Aboriginal people as the Traditional Owners of the land and seas of Australia. We also acknowledge the Noongar Nation and especially the Whadjuk people as the custodians of the land on which the Institute is located.\nWe pay our respects to Elders past, present, and future and seek their wisdom in our work to improve the health of all children.\n\n\nCourse preparation\n\n\nCourse material\n\nThe Code of Conduct is derived from work that is copyright © rOpenSci (rOpenSci Code of Conduct) made available under the CC BY 4.0 license.\nThe instruction material “Unix Shell” is derived from work that is copyright © The Carpentries (https://carpentries.org/) made available under the CC BY 4.0 license.\nThe instruction material “Remote logins and SSH” is derived from works that are copyright © The Carpentries (https://carpentries.org/) and copyright © Pawsey (https://pawsey.atlassian.net/wiki/spaces/US/overview) made available under the CC BY 4.0 license; and copyright © GitHub, Inc. (https://docs.github.com/en) made available under the CC0 1.0 Universal Deed.",
-    "crumbs": [
-      "Acknowledgements"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Global Disease Modelling 2025 Workshop",
-    "section": "",
-    "text": "This workshop is held 13-15 January and 22 January 2025 for the Global Disease Modelling team at The Kids Research Institute Australia, in collaboration with Pawsey Supercomputing Centre.\nParticipating in the workshop means you agree to abide by our Code of Conduct.\nYou can access the sessions’ Q&A at slido.com using the code # 3151 5665 or by clicking this link. You can also use the Teams meeting’s chat to post any questions or comments.\n\nOutline\n\n13/1 (Mon) at 13:00-16:00: the Unix shell.\n14/1 (Tue) at 13:00-16:00: version control with Git.\n15/1 (Wed) at 13:00-16:00: a high-level overview of high-performance computing (HPC) including logging in, modules and containers, Slurm, and job submissions.\n22/1 (Wed) at 13:00-16:30: a Hackathon session. We will attempt to move our individual projects to Pawsey.\n\n\n\nSession schedule\nThe first part of the workshop is held 13 to 15 January 2025 from 13:00 to 16:00, with the following schedule:\n\n13:00-13:50 Workshop\n13:50-14:00 Break\n14:00-14:50 Workshop\n14:50-15:15 Afternoon tea\n15:15-16:00 Workshop\n\nThe last day of the workshop is a Hackathon held on 22 January 2025 from 13:00 to 16:30, with the following schedule:\n\n13:00-14:45 Hackathon\n14:45-15:15 Afternoon tea\n15:15-16:30 Hackathon",
-    "crumbs": [
-      "Overview"
-    ]
+    "objectID": "session-2.html#job-scheduling-slurm",
+    "href": "session-2.html#job-scheduling-slurm",
+    "title": "Session 2",
+    "section": "4 Job scheduling (Slurm)",
+    "text": "4 Job scheduling (Slurm)"
   },
   {
     "objectID": "nano.html",
@@ -303,25 +185,187 @@
     ]
   },
   {
-    "objectID": "session-2.html#file-transfers-more-ssh",
-    "href": "session-2.html#file-transfers-more-ssh",
-    "title": "Session 2",
-    "section": "2 File transfers (more SSH)",
-    "text": "2 File transfers (more SSH)\n\n\n\n\n\n\nObjectives\n\n\n\n\nUse SCP and SFTP for file transfers\nUse the command line for basic file operations\nUse the text editor Vim\n\n\n\n\nLog in to an SFTP session. Transfer the folder secret-files within your scratch directory to your local PC.\n\n\n\n\n\n\n\nWarning\n\n\n\nIt’s tempting to use your PC’s GUI, but please use the command line for the next steps in this exercise!\n\n\n\nOpen a new terminal window for your local PC. Navigate to the secret-files directory on your local PC and open the file unmodified-secret-scenario.xml using Vim.\nThere are some values in that file that needs to be substituted; they look like: @parameter@. Find these and change them.\nWhen you’re done changing all the values, rename the file to secret-scenario.xml using the command mv.\nUsing SCP, transfer the file secret-scenario.xml to the secret-files folder within your scratch directory on Pawsey.\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhen do you think you would use SCP, SFTP, and Rsync? Which method do you think is quicker? And when would you use GUIs?"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Global Disease Modelling 2025 Workshop",
+    "section": "",
+    "text": "This workshop is held 13-15 January and 22 January 2025 for the Global Disease Modelling team at The Kids Research Institute Australia, in collaboration with Pawsey Supercomputing Centre.\nParticipating in the workshop means you agree to abide by our Code of Conduct.\nYou can access the sessions’ Q&A at slido.com using the code # 3151 5665 or by clicking this link. You can also use the Teams meeting’s chat to post any questions or comments.\n\nOutline\n\n13/1 (Mon) at 13:00-16:00: the Unix shell.\n14/1 (Tue) at 13:00-16:00: version control with Git.\n15/1 (Wed) at 13:00-16:00: a high-level overview of high-performance computing (HPC) including logging in, modules and containers, Slurm, and job submissions.\n22/1 (Wed) at 13:00-16:30: a Hackathon session. We will attempt to move our individual projects to Pawsey.\n\n\n\nSession schedule\nThe first part of the workshop is held 13 to 15 January 2025 from 13:00 to 16:00, with the following schedule:\n\n13:00-13:50 Workshop\n13:50-14:00 Break\n14:00-14:50 Workshop\n14:50-15:15 Afternoon tea\n15:15-16:00 Workshop\n\nThe last day of the workshop is a Hackathon held on 22 January 2025 from 13:00 to 16:30, with the following schedule:\n\n13:00-14:45 Hackathon\n14:45-15:15 Afternoon tea\n15:15-16:30 Hackathon",
+    "crumbs": [
+      "Overview"
+    ]
   },
   {
-    "objectID": "session-2.html#software-on-hpc",
-    "href": "session-2.html#software-on-hpc",
-    "title": "Session 2",
-    "section": "3 Software on HPC",
-    "text": "3 Software on HPC"
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Acknowledgements",
+    "section": "",
+    "text": "Acknowledgement of country\nThe Kids Research Institute Australia acknowledges Aboriginal people as the Traditional Owners of the land and seas of Australia. We also acknowledge the Noongar Nation and especially the Whadjuk people as the custodians of the land on which the Institute is located.\nWe pay our respects to Elders past, present, and future and seek their wisdom in our work to improve the health of all children.\n\n\nCourse preparation\n\n\nCourse material\n\nThe Code of Conduct is derived from work that is copyright © rOpenSci (rOpenSci Code of Conduct) made available under the CC BY 4.0 license.\nThe instruction material “Unix Shell” is derived from work that is copyright © The Carpentries (https://carpentries.org/) made available under the CC BY 4.0 license.\nThe instruction material “Remote logins and SSH” is derived from works that are copyright © The Carpentries (https://carpentries.org/) and copyright © Pawsey (https://pawsey.atlassian.net/wiki/spaces/US/overview) made available under the CC BY 4.0 license; and copyright © GitHub, Inc. (https://docs.github.com/en) made available under the CC0 1.0 Universal Deed.",
+    "crumbs": [
+      "Acknowledgements"
+    ]
   },
   {
-    "objectID": "session-2.html#job-scheduling-slurm",
-    "href": "session-2.html#job-scheduling-slurm",
-    "title": "Session 2",
-    "section": "4 Job scheduling (Slurm)",
-    "text": "4 Job scheduling (Slurm)"
+    "objectID": "pawsey.html",
+    "href": "pawsey.html",
+    "title": "Pawsey",
+    "section": "",
+    "text": "Logging in\nSecurity (SSH)\nMoving data (SCP, SFTP, Rsync, and GUIs)\nFinding and using available software\nSingularity (containers)\nSubmitting and monitoring jobs"
+  },
+  {
+    "objectID": "pawsey.html#logging-in-using-ssh",
+    "href": "pawsey.html#logging-in-using-ssh",
+    "title": "Pawsey",
+    "section": "1 Logging in using ssh",
+    "text": "1 Logging in using ssh\nTo make a remote login, we issue the command ssh &lt;username&gt;@&lt;computer&gt; which tries to make a connection to the SSH daemon running on the remote computer we have specified. For Chitra to access the Setonix computer on Pawsey, she logs in using ssh chitrams@setonix.pawsey.org.au.\n\n\n\n\n\n\nTest your understanding\n\n\n\n\nWhat happens if Chitra has already been allocated a node named nid09310 that she would like to directly log in to?\nWhat happens if Chitra wants to access the data mover nodes on Pawsey, which has the hostname data-mover.pawsey.org.au?\n\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nFor the first instance, Chitra would log in with the following command:\nssh chitrams@nid09310.pawsey.org.au\nFor the second, Chitra would log in with the following command:\nsftp chitrams@data-mover.pawseyl.org.au\nwhere sftp is another companion program for ssh, the Secure File Transfer Protocol. We talk about this in a subsequent section.\n\n\n\nAfter we log in, we can use the remote shell to use the remote computer’s files and directories.\nTyping exit terminates the remote shell (and the local client program on that remote shell) and returns us to our previous shell."
+  },
+  {
+    "objectID": "session-ssh.html",
+    "href": "session-ssh.html",
+    "title": "SSH keys and logging in",
+    "section": "",
+    "text": "Objectives\n\n\n\n\nSet up SSH keys for Git and Pawsey\nUnderstand “where” you are\n\n\n\n\nCheck whether you already have SSH keys set up. How would you do this? You may find Section 3 in the Remote logins and SSH page useful.\nSet up your SSH key for Git. You may find Section 3.1 in the Remote logins and SSH page useful.\nSet up your SSH key for Pawsey. You may find Section 3.2 in the Remote logins and SSH page useful.\nLog on to Pawsey using SSH. How do you know “where” you are? Is your terminal running on your local PC, or on Pawsey?\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhy do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?"
+  },
+  {
+    "objectID": "session-ssh.html#logging-in-ssh",
+    "href": "session-ssh.html#logging-in-ssh",
+    "title": "SSH keys and logging in",
+    "section": "",
+    "text": "Objectives\n\n\n\n\nSet up SSH keys for Git and Pawsey\nUnderstand “where” you are\n\n\n\n\nCheck whether you already have SSH keys set up. How would you do this? You may find Section 3 in the Remote logins and SSH page useful.\nSet up your SSH key for Git. You may find Section 3.1 in the Remote logins and SSH page useful.\nSet up your SSH key for Pawsey. You may find Section 3.2 in the Remote logins and SSH page useful.\nLog on to Pawsey using SSH. How do you know “where” you are? Is your terminal running on your local PC, or on Pawsey?\n\n\n\n\n\n\n\nDiscussion\n\n\n\nWhy do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?"
+  },
+  {
+    "objectID": "session-ssh.html#looking-around",
+    "href": "session-ssh.html#looking-around",
+    "title": "SSH keys and logging in",
+    "section": "2 Looking around",
+    "text": "2 Looking around\n\n\n\n\n\n\nObjectives\n\n\n\n\nNavigate Pawsey using the command line\nUnderstand user permissions\nUnderstand the Pawsey filesystem\n\n\n\n\nNavigate to your own software directory using cd $MYSOFTWARE. Now, navigate to the GROUP directory (also located within pawsey1104).\nCopy a folder within the software directory to your scratch directory. How would you do this?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nSimilar to $MYSOFTWARE, there is an alias $MYSCRATCH for your scratch directory.\n\n\n\n\nNavigate to the copied folder within your scratch directory."
+  },
+  {
+    "objectID": "collaborative-git.html",
+    "href": "collaborative-git.html",
+    "title": "Collaborative Git",
+    "section": "",
+    "text": "You’ve already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.\n\n\nThese questions encapsulate the concepts we will address in this section.\n\nWhat does it mean to have staged and unstaged changes?\nWhat is a branch? Where does it live?\nHow do you add a second remote, and why would you want multiple remote repositories?\nHow do I incorporate someone else’s changes with the changes I’ve made, if we’ve both committed to the same branch at the same time?\nHow do you re-write history if you’re unhappy with the direction your project has taken?\nFollowing up on the previous question, can you choose to keep only some changes and not others?\n\n\n\n\n\nWe will discuss what happens when staging, committing, and pushing\nWe will discuss branches, remotes, and pull requests: what they are and how to use them\nWe will discuss what is considered best practice for commits, pushing, and branches on the command line\nWe will discuss what is considered best practice for team workflows, including how to use pull requests on GitHub\nWe will look at how to use revert, reset, merge, and cherry-pick, especially when collaborating with others"
+  },
+  {
+    "objectID": "collaborative-git.html#introduction",
+    "href": "collaborative-git.html#introduction",
+    "title": "Collaborative Git",
+    "section": "",
+    "text": "You’ve already committed and pushed changes to GitHub, and you’re comfortable with creating branches. In this section we’ll level up your Git knowledge to fully utilise Git for collaboration.\n\n\nThese questions encapsulate the concepts we will address in this section.\n\nWhat does it mean to have staged and unstaged changes?\nWhat is a branch? Where does it live?\nHow do you add a second remote, and why would you want multiple remote repositories?\nHow do I incorporate someone else’s changes with the changes I’ve made, if we’ve both committed to the same branch at the same time?\nHow do you re-write history if you’re unhappy with the direction your project has taken?\nFollowing up on the previous question, can you choose to keep only some changes and not others?\n\n\n\n\n\nWe will discuss what happens when staging, committing, and pushing\nWe will discuss branches, remotes, and pull requests: what they are and how to use them\nWe will discuss what is considered best practice for commits, pushing, and branches on the command line\nWe will discuss what is considered best practice for team workflows, including how to use pull requests on GitHub\nWe will look at how to use revert, reset, merge, and cherry-pick, especially when collaborating with others"
+  },
+  {
+    "objectID": "collaborative-git.html#background",
+    "href": "collaborative-git.html#background",
+    "title": "Collaborative Git",
+    "section": "2 Background",
+    "text": "2 Background\n\n\n\n\n\n\nOverview\n\n\n\n\nWhat is version control?\nWhy should I use it?\n\n\n\nWhy we like version control:\n\nNothing that is committed to version control is ever lost, unless you work really, really hard at losing it. Since all old versions of files are saved, it’s always possible to go back in time to see exactly who wrote what on a particular day, or what version of a program was used to generate a particular set of results.\nAs we have this record of who made what changes when, we know who to ask if we have questions later on, and, if needed, revert to a previous version, much like the “undo” feature in an editor.\nWhen several people collaborate in the same project, it’s possible to accidentally overlook or overwrite someone’s changes. The version control system automatically notifies users whenever there’s a conflict between one person’s work and another’s.\n\nTeams are not the only ones to benefit from version control: lone researchers can benefit immensely. Keeping a record of what was changed, when, and why is extremely useful for all researchers if they ever need to come back to the project later on (e.g., a year later, when memory has faded).\nVersion control is the lab notebook of the digital world: it’s what professionals use to keep track of what they’ve done and to collaborate with other people. Every large software development project relies on it, and most programmers use it for their small jobs as well. And it isn’t just for software: books, papers, small data sets, and anything that changes over time or needs to be shared can and should be stored in a version control system.\nWe’ll start by exploring how version control can be used to keep track of what one person did and when. Even if you aren’t collaborating with other people, automated version control is much better than this situation:\n\n\n\n\n\nWe’ve all been in this situation before: it seems unnecessary to have multiple nearly-identical versions of the same document. Some word processors let us deal with this a little better, such as Microsoft Word’s Track Changes, Google Docs’ version history, or LibreOffice’s Recording and Displaying Changes.\nVersion control systems start with a base version of the document and then record changes you make each step of the way. You can think of it as a recording of your progress: you can rewind to start at the base document and play back each change you made, eventually arriving at your more recent version.\nOnce you think of changes as separate from the document itself, you can then think about “playing back” different sets of changes on the base document, ultimately resulting in different versions of that document. For example, two users can make independent sets of changes on the same document.\nUnless multiple users make changes to the same section of the document-a conflict–you can incorporate two sets of changes into the same base document.\nA version control system is a tool that keeps track of these changes for us, effectively creating different versions of our files. It allows us to decide which changes will be made to the next version (each record of these changes is called a commit), and keeps useful metadata about them. The complete history of commits for a particular project and their metadata make up a repository. Repositories can be kept in sync across different computers, facilitating collaboration among different people.\nAutomated version control systems are nothing new. Tools like RCS, CVS, or Subversion have been around since the early 1980s and are used by many large companies. However, many of these are now considered legacy systems (i.e., outdated) due to various limitations in their capabilities. More modern systems, such as Git and Mercurial, are distributed, meaning that they do not need a centralized server to host the repository. These modern systems also include powerful merging tools that make it possible for multiple authors to work on the same files concurrently.\n\n\n\n\n\n\nKey points\n\n\n\n\nVersion control is like an unlimited “undo”\nVersion control allows multiple people to work concurrently."
+  },
+  {
+    "objectID": "vim.html",
+    "href": "vim.html",
+    "title": "Text editors: Vim",
+    "section": "",
+    "text": "Vim is a text editor. That is all it does. You cannot format a document, insert shapes, make a table with lines, use multiple fonts, highlight sentences, or print out with headings or margins. Vim, however, is very good at editing text. Once you’ve mastered Vim, it is very powerful. You can find and replace chunks of text using commands, copy and paste columns of data, and jump to a specified line number.\n\n\n\n\n\n\nWhat is a text editor?\n\n\n\nWe sometimes call programs like Microsoft Word or LibreOffice Writer “text editors”, but we need to be a bit more careful when it comes to programming.\nBy default, Microsoft Word uses .docx files to store not only text, but also formatting information about fonts, headings, and so on. This extra information isn’t stored as characters, and doesn’t mean anything to tools like head: they expect input files to contain nothing but the letters, digits and punctuation on a standard computer keyboard. When editing programs, therefore, you must either use a plain text editor, or be careful to save files as plain text.\n\n\nVim is also everywhere. If you are working on a computer with a shell (such as terminal or gitbash), then you have Vim; it’s already there. And you can open it directly from the shell. The problem is, however, that Vim is notoriously difficult to learn.\nLet’s create a new file with Vim. First, open your shell, then type:\nvim new-file.txt\nYay, a new file! Now, close that file. Type:\n:q\nTa-da! Congratulations, you’ve exited vim.",
+    "crumbs": [
+      "Additional resources",
+      "Text editors: Vim"
+    ]
+  },
+  {
+    "objectID": "vim.html#starting-vim",
+    "href": "vim.html#starting-vim",
+    "title": "Text editors: Vim",
+    "section": "",
+    "text": "Vim is a text editor. That is all it does. You cannot format a document, insert shapes, make a table with lines, use multiple fonts, highlight sentences, or print out with headings or margins. Vim, however, is very good at editing text. Once you’ve mastered Vim, it is very powerful. You can find and replace chunks of text using commands, copy and paste columns of data, and jump to a specified line number.\n\n\n\n\n\n\nWhat is a text editor?\n\n\n\nWe sometimes call programs like Microsoft Word or LibreOffice Writer “text editors”, but we need to be a bit more careful when it comes to programming.\nBy default, Microsoft Word uses .docx files to store not only text, but also formatting information about fonts, headings, and so on. This extra information isn’t stored as characters, and doesn’t mean anything to tools like head: they expect input files to contain nothing but the letters, digits and punctuation on a standard computer keyboard. When editing programs, therefore, you must either use a plain text editor, or be careful to save files as plain text.\n\n\nVim is also everywhere. If you are working on a computer with a shell (such as terminal or gitbash), then you have Vim; it’s already there. And you can open it directly from the shell. The problem is, however, that Vim is notoriously difficult to learn.\nLet’s create a new file with Vim. First, open your shell, then type:\nvim new-file.txt\nYay, a new file! Now, close that file. Type:\n:q\nTa-da! Congratulations, you’ve exited vim.",
+    "crumbs": [
+      "Additional resources",
+      "Text editors: Vim"
+    ]
+  },
+  {
+    "objectID": "vim.html#text-editing",
+    "href": "vim.html#text-editing",
+    "title": "Text editors: Vim",
+    "section": "2 Text editing",
+    "text": "2 Text editing\nSo, you’ve created and exited a file with Vim. Your next challenge is to put some text inside the file. Open your file again:\nvim new-file.txt\nNow, try and type some text. What’s happening? You are currently in Normal (or ‘control’) mode. To add text, you need to be in Insert or ‘edit’ mode.\nTo enter Insert mode, type i. You can now type! Add some text:\nYay I can now add words to my file! This wasn't difficult at all!\nHow do you save your work? ctrl + s will not help you. First, you need to go back to Normal mode by pressing esc, then type:\n:w\n(If you spend too much time working in Vim, your text documents start to accumulate random :w in them.) Now, you can safely quit vim again:\n:q\nPractice this. Re-open your vim document, enter insert mode, and add some more random text.\nThere is also a command for saving and exiting all in one instruction. Press esc, then type:\n:x\nPhew! You had little control over where your new text went in the last exercise. How do you move around in vim? In Normal mode, you can move one character at a time using your arrow keys, or the keys k (up), l (right), h (left), and j (down).\nOnce you are in place, type i to enter Insert mode on the left-hand-side of the current character. You can also type a to enter Insert mode on the right-hand-side (think (a)fter the character). Try this out and add some more text.\n\n\n\n\n\n\nSummary of Vim modes\n\n\n\nVim has several modes. For our purposes, the Normal mode and Insert mode are the most important.\n\nNormal mode is the default mode for navigating and manipulating text.\n\nTo enter, press Esc from any other mode.\nUse this mode for moving around the file, deleting text, copying, pasting, and other commands.\n\nInsert mode is used for inserting and editing text.\n\nTo enter this mode, press i, I, a, A, o, or O from Normal mode.\nUse this mode to type text directly into the document.",
+    "crumbs": [
+      "Additional resources",
+      "Text editors: Vim"
+    ]
+  },
+  {
+    "objectID": "vim.html#useful-shortcuts",
+    "href": "vim.html#useful-shortcuts",
+    "title": "Text editors: Vim",
+    "section": "3 Useful shortcuts",
+    "text": "3 Useful shortcuts\n\n/pattern searches forward from the current cursor position for the text matching pattern. Press /, type the search term (pattern), and press Enter.\n\nTo search for the word “example”: first, ensure you are in Normal mode by pressing esc. Then type /example and press Enter.\nTo navigate search results, n moves to the next occurrence of the search pattern.\nN moves to the previous occurrence of the search pattern.\n\n?pattern searches backward from the current cursor position for the text matching pattern. Press ?, type the search term (pattern), and press Enter.\n\nTo search backward for the word “example”, you would type ?example in Normal mode and press Enter.",
+    "crumbs": [
+      "Additional resources",
+      "Text editors: Vim"
+    ]
+  },
+  {
+    "objectID": "best-practice-programming.html#best-practice-git",
+    "href": "best-practice-programming.html#best-practice-git",
+    "title": "Best practices for programming",
+    "section": "Best practice Git",
+    "text": "Best practice Git\n\nCommit names\nBranch names"
+  },
+  {
+    "objectID": "best-practice-programming.html#best-practice-pawsey",
+    "href": "best-practice-programming.html#best-practice-pawsey",
+    "title": "Best practices for programming",
+    "section": "Best practice Pawsey",
+    "text": "Best practice Pawsey"
+  },
+  {
+    "objectID": "best-practice-programming.html#modularisation",
+    "href": "best-practice-programming.html#modularisation",
+    "title": "Best practices for programming",
+    "section": "Modularisation",
+    "text": "Modularisation"
+  },
+  {
+    "objectID": "best-practice-programming.html#resources",
+    "href": "best-practice-programming.html#resources",
+    "title": "Best practices for programming",
+    "section": "Resources",
+    "text": "Resources"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "supercomputing.html",
+    "href": "supercomputing.html",
+    "title": "Supercomputing fundamentals",
+    "section": "",
+    "text": "Components of a supercomputer\nFilesystem of a supercomputer\nSupercomputer modules\nScheduler (Slurm)\nBatch scripting\nObject storage\n\n\n\n\nGeneral architecture of a supercomputer"
+  },
+  {
+    "objectID": "session-3.html#slurm-job-arrays",
+    "href": "session-3.html#slurm-job-arrays",
+    "title": "Session 3",
+    "section": "2 Slurm job arrays",
+    "text": "2 Slurm job arrays"
+  },
+  {
+    "objectID": "session-3.html#intro-to-nextflow",
+    "href": "session-3.html#intro-to-nextflow",
+    "title": "Session 3",
+    "section": "3 Intro to Nextflow",
+    "text": "3 Intro to Nextflow"
+  },
+  {
+    "objectID": "session-3.html#moving-your-project-to-pawsey",
+    "href": "session-3.html#moving-your-project-to-pawsey",
+    "title": "Session 3",
+    "section": "4 Moving your project to Pawsey",
+    "text": "4 Moving your project to Pawsey"
   },
   {
     "objectID": "session-hackathon.html",

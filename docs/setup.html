@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Text editors: Vim – GDM 2025 Workshop</title>
+<title>Setting up – GDM 2025 Workshop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./acknowledgements.html" rel="next">
-<link href="./nano.html" rel="prev">
+<link href="./unix-shell.html" rel="next">
+<link href="./session-hackathon.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -122,7 +88,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Text editors: Vim</h1>
+          <h1 class="quarto-secondary-nav-title">Setting up</h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -204,7 +170,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setup.html" class="sidebar-item-text sidebar-link">
+  <a href="./setup.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Setting up</span></a>
   </div>
 </li>
@@ -228,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./vim.html" class="sidebar-item-text sidebar-link active">
+  <a href="./vim.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Text editors: Vim</span></a>
   </div>
 </li>
@@ -250,9 +216,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#starting-vim" id="toc-starting-vim" class="nav-link active" data-scroll-target="#starting-vim"><span class="header-section-number">1</span> Starting Vim</a></li>
-  <li><a href="#text-editing" id="toc-text-editing" class="nav-link" data-scroll-target="#text-editing"><span class="header-section-number">2</span> Text editing</a></li>
-  <li><a href="#useful-shortcuts" id="toc-useful-shortcuts" class="nav-link" data-scroll-target="#useful-shortcuts"><span class="header-section-number">3</span> Useful shortcuts</a></li>
+  <li><a href="#the-bash-shell" id="toc-the-bash-shell" class="nav-link active" data-scroll-target="#the-bash-shell"><span class="header-section-number">1</span> The Bash shell</a></li>
+  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git"><span class="header-section-number">2</span> Git</a></li>
+  <li><a href="#text-editor" id="toc-text-editor" class="nav-link" data-scroll-target="#text-editor"><span class="header-section-number">3</span> Text editor</a></li>
   </ul>
 </nav>
     </div>
@@ -261,7 +227,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Text editors: Vim</h1>
+<h1 class="title d-none d-lg-block">Setting up</h1>
 </div>
 
 
@@ -278,86 +244,96 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="starting-vim" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="starting-vim"><span class="header-section-number">1</span> Starting Vim</h2>
-<p>Vim is a text editor. That is all it does. You cannot format a document, insert shapes, make a table with lines, use multiple fonts, highlight sentences, or print out with headings or margins. Vim, however, is very good at editing text. Once you’ve mastered Vim, it is very powerful. You can find and replace chunks of text using commands, copy and paste columns of data, and jump to a specified line number.</p>
-<div class="callout callout-style-default callout-warning callout-titled" title="What is a text editor?">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>To participate in the workshop, you will need access to software as described below. In addition, you will need an up-to-date web browser.</p>
+<p>There is a list of common issues that occur during installation, as a reference for instructors, that may be useful in the following wiki page: <a href="https://github.com/carpentries/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions</a>.</p>
+<section id="the-bash-shell" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="the-bash-shell"><span class="header-section-number">1</span> The Bash shell</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">MacOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>The default shell in Mac OS X Ventura and newer versions is Zsh, but Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in <code>/Applications/Utilities</code>). See the Git installation <a href="https://uwa-hpc.github.io/2024-07-01-UWA/#shell-macos-video-tutorial">video tutorial</a> for an example on how to open the Terminal. You may want to keep Terminal in your dock for this workshop.</p>
+<p>To see if your default shell is Bash type <code>echo $SHELL</code> in Terminal and press the Return key. If the message printed does not end with ‘/bash’ then your default is something else, you can change your current shell to Bash by typing <code>bash</code> and then pressing Return. To check your current shell type <code>echo $0</code> and press Return.</p>
+<p>To change your default shell to Bash type <code>chsh -s /bin/bash</code> and press the Return key, then reboot for the change to take effect. To change your default back to Zsh, type <code>chsh -s /bin/zsh</code>, press the Return key and reboot. To check available shells, type <code>cat /etc/shells</code>.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/9LQhwETCdwY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
-<div class="callout-title-container flex-fill">
-What is a text editor?
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ol type="1">
+<li><p>Download the Git for Windows <a href="https://gitforwindows.org/">installer</a>.</p></li>
+<li><p>Run the installer and follow the steps below:</p>
+<ol type="1">
+<li>Click on “Next” four times (two times if you’ve previously installed Git). You don’t need to change anything in the Information, location, components, and start menu screens.</li>
+<li>From the dropdown menu, “Choosing the default editor used by Git”, select “Use the Nano editor by default” (NOTE: you will need to scroll up to find it) and click on “Next”.</li>
+<li>On the page that says “Adjusting the name of the initial branch in new repositories”, ensure that “Let Git decide” is selected. This will ensure the highest level of compatibility for our lessons.</li>
+<li>Ensure that “Git from the command line and also from 3rd-party software” is selected and click on “Next”. (If you don’t do this Git Bash will not work properly, requiring you to remove the Git Bash installation, re-run the installer and to select the “Git from the command line and also from 3rd-party software” option.)</li>
+<li>Select “Use bundled OpenSSH”.</li>
+<li>Ensure that “Use the native Windows Secure Channel Library” is selected and click on “Next”.</li>
+<li>Ensure that “Checkout Windows-style, commit Unix-style line endings” is selected and click on “Next”.</li>
+<li><strong>Ensure that “Use Windows’ default console window” is selected and click on “Next”.</strong></li>
+<li>Ensure that “Default (fast-forward or merge) is selected and click”Next”</li>
+<li>Ensure that “Git Credential Manager” is selected and click on “Next”.</li>
+<li>Ensure that “Enable file system caching” is selected and click on “Next”.</li>
+<li>Click on “Install”.</li>
+<li>Click on “Finish” or “Next”.</li>
+</ol></li>
+<li><p>If your “HOME” environment variable is not set (or you don’t know what this is):</p>
+<ol type="1">
+<li>Open command prompt (Open the <strong>Start Menu</strong>, then type <code>cmd</code> and press <code>Enter</code>)</li>
+<li>Type the following line into the command prompt window, exactly as shown: <code>setx HOME "%USERPROFILE%"</code></li>
+<li>Press Enter and you should see <code>SUCCESS: Specified value was saved.</code></li>
+<li>Quit the command prompt by typing <code>exit</code> then pressing <code>Enter</code>.</li>
+</ol></li>
+</ol>
+<p>This will provide you with both Git and Bash in the Git Bash program.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/339AEqk9c-8" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>The default shell is usually Bash and there is usually no need to install anything.</p>
+<p>To see if your default shell is Bash type <code>echo $SHELL</code> in Terminal and press the Return key. If the message printed does not end with ‘/bash’ then your default is something else, you can change your current shell to Bash by typing <code>bash</code> and then pressing Return. To check your current shell type <code>echo $0</code> and press Return.</p>
+<p>To change your default shell to Bash type <code>chsh -s /bin/bash</code> and press the Return key, then reboot for the change to take effect. To change your default back to Zsh, type <code>chsh -s /bin/zsh</code>, press the Return key and reboot. To check available shells, type <code>cat /etc/shells</code>.</p>
 </div>
-<div class="callout-body-container callout-body">
-<p>We sometimes call programs like Microsoft Word or LibreOffice Writer “text editors”, but we need to be a bit more careful when it comes to programming.</p>
-<p>By default, Microsoft Word uses <code>.docx</code> files to store not only text, but also formatting information about fonts, headings, and so on. This extra information isn’t stored as characters, and doesn’t mean anything to tools like <code>head</code>: they expect input files to contain nothing but the letters, digits and punctuation on a standard computer keyboard. When editing programs, therefore, you must either use a plain text editor, or be careful to save files as plain text.</p>
-</div>
-</div>
-<p>Vim is also everywhere. If you are working on a computer with a shell (such as terminal or gitbash), then you have Vim; it’s already there. And you can open it directly from the shell. The problem is, however, that Vim is notoriously difficult to learn.</p>
-<p>Let’s create a new file with Vim. First, open your shell, then type:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">vim</span> new-file.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Yay, a new file! Now, close that file. Type:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>:q</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Ta-da! Congratulations, you’ve exited vim.</p>
-</section>
-<section id="text-editing" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="text-editing"><span class="header-section-number">2</span> Text editing</h2>
-<p>So, you’ve created and exited a file with Vim. Your next challenge is to put some text inside the file. Open your file again:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">vim</span> new-file.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now, try and type some text. What’s happening? You are currently in <strong>Normal</strong> (or ‘control’) mode. To add text, you need to be in <strong>Insert</strong> or ‘edit’ mode.</p>
-<p>To enter Insert mode, type <code>i</code>. You can now type! Add some text:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Yay I can now add words to my file! This wasn't difficult at all!</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>How do you save your work? <code>ctrl</code> + <code>s</code> will not help you. First, you need to go back to Normal mode by pressing <code>esc</code>, then type:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>:w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>(If you spend too much time working in Vim, your text documents start to accumulate random <code>:w</code> in them.) Now, you can safely quit vim again:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>:q</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Practice this. Re-open your vim document, enter insert mode, and add some more random text.</p>
-<p>There is also a command for saving and exiting all in one instruction. Press <code>esc</code>, then type:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>:x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Phew! You had little control over <em>where</em> your new text went in the last exercise. How do you move around in vim? In Normal mode, you can move one character at a time using your arrow keys, or the keys <code>k</code> (up), <code>l</code> (right), <code>h</code> (left), and <code>j</code> (down).</p>
-<p>Once you are in place, type <code>i</code> to enter Insert mode on the left-hand-side of the current character. You can also type <code>a</code> to enter Insert mode on the right-hand-side (think (<code>a</code>)fter the character). Try this out and add some more text.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Summary of Vim modes">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Summary of Vim modes
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Vim has several modes. For our purposes, the Normal mode and Insert mode are the most important.</p>
-<ul>
-<li><strong>Normal mode</strong> is the default mode for navigating and manipulating text.
-<ul>
-<li>To enter, press <code>Esc</code> from any other mode.</li>
-<li>Use this mode for moving around the file, deleting text, copying, pasting, and other commands.</li>
-</ul></li>
-<li><strong>Insert mode</strong> is used for inserting and editing text.
-<ul>
-<li>To enter this mode, press <code>i</code>, <code>I</code>, <code>a</code>, <code>A</code>, <code>o</code>, or <code>O</code> from Normal mode.</li>
-<li>Use this mode to type text directly into the document.</li>
-</ul></li>
-</ul>
 </div>
 </div>
 </section>
-<section id="useful-shortcuts" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="useful-shortcuts"><span class="header-section-number">3</span> Useful shortcuts</h2>
-<ul>
-<li><code>/pattern</code> searches forward from the current cursor position for the text matching <code>pattern</code>. Press <code>/</code>, type the search term (pattern), and press <code>Enter</code>.
-<ul>
-<li>To search for the word “example”: first, ensure you are in Normal mode by pressing <code>esc</code>. Then type <code>/example</code> and press <code>Enter</code>.</li>
-<li>To navigate search results, <code>n</code> moves to the next occurrence of the search pattern.</li>
-<li><code>N</code> moves to the previous occurrence of the search pattern.</li>
-</ul></li>
-<li><code>?pattern</code> searches backward from the current cursor position for the text matching <code>pattern</code>. Press <code>?</code>, type the search term (pattern), and press <code>Enter</code>.
-<ul>
-<li>To search backward for the word “example”, you would type <code>?example</code> in Normal mode and press <code>Enter</code>.</li>
-</ul></li>
-</ul>
+<section id="git" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="git"><span class="header-section-number">2</span> Git</h2>
+<p>Git is a version control system that lets you track who made changes to what when and has options for easily updating a shared or public version of your code on <a href="https://github.com/">github.com</a>. You will need a <a href="https://help.github.com/articles/supported-browsers/">supported web browser</a>.</p>
+<p>You will need an account at <a href="https://github.com/">github.com</a> for parts of the Git lesson. When setting up your GitHub account, please consider what personal information you’d like to reveal. For example, you may want to review these <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions for keeping your email address private</a> provided at GitHub.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">MacOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Please open the Terminal app, type <code>git --version</code> and press <code>Return</code>. If it’s not installed already, follow the instructions to install the “command line developer tools”. Do notclick “Get Xcode”, because that will take too long and is not necessary for our Git lesson. After installing these tools, there won’t be anything in your <code>/Applications</code> folder, as they and Git are command line programs.</p>
+<p>For older versions of OS X (10.5-10.8): use the most recent available installer labelled “snow-leopard” <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>. (Note: this project is no longer maintained.) Because this installer is not signed by the developer, you may have to right click (control + click) on the .pkg file, and then click Open in the pop-up dialog. You can watch the video tutorial below for this.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/9LQhwETCdwY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Git should be installed on your computer as part of your Bash install.</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>If Git is not already available on your machine you can try to install it via your distro’s package manager. For Debian/Ubuntu run <code>sudo apt-get install git</code> and for Fedora run <code>sudo dnf install git</code>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="text-editor" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="text-editor"><span class="header-section-number">3</span> Text editor</h2>
+<p>When you’re writing code, it’s nice to have a text editor that is optimized for writing code, with features like automatic color-coding of key words. The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. If you accidentally find yourself stuck in it, hit the <code>Esc</code> key, followed by <code>:</code>+<code>q</code>+<code>!</code> (colon, lower-case ‘q’, exclamation mark), then hitting <code>Return</code> to return to the shell.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">MacOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>nano is a basic editor and the default that instructors use in the workshop. See the Git installation video tutorial, also provided below, for an example on how to open nano. It should be pre-installed.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/9LQhwETCdwY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>nano is a basic editor and the default that instructors use in the workshop. It is installed along with Git.</p>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p>nano is a basic editor and the default that instructors use in the workshop. It should be pre-installed.</p>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -785,13 +761,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./nano.html" class="pagination-link" aria-label="Text editors: nano">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Text editors: nano</span>
+      <a href="./session-hackathon.html" class="pagination-link" aria-label="Hackathon">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Hackathon</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./acknowledgements.html" class="pagination-link" aria-label="Acknowledgements">
-        <span class="nav-page-text">Acknowledgements</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./unix-shell.html" class="pagination-link" aria-label="Unix shell">
+        <span class="nav-page-text">Unix shell</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
