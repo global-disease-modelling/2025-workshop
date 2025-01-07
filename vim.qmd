@@ -39,13 +39,13 @@ vim new-file.txt
 
 Now, try and type some text. What’s happening? You are currently in **Normal** (or ‘control’) mode. To add text, you need to be in **Insert** or ‘edit’ mode.
 
-To enter Insert mode, type `i`. You can now type! Add some text:
+To enter Insert mode, type **i**. You can now type! Add some text:
 
 ``` txt
 Yay I can now add words to my file! This wasn't difficult at all!
 ```
 
-How do you save your work? `ctrl` + `s` will not help you. First, you need to go back to Normal mode by pressing `esc`, then type:
+How do you save your work? **Ctrl + s** will not help you. First, you need to go back to Normal mode by pressing **Esc**, then type:
 
 ``` txt
 :w
@@ -59,32 +59,32 @@ How do you save your work? `ctrl` + `s` will not help you. First, you need to go
 
 Practice this. Re-open your vim document, enter insert mode, and add some more random text.
 
-There is also a command for saving and exiting all in one instruction. Press `esc`, then type:
+There is also a command for saving and exiting all in one instruction. Press **Esc**, then type:
 
 ``` txt
 :x
 ```
 
-Phew! You had little control over *where* your new text went in the last exercise. How do you move around in vim? In Normal mode, you can move one character at a time using your arrow keys, or the keys `k` (up), `l` (right), `h` (left), and `j` (down).
+Phew! You had little control over *where* your new text went in the last exercise. How do you move around in vim? In Normal mode, you can move one character at a time using your arrow keys, or the keys **K** (up), **L** (right), **H** (left), and **J** (down).
 
-Once you are in place, type `i` to enter Insert mode on the left-hand-side of the current character. You can also type `a` to enter Insert mode on the right-hand-side (think (`a`)fter the character). Try this out and add some more text.
+Once you are in place, type **i** to enter Insert mode on the left-hand-side of the current character. You can also type **a** to enter Insert mode on the right-hand-side (think (**a**)fter the character). Try this out and add some more text.
 
 ::: {.callout-tip title="Summary of Vim modes"}
 Vim has several modes. For our purposes, the Normal mode and Insert mode are the most important.
 
 -   **Normal mode** is the default mode for navigating and manipulating text.
-    -   To enter, press `Esc` from any other mode.
+    -   To enter, press **Esc** from any other mode.
     -   Use this mode for moving around the file, deleting text, copying, pasting, and other commands.
 -   **Insert mode** is used for inserting and editing text.
-    -   To enter this mode, press `i`, `I`, `a`, `A`, `o`, or `O` from Normal mode.
+    -   To enter this mode, press **i**, **I**, **a**, **A**, **o**, or **O** from Normal mode.
     -   Use this mode to type text directly into the document.
 :::
 
 ## Useful shortcuts
 
--   `/pattern` searches forward from the current cursor position for the text matching `pattern`. Press `/`, type the search term (pattern), and press `Enter`.
-    -   To search for the word "example": first, ensure you are in Normal mode by pressing `esc`. Then type `/example` and press `Enter`.
-    -   To navigate search results, `n` moves to the next occurrence of the search pattern.
-    -   `N` moves to the previous occurrence of the search pattern.
--   `?pattern` searches backward from the current cursor position for the text matching `pattern`. Press `?`, type the search term (pattern), and press `Enter`.
-    -   To search backward for the word "example", you would type `?example` in Normal mode and press `Enter`.
+-   `/pattern` searches forward from the current cursor position for the text matching `pattern`. Type **/**, type the search term (pattern), and press **Enter**.
+    -   To search for the word "example": first, ensure you are in Normal mode by pressing **Esc**. Then type `/example` and press **Enter**.
+    -   To navigate search results, **n** moves to the next occurrence of the search pattern.
+    -   **N** moves to the previous occurrence of the search pattern.
+-   `?pattern` searches backward from the current cursor position for the text matching `pattern`. Press **?**, type the search term (pattern), and press **Enter**.
+    -   To search backward for the word "example", you would type `?example` in Normal mode and press **Enter**.

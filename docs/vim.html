@@ -307,17 +307,17 @@ What is a text editor?
 <p>So, you’ve created and exited a file with Vim. Your next challenge is to put some text inside the file. Open your file again:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">vim</span> new-file.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now, try and type some text. What’s happening? You are currently in <strong>Normal</strong> (or ‘control’) mode. To add text, you need to be in <strong>Insert</strong> or ‘edit’ mode.</p>
-<p>To enter Insert mode, type <code>i</code>. You can now type! Add some text:</p>
+<p>To enter Insert mode, type <strong>i</strong>. You can now type! Add some text:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Yay I can now add words to my file! This wasn't difficult at all!</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>How do you save your work? <code>ctrl</code> + <code>s</code> will not help you. First, you need to go back to Normal mode by pressing <code>esc</code>, then type:</p>
+<p>How do you save your work? <strong>Ctrl + s</strong> will not help you. First, you need to go back to Normal mode by pressing <strong>Esc</strong>, then type:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>:w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>(If you spend too much time working in Vim, your text documents start to accumulate random <code>:w</code> in them.) Now, you can safely quit vim again:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>:q</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Practice this. Re-open your vim document, enter insert mode, and add some more random text.</p>
-<p>There is also a command for saving and exiting all in one instruction. Press <code>esc</code>, then type:</p>
+<p>There is also a command for saving and exiting all in one instruction. Press <strong>Esc</strong>, then type:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>:x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Phew! You had little control over <em>where</em> your new text went in the last exercise. How do you move around in vim? In Normal mode, you can move one character at a time using your arrow keys, or the keys <code>k</code> (up), <code>l</code> (right), <code>h</code> (left), and <code>j</code> (down).</p>
-<p>Once you are in place, type <code>i</code> to enter Insert mode on the left-hand-side of the current character. You can also type <code>a</code> to enter Insert mode on the right-hand-side (think (<code>a</code>)fter the character). Try this out and add some more text.</p>
+<p>Phew! You had little control over <em>where</em> your new text went in the last exercise. How do you move around in vim? In Normal mode, you can move one character at a time using your arrow keys, or the keys <strong>K</strong> (up), <strong>L</strong> (right), <strong>H</strong> (left), and <strong>J</strong> (down).</p>
+<p>Once you are in place, type <strong>i</strong> to enter Insert mode on the left-hand-side of the current character. You can also type <strong>a</strong> to enter Insert mode on the right-hand-side (think (<strong>a</strong>)fter the character). Try this out and add some more text.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Summary of Vim modes">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -332,12 +332,12 @@ Summary of Vim modes
 <ul>
 <li><strong>Normal mode</strong> is the default mode for navigating and manipulating text.
 <ul>
-<li>To enter, press <code>Esc</code> from any other mode.</li>
+<li>To enter, press <strong>Esc</strong> from any other mode.</li>
 <li>Use this mode for moving around the file, deleting text, copying, pasting, and other commands.</li>
 </ul></li>
 <li><strong>Insert mode</strong> is used for inserting and editing text.
 <ul>
-<li>To enter this mode, press <code>i</code>, <code>I</code>, <code>a</code>, <code>A</code>, <code>o</code>, or <code>O</code> from Normal mode.</li>
+<li>To enter this mode, press <strong>i</strong>, <strong>I</strong>, <strong>a</strong>, <strong>A</strong>, <strong>o</strong>, or <strong>O</strong> from Normal mode.</li>
 <li>Use this mode to type text directly into the document.</li>
 </ul></li>
 </ul>
@@ -347,15 +347,15 @@ Summary of Vim modes
 <section id="useful-shortcuts" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="useful-shortcuts"><span class="header-section-number">3</span> Useful shortcuts</h2>
 <ul>
-<li><code>/pattern</code> searches forward from the current cursor position for the text matching <code>pattern</code>. Press <code>/</code>, type the search term (pattern), and press <code>Enter</code>.
+<li><code>/pattern</code> searches forward from the current cursor position for the text matching <code>pattern</code>. Type <strong>/</strong>, type the search term (pattern), and press <strong>Enter</strong>.
 <ul>
-<li>To search for the word “example”: first, ensure you are in Normal mode by pressing <code>esc</code>. Then type <code>/example</code> and press <code>Enter</code>.</li>
-<li>To navigate search results, <code>n</code> moves to the next occurrence of the search pattern.</li>
-<li><code>N</code> moves to the previous occurrence of the search pattern.</li>
+<li>To search for the word “example”: first, ensure you are in Normal mode by pressing <strong>Esc</strong>. Then type <code>/example</code> and press <strong>Enter</strong>.</li>
+<li>To navigate search results, <strong>n</strong> moves to the next occurrence of the search pattern.</li>
+<li><strong>N</strong> moves to the previous occurrence of the search pattern.</li>
 </ul></li>
-<li><code>?pattern</code> searches backward from the current cursor position for the text matching <code>pattern</code>. Press <code>?</code>, type the search term (pattern), and press <code>Enter</code>.
+<li><code>?pattern</code> searches backward from the current cursor position for the text matching <code>pattern</code>. Press <strong>?</strong>, type the search term (pattern), and press <strong>Enter</strong>.
 <ul>
-<li>To search backward for the word “example”, you would type <code>?example</code> in Normal mode and press <code>Enter</code>.</li>
+<li>To search backward for the word “example”, you would type <code>?example</code> in Normal mode and press <strong>Enter</strong>.</li>
 </ul></li>
 </ul>
 
