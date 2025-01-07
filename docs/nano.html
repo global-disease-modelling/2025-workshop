@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SSH keys and logging in – GDM 2025 Workshop</title>
+<title>Text editors: nano – GDM 2025 Workshop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./session-hackathon.html" rel="next">
-<link href="./code-of-conduct.html" rel="prev">
+<link href="./vim.html" rel="next">
+<link href="./best-practice-programming.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -88,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">SSH keys and logging in</h1>
+          <h1 class="quarto-secondary-nav-title">Text editors: nano</h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session-ssh.html" class="sidebar-item-text sidebar-link active">
+  <a href="./session-ssh.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SSH keys and logging in</span></a>
   </div>
 </li>
@@ -194,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nano.html" class="sidebar-item-text sidebar-link">
+  <a href="./nano.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Text editors: nano</span></a>
   </div>
 </li>
@@ -222,8 +222,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#logging-in-ssh" id="toc-logging-in-ssh" class="nav-link active" data-scroll-target="#logging-in-ssh"><span class="header-section-number">1</span> Logging in (SSH)</a></li>
-  <li><a href="#looking-around" id="toc-looking-around" class="nav-link" data-scroll-target="#looking-around"><span class="header-section-number">2</span> Looking around</a></li>
+  <li><a href="#starting-nano" id="toc-starting-nano" class="nav-link active" data-scroll-target="#starting-nano"><span class="header-section-number">1</span> Starting nano</a></li>
+  <li><a href="#search-and-replace" id="toc-search-and-replace" class="nav-link" data-scroll-target="#search-and-replace"><span class="header-section-number">2</span> Search and replace</a></li>
+  <li><a href="#copy-cut-and-paste" id="toc-copy-cut-and-paste" class="nav-link" data-scroll-target="#copy-cut-and-paste"><span class="header-section-number">3</span> Copy, cut, and paste</a></li>
+  <li><a href="#save-and-exit" id="toc-save-and-exit" class="nav-link" data-scroll-target="#save-and-exit"><span class="header-section-number">4</span> <strong>Save and exit</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -232,8 +234,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">SSH keys and logging in</h1>
-<p class="subtitle lead">Fundamentals of Unix and Git</p>
+<h1 class="title d-none d-lg-block">Text editors: nano</h1>
 </div>
 
 
@@ -250,86 +251,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="logging-in-ssh" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="logging-in-ssh"><span class="header-section-number">1</span> Logging in (SSH)</h2>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Objectives">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Objectives
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Set up SSH keys for Git and Pawsey</li>
-<li>Understand “where” you are</li>
-</ul>
-</div>
-</div>
-<ol type="1">
-<li>Check whether you already have SSH keys set up. How would you do this? You may find <a href="./ssh.html#sec-sshkeys">Section 3</a> in the Remote logins and SSH page useful.</li>
-<li>Set up your SSH key for Git. You may find <a href="./ssh.html#sec-ssh-git">Section 3.1</a> in the Remote logins and SSH page useful.</li>
-<li>Set up your SSH key for Pawsey. You may find <a href="./ssh.html#sec-ssh-pawsey">Section 3.2</a> in the Remote logins and SSH page useful.</li>
-<li>Log on to Pawsey using SSH. How do you know “where” you are? Is your terminal running on your local PC, or on Pawsey?</li>
-</ol>
-<div class="callout callout-style-default callout-warning callout-titled" title="Discussion">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Discussion
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Why do you think we use the shell, or the command line, when interacting with Pawsey? Why not use a graphical user interface (GUI)?</p>
-</div>
-</div>
+<p>When working on the command line, quite often you will need to create or edit text files. Two of the most powerful and popular command-line editors are Vim and Emacs. Both have a steep learning curve that can be intimidating to new users. For those who need a simple editor, there is nano.</p>
+<p>GNU nano is an easy-to-use command line text editor for Unix and Linux operating systems. It includes all the basic functionality you’d expect from a regular text editor, like syntax highlighting, multiple buffers, search and replace with regular expression support, spellchecking, UTF-8 encoding, and more.</p>
+<p>We will go through the basics of using nano, including how to create and open a file, edit a file, save a file, search and replace text, and cut and paste text.</p>
+<section id="starting-nano" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="starting-nano"><span class="header-section-number">1</span> Starting nano</h2>
+<p>Nano text editor is pre-installed on macOS and most Linux distributions. To check if it is installed on your system, type:</p>
+<pre><code>nano --version</code></pre>
+<p>To open an existing file or to create a new file, type <code>nano</code> followed by the file name:</p>
+<pre><code>nano filename</code></pre>
+<p>This opens a new editor window, and you can start editing the file. Unlike Vim, nano is a modeless editor, which means that you can start typing and editing the text immediately after opening the file.</p>
+<p>To move the cursor to a specific line and character number, use the <code>Ctrl+_</code> command. The menu at the bottom of the screen will change. Enter the number(s) in the “Enter line number, column number:” field and hit <code>Enter</code>.</p>
+<p>At the bottom of the window, there is a list of the most basic command shortcuts to use with the nano editor. All commands are prefixed with either <code>^</code> or <code>M</code> characters. The caret symbol (<code>^</code>) represents the <code>Ctrl</code> key. For example, the <code>^J</code> commands mean to press the <code>Ctrl</code> and <code>J</code> keys at the same time. The letter <code>M</code> represents the <code>Alt</code> key. You can get a list of all commands by typing <code>Ctrl+g</code>.</p>
+<p>To open a file, you must have read permissions to the file. If you want to open a file with the cursor on a specific line and character, use the following syntax:</p>
+<pre><code>nano +line_number,character_number filename</code></pre>
+<p>If you omit the <code>character_number</code>, the cursor will be positioned on the first character.</p>
 </section>
-<section id="looking-around" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="looking-around"><span class="header-section-number">2</span> Looking around</h2>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Objectives">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Objectives
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Navigate Pawsey using the command line</li>
-<li>Understand user permissions</li>
-<li>Understand the Pawsey filesystem</li>
-</ul>
-</div>
-</div>
-<ol type="1">
-<li>Navigate to your own software directory using <code>cd $MYSOFTWARE</code>. Now, navigate to the <code>GROUP</code> directory (also located within <code>pawsey1104</code>).</li>
-<li>Copy a folder within the <code>software</code> directory to your <code>scratch</code> directory. How would you do this?</li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled" title="Tip">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Similar to <code>$MYSOFTWARE</code>, there is an alias <code>$MYSCRATCH</code> for your scratch directory.</p>
-</div>
-</div>
-</div>
-<ol start="3" type="1">
-<li>Navigate to the copied folder within your <code>scratch</code> directory.</li>
-</ol>
+<section id="search-and-replace" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="search-and-replace"><span class="header-section-number">2</span> Search and replace</h2>
+<p>To search for a text, press <code>Ctrl+w</code>, type in the search term, and press <code>Enter</code>. The cursor will move to the first match. To move to the next match, press <code>Alt+w</code>.</p>
+<p>If you want to search and replace, press <code>Ctrl+\</code>. Enter the search term and the text to be replaced with. The editor will move to the first match and ask you whether to replace it. After hitting <code>Y</code> or <code>N</code>, it will move to the next match. Pressing <code>A</code> will replace all matches.</p>
+</section>
+<section id="copy-cut-and-paste" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="copy-cut-and-paste"><span class="header-section-number">3</span> Copy, cut, and paste</h2>
+<p>To select text, move the cursor to the beginning of the text and press <code>Alt+a</code>. This will set a selection mark. Move the cursor to the end of the text you want to select using the arrow keys. The selected text will be highlighted. If you wish to cancel the selection, press <code>Ctrl+6</code>.</p>
+<p>Copy the selected text to the clipboard using the <code>Alt+6</code> command. <code>Ctrl+k</code> will cut the selected text.</p>
+<p>If you want to cut whole lines, move the cursor to the line and press <code>Ctrl+k</code>. You can cut multiple lines by hitting <code>Ctrl+k</code> several times.</p>
+<p>To paste the text, move the cursor to where you want to put the text and press <code>Ctrl+u</code>.</p>
+</section>
+<section id="save-and-exit" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="save-and-exit"><span class="header-section-number">4</span> <strong>Save and exit</strong></h2>
+<p>To save the changes you’ve made to the file, press <code>Ctrl+o</code>. If the file doesn’t exist, it will be created once you save it.</p>
+<p>To exit nano, press <code>Ctrl+x</code>. If there are unsaved changes, you’ll be asked whether you want to save the changes.</p>
+<p>To save the file, you must have write permissions to the file. If you are creating a new file, you need to have write permission to the directory where the file is created.</p>
 
 
 </section>
@@ -757,13 +711,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./code-of-conduct.html" class="pagination-link" aria-label="Code of Conduct">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Code of Conduct</span>
+      <a href="./best-practice-programming.html" class="pagination-link" aria-label="Best practices for programming">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Best practices for programming</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./session-hackathon.html" class="pagination-link" aria-label="Hackathon session">
-        <span class="nav-page-text">Hackathon session</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./vim.html" class="pagination-link" aria-label="Text editors: Vim">
+        <span class="nav-page-text">Text editors: Vim</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

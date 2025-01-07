@@ -30,6 +30,7 @@ website:
           - supercomputing.qmd
           - pawsey.qmd
           - best-practice-programming.qmd
+          - nano.qmd
           - vim.qmd
       - acknowledgements.qmd
   
