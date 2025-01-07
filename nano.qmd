@@ -57,7 +57,7 @@ If you want to cut whole lines, move the cursor to the line and press `Ctrl+k`. 
 
 To paste the text, move the cursor to where you want to put the text and press `Ctrl+u`.
 
-## **Save and exit**
+## Save and exit
 
 To save the changes you’ve made to the file, press `Ctrl+o`. If the file doesn’t exist, it will be created once you save it.
 
