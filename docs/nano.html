@@ -302,28 +302,28 @@ What is a text editor?
 <p>To open an existing file or to create a new file, type <code>nano</code> followed by the file name:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> filename</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This opens a new editor window, and you can start editing the file. nano is a “modeless” editor. All keys, with the exception of Control and Meta (<code>Alt</code> or <code>Option</code>) key sequences, will enter text into the file being edited.</p>
-<p>At the bottom of the window, there is a list of the most basic command shortcuts to use with the nano editor. All commands are prefixed with either <code>^</code> or <code>M</code> characters. The caret symbol (<code>^</code>) represents the <code>Ctrl</code> key. For example, the <code>^J</code> commands mean to press the <code>Ctrl</code> and <code>J</code> keys at the same time. The letter <code>M</code> represents the <code>Alt</code> or <code>Option</code> key. You can get a list of all commands by typing <code>Ctrl+g</code>.</p>
-<p>To move the cursor to a specific line and character number, use the <code>Ctrl+_</code> command. The menu at the bottom of the screen will change. Enter the number(s) in the “Enter line number, column number:” field and hit <code>Enter</code>.</p>
+<p>At the bottom of the window, there is a list of the most basic command shortcuts to use with the nano editor. All commands are prefixed with either <code>^</code> or <code>M</code> characters. The caret symbol (<code>^</code>) represents the <strong>Ctrl</strong> key. For example, the <code>^J</code> command means to press the <strong>Ctrl</strong> and <strong>J</strong> keys at the same time. The letter <code>M</code> represents the <strong>Alt</strong> or <strong>Option</strong> key. You can get a list of all commands by typing <strong>Ctrl + g</strong>.</p>
+<p>To move the cursor to a specific line and character number, use the command <strong>Ctrl + _</strong>. The menu at the bottom of the screen will change. Enter the number(s) in the “Enter line number, column number:” field and hit <strong>Enter</strong>.</p>
 <p>To open a file, you must have read permissions to the file. If you want to open a file with the cursor on a specific line and character, use the following syntax:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> +line_number,character_number filename</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you omit the <code>character_number</code>, the cursor will be positioned on the first character.</p>
 </section>
 <section id="search-and-replace" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="search-and-replace"><span class="header-section-number">2</span> Search and replace</h2>
-<p>To search for a text, press <code>Ctrl+w</code>, type in the search term, and press <code>Enter</code>. The cursor will move to the first match. To move to the next match, press <code>Alt+w</code>.</p>
-<p>If you want to search and replace, press <code>Ctrl+\</code>. Enter the search term and the text to be replaced with. The editor will move to the first match and ask you whether to replace it. After hitting <code>Y</code> or <code>N</code>, it will move to the next match. Pressing <code>A</code> will replace all matches.</p>
+<p>To search for a text, press <strong>Ctrl + w</strong>, type in the search term, and press <strong>Enter</strong>. The cursor will move to the first match. To move to the next match, press <strong>Alt+w</strong>.</p>
+<p>If you want to search and replace, press <strong>Ctrl + \</strong>. Enter the search term and the text to be replaced with. The editor will move to the first match and ask you whether to replace it. After hitting <strong>Y</strong> or <strong>N</strong>, it will move to the next match. Pressing <strong>A</strong> will replace all matches.</p>
 </section>
 <section id="copy-cut-and-paste" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="copy-cut-and-paste"><span class="header-section-number">3</span> Copy, cut, and paste</h2>
-<p>To select text, move the cursor to the beginning of the text and press <code>Alt+a</code>. This will set a selection mark. Move the cursor to the end of the text you want to select using the arrow keys. The selected text will be highlighted. If you wish to cancel the selection, press <code>Ctrl+6</code>.</p>
-<p>Copy the selected text to the clipboard using the <code>Alt+6</code> command. <code>Ctrl+k</code> will cut the selected text.</p>
-<p>If you want to cut whole lines, move the cursor to the line and press <code>Ctrl+k</code>. You can cut multiple lines by hitting <code>Ctrl+k</code> several times.</p>
-<p>To paste the text, move the cursor to where you want to put the text and press <code>Ctrl+u</code>.</p>
+<p>To select text, move the cursor to the beginning of the text and press <strong>Alt + a</strong>. This will set a selection mark. Move the cursor to the end of the text you want to select using the arrow keys. The selected text will be highlighted. If you wish to cancel the selection, press <strong>Ctrl + 6</strong>.</p>
+<p>Copy the selected text to the clipboard using the <strong>Alt + 6</strong> command. <strong>Ctrl + k</strong> will cut the selected text.</p>
+<p>If you want to cut whole lines, move the cursor to the line and press <strong>Ctrl + k</strong>. You can cut multiple lines by hitting <strong>Ctrl + k</strong> several times.</p>
+<p>To paste the text, move the cursor to where you want to put the text and press <strong>Ctrl + u</strong>.</p>
 </section>
 <section id="save-and-exit" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="save-and-exit"><span class="header-section-number">4</span> Save and exit</h2>
-<p>To save the changes you’ve made to the file, press <code>Ctrl+o</code>. If the file doesn’t exist, it will be created once you save it.</p>
-<p>To exit nano, press <code>Ctrl+x</code>. If there are unsaved changes, you’ll be asked whether you want to save the changes.</p>
+<p>To save the changes you’ve made to the file, select <strong>Ctrl + o</strong>. If the file doesn’t exist, it will be created once you save it.</p>
+<p>To exit nano, select <strong>Ctrl + x</strong>. If there are unsaved changes, you’ll be asked whether you want to save the changes.</p>
 <p>To save the file, you must have write permissions to the file. If you are creating a new file, you need to have write permission to the directory where the file is created.</p>
 
 
