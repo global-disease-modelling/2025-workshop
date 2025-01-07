@@ -252,15 +252,17 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">MacOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Linux</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>The default shell in Mac OS X Ventura and newer versions is Zsh, but Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in <code>/Applications/Utilities</code>). See the Git installation <a href="https://uwa-hpc.github.io/2024-07-01-UWA/#shell-macos-video-tutorial">video tutorial</a> for an example on how to open the Terminal. You may want to keep Terminal in your dock for this workshop.</p>
+<p>The default shell in Mac OS X Ventura and newer versions is Zsh, but Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in <strong>/Applications/Utilities</strong>). See the video tutorial below for an example on how to open the Terminal. You may want to keep Terminal in your dock for this workshop.</p>
 <p>To see if your default shell is Bash type <code>echo $SHELL</code> in Terminal and press the Return key. If the message printed does not end with ‘/bash’ then your default is something else, you can change your current shell to Bash by typing <code>bash</code> and then pressing Return. To check your current shell type <code>echo $0</code> and press Return.</p>
-<p>To change your default shell to Bash type <code>chsh -s /bin/bash</code> and press the Return key, then reboot for the change to take effect. To change your default back to Zsh, type <code>chsh -s /bin/zsh</code>, press the Return key and reboot. To check available shells, type <code>cat /etc/shells</code>.</p>
+<p>To change your default shell to Bash type <code>chsh -s /bin/bash</code> and press the Return key, then reboot for the change to take effect.</p>
+<p>To change your default back to Zsh, type <code>chsh -s /bin/zsh</code>, press the Return key and reboot.</p>
+<p>To check available shells, type <code>cat /etc/shells</code>.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/9LQhwETCdwY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <ol type="1">
-<li><p>Download the Git for Windows <a href="https://gitforwindows.org/">installer</a>.</p></li>
-<li><p>Run the installer and follow the steps below:</p>
+<li>Download the Git for Windows <a href="https://gitforwindows.org/">installer</a>.</li>
+<li>Run the installer and follow the steps below:
 <ol type="1">
 <li>Click on “Next” four times (two times if you’ve previously installed Git). You don’t need to change anything in the Information, location, components, and start menu screens.</li>
 <li>From the dropdown menu, “Choosing the default editor used by Git”, select “Use the Nano editor by default” (NOTE: you will need to scroll up to find it) and click on “Next”.</li>
@@ -269,14 +271,14 @@ ul.task-list li input[type="checkbox"] {
 <li>Select “Use bundled OpenSSH”.</li>
 <li>Ensure that “Use the native Windows Secure Channel Library” is selected and click on “Next”.</li>
 <li>Ensure that “Checkout Windows-style, commit Unix-style line endings” is selected and click on “Next”.</li>
-<li><strong>Ensure that “Use Windows’ default console window” is selected and click on “Next”.</strong></li>
+<li>Ensure that “Use Windows’ default console window” is selected and click “Next”.</li>
 <li>Ensure that “Default (fast-forward or merge) is selected and click”Next”</li>
 <li>Ensure that “Git Credential Manager” is selected and click on “Next”.</li>
 <li>Ensure that “Enable file system caching” is selected and click on “Next”.</li>
 <li>Click on “Install”.</li>
 <li>Click on “Finish” or “Next”.</li>
 </ol></li>
-<li><p>If your “HOME” environment variable is not set (or you don’t know what this is):</p>
+<li>If your “HOME” environment variable is not set (or you don’t know what this is):
 <ol type="1">
 <li>Open command prompt (Open the <strong>Start Menu</strong>, then type <code>cmd</code> and press <code>Enter</code>)</li>
 <li>Type the following line into the command prompt window, exactly as shown: <code>setx HOME "%USERPROFILE%"</code></li>

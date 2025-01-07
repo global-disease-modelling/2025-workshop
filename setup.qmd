@@ -14,20 +14,22 @@ There is a list of common issues that occur during installation, as a reference 
 ::: panel-tabset
 ### MacOS
 
-The default shell in Mac OS X Ventura and newer versions is Zsh, but Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in `/Applications/Utilities`). See the Git installation [video tutorial](https://uwa-hpc.github.io/2024-07-01-UWA/#shell-macos-video-tutorial) for an example on how to open the Terminal. You may want to keep Terminal in your dock for this workshop.
+The default shell in Mac OS X Ventura and newer versions is Zsh, but Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in **/Applications/Utilities**). See the video tutorial below for an example on how to open the Terminal. You may want to keep Terminal in your dock for this workshop.
 
 To see if your default shell is Bash type `echo $SHELL` in Terminal and press the Return key. If the message printed does not end with '/bash' then your default is something else, you can change your current shell to Bash by typing `bash` and then pressing Return. To check your current shell type `echo $0` and press Return.
 
-To change your default shell to Bash type `chsh -s /bin/bash` and press the Return key, then reboot for the change to take effect. To change your default back to Zsh, type `chsh -s /bin/zsh`, press the Return key and reboot. To check available shells, type `cat /etc/shells`.
+To change your default shell to Bash type `chsh -s /bin/bash` and press the Return key, then reboot for the change to take effect.
+
+To change your default back to Zsh, type `chsh -s /bin/zsh`, press the Return key and reboot.
+
+To check available shells, type `cat /etc/shells`.
 
 {{< video https://youtu.be/9LQhwETCdwY >}}
 
 ### Windows
 
 1.  Download the Git for Windows [installer](https://gitforwindows.org/).
-
 2.  Run the installer and follow the steps below:
-
     1.  Click on "Next" four times (two times if you've previously installed Git). You don't need to change anything in the Information, location, components, and start menu screens.
     2.  From the dropdown menu, "Choosing the default editor used by Git", select "Use the Nano editor by default" (NOTE: you will need to scroll up to find it) and click on "Next".
     3.  On the page that says "Adjusting the name of the initial branch in new repositories", ensure that "Let Git decide" is selected. This will ensure the highest level of compatibility for our lessons.
@@ -35,15 +37,13 @@ To change your default shell to Bash type `chsh -s /bin/bash` and press the Retu
     5.  Select "Use bundled OpenSSH".
     6.  Ensure that "Use the native Windows Secure Channel Library" is selected and click on "Next".
     7.  Ensure that "Checkout Windows-style, commit Unix-style line endings" is selected and click on "Next".
-    8.  **Ensure that "Use Windows' default console window" is selected and click on "Next".**
+    8.  Ensure that "Use Windows' default console window" is selected and click "Next".
     9.  Ensure that "Default (fast-forward or merge) is selected and click "Next"
     10. Ensure that "Git Credential Manager" is selected and click on "Next".
     11. Ensure that "Enable file system caching" is selected and click on "Next".
     12. Click on "Install".
     13. Click on "Finish" or "Next".
-
 3.  If your "HOME" environment variable is not set (or you don't know what this is):
-
     1.  Open command prompt (Open the **Start Menu**, then type `cmd` and press `Enter`)
     2.  Type the following line into the command prompt window, exactly as shown: `setx HOME "%USERPROFILE%"`
     3.  Press Enter and you should see `SUCCESS: Specified value was saved.`
