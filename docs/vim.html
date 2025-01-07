@@ -287,6 +287,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="starting-vim" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="starting-vim"><span class="header-section-number">1</span> Starting Vim</h2>
 <p>Vim is a text editor. That is all it does. You cannot format a document, insert shapes, make a table with lines, use multiple fonts, highlight sentences, or print out with headings or margins. Vim, however, is very good at editing text. Once you’ve mastered Vim, it is very powerful. You can find and replace chunks of text using commands, copy and paste columns of data, and jump to a specified line number.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="What is a text editor?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What is a text editor?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We sometimes call programs like Microsoft Word or LibreOffice Writer “text editors”, but we need to be a bit more careful when it comes to programming.</p>
+<p>By default, Microsoft Word uses <code>.docx</code> files to store not only text, but also formatting information about fonts, headings, and so on. This extra information isn’t stored as characters, and doesn’t mean anything to tools like <code>head</code>: they expect input files to contain nothing but the letters, digits and punctuation on a standard computer keyboard. When editing programs, therefore, you must either use a plain text editor, or be careful to save files as plain text.</p>
+</div>
+</div>
 <p>Vim is also everywhere. If you are working on a computer with a shell (such as terminal or gitbash), then you have Vim; it’s already there. And you can open it directly from the shell. The problem is, however, that Vim is notoriously difficult to learn.</p>
 <p>Let’s create a new file with Vim. First, open your shell, then type:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">vim</span> new-file.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
