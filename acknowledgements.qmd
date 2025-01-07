@@ -12,6 +12,8 @@ We pay our respects to Elders past, present, and future and seek their wisdom in
 
 Thank you to Lara Frcej and Victor Olet for preparing the workshop materials for Session 1 on Unix. Thank you to Victor Olet and Aurélien Cavelan for preparing the workshop materials for Session 2 on version control with Git. Thank you to Sarah Beecroft for preparing the workshop materials for Session 3 on an introduction to high performance computing. Thank you to Fathima Hassan, Sarah Beecroft, Victor Olet, Lara Frce, and Christopher Harris for supporting the preparation of the workshop.
 
+### Licenses
+
 -   The Code of Conduct is derived from work that is copyright © rOpenSci ([rOpenSci Code of Conduct](https://ropensci.org/code-of-conduct/)) made available under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
 -   The instruction material "Setting up" is derived from work that is copyright © The Carpentries (<https://carpentries.org/>) made available under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
 -   The instruction material "Unix Shell" is derived from work that is copyright © The Carpentries (<https://carpentries.org/>) made available under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
