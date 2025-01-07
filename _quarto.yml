@@ -18,18 +18,18 @@ website:
       - text: Overview
         href: index.qmd
       - code-of-conduct.qmd
-      - section: "Workshop"
+      - section: "Workshop material"
         contents:
-          - session-ssh.qmd
-          - session-hackathon.qmd
-      - section: "Resources"
+          - text: "Session 1: Unix"
+            href: https://docs.google.com/presentation/d/14wXx2teSk4jcvHENpN-TDYu1mMuBhmP47G6WzLNjTrg/edit?usp=sharing
+          - text: "Session 2: Git"
+            href: https://pawsey-internships.github.io/version-control/
+          - text: "Session 3: High Performance Computing"
+            href: https://docs.google.com/presentation/d/1pu1PxsHo8dymT3Sz5njxHpWgcZAsYtYe/edit?usp=sharing&ouid=109436109386903974423&rtpof=true&sd=true
+      - section: "Additional resources"
         contents:
           - unix-shell.qmd
           - ssh.qmd
-          - collaborative-git.qmd
-          - supercomputing.qmd
-          - pawsey.qmd
-          - best-practice-programming.qmd
           - nano.qmd
           - vim.qmd
       - acknowledgements.qmd
