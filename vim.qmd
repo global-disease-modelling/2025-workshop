@@ -7,6 +7,12 @@ number-sections: true
 
 Vim is a text editor. That is all it does. You cannot format a document, insert shapes, make a table with lines, use multiple fonts, highlight sentences, or print out with headings or margins. Vim, however, is very good at editing text. Once you’ve mastered Vim, it is very powerful. You can find and replace chunks of text using commands, copy and paste columns of data, and jump to a specified line number.
 
+::: {.callout-warning title="What is a text editor?"}
+We sometimes call programs like Microsoft Word or LibreOffice Writer “text editors”, but we need to be a bit more careful when it comes to programming.
+
+By default, Microsoft Word uses `.docx` files to store not only text, but also formatting information about fonts, headings, and so on. This extra information isn’t stored as characters, and doesn’t mean anything to tools like `head`: they expect input files to contain nothing but the letters, digits and punctuation on a standard computer keyboard. When editing programs, therefore, you must either use a plain text editor, or be careful to save files as plain text.
+:::
+
 Vim is also everywhere. If you are working on a computer with a shell (such as terminal or gitbash), then you have Vim; it’s already there. And you can open it directly from the shell. The problem is, however, that Vim is notoriously difficult to learn.
 
 Let’s create a new file with Vim. First, open your shell, then type:

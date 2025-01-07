@@ -3,11 +3,15 @@ title: "Text editors: nano"
 number-sections: true
 ---
 
-When working on the command line, quite often you will need to create or edit text files. Two of the most powerful and popular command-line editors are Vim and Emacs. Both have a steep learning curve that can be intimidating to new users. For those who need a simple editor, there is nano.
+nano is an easy-to-use command line text editor for Unix and Linux operating systems. It includes all the basic functionality you’d expect from a regular text editor, like syntax highlighting, multiple buffers, search and replace with regular expression support, spellchecking, UTF-8 encoding, and more.
 
-GNU nano is an easy-to-use command line text editor for Unix and Linux operating systems. It includes all the basic functionality you’d expect from a regular text editor, like syntax highlighting, multiple buffers, search and replace with regular expression support, spellchecking, UTF-8 encoding, and more.
+We will go through the basics of using nano, including: how to create and open a file, edit a file, save a file, search and replace text, and cut and paste text.
 
-We will go through the basics of using nano, including how to create and open a file, edit a file, save a file, search and replace text, and cut and paste text.
+::: {.callout-warning title="What is a text editor?"}
+We sometimes call programs like Microsoft Word or LibreOffice Writer “text editors”, but we need to be a bit more careful when it comes to programming.
+
+By default, Microsoft Word uses `.docx` files to store not only text, but also formatting information about fonts, headings, and so on. This extra information isn’t stored as characters, and doesn’t mean anything to tools like `head`: they expect input files to contain nothing but the letters, digits and punctuation on a standard computer keyboard. When editing programs, therefore, you must either use a plain text editor, or be careful to save files as plain text.
+:::
 
 ## Starting nano
 
@@ -23,11 +27,11 @@ To open an existing file or to create a new file, type `nano` followed by the fi
 nano filename
 ```
 
-This opens a new editor window, and you can start editing the file. Unlike Vim, nano is a modeless editor, which means that you can start typing and editing the text immediately after opening the file.
+This opens a new editor window, and you can start editing the file. nano is a "modeless" editor. All keys, with the exception of Control and Meta (`Alt` or `Option`) key sequences, will enter text into the file being edited.
+
+At the bottom of the window, there is a list of the most basic command shortcuts to use with the nano editor. All commands are prefixed with either `^` or `M` characters. The caret symbol (`^`) represents the `Ctrl` key. For example, the `^J` commands mean to press the `Ctrl` and `J` keys at the same time. The letter `M` represents the `Alt` or `Option` key. You can get a list of all commands by typing `Ctrl+g`.
 
 To move the cursor to a specific line and character number, use the `Ctrl+_` command. The menu at the bottom of the screen will change. Enter the number(s) in the “Enter line number, column number:” field and hit `Enter`.
-
-At the bottom of the window, there is a list of the most basic command shortcuts to use with the nano editor. All commands are prefixed with either `^` or `M` characters. The caret symbol (`^`) represents the `Ctrl` key. For example, the `^J` commands mean to press the `Ctrl` and `J` keys at the same time. The letter `M` represents the `Alt` key. You can get a list of all commands by typing `Ctrl+g`.
 
 To open a file, you must have read permissions to the file. If you want to open a file with the cursor on a specific line and character, use the following syntax:
 

@@ -251,18 +251,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>When working on the command line, quite often you will need to create or edit text files. Two of the most powerful and popular command-line editors are Vim and Emacs. Both have a steep learning curve that can be intimidating to new users. For those who need a simple editor, there is nano.</p>
-<p>GNU nano is an easy-to-use command line text editor for Unix and Linux operating systems. It includes all the basic functionality you’d expect from a regular text editor, like syntax highlighting, multiple buffers, search and replace with regular expression support, spellchecking, UTF-8 encoding, and more.</p>
-<p>We will go through the basics of using nano, including how to create and open a file, edit a file, save a file, search and replace text, and cut and paste text.</p>
+<p>nano is an easy-to-use command line text editor for Unix and Linux operating systems. It includes all the basic functionality you’d expect from a regular text editor, like syntax highlighting, multiple buffers, search and replace with regular expression support, spellchecking, UTF-8 encoding, and more.</p>
+<p>We will go through the basics of using nano, including: how to create and open a file, edit a file, save a file, search and replace text, and cut and paste text.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="What is a text editor?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What is a text editor?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We sometimes call programs like Microsoft Word or LibreOffice Writer “text editors”, but we need to be a bit more careful when it comes to programming.</p>
+<p>By default, Microsoft Word uses <code>.docx</code> files to store not only text, but also formatting information about fonts, headings, and so on. This extra information isn’t stored as characters, and doesn’t mean anything to tools like <code>head</code>: they expect input files to contain nothing but the letters, digits and punctuation on a standard computer keyboard. When editing programs, therefore, you must either use a plain text editor, or be careful to save files as plain text.</p>
+</div>
+</div>
 <section id="starting-nano" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="starting-nano"><span class="header-section-number">1</span> Starting nano</h2>
 <p>Nano text editor is pre-installed on macOS and most Linux distributions. To check if it is installed on your system, type:</p>
 <pre><code>nano --version</code></pre>
 <p>To open an existing file or to create a new file, type <code>nano</code> followed by the file name:</p>
 <pre><code>nano filename</code></pre>
-<p>This opens a new editor window, and you can start editing the file. Unlike Vim, nano is a modeless editor, which means that you can start typing and editing the text immediately after opening the file.</p>
+<p>This opens a new editor window, and you can start editing the file. nano is a “modeless” editor. All keys, with the exception of Control and Meta (<code>Alt</code> or <code>Option</code>) key sequences, will enter text into the file being edited.</p>
+<p>At the bottom of the window, there is a list of the most basic command shortcuts to use with the nano editor. All commands are prefixed with either <code>^</code> or <code>M</code> characters. The caret symbol (<code>^</code>) represents the <code>Ctrl</code> key. For example, the <code>^J</code> commands mean to press the <code>Ctrl</code> and <code>J</code> keys at the same time. The letter <code>M</code> represents the <code>Alt</code> or <code>Option</code> key. You can get a list of all commands by typing <code>Ctrl+g</code>.</p>
 <p>To move the cursor to a specific line and character number, use the <code>Ctrl+_</code> command. The menu at the bottom of the screen will change. Enter the number(s) in the “Enter line number, column number:” field and hit <code>Enter</code>.</p>
-<p>At the bottom of the window, there is a list of the most basic command shortcuts to use with the nano editor. All commands are prefixed with either <code>^</code> or <code>M</code> characters. The caret symbol (<code>^</code>) represents the <code>Ctrl</code> key. For example, the <code>^J</code> commands mean to press the <code>Ctrl</code> and <code>J</code> keys at the same time. The letter <code>M</code> represents the <code>Alt</code> key. You can get a list of all commands by typing <code>Ctrl+g</code>.</p>
 <p>To open a file, you must have read permissions to the file. If you want to open a file with the cursor on a specific line and character, use the following syntax:</p>
 <pre><code>nano +line_number,character_number filename</code></pre>
 <p>If you omit the <code>character_number</code>, the cursor will be positioned on the first character.</p>
