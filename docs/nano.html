@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -270,14 +304,14 @@ What is a text editor?
 <section id="starting-nano" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="starting-nano"><span class="header-section-number">1</span> Starting nano</h2>
 <p>Nano text editor is pre-installed on macOS and most Linux distributions. To check if it is installed on your system, type:</p>
-<pre><code>nano --version</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>To open an existing file or to create a new file, type <code>nano</code> followed by the file name:</p>
-<pre><code>nano filename</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> filename</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This opens a new editor window, and you can start editing the file. nano is a “modeless” editor. All keys, with the exception of Control and Meta (<code>Alt</code> or <code>Option</code>) key sequences, will enter text into the file being edited.</p>
 <p>At the bottom of the window, there is a list of the most basic command shortcuts to use with the nano editor. All commands are prefixed with either <code>^</code> or <code>M</code> characters. The caret symbol (<code>^</code>) represents the <code>Ctrl</code> key. For example, the <code>^J</code> commands mean to press the <code>Ctrl</code> and <code>J</code> keys at the same time. The letter <code>M</code> represents the <code>Alt</code> or <code>Option</code> key. You can get a list of all commands by typing <code>Ctrl+g</code>.</p>
 <p>To move the cursor to a specific line and character number, use the <code>Ctrl+_</code> command. The menu at the bottom of the screen will change. Enter the number(s) in the “Enter line number, column number:” field and hit <code>Enter</code>.</p>
 <p>To open a file, you must have read permissions to the file. If you want to open a file with the cursor on a specific line and character, use the following syntax:</p>
-<pre><code>nano +line_number,character_number filename</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> +line_number,character_number filename</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you omit the <code>character_number</code>, the cursor will be positioned on the first character.</p>
 </section>
 <section id="search-and-replace" class="level2" data-number="2">
