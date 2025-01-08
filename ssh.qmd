@@ -331,6 +331,12 @@ As for any Linux interactive session, the basic navigation tool for navigating d
 
 Alternatively, you can specify the directory within the `put` and `get` commands above.
 
+In order to transfer an entire directory, the option `-r` needs to be used in either `put` or `get`. In the following example, the directory my-scripts will be transferred to the your personal directory in the /scratch filesystem:
+
+``` txt
+sftp> put -r ./my-scripts /scratch/<project>/<username>
+```
+
 ### GUI clients
 
 GUI clients are a very attractive option for file transfers because of their intuitive framework. They have the advantage that users do not need to remember the several different options for the command-line tools, but keep in mind these GUI clients are still based on the command line clients listed above. In practice, the combined use of both GUI and command line clients within your workflows results in better efficiency.
