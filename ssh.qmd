@@ -24,24 +24,24 @@ The remote login server which accepts connections from client programs is known 
 To make a remote login, we issue the command `ssh <username>@<computer>` which tries to make a connection to the SSH daemon running on the remote computer we have specified. For Chitra to access the Setonix computer on Pawsey, she logs in using `ssh chitrams@setonix.pawsey.org.au`.
 
 ::: {.callout-warning title="Test your understanding"}
-1.  What happens if Chitra has already been allocated a node named `nid09310` that she would like to directly log in to?
-2.  What happens if Chitra wants to access the data mover nodes on Pawsey, which has the hostname `data-mover.pawsey.org.au`?
+1.  Say that Chitra has been allocated a node named `nid09310`. How would she log in to that node directly?
+2.  Say that Chitra wants to access the data mover nodes on Pawsey, which has the hostname `data-mover.pawsey.org.au`. How would she log in to the data mover node?
 :::
 
 ::: {.callout-note title="Answer" icon="false" collapse="true"}
 For the first instance, Chitra would log in with the following command:
 
 ``` bash
-ssh chitrams@nid09310.pawsey.org.au
+$ ssh chitrams@nid09310.pawsey.org.au
 ```
 
 For the second, Chitra would log in with the following command:
 
 ``` bash
-sftp chitrams@data-mover.pawseyl.org.au
+$ sftp chitrams@data-mover.pawsey.org.au
 ```
 
-where `sftp` is another companion program for `ssh`, the Secure File Transfer Protocol. We talk about this in @sec-file-transfer.
+where `sftp` is another companion program for `ssh`, the Secure File Transfer Protocol. We discuss this in @sec-file-transfer.
 :::
 
 After we log in, we can use the remote shell to use the remote computer’s files and directories.
@@ -74,7 +74,7 @@ You can generate a new SSH key on your local machine. After you generate the key
 1.  Open a Terminal and paste the text below, replacing the email used in the example with your GitHub email address.
 
     ``` txt
-    ssh-keygen -t ed25519 -C "your_email@example.com" -f ~/.ssh/github_ed25519_key
+    $ ssh-keygen -t ed25519 -C "your_email@example.com" -f ~/.ssh/github_ed25519_key
     ```
 
     This creates a new SSH key, using the provided email as a label, and `github_ed25519_key` as the key name.
@@ -113,7 +113,7 @@ You can generate a new SSH key on your local machine. After you generate the key
     -   If the file doesn't exist, create the file.
 
     ``` txt
-    touch ~/.ssh/config
+    $ touch ~/.ssh/config
     ```
 
     -   Open your `~/.ssh/config` file, then modify the file to contain the following lines. If your SSH key file has a different name or path than the example code, modify the filename or path to match your current setup.
@@ -139,7 +139,7 @@ You can generate a new SSH key on your local machine. After you generate the key
 3.  Add your SSH private key to the ssh-agent and store your passphrase in the keychain. If you created your key with a different name, or if you are adding an existing key that has a different name, replace `github_ed25519_key` in the command with the name of your private key file.
 
     ``` txt
-    ssh-add --apple-use-keychain ~/.ssh/github_ed25519_key
+    $ ssh-add --apple-use-keychain ~/.ssh/github_ed25519_key
     ```
 
     ::: {.callout-note title="Note"}
@@ -188,7 +188,7 @@ Link to GitHub documentation [here](https://docs.github.com/en/authentication/co
 1.  Open a terminal and execute the following command:
 
     ``` txt
-    ssh-keygen -t ed25519 -f ~/.ssh/pawsey_ed25519_key
+    $ ssh-keygen -t ed25519 -f ~/.ssh/pawsey_ed25519_key
     ```
 
 2.  At the prompt, type a secure passphrase.
@@ -249,7 +249,7 @@ Link to GitHub documentation [here](https://docs.github.com/en/authentication/co
 On your local machine, execute the following command:
 
 ``` txt
-ssh-copy-id -i ~/.ssh/pawsey_ed25519_key.pub <username>@<remotehost>
+$ ssh-copy-id -i ~/.ssh/pawsey_ed25519_key.pub <username>@<remotehost>
 ```
 
 Where `<username>` is your Pawsey username and `<remotehost>` is the remote host to be accessed (usually setonix.pawsey.org.au). If the command establishes the correct connection to the host, then it will ask for your password to accept and finalise the copy.
@@ -289,10 +289,10 @@ On Pawsey, your personal directory in scratch will always look like: `/scratch/<
 To transfer a whole directory tree recursively, then the option `-r` needs to be used. As an example:
 
 ``` bash
-scp -r chitra-ms@data-mover.pawsey.org.au:/scratch/pawsey1104/chitrams/vimc-pawsey/output ./pawsey-files
+$ scp -r chitra-ms@data-mover.pawsey.org.au:/scratch/pawsey1104/chitrams/vimc-pawsey/output ./pawsey-files
 ```
 
-### `sftp`
+### `sftp` {#sec-sftp}
 
 ### GUI clients
 
@@ -313,5 +313,3 @@ As for any software, be careful of not falling into "click tricks" that mislead 
 ::: {.callout-important title="Authentication"}
 Saving your password within the GUI client is not recommended. Instead, use SSH keys. See @sec-sshkeys for information on SSH keys.
 :::
-
-::::::

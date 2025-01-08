@@ -260,7 +260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#sec-file-transfer" id="toc-sec-file-transfer" class="nav-link" data-scroll-target="#sec-file-transfer"><span class="header-section-number">4</span> Secure file transfers</a>
   <ul class="collapse">
   <li><a href="#scp" id="toc-scp" class="nav-link" data-scroll-target="#scp"><span class="header-section-number">4.1</span> <code>scp</code></a></li>
-  <li><a href="#sftp" id="toc-sftp" class="nav-link" data-scroll-target="#sftp"><span class="header-section-number">4.2</span> <code>sftp</code></a></li>
+  <li><a href="#sec-sftp" id="toc-sec-sftp" class="nav-link" data-scroll-target="#sec-sftp"><span class="header-section-number">4.2</span> <code>sftp</code></a></li>
   <li><a href="#gui-clients" id="toc-gui-clients" class="nav-link" data-scroll-target="#gui-clients"><span class="header-section-number">4.3</span> GUI clients</a></li>
   </ul></li>
   </ul>
@@ -311,8 +311,8 @@ Test your understanding
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>What happens if Chitra has already been allocated a node named <code>nid09310</code> that she would like to directly log in to?</li>
-<li>What happens if Chitra wants to access the data mover nodes on Pawsey, which has the hostname <code>data-mover.pawsey.org.au</code>?</li>
+<li>Say that Chitra has been allocated a node named <code>nid09310</code>. How would she log in to that node directly?</li>
+<li>Say that Chitra wants to access the data mover nodes on Pawsey, which has the hostname <code>data-mover.pawsey.org.au</code>. How would she log in to the data mover node?</li>
 </ol>
 </div>
 </div>
@@ -329,10 +329,10 @@ Answer
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>For the first instance, Chitra would log in with the following command:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> chitrams@nid09310.pawsey.org.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ssh chitrams@nid09310.pawsey.org.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>For the second, Chitra would log in with the following command:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sftp</span> chitrams@data-mover.pawseyl.org.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>where <code>sftp</code> is another companion program for <code>ssh</code>, the Secure File Transfer Protocol. We talk about this in <a href="#sec-file-transfer" class="quarto-xref">Section&nbsp;4</a>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sftp chitrams@data-mover.pawsey.org.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>where <code>sftp</code> is another companion program for <code>ssh</code>, the Secure File Transfer Protocol. We discuss this in <a href="#sec-file-transfer" class="quarto-xref">Section&nbsp;4</a>.</p>
 </div>
 </div>
 </div>
@@ -355,7 +355,7 @@ Answer
 <h4 data-number="3.1.1" class="anchored" data-anchor-id="generate-a-new-ssh-key-pair"><span class="header-section-number">3.1.1</span> Generate a new SSH key pair</h4>
 <ol type="1">
 <li><p>Open a Terminal and paste the text below, replacing the email used in the example with your GitHub email address.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ssh-keygen -t ed25519 -C "your_email@example.com" -f ~/.ssh/github_ed25519_key</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>$ ssh-keygen -t ed25519 -C "your_email@example.com" -f ~/.ssh/github_ed25519_key</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This creates a new SSH key, using the provided email as a label, and <code>github_ed25519_key</code> as the key name.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>&gt; Generating public/private ALGORITHM key pair.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>At the prompt, type a secure passphrase.</p>
@@ -379,7 +379,7 @@ Answer
 <ul>
 <li>If the file doesn’t exist, create the file.</li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>touch ~/.ssh/config</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>$ touch ~/.ssh/config</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Open your <code>~/.ssh/config</code> file, then modify the file to contain the following lines. If your SSH key file has a different name or path than the example code, modify the filename or path to match your current setup.</li>
 </ul>
@@ -404,7 +404,7 @@ Note
 </div>
 </div></li>
 <li><p>Add your SSH private key to the ssh-agent and store your passphrase in the keychain. If you created your key with a different name, or if you are adding an existing key that has a different name, replace <code>github_ed25519_key</code> in the command with the name of your private key file.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ssh-add --apple-use-keychain ~/.ssh/github_ed25519_key</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>$ ssh-add --apple-use-keychain ~/.ssh/github_ed25519_key</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-note callout-titled" title="Note">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -462,7 +462,7 @@ If <code>pbcopy</code> doesn’t work
 <h4 data-number="3.2.1" class="anchored" data-anchor-id="generate-a-new-ssh-key-pair-1"><span class="header-section-number">3.2.1</span> Generate a new SSH key pair</h4>
 <ol type="1">
 <li><p>Open a terminal and execute the following command:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>ssh-keygen -t ed25519 -f ~/.ssh/pawsey_ed25519_key</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb14"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>$ ssh-keygen -t ed25519 -f ~/.ssh/pawsey_ed25519_key</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>At the prompt, type a secure passphrase.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>&gt; Enter passphrase (empty for no passphrase): [Type a passphrase]</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>&gt; Enter same passphrase again: [Type passphrase again]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
@@ -513,7 +513,7 @@ Note
 <section id="add-the-public-key-to-setonix" class="level4" data-number="3.2.3">
 <h4 data-number="3.2.3" class="anchored" data-anchor-id="add-the-public-key-to-setonix"><span class="header-section-number">3.2.3</span> Add the public key to Setonix</h4>
 <p>On your local machine, execute the following command:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>ssh-copy-id -i ~/.ssh/pawsey_ed25519_key.pub &lt;username&gt;@&lt;remotehost&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>$ ssh-copy-id -i ~/.ssh/pawsey_ed25519_key.pub &lt;username&gt;@&lt;remotehost&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Where <code>&lt;username&gt;</code> is your Pawsey username and <code>&lt;remotehost&gt;</code> is the remote host to be accessed (usually setonix.pawsey.org.au). If the command establishes the correct connection to the host, then it will ask for your password to accept and finalise the copy.</p>
 </section>
 </section>
@@ -547,10 +547,10 @@ Use SSH keys!
 <div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp /VIMC/launch.R chitrams@data-mover.pawsey.org.au:/scratch/pawsey1104/chitrams</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>On Pawsey, your personal directory in scratch will always look like: <code>/scratch/&lt;project-name&gt;/&lt;user-name&gt;</code>.</p>
 <p>To transfer a whole directory tree recursively, then the option <code>-r</code> needs to be used. As an example:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-r</span> chitra-ms@data-mover.pawsey.org.au:/scratch/pawsey1104/chitrams/vimc-pawsey/output ./pawsey-files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp <span class="at">-r</span> chitra-ms@data-mover.pawsey.org.au:/scratch/pawsey1104/chitrams/vimc-pawsey/output ./pawsey-files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="sftp" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="sftp"><span class="header-section-number">4.2</span> <code>sftp</code></h3>
+<section id="sec-sftp" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="sec-sftp"><span class="header-section-number">4.2</span> <code>sftp</code></h3>
 </section>
 <section id="gui-clients" class="level3" data-number="4.3">
 <h3 data-number="4.3" class="anchored" data-anchor-id="gui-clients"><span class="header-section-number">4.3</span> GUI clients</h3>
@@ -588,7 +588,6 @@ Authentication
 <p>Saving your password within the GUI client is not recommended. Instead, use SSH keys. See <a href="#sec-sshkeys" class="quarto-xref">Section&nbsp;3</a> for information on SSH keys.</p>
 </div>
 </div>
-<p>::::::</p>
 
 
 </section>
