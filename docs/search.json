@@ -405,7 +405,7 @@
     "href": "unix-shell.html#useful-shortcuts",
     "title": "Unix shell",
     "section": "2 Useful shortcuts",
-    "text": "2 Useful shortcuts\n\nPress Tab to auto-complete names (such as files, folders, or programs) in your current directory.\nPressing Ctrl + c cancels what you’ve written or terminates a process that’s currently running\nChanging directories using cd:\n\nTyping cd ~ takes you to your home directory\nTyping cd - takes you to the last directory you were in, which is especially useful if you’re switching back and forth between two directories\n\nPressing the up arrow (↑) gives you the previous command you entered\nPressing Ctrl + r searches through your command line history",
+    "text": "2 Useful shortcuts\n\nPress Tab to auto-complete names (such as files, folders, or programs) in your current directory.\nPressing Ctrl + C cancels what you’ve written or terminates a process that’s currently running\nChanging directories using cd:\n\nTyping cd ~ takes you to your home directory\nTyping cd - takes you to the last directory you were in, which is especially useful if you’re switching back and forth between two directories\n\nPressing the up arrow (↑) gives you the previous command you entered\nPressing Ctrl + R searches through your command line history",
     "crumbs": [
       "Additional resources",
       "Unix shell"

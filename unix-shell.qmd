@@ -11,30 +11,30 @@ The shell is a program that enables us to send commands to the computer and rece
 First, open a terminal. If you're not sure how to open a terminal on your operating system (OS), see the instructions in the box "Shells for various OS" below.
 
 ::: {.callout-note title="Shells for various OS" collapse="true"}
-##### MacOS
+**MacOS**
 
 For a Mac computer running macOS Mojave or earlier releases, the default Unix Shell is Bash. For a Mac computer running macOS Catalina or later releases, the default Unix Shell is Zsh. Your default shell is available via the Terminal program within your Utilities folder.
 
 To open Terminal, try one or both of the following:
 
--   In Finder, select the Go menu, then select Utilities. Locate Terminal in the Utilities folder and open it.
--   Use the Mac ‘Spotlight’ computer search function. Search for 'Terminal' and press Return.
+-   In **Finder**, select the **Go** menu, then select **Utilities**. Locate **Terminal** in the Utilities folder and open it.
+-   Use the Mac ‘Spotlight’ computer search function. Search for 'Terminal' and press **Return**.
 
 To check if your machine is set up to use something other than Bash, type `echo $SHELL` in your terminal window.
 
 See [this article on Macworld](https://www.macworld.com/article/671618/how-to-use-terminal-on-mac.html) for how to use Terminal on Mac.
 
-##### Linux
+**Linux**
 
 The default Unix Shell for Linux operating systems is usually Bash.
 
-##### Windows
+**Windows**
 
-Computers with Windows operating systems do not automatically have a Unix Shell program installed. In this lesson, we encourage you to use an emulator included in [Git for Windows](https://carpentries.github.io/workshop-template/install_instructions/#shell), which gives you access to both Bash shell commands and Git.
+Computers with Windows operating systems do not automatically have a Unix Shell program installed. In this lesson, we encourage you to use an emulator included in [Git for Windows](https://gitforwindows.org/), which gives you access to both Bash shell commands and Git. Instructions for this are provided in the [**Setting up**](setup.qmd) guide.
 
 Once installed, you can open a terminal by running the program Git Bash from the Windows start menu.
 
-As an alternative to Git for Windows you may wish to [Install the Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) which gives access to a Bash shell command-line tool in Windows 10 and above.
+As an alternative to Git for Windows, you may wish to [Install the Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) which gives access to a Bash shell command-line tool in Windows 10 and above.
 :::
 
 ## Introducing the Shell
@@ -62,13 +62,13 @@ In addition, the command line is often the easiest way to interact with remote m
 
 ## Useful shortcuts
 
--   Press `Tab` to auto-complete names (such as files, folders, or programs) in your current directory.
--   Pressing `Ctrl` + `c` cancels what you've written or terminates a process that's currently running
+-   Press **Tab** to auto-complete names (such as files, folders, or programs) in your current directory.
+-   Pressing **Ctrl + C** cancels what you've written or terminates a process that's currently running
 -   Changing directories using `cd`:
     -   Typing `cd ~` takes you to your home directory
     -   Typing `cd -` takes you to the last directory you were in, which is especially useful if you're switching back and forth between two directories
 -   Pressing the up arrow (`↑`) gives you the previous command you entered
--   Pressing `Ctrl` + `r` searches through your command line history
+-   Pressing **Ctrl + R** searches through your command line history
 
 ## Files and directories
 
@@ -143,7 +143,7 @@ The first (`grep`) finds files that match a pattern; the second (`find`) looks f
 
 Here is what the output would look like:
 
-```txt
+``` txt
 ./writing/LittleWomen.txt:sitting on the top step, affected to be searching for her book, but was
 ./writing/haiku.txt:With searching comes loss
 ```
@@ -190,7 +190,7 @@ Let’s look at this in action. If we `cd` into the `GROUP` directory on Pawsey 
 $ ls -l
 ```
 
-```txt
+``` txt
 total 20
 drwxrws---  7 chitrams pawsey1104 4096 Oct  5 08:05 MAP_data
 drwxrwx---  2 chitrams chitrams   4096 Dec  2 16:22 chatbox-om
@@ -215,7 +215,7 @@ To change permissions, we use the `chmod` command (whose name stands for “chan
 $ ls -l launch.R
 ```
 
-```txt 
+``` txt
 -rw-r--r-- 1 chitrams pawsey1104 15784 Nov 15 13:45 launch.R
 ```
 
@@ -232,6 +232,6 @@ $ chmod g=rw launch.R
 $ chmod o=--- launch.R
 ```
 
-```txt
+``` txt
 -rwxrw---- 1 chitrams pawsey1104 15784 Nov 15 13:45 launch.R
 ```
