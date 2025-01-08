@@ -90,6 +90,8 @@ If Git is not already available on your machine you can try to install it via yo
 
 When you're writing code, it's nice to have a text editor that is optimized for writing code, with features like automatic color-coding of key words. The default text editor on macOS and Linux is usually set to Vim, which is not famous for being intuitive. If you accidentally find yourself stuck in it, hit the **Esc** key, followed by **: + q + !** (colon, lower-case 'q', exclamation mark), then hitting **Return** to return to the shell.
 
+In this lesson, we will be using the text editor nano. For a deeper dive into nano, refer to our [**Text editor: nano**](nano.qmd) guide.
+
 ::: panel-tabset
 ### MacOS
 
@@ -106,4 +108,4 @@ nano is a basic editor and the default that instructors use in the workshop. It 
 nano is a basic editor and the default that instructors use in the workshop. It should be pre-installed.
 :::
 
-You can refer to our [guide for nano](nano.qmd) or [guide for vim](vim.qmd) under our Resources pages.
+Alternatively if you wish to use Vim, refer to our [**Text editor: Vim**](vim.qmd) guide.
