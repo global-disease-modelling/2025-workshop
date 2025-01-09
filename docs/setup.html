@@ -213,6 +213,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-bash-shell" id="toc-the-bash-shell" class="nav-link active" data-scroll-target="#the-bash-shell"><span class="header-section-number">1</span> The Bash shell</a></li>
   <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git"><span class="header-section-number">2</span> Git</a></li>
   <li><a href="#text-editor" id="toc-text-editor" class="nav-link" data-scroll-target="#text-editor"><span class="header-section-number">3</span> Text editor</a></li>
+  <li><a href="#for-instructors" id="toc-for-instructors" class="nav-link" data-scroll-target="#for-instructors"><span class="header-section-number">4</span> For instructors</a></li>
   </ul>
 </nav>
     </div>
@@ -239,19 +240,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>To participate in the workshop, you will need access to software as described below. In addition, you will need an up-to-date web browser.</p>
-<p>There is a list of common issues that occur during installation, as a reference for instructors, that may be useful in the following wiki page: <a href="https://github.com/carpentries/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions</a>.</p>
 <section id="the-bash-shell" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="the-bash-shell"><span class="header-section-number">1</span> The Bash shell</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">MacOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Linux</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>The default shell in Mac OS X Ventura and newer versions is Zsh, but Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in <strong>/Applications/Utilities</strong>). See the video tutorial below for an example on how to open the Terminal. You may want to keep Terminal in your dock for this workshop.</p>
+<p>The default shell in Mac OS X Ventura and newer versions is Zsh, but Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in /Applications/Utilities). You can also find it using Spotlight search: press <strong>Command</strong> + <strong>Space</strong> and type “Terminal”. You may want to keep Terminal in your dock for this workshop.</p>
 <p>To see if your default shell is Bash type <code>echo $SHELL</code> in Terminal and press the <strong>Return</strong> key. If the message printed does not end with ‘/bash’ then your default is something else, you can change your current shell to Bash by typing <code>bash</code> and then pressing <strong>Return</strong>. To check your current shell type <code>echo $0</code> and press Return.</p>
 <p>To change your default shell to Bash type <code>chsh -s /bin/bash</code> and press the <strong>Return</strong> key, then reboot for the change to take effect.</p>
 <p>To change your default back to Zsh, type <code>chsh -s /bin/zsh</code>, press the <strong>Return</strong> key and reboot.</p>
 <p>To check available shells, type <code>cat /etc/shells</code>.</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/9LQhwETCdwY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <ol type="1">
@@ -299,7 +298,25 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">MacOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Linux</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>Please open the Terminal app, type <code>git --version</code> and press <strong>Return</strong>. If it’s not installed already, follow the instructions to install the “command line developer tools”. Do not click <strong>Get Xcode</strong>, because that will take too long and is not necessary for our Git lesson. After installing these tools, there won’t be anything in your /Applications folder, as they and Git are command line programs.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your device should come with Git pre-installed. Only follow the video instructions if you <strong>do not</strong> have Git installed on your device.</p>
+</div>
+</div>
+<ol type="1">
+<li>Open Terminal (you can find it using Spotlight search - press <strong>Command</strong> + <strong>Space</strong> and type “Terminal”)</li>
+<li>Type <code>git --version</code> and press <code>Return</code></li>
+<li>If you see a version number (like <code>git version 2.39.2</code>), Git is already installed and you’re all set</li>
+<li>If you see an error or no version number, proceed with the instructions to install the “command line developer tools”. Do not click <strong>Get Xcode</strong>, because that will take too long and is not necessary for our Git lesson. After installing these tools, there won’t be anything in your /Applications folder, as they and Git are command line programs.</li>
+</ol>
 <p>For older versions of OS X (10.5-10.8): use the most recent available installer labelled “snow-leopard” <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>. (Note: this project is no longer maintained.) Because this installer is not signed by the developer, you may have to right click (<strong>Control + click</strong>) on the .pkg file, and then click <strong>Open</strong> in the pop-up dialog. You can watch the video tutorial below for this.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/9LQhwETCdwY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </div>
@@ -332,6 +349,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Alternatively if you wish to use Vim, refer to our <a href="./vim.html"><strong>Text editors: Vim</strong></a> guide.</p>
+</section>
+<section id="for-instructors" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="for-instructors"><span class="header-section-number">4</span> For instructors</h2>
+<p>There is a list of common issues that occur during installation, as a reference for instructors, that may be useful in the following wiki page: <a href="https://github.com/carpentries/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions</a>.</p>
 
 
 </section>

@@ -7,14 +7,12 @@ number-sections: true
 
 To participate in the workshop, you will need access to software as described below. In addition, you will need an up-to-date web browser.
 
-There is a list of common issues that occur during installation, as a reference for instructors, that may be useful in the following wiki page: [Configuration Problems and Solutions](https://github.com/carpentries/workshop-template/wiki/Configuration-Problems-and-Solutions).
-
 ## The Bash shell
 
 ::: panel-tabset
 ### MacOS
 
-The default shell in Mac OS X Ventura and newer versions is Zsh, but Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in **/Applications/Utilities**). See the video tutorial below for an example on how to open the Terminal. You may want to keep Terminal in your dock for this workshop.
+The default shell in Mac OS X Ventura and newer versions is Zsh, but Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in /Applications/Utilities). You can also find it using Spotlight search: press **Command** + **Space** and type "Terminal". You may want to keep Terminal in your dock for this workshop.
 
 To see if your default shell is Bash type `echo $SHELL` in Terminal and press the **Return** key. If the message printed does not end with '/bash' then your default is something else, you can change your current shell to Bash by typing `bash` and then pressing **Return**. To check your current shell type `echo $0` and press Return.
 
@@ -23,8 +21,6 @@ To change your default shell to Bash type `chsh -s /bin/bash` and press the **Re
 To change your default back to Zsh, type `chsh -s /bin/zsh`, press the **Return** key and reboot.
 
 To check available shells, type `cat /etc/shells`.
-
-{{< video https://youtu.be/9LQhwETCdwY >}}
 
 ### Windows
 
@@ -71,7 +67,14 @@ You will need an account at [github.com](https://github.com/) for parts of the G
 ::: panel-tabset
 ### MacOS
 
-Please open the Terminal app, type `git --version` and press **Return**. If it's not installed already, follow the instructions to install the "command line developer tools". Do not click **Get Xcode**, because that will take too long and is not necessary for our Git lesson. After installing these tools, there won't be anything in your /Applications folder, as they and Git are command line programs.
+:::{.callout-important}
+Your device should come with Git pre-installed. Only follow the video instructions if you **do not** have Git installed on your device.
+:::
+
+1. Open Terminal (you can find it using Spotlight search - press **Command** + **Space** and type "Terminal")
+2. Type `git --version` and press `Return`
+3. If you see a version number (like `git version 2.39.2`), Git is already installed and you're all set
+4. If you see an error or no version number, proceed with the instructions to install the "command line developer tools". Do not click **Get Xcode**, because that will take too long and is not necessary for our Git lesson. After installing these tools, there won't be anything in your /Applications folder, as they and Git are command line programs.
 
 For older versions of OS X (10.5-10.8): use the most recent available installer labelled "snow-leopard" [available here](http://sourceforge.net/projects/git-osx-installer/files/). (Note: this project is no longer maintained.) Because this installer is not signed by the developer, you may have to right click (**Control + click**) on the .pkg file, and then click **Open** in the pop-up dialog. You can watch the video tutorial below for this.
 
@@ -109,3 +112,7 @@ nano is a basic editor and the default that instructors use in the workshop. It 
 :::
 
 Alternatively if you wish to use Vim, refer to our [**Text editors: Vim**](vim.qmd) guide.
+
+## For instructors
+
+There is a list of common issues that occur during installation, as a reference for instructors, that may be useful in the following wiki page: [Configuration Problems and Solutions](https://github.com/carpentries/workshop-template/wiki/Configuration-Problems-and-Solutions).
