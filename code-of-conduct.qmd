@@ -27,7 +27,7 @@ Participants are expected to engage in respectful interaction throughout the wor
 
 -   Be fully present during workshop sessions.
 -   Avoid working on unrelated projects during workshop time.
--   Respect the workshop organizers' and facilitators' time and effort.
+-   Respect the workshop organisers' and facilitators' time and effort.
 -   Contribute to a collaborative and supportive learning environment.
 
 ### Unacceptable Behavior
@@ -35,7 +35,7 @@ Participants are expected to engage in respectful interaction throughout the wor
 The following behaviors are not tolerated:
 
 -   combative or argumentative conduct;
--   veiled criticisms disguised as questions (e.g., "Have you thought about...");
+-   veiled criticisms disguised as questions–constructive debate is welcome, but it must be done respectfully;
 -   interrupting or talking over others;
 -   dismissive or condescending remarks;
 -   any form of harassment, including: discriminatory language or jokes; unwelcome sexual advances; intimidation or bullying; and offensive comments related to gender, sexual orientation, race, religion, disability, or age.
@@ -44,8 +44,16 @@ By participating in this workshop, you agree to uphold these principles and cont
 
 ### Reporting Guidelines 
 
-The Code of Conduct Committee includes Melissa Penny, Chitra M Saraswati, and #TODO XXX. 
+If you witness or experience inappropriate behaviour, or have any other concerns, please alert Melissa Penny or Chitra M Saraswati immediately. Even if an incident seems minor, reporting helps maintain a safe environment for everyone. 
 
-If you witness or experience inappropriate behaviour, or have any other concerns, please alert a member of the Code of Conduct Committee immediately. Even if an incident seems minor, reporting helps maintain a safe environment for everyone. 
+### The Institute Way
 
-Violation of the Code of Conduct will result in a warning, asking a participant to leave a session, or removal from the entire workshop.
+The Kids Research Institute Australia's set of values, The Institute Way, is as follows:
+
+We are an Institute of world-class researchers and those who support them, committed to maintaining the very highest levels of excellence. Relentlessly curious, we demand this of ourselves and of each other. The pride we share in our collective impact means we will never cut-corners, accept ‘good enough’ or compromise on the quality of our work.
+
+We are honest, ethical and fair. We appreciate the importance of different perspectives, knowledge, skills and abilities, and we value and recognize all contributions, always. We believe in open, transparent communication and decision-making at every level, and we treat one another with kindness and empathy.
+
+We seek and give feedback constructively, never being too busy or too important for one another. By being humble, kind, inclusive and honest, we respect one another and ourselves. We foster innovation and share learnings, knowing that even with every failure, we learn and grow.
+
+We seek out opportunities to collaborate with each other, with our partners and with the community, because we know that our work is better when we work together. We embrace the opportunity to constantly learn from one another, valuing and respecting each other’s expertise and contribution to a team science approach that delivers real impact to our community.
