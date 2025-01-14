@@ -8,4 +8,4 @@ number-sections: true
 
 In this Hackathon-style session, we will start transitioning our projects onto Pawsey. Facilitators from Pawsey will be around to help us with this.
 
-You can access the Q&A at [slido.com](https://www.slido.com/) using the code **\# 3151 5665** or by [clicking this link](https://app.sli.do/event/t1wc4szfSZLy9CzTgTEove). You can also use the Teams meeting's chat to post any questions or comments.
+You can also use the Teams meeting's chat to post any questions or comments during the Hackathon session.
