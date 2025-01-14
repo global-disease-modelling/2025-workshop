@@ -19,8 +19,10 @@ website:
         contents:
           - text: "Session 1: Unix"
             href: https://docs.google.com/presentation/d/14wXx2teSk4jcvHENpN-TDYu1mMuBhmP47G6WzLNjTrg/edit?usp=sharing
-          - text: "Session 2: Git"
+          - text: "Session 2.1: Git"
             href: https://pawsey-internships.github.io/version-control/
+          - text: "Session 2.2: Collaborative Git"
+            href: https://docs.google.com/presentation/d/17v-ImCja0-Te8lyIOKQhzyOreQccb-2HqopUHnTfGEU/edit?usp=sharing
           - text: "Session 3: Intro to HPC"
             href: https://docs.google.com/presentation/d/1pu1PxsHo8dymT3Sz5njxHpWgcZAsYtYe/edit?usp=sharing&ouid=109436109386903974423&rtpof=true&sd=true
           - text: "Hackathon"

@@ -109,6 +109,17 @@
     ]
   },
   {
+    "objectID": "setup.html#for-instructors",
+    "href": "setup.html#for-instructors",
+    "title": "Setting up",
+    "section": "4 For instructors",
+    "text": "4 For instructors\nThere is a list of common issues that occur during installation, as a reference for instructors, that may be useful in the following wiki page: Configuration Problems and Solutions.",
+    "crumbs": [
+      "Additional resources",
+      "Setting up"
+    ]
+  },
+  {
     "objectID": "session-2.html#file-transfers-more-ssh",
     "href": "session-2.html#file-transfers-more-ssh",
     "title": "Session 2",
@@ -453,17 +464,6 @@
     "crumbs": [
       "Additional resources",
       "Unix shell"
-    ]
-  },
-  {
-    "objectID": "setup.html#for-instructors",
-    "href": "setup.html#for-instructors",
-    "title": "Setting up",
-    "section": "4 For instructors",
-    "text": "4 For instructors\nThere is a list of common issues that occur during installation, as a reference for instructors, that may be useful in the following wiki page: Configuration Problems and Solutions.",
-    "crumbs": [
-      "Additional resources",
-      "Setting up"
     ]
   }
 ]
